@@ -1,0 +1,422 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		91D72B9D24BCADF200E7487D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D72B9C24BCADF200E7487D /* AppDelegate.swift */; };
+		91D72B9F24BCADF200E7487D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D72B9E24BCADF200E7487D /* SceneDelegate.swift */; };
+		91D72BA124BCADF200E7487D /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D72BA024BCADF200E7487D /* DashboardViewController.swift */; };
+		91D72BA324BCADF200E7487D /* MasterListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D72BA224BCADF200E7487D /* MasterListViewController.swift */; };
+		91D72BA624BCADF200E7487D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91D72BA424BCADF200E7487D /* Main.storyboard */; };
+		91D72BA924BCADF200E7487D /* skeda.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 91D72BA724BCADF200E7487D /* skeda.xcdatamodeld */; };
+		91D72BAB24BCADF400E7487D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91D72BAA24BCADF400E7487D /* Assets.xcassets */; };
+		91D72BAE24BCADF400E7487D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91D72BAC24BCADF400E7487D /* LaunchScreen.storyboard */; };
+		91D72BBC24BCB1E100E7487D /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D72BBB24BCB1E100E7487D /* CalendarViewController.swift */; };
+		91D72BC124BCBA2800E7487D /* CONSTS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D72BC024BCBA2800E7487D /* CONSTS.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		91D72B9924BCADF200E7487D /* skeda.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = skeda.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		91D72B9C24BCADF200E7487D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		91D72B9E24BCADF200E7487D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		91D72BA024BCADF200E7487D /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
+		91D72BA224BCADF200E7487D /* MasterListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterListViewController.swift; sourceTree = "<group>"; };
+		91D72BA524BCADF200E7487D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		91D72BA824BCADF200E7487D /* skeda.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = skeda.xcdatamodel; sourceTree = "<group>"; };
+		91D72BAA24BCADF400E7487D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		91D72BAD24BCADF400E7487D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		91D72BAF24BCADF400E7487D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		91D72BBB24BCB1E100E7487D /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		91D72BC024BCBA2800E7487D /* CONSTS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CONSTS.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		91D72B9624BCADF200E7487D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		91D72B9024BCADF200E7487D = {
+			isa = PBXGroup;
+			children = (
+				91D72B9B24BCADF200E7487D /* skeda */,
+				91D72B9A24BCADF200E7487D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		91D72B9A24BCADF200E7487D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				91D72B9924BCADF200E7487D /* skeda.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		91D72B9B24BCADF200E7487D /* skeda */ = {
+			isa = PBXGroup;
+			children = (
+				91D72BB524BCAE1400E7487D /* FrontEnd */,
+				91D72BB624BCAE1B00E7487D /* BackEnd */,
+				91D72B9C24BCADF200E7487D /* AppDelegate.swift */,
+				91D72B9E24BCADF200E7487D /* SceneDelegate.swift */,
+				91D72BAA24BCADF400E7487D /* Assets.xcassets */,
+				91D72BAF24BCADF400E7487D /* Info.plist */,
+				91D72BA724BCADF200E7487D /* skeda.xcdatamodeld */,
+			);
+			path = skeda;
+			sourceTree = "<group>";
+		};
+		91D72BB524BCAE1400E7487D /* FrontEnd */ = {
+			isa = PBXGroup;
+			children = (
+				91D72BB824BCAE3400E7487D /* Views */,
+				91D72BB724BCAE2B00E7487D /* Controllers */,
+			);
+			path = FrontEnd;
+			sourceTree = "<group>";
+		};
+		91D72BB624BCAE1B00E7487D /* BackEnd */ = {
+			isa = PBXGroup;
+			children = (
+				91D72BC024BCBA2800E7487D /* CONSTS.swift */,
+				91D72BBF24BCB22600E7487D /* Controllers */,
+				91D72BBD24BCB21400E7487D /* Models */,
+			);
+			path = BackEnd;
+			sourceTree = "<group>";
+		};
+		91D72BB724BCAE2B00E7487D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				91D72BA024BCADF200E7487D /* DashboardViewController.swift */,
+				91D72BA224BCADF200E7487D /* MasterListViewController.swift */,
+				91D72BBB24BCB1E100E7487D /* CalendarViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		91D72BB824BCAE3400E7487D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				91D72BA424BCADF200E7487D /* Main.storyboard */,
+				91D72BAC24BCADF400E7487D /* LaunchScreen.storyboard */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		91D72BBD24BCB21400E7487D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		91D72BBF24BCB22600E7487D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		91D72B9824BCADF200E7487D /* skeda */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 91D72BB224BCADF400E7487D /* Build configuration list for PBXNativeTarget "skeda" */;
+			buildPhases = (
+				91D72B9524BCADF200E7487D /* Sources */,
+				91D72B9624BCADF200E7487D /* Frameworks */,
+				91D72B9724BCADF200E7487D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = skeda;
+			productName = skeda;
+			productReference = 91D72B9924BCADF200E7487D /* skeda.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		91D72B9124BCADF200E7487D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1150;
+				LastUpgradeCheck = 1150;
+				ORGANIZATIONNAME = "Icosa Studios";
+				TargetAttributes = {
+					91D72B9824BCADF200E7487D = {
+						CreatedOnToolsVersion = 11.5;
+					};
+				};
+			};
+			buildConfigurationList = 91D72B9424BCADF200E7487D /* Build configuration list for PBXProject "skeda" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 91D72B9024BCADF200E7487D;
+			productRefGroup = 91D72B9A24BCADF200E7487D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				91D72B9824BCADF200E7487D /* skeda */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		91D72B9724BCADF200E7487D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				91D72BAE24BCADF400E7487D /* LaunchScreen.storyboard in Resources */,
+				91D72BAB24BCADF400E7487D /* Assets.xcassets in Resources */,
+				91D72BA624BCADF200E7487D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		91D72B9524BCADF200E7487D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				91D72BBC24BCB1E100E7487D /* CalendarViewController.swift in Sources */,
+				91D72BA324BCADF200E7487D /* MasterListViewController.swift in Sources */,
+				91D72BA124BCADF200E7487D /* DashboardViewController.swift in Sources */,
+				91D72BA924BCADF200E7487D /* skeda.xcdatamodeld in Sources */,
+				91D72B9D24BCADF200E7487D /* AppDelegate.swift in Sources */,
+				91D72B9F24BCADF200E7487D /* SceneDelegate.swift in Sources */,
+				91D72BC124BCBA2800E7487D /* CONSTS.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		91D72BA424BCADF200E7487D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				91D72BA524BCADF200E7487D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		91D72BAC24BCADF400E7487D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				91D72BAD24BCADF400E7487D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		91D72BB024BCADF400E7487D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		91D72BB124BCADF400E7487D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		91D72BB324BCADF400E7487D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CPULZH82P5;
+				INFOPLIST_FILE = skeda/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 0.9;
+				PRODUCT_BUNDLE_IDENTIFIER = com.icosastudios.skeda;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		91D72BB424BCADF400E7487D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CPULZH82P5;
+				INFOPLIST_FILE = skeda/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 0.9;
+				PRODUCT_BUNDLE_IDENTIFIER = com.icosastudios.skeda;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		91D72B9424BCADF200E7487D /* Build configuration list for PBXProject "skeda" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				91D72BB024BCADF400E7487D /* Debug */,
+				91D72BB124BCADF400E7487D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		91D72BB224BCADF400E7487D /* Build configuration list for PBXNativeTarget "skeda" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				91D72BB324BCADF400E7487D /* Debug */,
+				91D72BB424BCADF400E7487D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		91D72BA724BCADF200E7487D /* skeda.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				91D72BA824BCADF200E7487D /* skeda.xcdatamodel */,
+			);
+			currentVersion = 91D72BA824BCADF200E7487D /* skeda.xcdatamodel */;
+			path = skeda.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 91D72B9124BCADF200E7487D /* Project object */;
+}

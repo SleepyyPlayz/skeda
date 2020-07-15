@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Dashboard View Controller-->
+        <scene sceneID="hNz-n2-bh7">
+            <objects>
+                <viewController id="9pv-A4-QxB" customClass="DashboardViewController" customModule="skeda" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1RZ-F0-En4">
+                                <rect key="frame" x="20" y="44" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="04G-5q-zX3"/>
+                                    <constraint firstAttribute="width" constant="50" id="KXh-a0-4jR"/>
+                                </constraints>
+                                <state key="normal" image="SettingsButton"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yOL-Ct-AVb">
+                                <rect key="frame" x="344" y="44" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Yst-XP-kUe"/>
+                                    <constraint firstAttribute="width" constant="50" id="es6-Al-lQp"/>
+                                </constraints>
+                                <state key="normal" image="AddNewButton"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i5S-BS-NiH">
+                                <rect key="frame" x="90" y="44" width="100" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="0r7-5k-LV4"/>
+                                    <constraint firstAttribute="width" constant="100" id="tXR-SS-3jw"/>
+                                </constraints>
+                                <state key="normal" image="SortButton"/>
+                                <connections>
+                                    <action selector="sortButtonPressed:" destination="9pv-A4-QxB" eventType="touchUpInside" id="AKc-Ta-oJ8"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="1RZ-F0-En4" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="20" id="88L-go-v80"/>
+                            <constraint firstItem="i5S-BS-NiH" firstAttribute="leading" secondItem="1RZ-F0-En4" secondAttribute="trailing" constant="20" id="Mc8-gy-oRn"/>
+                            <constraint firstItem="1RZ-F0-En4" firstAttribute="top" secondItem="PQr-Ze-W5v" secondAttribute="top" id="SX0-Kz-QDA"/>
+                            <constraint firstItem="yOL-Ct-AVb" firstAttribute="top" secondItem="PQr-Ze-W5v" secondAttribute="top" id="anO-Fh-tXs"/>
+                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="yOL-Ct-AVb" secondAttribute="trailing" constant="20" id="bKy-qe-9SR"/>
+                            <constraint firstItem="i5S-BS-NiH" firstAttribute="top" secondItem="PQr-Ze-W5v" secondAttribute="top" id="wXk-bb-gma"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="HomeLogo" selectedImage="HomeLogoSelected" id="acW-dT-cKf"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="747.82608695652175" y="-518.30357142857144"/>
+        </scene>
+        <!--Master List View Controller-->
+        <scene sceneID="wg7-f3-ORb">
+            <objects>
+                <viewController id="8rJ-Kc-sve" customClass="MasterListViewController" customModule="skeda" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Categories View" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="zEq-FU-wV5">
+                                <rect key="frame" x="81" y="426.5" width="252" height="43"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loaded by SecondViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NDk-cv-Gan">
+                                <rect key="frame" x="99.5" y="477.5" width="215" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ruR-vA-yeu">
+                                <rect key="frame" x="20" y="44" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="LCm-D9-8iF"/>
+                                    <constraint firstAttribute="height" constant="50" id="adr-4l-88d"/>
+                                </constraints>
+                                <state key="normal" image="SettingsButton"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gaX-6M-0jo">
+                                <rect key="frame" x="90" y="44" width="100" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="0gO-jX-ifs"/>
+                                    <constraint firstAttribute="height" constant="50" id="oQQ-gW-ep0"/>
+                                </constraints>
+                                <state key="normal" image="SortButton"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6wM-66-vsP">
+                                <rect key="frame" x="344" y="44" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="OZX-jo-hLo"/>
+                                    <constraint firstAttribute="height" constant="50" id="uPp-cU-pcO"/>
+                                </constraints>
+                                <state key="normal" image="AddNewButton"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="gaX-6M-0jo" firstAttribute="leading" secondItem="ruR-vA-yeu" secondAttribute="trailing" constant="20" id="8rv-w6-Eit"/>
+                            <constraint firstItem="NDk-cv-Gan" firstAttribute="top" secondItem="zEq-FU-wV5" secondAttribute="bottom" constant="8" symbolic="YES" id="Day-4N-Vmt"/>
+                            <constraint firstItem="ruR-vA-yeu" firstAttribute="top" secondItem="O1u-W8-tvY" secondAttribute="top" id="FgX-GH-B6d"/>
+                            <constraint firstItem="NDk-cv-Gan" firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" id="JgO-Fn-dHn"/>
+                            <constraint firstItem="gaX-6M-0jo" firstAttribute="top" secondItem="O1u-W8-tvY" secondAttribute="top" id="Kxf-OP-0aY"/>
+                            <constraint firstItem="6wM-66-vsP" firstAttribute="top" secondItem="O1u-W8-tvY" secondAttribute="top" id="dST-Bd-GJp"/>
+                            <constraint firstItem="ruR-vA-yeu" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" constant="20" id="mBX-hz-yja"/>
+                            <constraint firstItem="O1u-W8-tvY" firstAttribute="trailing" secondItem="6wM-66-vsP" secondAttribute="trailing" constant="20" id="mLc-YR-RJ1"/>
+                            <constraint firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" id="qqM-NS-xev"/>
+                            <constraint firstAttribute="centerY" secondItem="zEq-FU-wV5" secondAttribute="centerY" id="qzY-Ky-pLD"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="ListButton" selectedImage="ListButtonSelected" id="cPa-gy-q4n"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="748" y="343"/>
+        </scene>
+        <!--Calendar View Controller-->
+        <scene sceneID="v1c-Jh-feZ">
+            <objects>
+                <viewController id="PsH-ot-RZa" customClass="CalendarViewController" customModule="skeda" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wFb-vd-8qc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="0TC-kh-BPt"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="CalendaButton" selectedImage="CalendarButtonSelected" id="x7A-oV-QxU"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Bk-Sg-eHg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="750"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="yl2-sM-qoP">
+            <objects>
+                <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
+                        <rect key="frame" x="0.0" y="975" width="768" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" name="BrandAzure"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
+                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
+                        <segue destination="PsH-ot-RZa" kind="relationship" relationship="viewControllers" id="xhJ-Di-pSh"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="0.0"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="AddNewButton" width="50" height="50"/>
+        <image name="CalendaButton" width="35" height="33"/>
+        <image name="CalendarButtonSelected" width="35" height="33"/>
+        <image name="HomeLogo" width="38" height="34"/>
+        <image name="HomeLogoSelected" width="38" height="34"/>
+        <image name="ListButton" width="34" height="28"/>
+        <image name="ListButtonSelected" width="34" height="28"/>
+        <image name="SettingsButton" width="50" height="50"/>
+        <image name="SortButton" width="100" height="50"/>
+        <namedColor name="BrandAzure">
+            <color red="0.11764705882352941" green="0.75294117647058822" blue="0.93725490196078431" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
