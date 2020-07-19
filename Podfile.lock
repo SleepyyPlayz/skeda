@@ -1,16 +1,20 @@
 PODS:
+  - CollectionViewWaterfallLayout (0.5.0)
   - NewPopMenu (2.1.2)
 
 DEPENDENCIES:
+  - CollectionViewWaterfallLayout
   - NewPopMenu
 
 SPEC REPOS:
   trunk:
+    - CollectionViewWaterfallLayout
     - NewPopMenu
 
 SPEC CHECKSUMS:
+  CollectionViewWaterfallLayout: 4399ba01be265fff4da1ed1d607130fe009780e4
   NewPopMenu: c6129e08e8192f6257ceb5f9a4357e1b59c6e2e7
 
-PODFILE CHECKSUM: 7c6a085e533e2c0bff1f2ab64e59e46be98d8bc2
+PODFILE CHECKSUM: eec4a6ab5c6174e68b6022e1ec429d27dd1f408e
 
 COCOAPODS: 1.9.3

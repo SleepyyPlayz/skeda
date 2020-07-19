@@ -6,5 +6,5 @@ target 'skeda' do
   use_frameworks!
 
   pod 'NewPopMenu'
-
+  pod 'CollectionViewWaterfallLayout'
 end
