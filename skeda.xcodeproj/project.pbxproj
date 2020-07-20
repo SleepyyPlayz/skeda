@@ -3,11 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		08ED5A8563AD937FB881C06B /* Pods_skeda.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDFAB3EFA5A80E48862A6A7E /* Pods_skeda.framework */; };
+		91C5982B24C610A0005E6A87 /* NewTagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C5982A24C610A0005E6A87 /* NewTagViewController.swift */; };
+		91C5982D24C612FB005E6A87 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C5982C24C612FB005E6A87 /* SettingsViewController.swift */; };
 		91D72B9D24BCADF200E7487D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D72B9C24BCADF200E7487D /* AppDelegate.swift */; };
 		91D72B9F24BCADF200E7487D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D72B9E24BCADF200E7487D /* SceneDelegate.swift */; };
 		91D72BA124BCADF200E7487D /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D72BA024BCADF200E7487D /* DashboardViewController.swift */; };
@@ -23,6 +25,8 @@
 /* Begin PBXFileReference section */
 		3625DAB69C897A5FF834D373 /* Pods-skeda.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-skeda.debug.xcconfig"; path = "Target Support Files/Pods-skeda/Pods-skeda.debug.xcconfig"; sourceTree = "<group>"; };
 		821DB5F27DD319C87DEBC813 /* Pods-skeda.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-skeda.release.xcconfig"; path = "Target Support Files/Pods-skeda/Pods-skeda.release.xcconfig"; sourceTree = "<group>"; };
+		91C5982A24C610A0005E6A87 /* NewTagViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTagViewController.swift; sourceTree = "<group>"; };
+		91C5982C24C612FB005E6A87 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		91D72B9924BCADF200E7487D /* skeda.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = skeda.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		91D72B9C24BCADF200E7487D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		91D72B9E24BCADF200E7487D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -56,7 +60,6 @@
 				3625DAB69C897A5FF834D373 /* Pods-skeda.debug.xcconfig */,
 				821DB5F27DD319C87DEBC813 /* Pods-skeda.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -114,9 +117,11 @@
 		91D72BB724BCAE2B00E7487D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				91D72BA024BCADF200E7487D /* DashboardViewController.swift */,
 				91D72BA224BCADF200E7487D /* MasterListViewController.swift */,
+				91D72BA024BCADF200E7487D /* DashboardViewController.swift */,
 				91D72BBB24BCB1E100E7487D /* CalendarViewController.swift */,
+				91C5982A24C610A0005E6A87 /* NewTagViewController.swift */,
+				91C5982C24C612FB005E6A87 /* SettingsViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -269,11 +274,13 @@
 			files = (
 				91D72BBC24BCB1E100E7487D /* CalendarViewController.swift in Sources */,
 				91D72BA324BCADF200E7487D /* MasterListViewController.swift in Sources */,
+				91C5982B24C610A0005E6A87 /* NewTagViewController.swift in Sources */,
 				91D72BA124BCADF200E7487D /* DashboardViewController.swift in Sources */,
 				91D72BA924BCADF200E7487D /* skeda.xcdatamodeld in Sources */,
 				91D72B9D24BCADF200E7487D /* AppDelegate.swift in Sources */,
 				91D72B9F24BCADF200E7487D /* SceneDelegate.swift in Sources */,
 				91D72BC124BCBA2800E7487D /* CONSTS.swift in Sources */,
+				91C5982D24C612FB005E6A87 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

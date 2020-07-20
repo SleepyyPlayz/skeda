@@ -8,14 +8,27 @@
 
 import UIKit
 import PopMenu
+import CoreData
 
 class MasterListViewController: UIViewController {
+    
+    @IBOutlet weak var tableView: UITableView!
+    
+    var tags = [Tag]()
+    
+    
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        tableView.dataSource = self
+        tableView.delegate = self
+        
     }
 
+    
+    //MARK: - Sort Button Functionality
     
     @IBAction func sortButtonPressedInMaster(_ sender: UIButton) {
         var sortMethodViewActions : [PopMenuDefaultAction] = []
@@ -58,5 +71,30 @@ class MasterListViewController: UIViewController {
                present(sortMethodViewController, animated: true, completion: nil)
     }
     
+    
 }
 
+extension MasterListViewController: UITableViewDataSource, UITableViewDelegate{
+    //DataSource methods:
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return tags.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        
+        //return cell
+    }
+    
+    //Delegate methods:
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        
+        
+        //segue to task list (+query by category)
+    }
+    
+    
+    
+}
