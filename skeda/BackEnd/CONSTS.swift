@@ -14,5 +14,24 @@ struct CONSTS{
         static let BrandLightBlue = "BrandLightBlue"
         static let PseudoWhite = "PseudoWhite"
         static let BrandLightOrange = "BrandLightOrange"
+        
+        static let BackgroundBlue = "BackgroundBlue"
+        static let BackgroundGreen = "BackgroundGreen"
+        static let BackgroundGrey = "BackgroundGrey"
+        static let BackgroundPurple = "BackgroundPurple"
+        static let BackgroundRed = "BackgroundRed"
+    }
+    struct TagTypes{
+        static let Default = "Default"
+        static let UserCreated = "UserCreated"
+    }
+    struct TaskTypes{
+        static let Point = "Point"
+        static let Line = "Line"
+        static let Routine = "Routine"
+    }
+    struct SubtaskTypes{
+        static let Point = "Point"
+        static let Line = "Line"
     }
 }
