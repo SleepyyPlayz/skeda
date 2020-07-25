@@ -10,6 +10,12 @@ import UIKit
 
 class NewTagViewController: UIViewController {
 
+    @IBOutlet var backgroundView: UIView!
+    @IBOutlet weak var topText: UILabel!
+    @IBOutlet weak var titleTextField: UITextField!
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -17,7 +23,7 @@ class NewTagViewController: UIViewController {
         
     }
     
-
+    
     
     
     

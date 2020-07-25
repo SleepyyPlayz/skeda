@@ -69,7 +69,7 @@
             <objects>
                 <viewController id="Ur5-gu-aSL" customClass="SettingsViewController" customModule="skeda" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2mo-zr-UVq">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="FjN-SU-Opo"/>
@@ -151,15 +151,57 @@
             <objects>
                 <viewController id="wFR-FM-vla" customClass="NewTagViewController" customModule="skeda" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sIW-iM-0gy">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Tag" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0yU-D5-ZvK">
+                                <rect key="frame" x="35" y="35" width="192" height="60"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="50"/>
+                                <color key="textColor" name="PseudoWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rDa-AH-hTM">
+                                <rect key="frame" x="344" y="40" width="50" height="50"/>
+                                <state key="normal" image="CloseButtonBlue"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iP6-st-g7D">
+                                <rect key="frame" x="20" y="120" width="40.5" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <color key="textColor" name="PseudoWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="4M8-lO-yLX">
+                                <rect key="frame" x="20" y="150" width="374" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="XwT-wc-j6p"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" name="BackgroundBlue"/>
+                        <constraints>
+                            <constraint firstItem="0yU-D5-ZvK" firstAttribute="top" secondItem="PFG-6I-7Ed" secondAttribute="top" constant="35" id="B2v-1y-vjs"/>
+                            <constraint firstItem="PFG-6I-7Ed" firstAttribute="trailing" secondItem="rDa-AH-hTM" secondAttribute="trailing" constant="20" id="JIW-iV-5UI"/>
+                            <constraint firstItem="iP6-st-g7D" firstAttribute="leading" secondItem="PFG-6I-7Ed" secondAttribute="leading" constant="20" id="KnX-pk-3ay"/>
+                            <constraint firstItem="PFG-6I-7Ed" firstAttribute="trailing" secondItem="4M8-lO-yLX" secondAttribute="trailing" constant="20" id="Pmc-sl-zEe"/>
+                            <constraint firstItem="4M8-lO-yLX" firstAttribute="top" secondItem="iP6-st-g7D" secondAttribute="bottom" constant="6" id="T0Y-1z-XpF"/>
+                            <constraint firstItem="rDa-AH-hTM" firstAttribute="top" secondItem="PFG-6I-7Ed" secondAttribute="top" constant="40" id="WOw-PR-nOh"/>
+                            <constraint firstItem="iP6-st-g7D" firstAttribute="top" secondItem="0yU-D5-ZvK" secondAttribute="bottom" constant="25" id="rWY-1J-Zc5"/>
+                            <constraint firstItem="4M8-lO-yLX" firstAttribute="leading" secondItem="PFG-6I-7Ed" secondAttribute="leading" constant="20" id="yNQ-XL-nUu"/>
+                            <constraint firstItem="0yU-D5-ZvK" firstAttribute="leading" secondItem="PFG-6I-7Ed" secondAttribute="leading" constant="35" id="zUr-90-oZs"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="PFG-6I-7Ed"/>
                     </view>
+                    <connections>
+                        <outlet property="backgroundView" destination="sIW-iM-0gy" id="qH4-qT-qAi"/>
+                        <outlet property="titleTextField" destination="4M8-lO-yLX" id="ISm-69-cjO"/>
+                        <outlet property="topText" destination="0yU-D5-ZvK" id="sgD-ze-z8b"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VLR-Qq-Qqg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="870" y="1055"/>
+            <point key="canvasLocation" x="869.56521739130437" y="1054.6875"/>
         </scene>
         <!--Calendar View Controller-->
         <scene sceneID="v1c-Jh-feZ">
@@ -205,14 +247,21 @@
         <image name="AddNewButton" width="50" height="50"/>
         <image name="CalendaButton" width="35" height="33"/>
         <image name="CalendarButtonSelected" width="35" height="33"/>
+        <image name="CloseButtonBlue" width="50" height="50"/>
         <image name="HomeLogo" width="38" height="34"/>
         <image name="HomeLogoSelected" width="38" height="34"/>
         <image name="ListButton" width="34" height="28"/>
         <image name="ListButtonSelected" width="34" height="28"/>
         <image name="SettingsButton" width="50" height="50"/>
         <image name="SortButton" width="100" height="50"/>
+        <namedColor name="BackgroundBlue">
+            <color red="0.11764705882352941" green="0.75294117647058822" blue="0.93725490196078431" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="BrandAzure">
             <color red="0.11764705882352941" green="0.75294117647058822" blue="0.93725490196078431" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="PseudoWhite">
+            <color red="0.98039215686274506" green="0.98431372549019602" blue="0.9882352941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

@@ -16,7 +16,7 @@
     <entity name="Tag" representedClassName="Tag" syncable="YES" codeGenerationType="class">
         <attribute name="isLightThemed" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
         <attribute name="priority" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
-        <attribute name="themeColorHex" attributeType="String" defaultValueString="1EC0EF"/>
+        <attribute name="themeColorName" attributeType="String" defaultValueString="1EC0EF"/>
         <attribute name="title" attributeType="String" defaultValueString=""/>
         <attribute name="type" attributeType="String" defaultValueString="Default"/>
         <relationship name="tasks" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Task" inverseName="parentTag" inverseEntity="Task"/>
@@ -30,7 +30,7 @@
         <attribute name="isLightThemed" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
         <attribute name="isRoutine" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
         <attribute name="notes" optional="YES" attributeType="String"/>
-        <attribute name="themeColorHex" attributeType="String" defaultValueString="1EC0EF"/>
+        <attribute name="themeColorName" attributeType="String" defaultValueString="1EC0EF"/>
         <attribute name="title" attributeType="String" defaultValueString=""/>
         <attribute name="type" attributeType="String" defaultValueString=""/>
         <relationship name="parentTag" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Tag" inverseName="tasks" inverseEntity="Tag"/>
