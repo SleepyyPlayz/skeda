@@ -23,7 +23,7 @@ class NewTagViewController: UIViewController {
         super.viewDidLoad()
         titleTextField.delegate = self
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard))
-        //tap.cancelsTouchesInView
+        tap.cancelsTouchesInView = false
         view.addGestureRecognizer(tap)
         
         
