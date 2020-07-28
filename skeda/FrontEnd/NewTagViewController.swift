@@ -14,35 +14,39 @@ class NewTagViewController: UIViewController {
     @IBOutlet weak var topText: UILabel!
     @IBOutlet weak var titleTextField: UITextField!
     
+    @IBAction func closeButtonPressed(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
+    }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        titleTextField.delegate = self
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard))
+        //tap.cancelsTouchesInView
+        view.addGestureRecognizer(tap)
+        
+        
+        resetFields()
         
         
     }
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func resetFields(){
+        
     }
-    */
+}
 
+extension NewTagViewController: UITextFieldDelegate{
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.endEditing(true)
+        return true
+    }
+    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
+        textField.endEditing(true)
+        return true
+    }
+    @objc func dismissKeyboard(){
+        view.endEditing(true)
+    }
 }
