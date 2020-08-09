@@ -213,6 +213,9 @@
                                             <segment title="4"/>
                                         </segments>
                                         <color key="selectedSegmentTintColor" name="PseudoWhite"/>
+                                        <connections>
+                                            <action selector="priorityBarChanged:" destination="wFR-FM-vla" eventType="valueChanged" id="SKH-d6-Lrd"/>
+                                        </connections>
                                     </segmentedControl>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PriorityBarRight" translatesAutoresizingMaskIntoConstraints="NO" id="BYz-lf-fgj">
                                         <rect key="frame" x="350" y="0.0" width="24" height="40"/>
@@ -458,6 +461,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bas-Zb-0ZY">
                                 <rect key="frame" x="107" y="768" width="200" height="50"/>
                                 <state key="normal" image="BigCheckButton"/>
+                                <connections>
+                                    <action selector="doneButtonPressed:" destination="wFR-FM-vla" eventType="touchUpInside" id="kXl-st-GNx"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" name="BackgroundBlue"/>
@@ -496,6 +502,7 @@
                         <outlet property="backgroundView" destination="sIW-iM-0gy" id="qH4-qT-qAi"/>
                         <outlet property="blueButton" destination="dw2-Ra-efH" id="Xhk-oB-Rb5"/>
                         <outlet property="blueLTButton" destination="iNC-5n-pw6" id="PV3-3h-08c"/>
+                        <outlet property="closeButton" destination="rDa-AH-hTM" id="jOS-dY-fOp"/>
                         <outlet property="deepBlueButton" destination="AQs-TJ-4Oe" id="sPf-Br-GQD"/>
                         <outlet property="deepBlueLTButton" destination="Wfx-XF-IkV" id="l3C-Oz-A0H"/>
                         <outlet property="greenButton" destination="jiE-kc-gYW" id="f7S-MQ-aZv"/>
@@ -504,14 +511,19 @@
                         <outlet property="greyLTButton" destination="uxF-x3-rbR" id="HH1-eN-p1t"/>
                         <outlet property="orangeButton" destination="nte-OD-47x" id="qVN-af-4Tg"/>
                         <outlet property="orangeLTButton" destination="Fqe-Gv-Os5" id="VjG-xo-wqB"/>
+                        <outlet property="priorityBar" destination="ecf-pD-iPt" id="beh-MK-L6F"/>
+                        <outlet property="priorityLabel" destination="ID4-4f-VQf" id="vAb-Xb-gCM"/>
                         <outlet property="purpleButton" destination="NPz-UX-S4k" id="uoU-rg-1gz"/>
                         <outlet property="purpleLTButton" destination="K6u-ZC-SgF" id="0Se-MD-aEO"/>
                         <outlet property="redButton" destination="XdI-l6-a2J" id="A2O-k1-ZmV"/>
                         <outlet property="redLTButton" destination="DNH-s4-85H" id="JL7-1A-C1r"/>
+                        <outlet property="themeLabel" destination="ExS-Y9-UZk" id="pPH-M3-eeJ"/>
+                        <outlet property="titleLabel" destination="iP6-st-g7D" id="6g3-Pf-EAu"/>
                         <outlet property="titleTextField" destination="4M8-lO-yLX" id="ISm-69-cjO"/>
                         <outlet property="topText" destination="0yU-D5-ZvK" id="sgD-ze-z8b"/>
                         <outlet property="turquoiseButton" destination="Bqg-0V-kME" id="OVi-Wj-7mn"/>
                         <outlet property="turquoiseLTButton" destination="ZIH-SO-CF0" id="Zow-hv-Vhq"/>
+                        <outlet property="whiteBackground" destination="I7A-Km-UDu" id="xAE-Hv-4lP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VLR-Qq-Qqg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

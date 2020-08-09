@@ -17,9 +17,23 @@ struct CONSTS{
         
         static let BackgroundBlue = "BackgroundBlue"
         static let BackgroundGreen = "BackgroundGreen"
+        static let BackgroundTurquoise = "BackgroundTurquoise"
         static let BackgroundGrey = "BackgroundGrey"
+        static let BackgroundDeepBlue = "BackgroundDeepBlue"
         static let BackgroundPurple = "BackgroundPurple"
+        static let BackgroundOrange = "BackgroundOrange"
         static let BackgroundRed = "BackgroundRed"
+    }
+    struct CloseButtons{
+        static let Blue = "CloseButtonBlue"
+        static let Green = "CloseButtonGreen"
+        static let Turquoise = "CloseButtonTurquoise"
+        static let Grey = "CloseButtonGrey"
+        static let DeepBlue = "CloseButtonDeepBlue"
+        static let Purple = "CloseButtonPurple"
+        static let Orange = "CloseButtonOrange"
+        static let Red = "CloseButtonRed"
+        
     }
     struct TagTypes{
         static let Default = "Default"
