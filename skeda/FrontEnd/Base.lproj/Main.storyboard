@@ -242,7 +242,11 @@
                                             <constraint firstAttribute="height" constant="40" id="7Ed-OD-1b3"/>
                                             <constraint firstAttribute="width" constant="40" id="zxh-IT-XGj"/>
                                         </constraints>
-                                        <state key="normal" image="ThemeButtonBlueSLTD"/>
+                                        <state key="normal" image="ThemeButtonBlue"/>
+                                        <state key="selected" image="ThemeButtonBlueSLTD"/>
+                                        <connections>
+                                            <action selector="blueButtonSelected:" destination="wFR-FM-vla" eventType="touchUpInside" id="ldu-yU-mUn"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jiE-kc-gYW">
                                         <rect key="frame" x="49" y="0.0" width="40" height="40"/>
@@ -251,6 +255,10 @@
                                             <constraint firstAttribute="width" constant="40" id="eFm-pe-GX0"/>
                                         </constraints>
                                         <state key="normal" image="ThemeButtonGreen"/>
+                                        <state key="selected" image="ThemeButtonGreenSLTD"/>
+                                        <connections>
+                                            <action selector="greenButtonSelected:" destination="wFR-FM-vla" eventType="touchUpInside" id="WKk-KD-hPT"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bqg-0V-kME">
                                         <rect key="frame" x="98" y="0.0" width="40" height="40"/>
@@ -259,6 +267,10 @@
                                             <constraint firstAttribute="height" constant="40" id="sGd-bl-lIj"/>
                                         </constraints>
                                         <state key="normal" image="ThemeButtonTurquoise"/>
+                                        <state key="selected" image="ThemeButtonTurquoiseSLTD"/>
+                                        <connections>
+                                            <action selector="turquoiseButtonSelected:" destination="wFR-FM-vla" eventType="touchUpInside" id="BnE-hX-oFM"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OuA-3E-3QH">
                                         <rect key="frame" x="147" y="0.0" width="40" height="40"/>
@@ -267,6 +279,10 @@
                                             <constraint firstAttribute="width" constant="40" id="uNL-c9-TPN"/>
                                         </constraints>
                                         <state key="normal" image="ThemeButtonGrey"/>
+                                        <state key="selected" image="ThemeButtonGreySLTD"/>
+                                        <connections>
+                                            <action selector="greyButtonSelected:" destination="wFR-FM-vla" eventType="touchUpInside" id="Knc-TG-EtN"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AQs-TJ-4Oe">
                                         <rect key="frame" x="196" y="0.0" width="40" height="40"/>
@@ -275,6 +291,10 @@
                                             <constraint firstAttribute="width" constant="40" id="Lvk-FX-gt4"/>
                                         </constraints>
                                         <state key="normal" image="ThemeButtonDeepBlue"/>
+                                        <state key="selected" image="ThemeButtonDeepBlueSLTD"/>
+                                        <connections>
+                                            <action selector="deepBlueButtonSelected:" destination="wFR-FM-vla" eventType="touchUpInside" id="0E0-Cz-e5d"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NPz-UX-S4k">
                                         <rect key="frame" x="245" y="0.0" width="40" height="40"/>
@@ -283,6 +303,10 @@
                                             <constraint firstAttribute="height" constant="40" id="rzS-eD-ISr"/>
                                         </constraints>
                                         <state key="normal" image="ThemeButtonPurple"/>
+                                        <state key="selected" image="ThemeButtonPurpleSLTD"/>
+                                        <connections>
+                                            <action selector="purpleButtonSelected:" destination="wFR-FM-vla" eventType="touchUpInside" id="Twn-az-33R"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nte-OD-47x">
                                         <rect key="frame" x="294" y="0.0" width="40" height="40"/>
@@ -291,6 +315,10 @@
                                             <constraint firstAttribute="height" constant="40" id="zDn-aH-jFF"/>
                                         </constraints>
                                         <state key="normal" image="ThemeButtonOrange"/>
+                                        <state key="selected" image="ThemeButtonOrangeSLTD"/>
+                                        <connections>
+                                            <action selector="orangeButtonSelected:" destination="wFR-FM-vla" eventType="touchUpInside" id="kOH-e9-yA7"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XdI-l6-a2J">
                                         <rect key="frame" x="343" y="0.0" width="40" height="40"/>
@@ -299,6 +327,10 @@
                                             <constraint firstAttribute="width" constant="40" id="b5h-le-WrT"/>
                                         </constraints>
                                         <state key="normal" image="ThemeButtonRed"/>
+                                        <state key="selected" image="ThemeButtonRedSLTD"/>
+                                        <connections>
+                                            <action selector="redButtonSelected:" destination="wFR-FM-vla" eventType="touchUpInside" id="hdG-KN-mqa"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -322,6 +354,10 @@
                                             <constraint firstAttribute="height" constant="40" id="QJf-o7-4OU"/>
                                         </constraints>
                                         <state key="normal" image="ThemeButtonBlueLT"/>
+                                        <state key="selected" image="ThemeButtonBlueLT_SLTD"/>
+                                        <connections>
+                                            <action selector="blueLTButtonSelected:" destination="wFR-FM-vla" eventType="touchUpInside" id="q7O-Za-H5b"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VeD-K4-YS6">
                                         <rect key="frame" x="49" y="0.0" width="40" height="40"/>
@@ -330,6 +366,10 @@
                                             <constraint firstAttribute="width" constant="40" id="oLS-S1-nle"/>
                                         </constraints>
                                         <state key="normal" image="ThemeButtonGreenLT"/>
+                                        <state key="selected" image="ThemeButtonGreenLT_SLTD"/>
+                                        <connections>
+                                            <action selector="greenLTButtonSelected:" destination="wFR-FM-vla" eventType="touchUpInside" id="aLu-Ab-M7D"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZIH-SO-CF0">
                                         <rect key="frame" x="98" y="0.0" width="40" height="40"/>
@@ -338,6 +378,10 @@
                                             <constraint firstAttribute="height" constant="40" id="o0V-qd-d2p"/>
                                         </constraints>
                                         <state key="normal" image="ThemeButtonTurquoiseLT"/>
+                                        <state key="selected" image="ThemeButtonTurquoiseLT_SLTD"/>
+                                        <connections>
+                                            <action selector="turquoiseLTButtonSelected:" destination="wFR-FM-vla" eventType="touchUpInside" id="wUa-Zm-x6o"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uxF-x3-rbR">
                                         <rect key="frame" x="147" y="0.0" width="40" height="40"/>
@@ -346,6 +390,10 @@
                                             <constraint firstAttribute="width" constant="40" id="etR-kB-l0V"/>
                                         </constraints>
                                         <state key="normal" image="ThemeButtonGreyLT"/>
+                                        <state key="selected" image="ThemeButtonGreyLT_SLTD"/>
+                                        <connections>
+                                            <action selector="greyLTButtonSelected:" destination="wFR-FM-vla" eventType="touchUpInside" id="Kah-Jw-17c"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wfx-XF-IkV">
                                         <rect key="frame" x="196" y="0.0" width="40" height="40"/>
@@ -354,6 +402,10 @@
                                             <constraint firstAttribute="width" constant="40" id="S9t-92-oED"/>
                                         </constraints>
                                         <state key="normal" image="ThemeButtonDeepBlueLT"/>
+                                        <state key="selected" image="ThemeButtonDeepBlueLT_SLTD"/>
+                                        <connections>
+                                            <action selector="deepBlueLTButtonSelected:" destination="wFR-FM-vla" eventType="touchUpInside" id="IIk-HD-OdX"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K6u-ZC-SgF">
                                         <rect key="frame" x="245" y="0.0" width="40" height="40"/>
@@ -362,6 +414,10 @@
                                             <constraint firstAttribute="height" constant="40" id="Xfx-BQ-xuq"/>
                                         </constraints>
                                         <state key="normal" image="ThemeButtonPurpleLT"/>
+                                        <state key="selected" image="ThemeButtonPurpleLT_SLTD"/>
+                                        <connections>
+                                            <action selector="PurpleLTButtonSelected:" destination="wFR-FM-vla" eventType="touchUpInside" id="2dA-MM-s3U"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fqe-Gv-Os5">
                                         <rect key="frame" x="294" y="0.0" width="40" height="40"/>
@@ -370,6 +426,10 @@
                                             <constraint firstAttribute="height" constant="40" id="vCa-GQ-RJh"/>
                                         </constraints>
                                         <state key="normal" image="ThemeButtonOrangeLT"/>
+                                        <state key="selected" image="ThemeButtonOrangeLT_SLTD"/>
+                                        <connections>
+                                            <action selector="orangeLTButtonSelected:" destination="wFR-FM-vla" eventType="touchUpInside" id="zvJ-a5-tT9"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DNH-s4-85H">
                                         <rect key="frame" x="343" y="0.0" width="40" height="40"/>
@@ -378,6 +438,10 @@
                                             <constraint firstAttribute="height" constant="40" id="KGp-dV-1lK"/>
                                         </constraints>
                                         <state key="normal" image="ThemeButtonRedLT"/>
+                                        <state key="selected" image="ThemeButtonRedLT_SLTD"/>
+                                        <connections>
+                                            <action selector="redLTButtonSelected:" destination="wFR-FM-vla" eventType="touchUpInside" id="Rg8-Vq-ecT"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -430,8 +494,24 @@
                     </view>
                     <connections>
                         <outlet property="backgroundView" destination="sIW-iM-0gy" id="qH4-qT-qAi"/>
+                        <outlet property="blueButton" destination="dw2-Ra-efH" id="Xhk-oB-Rb5"/>
+                        <outlet property="blueLTButton" destination="iNC-5n-pw6" id="PV3-3h-08c"/>
+                        <outlet property="deepBlueButton" destination="AQs-TJ-4Oe" id="sPf-Br-GQD"/>
+                        <outlet property="deepBlueLTButton" destination="Wfx-XF-IkV" id="l3C-Oz-A0H"/>
+                        <outlet property="greenButton" destination="jiE-kc-gYW" id="f7S-MQ-aZv"/>
+                        <outlet property="greenLTButton" destination="VeD-K4-YS6" id="pxa-2W-sdI"/>
+                        <outlet property="greyButton" destination="OuA-3E-3QH" id="AUX-gk-prh"/>
+                        <outlet property="greyLTButton" destination="uxF-x3-rbR" id="HH1-eN-p1t"/>
+                        <outlet property="orangeButton" destination="nte-OD-47x" id="qVN-af-4Tg"/>
+                        <outlet property="orangeLTButton" destination="Fqe-Gv-Os5" id="VjG-xo-wqB"/>
+                        <outlet property="purpleButton" destination="NPz-UX-S4k" id="uoU-rg-1gz"/>
+                        <outlet property="purpleLTButton" destination="K6u-ZC-SgF" id="0Se-MD-aEO"/>
+                        <outlet property="redButton" destination="XdI-l6-a2J" id="A2O-k1-ZmV"/>
+                        <outlet property="redLTButton" destination="DNH-s4-85H" id="JL7-1A-C1r"/>
                         <outlet property="titleTextField" destination="4M8-lO-yLX" id="ISm-69-cjO"/>
                         <outlet property="topText" destination="0yU-D5-ZvK" id="sgD-ze-z8b"/>
+                        <outlet property="turquoiseButton" destination="Bqg-0V-kME" id="OVi-Wj-7mn"/>
+                        <outlet property="turquoiseLTButton" destination="ZIH-SO-CF0" id="Zow-hv-Vhq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VLR-Qq-Qqg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -492,22 +572,38 @@
         <image name="PriorityBarRight" width="22" height="22"/>
         <image name="SettingsButton" width="50" height="50"/>
         <image name="SortButton" width="100" height="50"/>
+        <image name="ThemeButtonBlue" width="30" height="30"/>
         <image name="ThemeButtonBlueLT" width="32" height="32"/>
+        <image name="ThemeButtonBlueLT_SLTD" width="40" height="40"/>
         <image name="ThemeButtonBlueSLTD" width="40" height="40"/>
         <image name="ThemeButtonDeepBlue" width="30" height="30"/>
         <image name="ThemeButtonDeepBlueLT" width="32" height="32"/>
+        <image name="ThemeButtonDeepBlueLT_SLTD" width="40" height="40"/>
+        <image name="ThemeButtonDeepBlueSLTD" width="40" height="40"/>
         <image name="ThemeButtonGreen" width="30" height="30"/>
         <image name="ThemeButtonGreenLT" width="32" height="32"/>
+        <image name="ThemeButtonGreenLT_SLTD" width="40" height="40"/>
+        <image name="ThemeButtonGreenSLTD" width="40" height="40"/>
         <image name="ThemeButtonGrey" width="30" height="30"/>
         <image name="ThemeButtonGreyLT" width="32" height="32"/>
+        <image name="ThemeButtonGreyLT_SLTD" width="40" height="40"/>
+        <image name="ThemeButtonGreySLTD" width="40" height="40"/>
         <image name="ThemeButtonOrange" width="30" height="30"/>
         <image name="ThemeButtonOrangeLT" width="32" height="32"/>
+        <image name="ThemeButtonOrangeLT_SLTD" width="40" height="40"/>
+        <image name="ThemeButtonOrangeSLTD" width="40" height="40"/>
         <image name="ThemeButtonPurple" width="30" height="30"/>
         <image name="ThemeButtonPurpleLT" width="32" height="32"/>
+        <image name="ThemeButtonPurpleLT_SLTD" width="40" height="40"/>
+        <image name="ThemeButtonPurpleSLTD" width="40" height="40"/>
         <image name="ThemeButtonRed" width="30" height="30"/>
         <image name="ThemeButtonRedLT" width="32" height="32"/>
+        <image name="ThemeButtonRedLT_SLTD" width="40" height="40"/>
+        <image name="ThemeButtonRedSLTD" width="40" height="40"/>
         <image name="ThemeButtonTurquoise" width="30" height="30"/>
         <image name="ThemeButtonTurquoiseLT" width="32" height="32"/>
+        <image name="ThemeButtonTurquoiseLT_SLTD" width="40" height="40"/>
+        <image name="ThemeButtonTurquoiseSLTD" width="40" height="40"/>
         <image name="WhiteBackground" width="394" height="876"/>
         <namedColor name="BackgroundBlue">
             <color red="0.11764705882352941" green="0.75294117647058822" blue="0.93725490196078431" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
