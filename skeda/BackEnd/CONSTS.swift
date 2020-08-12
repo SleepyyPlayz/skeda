@@ -33,12 +33,24 @@ struct CONSTS{
         static let Purple = "CloseButtonPurple"
         static let Orange = "CloseButtonOrange"
         static let Red = "CloseButtonRed"
+    }
+    struct ArrowIcons{
+        static let White = "WhiteArrow"
         
+        static let Blue = "BlueArrow"
+        static let Green = "GreenArrow"
+        static let Turquoise = "TurquoiseArrow"
+        static let Grey = "GreyArrow"
+        static let DeepBlue = "DeepBlueArrow"
+        static let Purple = "PurpleArrow"
+        static let Orange = "OrangeArrow"
+        static let Red = "RedArrow"
     }
     struct TagTypes{
         static let Default = "Default"
         static let UserCreated = "UserCreated"
     }
+    
     struct TaskTypes{
         static let Point = "Point"
         static let Line = "Line"

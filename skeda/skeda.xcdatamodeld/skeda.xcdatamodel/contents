@@ -15,7 +15,7 @@
     </entity>
     <entity name="Tag" representedClassName="Tag" syncable="YES" codeGenerationType="class">
         <attribute name="isLightThemed" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
-        <attribute name="priority" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="priority" attributeType="Integer 32" defaultValueString="2" usesScalarValueType="YES"/>
         <attribute name="themeColorName" attributeType="String" defaultValueString="1EC0EF"/>
         <attribute name="title" attributeType="String" defaultValueString=""/>
         <attribute name="type" attributeType="String" defaultValueString="Default"/>
@@ -38,9 +38,9 @@
         <relationship name="subtasks" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Subtask" inverseName="parentTask" inverseEntity="Subtask"/>
     </entity>
     <elements>
+        <element name="Reminder" positionX="111.265625" positionY="-429.26171875" width="128" height="73"/>
+        <element name="Subtask" positionX="122.3671875" positionY="-236.4609375" width="128" height="148"/>
         <element name="Tag" positionX="-253.45703125" positionY="-297.2265625" width="128" height="133"/>
         <element name="Task" positionX="-78.64453125" positionY="-423.6796875" width="128" height="253"/>
-        <element name="Subtask" positionX="122.3671875" positionY="-236.4609375" width="128" height="148"/>
-        <element name="Reminder" positionX="111.265625" positionY="-429.26171875" width="128" height="73"/>
     </elements>
 </model>

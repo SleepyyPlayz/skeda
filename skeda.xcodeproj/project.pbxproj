@@ -22,6 +22,7 @@
 		91D72BAE24BCADF400E7487D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91D72BAC24BCADF400E7487D /* LaunchScreen.storyboard */; };
 		91D72BBC24BCB1E100E7487D /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D72BBB24BCB1E100E7487D /* CalendarViewController.swift */; };
 		91D72BC124BCBA2800E7487D /* CONSTS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D72BC024BCBA2800E7487D /* CONSTS.swift */; };
+		91EB561924E1385D000AE310 /* ItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91EB561824E1385D000AE310 /* ItemViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		91D72BAF24BCADF400E7487D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		91D72BBB24BCB1E100E7487D /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		91D72BC024BCBA2800E7487D /* CONSTS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CONSTS.swift; sourceTree = "<group>"; };
+		91EB561824E1385D000AE310 /* ItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewController.swift; sourceTree = "<group>"; };
 		DDFAB3EFA5A80E48862A6A7E /* Pods_skeda.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_skeda.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -135,6 +137,7 @@
 				91D72BBB24BCB1E100E7487D /* CalendarViewController.swift */,
 				91C5982A24C610A0005E6A87 /* NewTagViewController.swift */,
 				91C5982C24C612FB005E6A87 /* SettingsViewController.swift */,
+				91EB561824E1385D000AE310 /* ItemViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -287,6 +290,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91EB561924E1385D000AE310 /* ItemViewController.swift in Sources */,
 				91D72BBC24BCB1E100E7487D /* CalendarViewController.swift in Sources */,
 				91D72BA324BCADF200E7487D /* MasterListViewController.swift in Sources */,
 				91C5982B24C610A0005E6A87 /* NewTagViewController.swift in Sources */,

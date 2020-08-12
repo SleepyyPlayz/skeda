@@ -69,7 +69,7 @@ class NewTagViewController: UIViewController {
     func initializeFields(){
         blueButtonSelected(blueButton)
         titleTextField.text = ""
-        priorityBar.selectedSegmentIndex = 0
+        priorityBar.selectedSegmentIndex = 2
     }
     
     //Priority Bar select value

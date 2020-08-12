@@ -10,9 +10,18 @@ import UIKit
 
 class TagTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var backgroundBar: UIView!
+    
+    @IBOutlet weak var whiteBackgroundBar: UIImageView!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var arrow: UIImageView!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
+        backgroundBar.layer.cornerRadius = (backgroundBar.frame.size.height / 10)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
