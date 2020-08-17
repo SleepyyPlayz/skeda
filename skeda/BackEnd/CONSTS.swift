@@ -55,6 +55,7 @@ struct CONSTS{
         static let Point = "Point"
         static let Line = "Line"
         static let Routine = "Routine"
+        static let RoutineLine = "RoutineLine"
     }
     struct SubtaskTypes{
         static let Point = "Point"

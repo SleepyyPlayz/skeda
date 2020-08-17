@@ -7,6 +7,11 @@
 //
 
 import UIKit
+import CoreData
+
+protocol canLoadTags {
+    func loadTags()
+}
 
 class NewTagViewController: UIViewController {
     //BUTTONS
@@ -34,10 +39,13 @@ class NewTagViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var priorityLabel: UILabel!
     @IBOutlet weak var themeLabel: UILabel!
+    @IBOutlet weak var warningLabel: UILabel!
     
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var priorityBar: UISegmentedControl!
     
+    
+    var tags = [Tag]()
     
     
     @IBAction func closeButtonPressed(_ sender: UIButton) {
@@ -45,10 +53,14 @@ class NewTagViewController: UIViewController {
     }
     
     //Data to send to the database
-    var tagTitle: String?
-    var tagPriority: Int? = 0
+    //var tagTitle: String?
+    var tagPriority: Int? = 2
     var tagThemeColorName: String?
     var tagIsLightThemed: Bool?
+    
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    
+    var delegate: canLoadTags?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,13 +74,14 @@ class NewTagViewController: UIViewController {
         
         
         initializeFields()
-        
+        loadTags()
         
     }
     
     func initializeFields(){
         blueButtonSelected(blueButton)
         titleTextField.text = ""
+        warningLabel.isHidden = true
         priorityBar.selectedSegmentIndex = 2
     }
     
@@ -78,9 +91,46 @@ class NewTagViewController: UIViewController {
     }
     
     @IBAction func doneButtonPressed(_ sender: UIButton) {
+        if(titleTextField.text == ""){
+            warningLabel.isHidden = false
+        }else{
+            warningLabel.isHidden = true
+            let newTag = Tag(context: context)
+            newTag.type = CONSTS.TagTypes.UserCreated
+            newTag.title = titleTextField.text
+            newTag.priority = Int32(tagPriority!)
+            newTag.themeColorName = tagThemeColorName
+            newTag.isLightThemed = tagIsLightThemed ?? false
+            
+            tags.append(newTag)
+            saveTags()
+            self.dismiss(animated: true) {
+                self.delegate?.loadTags()
+            }
+            
+        }
         //save data
     }
     
+    
+    //load tags from database into array
+    func loadTags() {
+        let request : NSFetchRequest<Tag> = Tag.fetchRequest()
+
+        do{
+            tags = try context.fetch(request)
+        } catch {
+            print("Error loading categories \(error)")
+        }
+    }
+    //save data to database
+    func saveTags() {
+        do {
+            try context.save()
+        } catch {
+            print("Error saving tags \(error)")
+        }
+    }
 
 }
 

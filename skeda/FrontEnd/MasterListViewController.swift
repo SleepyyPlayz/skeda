@@ -10,7 +10,7 @@ import UIKit
 import PopMenu
 import CoreData
 
-class MasterListViewController: UIViewController {
+class MasterListViewController: UIViewController, canLoadTags {
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -18,18 +18,23 @@ class MasterListViewController: UIViewController {
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
-    
-    
-    
+    var newTagView = NewTagViewController()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
+        tableView.register(UINib(nibName: "TagTableViewCell", bundle: nil), forCellReuseIdentifier: "TagCell")
+        newTagView.delegate = self
         
         loadTags()
         
     }
+    
+    /*override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear()
+        
+    }*/
     
     //load tags from database into array
     func loadTags() {
@@ -95,6 +100,7 @@ class MasterListViewController: UIViewController {
 extension MasterListViewController: UITableViewDataSource, UITableViewDelegate{
     //DataSource methods:
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        //print(tags.count + 1)
         return (tags.count + 1)
     }
     
@@ -104,7 +110,7 @@ extension MasterListViewController: UITableViewDataSource, UITableViewDelegate{
         if(indexPath.row == 0){
             cell.backgroundBar?.backgroundColor = UIColor(named: CONSTS.Colors.BackgroundBlue)
             cell.whiteBackgroundBar?.isHidden = true
-            cell.titleLabel?.text = "All Events"
+            cell.titleLabel?.text = "All Tasks"
             cell.titleLabel?.textColor = UIColor(named: CONSTS.Colors.PseudoWhite)
             cell.arrow?.image = UIImage(named: CONSTS.ArrowIcons.White)
         }else{

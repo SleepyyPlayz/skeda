@@ -18,9 +18,9 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L2g-6m-R7T">
-                        <rect key="frame" x="10" y="8" width="365" height="60"/>
+                        <rect key="frame" x="10" y="4" width="365" height="60"/>
                         <subviews>
-                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TagBackground" translatesAutoresizingMaskIntoConstraints="NO" id="B9u-yC-uE5">
+                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TagBackground" translatesAutoresizingMaskIntoConstraints="NO" id="B9u-yC-uE5">
                                 <rect key="frame" x="5" y="5" width="355" height="50"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zdb-iB-Ar0">
@@ -53,8 +53,8 @@
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="L2g-6m-R7T" secondAttribute="trailing" constant="10" id="MGS-Wa-LjI"/>
-                    <constraint firstItem="L2g-6m-R7T" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="ZhX-VU-LfH"/>
-                    <constraint firstAttribute="bottom" secondItem="L2g-6m-R7T" secondAttribute="bottom" id="kKf-1N-Qnj"/>
+                    <constraint firstItem="L2g-6m-R7T" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="ZhX-VU-LfH"/>
+                    <constraint firstAttribute="bottom" secondItem="L2g-6m-R7T" secondAttribute="bottom" constant="4" id="kKf-1N-Qnj"/>
                     <constraint firstItem="L2g-6m-R7T" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="qyu-0s-5fc"/>
                 </constraints>
             </tableViewCellContentView>
