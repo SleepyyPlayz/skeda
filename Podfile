@@ -7,4 +7,5 @@ target 'skeda' do
 
   pod 'NewPopMenu'
   pod 'CollectionViewWaterfallLayout'
+  pod 'CFAlertViewController'
 end

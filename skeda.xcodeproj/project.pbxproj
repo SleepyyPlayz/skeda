@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		08ED5A8563AD937FB881C06B /* Pods_skeda.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDFAB3EFA5A80E48862A6A7E /* Pods_skeda.framework */; };
+		9135713324F2C46800E0CF0B /* NewTaskTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9135713224F2C46800E0CF0B /* NewTaskTypeViewController.swift */; };
 		91C5982B24C610A0005E6A87 /* NewTagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C5982A24C610A0005E6A87 /* NewTagViewController.swift */; };
 		91C5982D24C612FB005E6A87 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C5982C24C612FB005E6A87 /* SettingsViewController.swift */; };
 		91C5983224C82840005E6A87 /* TagTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C5983024C82840005E6A87 /* TagTableViewCell.swift */; };
@@ -28,6 +29,7 @@
 /* Begin PBXFileReference section */
 		3625DAB69C897A5FF834D373 /* Pods-skeda.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-skeda.debug.xcconfig"; path = "Target Support Files/Pods-skeda/Pods-skeda.debug.xcconfig"; sourceTree = "<group>"; };
 		821DB5F27DD319C87DEBC813 /* Pods-skeda.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-skeda.release.xcconfig"; path = "Target Support Files/Pods-skeda/Pods-skeda.release.xcconfig"; sourceTree = "<group>"; };
+		9135713224F2C46800E0CF0B /* NewTaskTypeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTaskTypeViewController.swift; sourceTree = "<group>"; };
 		91C5982A24C610A0005E6A87 /* NewTagViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTagViewController.swift; sourceTree = "<group>"; };
 		91C5982C24C612FB005E6A87 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		91C5983024C82840005E6A87 /* TagTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagTableViewCell.swift; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 		91D72BB724BCAE2B00E7487D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				9135713224F2C46800E0CF0B /* NewTaskTypeViewController.swift */,
 				91D72BA224BCADF200E7487D /* MasterListViewController.swift */,
 				91D72BA024BCADF200E7487D /* DashboardViewController.swift */,
 				91D72BBB24BCB1E100E7487D /* CalendarViewController.swift */,
@@ -298,6 +301,7 @@
 				91D72BA924BCADF200E7487D /* skeda.xcdatamodeld in Sources */,
 				91D72B9D24BCADF200E7487D /* AppDelegate.swift in Sources */,
 				91C5983224C82840005E6A87 /* TagTableViewCell.swift in Sources */,
+				9135713324F2C46800E0CF0B /* NewTaskTypeViewController.swift in Sources */,
 				91D72B9F24BCADF200E7487D /* SceneDelegate.swift in Sources */,
 				91D72BC124BCBA2800E7487D /* CONSTS.swift in Sources */,
 				91C5982D24C612FB005E6A87 /* SettingsViewController.swift in Sources */,
