@@ -10,7 +10,7 @@ import UIKit
 import PopMenu
 import CoreData
 
-class MasterListViewController: UIViewController, canLoadTags {
+class MasterListViewController: UIViewController, canLoadTags{
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -18,17 +18,21 @@ class MasterListViewController: UIViewController, canLoadTags {
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
-    var newTagView = NewTagViewController()
+    //var newTagView = NewTagViewController()  OLD CODE
 
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
         tableView.register(UINib(nibName: "TagTableViewCell", bundle: nil), forCellReuseIdentifier: "TagCell")
-        newTagView.delegate = self
+        //newTagView.delegate = self    OLD CODE
         
         loadTags()
         
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        loadTags()
     }
     
     /*override func viewWillAppear(_ animated: Bool) {
@@ -49,7 +53,18 @@ class MasterListViewController: UIViewController, canLoadTags {
 
     }
     
+    //MARK: - New Tag Button Pressed (Interactions with NewTagViewController)
     
+    @IBAction func newTagButtonPressed(_ sender: UIButton) {
+        performSegue(withIdentifier: "TagListToNewTag", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "TagListToNewTag"){
+            let destinationVC = segue.destination as! NewTagViewController
+            destinationVC.delegate = self
+        }
+    }
     
     //MARK: - Sort Button Functionality
     
@@ -100,50 +115,41 @@ class MasterListViewController: UIViewController, canLoadTags {
 extension MasterListViewController: UITableViewDataSource, UITableViewDelegate{
     //DataSource methods:
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        //print(tags.count + 1)
-        return (tags.count + 1)
+        return tags.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "TagCell", for: indexPath) as! TagTableViewCell
-        if(indexPath.row == 0){
-            cell.backgroundBar?.backgroundColor = UIColor(named: CONSTS.Colors.BackgroundBlue)
-            cell.whiteBackgroundBar?.isHidden = true
-            cell.titleLabel?.text = "All Tasks"
+        let index = indexPath.row
+        cell.backgroundBar?.backgroundColor = UIColor(named: tags[index].themeColorName ?? CONSTS.Colors.BackgroundBlue)
+        cell.whiteBackgroundBar?.isHidden = !(tags[index].isLightThemed)
+        cell.titleLabel?.text = tags[index].title
+        if(tags[index].isLightThemed){
+            cell.titleLabel?.textColor = UIColor(named: tags[index].themeColorName ?? CONSTS.Colors.BackgroundBlue)
+            switch tags[index].themeColorName {
+            case CONSTS.Colors.BackgroundBlue:
+                cell.arrow?.image = UIImage(named: CONSTS.ArrowIcons.Blue)
+            case CONSTS.Colors.BackgroundGreen:
+                cell.arrow?.image = UIImage(named: CONSTS.ArrowIcons.Green)
+            case CONSTS.Colors.BackgroundTurquoise:
+                cell.arrow?.image = UIImage(named: CONSTS.ArrowIcons.Turquoise)
+            case CONSTS.Colors.BackgroundGrey:
+                cell.arrow?.image = UIImage(named: CONSTS.ArrowIcons.Grey)
+            case CONSTS.Colors.BackgroundDeepBlue:
+                cell.arrow?.image = UIImage(named: CONSTS.ArrowIcons.DeepBlue)
+            case CONSTS.Colors.BackgroundPurple:
+                cell.arrow?.image = UIImage(named: CONSTS.ArrowIcons.Purple)
+            case CONSTS.Colors.BackgroundOrange:
+                cell.arrow?.image = UIImage(named: CONSTS.ArrowIcons.Orange)
+            case CONSTS.Colors.BackgroundRed:
+                cell.arrow?.image = UIImage(named: CONSTS.ArrowIcons.Red)
+            default:
+                cell.arrow?.image = UIImage(named: CONSTS.ArrowIcons.Blue)
+            }
+        }else{
             cell.titleLabel?.textColor = UIColor(named: CONSTS.Colors.PseudoWhite)
             cell.arrow?.image = UIImage(named: CONSTS.ArrowIcons.White)
-        }else{
-            let index = indexPath.row - 1
-            cell.backgroundBar?.backgroundColor = UIColor(named: tags[index].themeColorName ?? CONSTS.Colors.BackgroundBlue)
-            cell.whiteBackgroundBar?.isHidden = !(tags[index].isLightThemed)
-            cell.titleLabel?.text = tags[index].title
-            if(tags[index].isLightThemed){
-                cell.titleLabel?.textColor = UIColor(named: tags[index].themeColorName ?? CONSTS.Colors.BackgroundBlue)
-                switch tags[index].themeColorName {
-                case CONSTS.Colors.BackgroundBlue:
-                    cell.arrow?.image = UIImage(named: CONSTS.ArrowIcons.Blue)
-                case CONSTS.Colors.BackgroundGreen:
-                    cell.arrow?.image = UIImage(named: CONSTS.ArrowIcons.Green)
-                case CONSTS.Colors.BackgroundTurquoise:
-                    cell.arrow?.image = UIImage(named: CONSTS.ArrowIcons.Turquoise)
-                case CONSTS.Colors.BackgroundGrey:
-                    cell.arrow?.image = UIImage(named: CONSTS.ArrowIcons.Grey)
-                case CONSTS.Colors.BackgroundDeepBlue:
-                    cell.arrow?.image = UIImage(named: CONSTS.ArrowIcons.DeepBlue)
-                case CONSTS.Colors.BackgroundPurple:
-                    cell.arrow?.image = UIImage(named: CONSTS.ArrowIcons.Purple)
-                case CONSTS.Colors.BackgroundOrange:
-                    cell.arrow?.image = UIImage(named: CONSTS.ArrowIcons.Orange)
-                case CONSTS.Colors.BackgroundRed:
-                    cell.arrow?.image = UIImage(named: CONSTS.ArrowIcons.Red)
-                default:
-                    cell.arrow?.image = UIImage(named: CONSTS.ArrowIcons.Blue)
-                }
-            }else{
-                cell.titleLabel?.textColor = UIColor(named: CONSTS.Colors.PseudoWhite)
-                cell.arrow?.image = UIImage(named: CONSTS.ArrowIcons.White)
-            }
         }
         return cell
     }
@@ -152,7 +158,7 @@ extension MasterListViewController: UITableViewDataSource, UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        
+        tableView.deselectRow(at: indexPath, animated: true)
         
         //segue to task list (+query by category)
     }

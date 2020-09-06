@@ -114,24 +114,24 @@
 		961AA841D216A3EE47942B599E2EC7DF /* PopMenuAppearance.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PopMenuAppearance.swift; path = PopMenu/Classes/PopMenuAppearance.swift; sourceTree = "<group>"; };
 		98EB344E1A7B7597E2DA6D81279DC55E /* CFAlertPopupTransition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CFAlertPopupTransition.swift; path = CFAlertViewController/Transitions/Popup/CFAlertPopupTransition.swift; sourceTree = "<group>"; };
 		9D66F084F6A18285DDD033245DDBAA9F /* CollectionViewWaterfallLayout.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = CollectionViewWaterfallLayout.modulemap; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9F914A7498FBE10312BF3E5DD5F654D8 /* CFAlertViewController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CFAlertViewController.framework; path = CFAlertViewController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9F914A7498FBE10312BF3E5DD5F654D8 /* CFAlertViewController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CFAlertViewController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9070FC69D76623B85FFF08E12E0B9E8 /* CFAlertViewController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CFAlertViewController-dummy.m"; sourceTree = "<group>"; };
 		ACF0D35AC691B21DD10237EFE98769E6 /* NewPopMenu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = NewPopMenu.release.xcconfig; sourceTree = "<group>"; };
 		B26C696B1007BDCA111D86B7FADE4E40 /* Pods-skeda-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-skeda-Info.plist"; sourceTree = "<group>"; };
 		B34FF27B5C0EE12A5C36AFA3D52DD79B /* CFAlertActionSheetInteractiveTransition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CFAlertActionSheetInteractiveTransition.swift; path = "CFAlertViewController/Transitions/Action Sheet/CFAlertActionSheetInteractiveTransition.swift"; sourceTree = "<group>"; };
 		B520259E426700DD8AD56B6DC4431DAF /* PopMenuViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PopMenuViewController.swift; path = "PopMenu/View Controller & Views/PopMenuViewController.swift"; sourceTree = "<group>"; };
-		BB9F085B83443B75B2DC41CF5AC93CEB /* PopMenu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = PopMenu.framework; path = NewPopMenu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB9F085B83443B75B2DC41CF5AC93CEB /* PopMenu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PopMenu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE69CD0C487A3EC15264528E1618E630 /* PopMenuManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PopMenuManager.swift; path = PopMenu/Classes/PopMenuManager.swift; sourceTree = "<group>"; };
 		C0830860AF918516CE1E467BE4D9B940 /* PopMenuAction.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PopMenuAction.swift; path = "PopMenu/View Controller & Views/PopMenuAction.swift"; sourceTree = "<group>"; };
 		C0DFBC89C070C89BCC65C6BCDA49D6F2 /* CFAlertViewController-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CFAlertViewController-umbrella.h"; sourceTree = "<group>"; };
-		C293BBE10ACA2C1BE9D7CB57FB5E617F /* Pods_skeda.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_skeda.framework; path = "Pods-skeda.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C293BBE10ACA2C1BE9D7CB57FB5E617F /* Pods_skeda.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_skeda.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4ACBFF6A2F5015E37F2453C702AF148 /* Haptics.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Haptics.swift; path = PopMenu/Classes/Helpers/Haptics.swift; sourceTree = "<group>"; };
 		C538174087DF075E742FDFAB7A26D24C /* PopMenuPresentAnimationController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PopMenuPresentAnimationController.swift; path = PopMenu/Transitions/PopMenuPresentAnimationController.swift; sourceTree = "<group>"; };
 		C8A6B4CDEFE9210A79A116CD476A2178 /* CollectionViewWaterfallLayout-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CollectionViewWaterfallLayout-umbrella.h"; sourceTree = "<group>"; };
 		C95ED99459E6E083B6B4E53E100FEC8D /* Pods-skeda.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-skeda.modulemap"; sourceTree = "<group>"; };
 		CA31CD9CC79A89A3D68B7BA2894BFD9E /* CFAlertViewController.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CFAlertViewController.debug.xcconfig; sourceTree = "<group>"; };
-		CF34798AE8213715A3AEDDF098F83047 /* CollectionViewWaterfallLayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CollectionViewWaterfallLayout.framework; path = CollectionViewWaterfallLayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF34798AE8213715A3AEDDF098F83047 /* CollectionViewWaterfallLayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CollectionViewWaterfallLayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D458ABE0AFD53D4DB41D10A100C83895 /* CFAlertViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CFAlertViewController.swift; path = CFAlertViewController/CFAlertViewController.swift; sourceTree = "<group>"; };
 		D73DA7E099C0416E2978907CC69A5017 /* CFAlertViewController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CFAlertViewController-prefix.pch"; sourceTree = "<group>"; };
 		D76F8CFECC3572A011EC99084A010A40 /* CFAlertAction.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CFAlertAction.swift; path = CFAlertViewController/Models/CFAlertAction.swift; sourceTree = "<group>"; };
@@ -223,7 +223,6 @@
 				64C44012C143B81EE6BF15AB12420B83 /* CollectionViewWaterfallLayout.swift */,
 				449CE95BA4405BE66D6EE9A38E4D4501 /* Support Files */,
 			);
-			name = CollectionViewWaterfallLayout;
 			path = CollectionViewWaterfallLayout;
 			sourceTree = "<group>";
 		};
@@ -260,7 +259,6 @@
 				DDB9FF2F463E6F3CB044DF32F7D485DD /* Resources */,
 				E2903B1C79A3942BD83467DE83163637 /* Support Files */,
 			);
-			name = CFAlertViewController;
 			path = CFAlertViewController;
 			sourceTree = "<group>";
 		};
@@ -358,7 +356,6 @@
 				F99CB9C1F032622C69617A5A15ADADC5 /* UIView+Shadows.swift */,
 				9EAEBBA805288D802EEBD15D0E3EE9F4 /* Support Files */,
 			);
-			name = NewPopMenu;
 			path = NewPopMenu;
 			sourceTree = "<group>";
 		};
@@ -484,6 +481,11 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1100;
 				LastUpgradeCheck = 1100;
+				TargetAttributes = {
+					8CC7F28675174E65A4EB204EBB5DC19A = {
+						LastSwiftMigration = 1170;
+					};
+				};
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 10.0";
@@ -687,7 +689,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -723,7 +725,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";

@@ -104,10 +104,8 @@ class NewTagViewController: UIViewController {
             
             tags.append(newTag)
             saveTags()
-            self.dismiss(animated: true) {
-                self.delegate?.loadTags()
-            }
-            
+            self.delegate?.loadTags()
+            self.dismiss(animated: true)
         }
         //save data
     }
