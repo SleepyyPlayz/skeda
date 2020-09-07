@@ -9,8 +9,9 @@
 import UIKit
 import PopMenu
 import CoreData
+import SwipeCellKit
 
-class MasterListViewController: UIViewController, canLoadTags{
+class MasterListViewController: UIViewController, canLoadTags, SwipeTableViewCellDelegate{
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -122,6 +123,7 @@ extension MasterListViewController: UITableViewDataSource, UITableViewDelegate{
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "TagCell", for: indexPath) as! TagTableViewCell
         let index = indexPath.row
+        cell.delegate = self
         cell.backgroundBar?.backgroundColor = UIColor(named: tags[index].themeColorName ?? CONSTS.Colors.BackgroundBlue)
         cell.whiteBackgroundBar?.isHidden = !(tags[index].isLightThemed)
         cell.titleLabel?.text = tags[index].title
@@ -156,8 +158,29 @@ extension MasterListViewController: UITableViewDataSource, UITableViewDelegate{
     
     //Delegate methods:
     
+    //func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
+    //    ...
+    //}
+    
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath, for orientation: SwipeActionsOrientation) -> [SwipeAction]? {
+        guard orientation == .right else {return nil}
+        let editAction = SwipeAction(style: .default, title: nil) { (action, indexPath) in
+            //...
+        }
+        editAction.image = UIImage(named: "EditButton")
+        editAction.backgroundColor = UIColor(named: CONSTS.Colors.PseudoWhite)
+        return [editAction]
+    }
+    
+    func tableView(_ tableView: UITableView, editActionsOptionsForRowAt indexPath: IndexPath, for orientation: SwipeActionsOrientation) -> SwipeOptions {
+        var options = SwipeOptions()
+        options.expansionStyle = .none
+        options.transitionStyle = .drag
+        //options.backgroundColor = UIColor(named: CONSTS.Colors.PseudoWhite)
+        return options
+    }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
         tableView.deselectRow(at: indexPath, animated: true)
         
         //segue to task list (+query by category)

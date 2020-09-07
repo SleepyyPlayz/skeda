@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import SwipeCellKit
 
-class TagTableViewCell: UITableViewCell {
+class TagTableViewCell: SwipeTableViewCell {
 
     @IBOutlet weak var backgroundBar: UIView!
     
@@ -26,8 +27,9 @@ class TagTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
         // Configure the view for the selected state
     }
+    
     
 }

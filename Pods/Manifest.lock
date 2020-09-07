@@ -2,23 +2,27 @@ PODS:
   - CFAlertViewController (3.1)
   - CollectionViewWaterfallLayout (0.5.0)
   - NewPopMenu (2.1.2)
+  - SwipeCellKit (2.7.1)
 
 DEPENDENCIES:
   - CFAlertViewController
   - CollectionViewWaterfallLayout
   - NewPopMenu
+  - SwipeCellKit
 
 SPEC REPOS:
   trunk:
     - CFAlertViewController
     - CollectionViewWaterfallLayout
     - NewPopMenu
+    - SwipeCellKit
 
 SPEC CHECKSUMS:
   CFAlertViewController: a27cf0512d0fa9ef6a3b966862039c295fb0ef69
   CollectionViewWaterfallLayout: 4399ba01be265fff4da1ed1d607130fe009780e4
   NewPopMenu: c6129e08e8192f6257ceb5f9a4357e1b59c6e2e7
+  SwipeCellKit: 3972254a826da74609926daf59b08d6c72e619ea
 
-PODFILE CHECKSUM: 040e0e94e2ab118558fb2f7f7597d793ea7abae1
+PODFILE CHECKSUM: 22f5f9ed5d9b98392977f2c6b5938e0844176f48
 
 COCOAPODS: 1.9.3

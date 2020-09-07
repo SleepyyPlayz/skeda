@@ -200,11 +200,13 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/CFAlertViewController/CFAlertViewController.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/CollectionViewWaterfallLayout/CollectionViewWaterfallLayout.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/NewPopMenu/PopMenu.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/SwipeCellKit/SwipeCellKit.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/CFAlertViewController/CFAlertViewController.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/CollectionViewWaterfallLayout/CollectionViewWaterfallLayout.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/NewPopMenu/PopMenu.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/SwipeCellKit/SwipeCellKit.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then
   wait
