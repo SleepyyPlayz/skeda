@@ -11,7 +11,7 @@ import PopMenu
 import CoreData
 import SwipeCellKit
 
-class MasterListViewController: UIViewController, canLoadTags, SwipeTableViewCellDelegate{
+class MasterListViewController: UIViewController, canLoadTags{
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -33,13 +33,9 @@ class MasterListViewController: UIViewController, canLoadTags, SwipeTableViewCel
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         loadTags()
     }
-    
-    /*override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear()
-        
-    }*/
     
     //load tags from database into array
     func loadTags() {
@@ -64,6 +60,9 @@ class MasterListViewController: UIViewController, canLoadTags, SwipeTableViewCel
         if(segue.identifier == "TagListToNewTag"){
             let destinationVC = segue.destination as! NewTagViewController
             destinationVC.delegate = self
+        }
+        if(segue.identifier == "TagListToEditTag"){
+            //... pass info on the selected item
         }
     }
     
@@ -113,7 +112,7 @@ class MasterListViewController: UIViewController, canLoadTags, SwipeTableViewCel
     
 }
 
-extension MasterListViewController: UITableViewDataSource, UITableViewDelegate{
+extension MasterListViewController: UITableViewDataSource, UITableViewDelegate, SwipeTableViewCellDelegate{
     //DataSource methods:
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return tags.count
@@ -165,10 +164,11 @@ extension MasterListViewController: UITableViewDataSource, UITableViewDelegate{
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath, for orientation: SwipeActionsOrientation) -> [SwipeAction]? {
         guard orientation == .right else {return nil}
         let editAction = SwipeAction(style: .default, title: nil) { (action, indexPath) in
-            //...
+            self.performSegue(withIdentifier: "TagListToEditTag", sender: self.self)
         }
         editAction.image = UIImage(named: "EditButton")
-        editAction.backgroundColor = UIColor(named: CONSTS.Colors.PseudoWhite)
+        editAction.backgroundColor = UIColor(named: CONSTS.Colors.White)
+        editAction.hidesWhenSelected = true
         return [editAction]
     }
     

@@ -156,10 +156,10 @@
 		8F3FA2EBF3C700A0D5D33BC985FBECE2 /* Pods-skeda-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-skeda-frameworks.sh"; sourceTree = "<group>"; };
 		8FBD86255BEFD9E1EDC7CB0E9D1A9E89 /* NewPopMenu-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "NewPopMenu-Info.plist"; sourceTree = "<group>"; };
 		925D88D230207B07F17DF5F63E6CE19B /* SwipeAnimator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeAnimator.swift; path = Source/SwipeAnimator.swift; sourceTree = "<group>"; };
-		9D443E759FE97A6C0CA5A3B5E4142EBA /* SwipeCellKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwipeCellKit.framework; path = SwipeCellKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D443E759FE97A6C0CA5A3B5E4142EBA /* SwipeCellKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwipeCellKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9E7F2D3BEFA3FB58E36C646BC7239DD4 /* PopMenuGradientView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PopMenuGradientView.swift; path = PopMenu/Classes/Helpers/PopMenuGradientView.swift; sourceTree = "<group>"; };
-		9F914A7498FBE10312BF3E5DD5F654D8 /* CFAlertViewController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CFAlertViewController.framework; path = CFAlertViewController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F914A7498FBE10312BF3E5DD5F654D8 /* CFAlertViewController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CFAlertViewController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A09B9F924D90FA578881C63A7B0A5DEC /* PopMenu.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PopMenu.h; path = PopMenu/PopMenu.h; sourceTree = "<group>"; };
 		A3A4846A4623A84ACF0DADB79953A3FE /* CFAlertViewController.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CFAlertViewController.debug.xcconfig; sourceTree = "<group>"; };
 		A4A0E79E7DAAD40BCA238D6257171A26 /* SwipeCollectionViewCell+Accessibility.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "SwipeCollectionViewCell+Accessibility.swift"; path = "Source/SwipeCollectionViewCell+Accessibility.swift"; sourceTree = "<group>"; };
@@ -170,8 +170,8 @@
 		B26C696B1007BDCA111D86B7FADE4E40 /* Pods-skeda-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-skeda-Info.plist"; sourceTree = "<group>"; };
 		B480EF8E8DEDB634C3F4C0870B320B93 /* NewPopMenu.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = NewPopMenu.modulemap; sourceTree = "<group>"; };
 		B7D7317C6C6C5CA6EB712781286F3B61 /* SwipeCellKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SwipeCellKit.modulemap; sourceTree = "<group>"; };
-		BB9F085B83443B75B2DC41CF5AC93CEB /* PopMenu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = PopMenu.framework; path = NewPopMenu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C293BBE10ACA2C1BE9D7CB57FB5E617F /* Pods_skeda.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_skeda.framework; path = "Pods-skeda.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB9F085B83443B75B2DC41CF5AC93CEB /* PopMenu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PopMenu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C293BBE10ACA2C1BE9D7CB57FB5E617F /* Pods_skeda.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_skeda.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C32C8CF680AF9C8592DB2D1F019C71DC /* CFAlertAction.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CFAlertAction.swift; path = CFAlertViewController/Models/CFAlertAction.swift; sourceTree = "<group>"; };
 		C3B572A070329AE7A17AAAF83A16B0B5 /* CFAlertBaseInteractiveTransition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CFAlertBaseInteractiveTransition.swift; path = CFAlertViewController/Transitions/Base/CFAlertBaseInteractiveTransition.swift; sourceTree = "<group>"; };
 		C3FFC9D9FE704900F5A1FC57CA14B4C0 /* SwipeActionTransitioning.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeActionTransitioning.swift; path = Source/SwipeActionTransitioning.swift; sourceTree = "<group>"; };
@@ -185,7 +185,7 @@
 		CBE8E88DCFA3DFB60FAEEDE40FAD696B /* Swipeable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Swipeable.swift; path = Source/Swipeable.swift; sourceTree = "<group>"; };
 		CEC427187506D0CB8538FBF113B9D3CA /* SwipeTransitionLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeTransitionLayout.swift; path = Source/SwipeTransitionLayout.swift; sourceTree = "<group>"; };
 		CEFBEE1F14AB4B44ACF46A1F92A39555 /* NewPopMenu-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NewPopMenu-dummy.m"; sourceTree = "<group>"; };
-		CF34798AE8213715A3AEDDF098F83047 /* CollectionViewWaterfallLayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CollectionViewWaterfallLayout.framework; path = CollectionViewWaterfallLayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF34798AE8213715A3AEDDF098F83047 /* CollectionViewWaterfallLayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CollectionViewWaterfallLayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D209DB82BE2BCC6D67036FC87FB553F1 /* CFAlertTitleSubtitleTableViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CFAlertTitleSubtitleTableViewCell.swift; path = CFAlertViewController/Cells/CFAlertTitleSubtitleTableViewCell.swift; sourceTree = "<group>"; };
 		D56B52926C3FF498C34A9C459E554485 /* CollectionViewWaterfallLayout.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = CollectionViewWaterfallLayout.modulemap; sourceTree = "<group>"; };
 		D70CD9DD69A263DD3F985AA7A9B54F21 /* CFAlertViewController.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = CFAlertViewController.modulemap; sourceTree = "<group>"; };
@@ -278,7 +278,6 @@
 				CEC427187506D0CB8538FBF113B9D3CA /* SwipeTransitionLayout.swift */,
 				B67C66E5877BCCEB21B24EB79B999B6A /* Support Files */,
 			);
-			name = SwipeCellKit;
 			path = SwipeCellKit;
 			sourceTree = "<group>";
 		};
@@ -346,7 +345,6 @@
 				3B50FF72B55EFE1184D6D4738BBEA302 /* Resources */,
 				8ED0C52ACC69B24B62ED6A67FE8FD249 /* Support Files */,
 			);
-			name = CFAlertViewController;
 			path = CFAlertViewController;
 			sourceTree = "<group>";
 		};
@@ -456,7 +454,6 @@
 				1DD7481FAE0EAA87A7BD62BE102C0916 /* CollectionViewWaterfallLayout.swift */,
 				462161C9379AA293339F2E519E1EC6AA /* Support Files */,
 			);
-			name = CollectionViewWaterfallLayout;
 			path = CollectionViewWaterfallLayout;
 			sourceTree = "<group>";
 		};
@@ -476,7 +473,6 @@
 				DDA5906CA74A2C2888F7D0C9ED5294AF /* UIView+Shadows.swift */,
 				9325A1FEACD35EAD2227843B3822ED72 /* Support Files */,
 			);
-			name = NewPopMenu;
 			path = NewPopMenu;
 			sourceTree = "<group>";
 		};
@@ -629,6 +625,11 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1100;
 				LastUpgradeCheck = 1100;
+				TargetAttributes = {
+					8CC7F28675174E65A4EB204EBB5DC19A = {
+						LastSwiftMigration = 1170;
+					};
+				};
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 10.0";
@@ -837,7 +838,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -912,7 +913,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
