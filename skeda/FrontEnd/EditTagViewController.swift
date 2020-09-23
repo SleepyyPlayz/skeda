@@ -173,6 +173,7 @@ class EditTagViewController: UIViewController, UITextFieldDelegate {
     @IBAction func doneButtonPressed(_ sender: UIButton) {
     }
     
+    
     //MARK: - Delete Button Pressed
     //Pops up alert saying either list is not empty can't delete, or an alert confirming action
     @IBAction func deleteButtonPressed(_ sender: UIButton) {
