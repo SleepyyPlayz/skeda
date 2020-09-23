@@ -62,6 +62,7 @@ class NewTagViewController: UIViewController {
     
     var delegate: canLoadTags?
     
+    //VIEW DID LOAD
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -96,11 +97,13 @@ class NewTagViewController: UIViewController {
         }else{
             warningLabel.isHidden = true
             let newTag = Tag(context: context)
-            newTag.type = CONSTS.TagTypes.UserCreated
+            //newTag.type = CONSTS.TagTypes.UserCreated
             newTag.title = titleTextField.text
             newTag.priority = Int32(tagPriority!)
             newTag.themeColorName = tagThemeColorName
             newTag.isLightThemed = tagIsLightThemed ?? false
+            newTag.dateKey = Date().timeIntervalSinceReferenceDate
+            
             
             tags.append(newTag)
             saveTags()

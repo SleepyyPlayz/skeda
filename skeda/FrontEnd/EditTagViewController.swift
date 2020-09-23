@@ -8,6 +8,12 @@
 
 import UIKit
 import CoreData
+import CFAlertViewController
+
+protocol canEdit {
+    func loadTagsFromEdit()
+    // func update Tag and delete Tag??? 
+}
 
 class EditTagViewController: UIViewController, UITextFieldDelegate {
     //BUTTONS
@@ -41,12 +47,24 @@ class EditTagViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var priorityBar: UISegmentedControl!
     
     
+    var tags = [Tag]()
+    var indexForEdit: Int?
+    
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    
     @IBAction func closeButtonPressed(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
     }
     
+    var delegate: canEdit?
     
+    //temporary variables for use, matches tag data structure.
+    var tagPriority: Int?
+    var tagThemeColorName: String?
+    var tagIsLightThemed: Bool?
+    var tagTitle: String?
     
+    //VIEW DID LOAD
     override func viewDidLoad() {
         super.viewDidLoad()
         titleTextField.delegate = self
@@ -56,16 +74,99 @@ class EditTagViewController: UIViewController, UITextFieldDelegate {
         tap.cancelsTouchesInView = false
         view.addGestureRecognizer(tap)
         
-        initializeFields()
+        //load tags tag array first,
+        loadTags()
+        //then load data into temp variables and the screen.
+        do{
+            try initializeFields()
+        } catch {
+            print("error initializing edit screen: \(error)")
+        }
     }
     
+    //load tags from database into array
+    func loadTags() {
+        let request : NSFetchRequest<Tag> = Tag.fetchRequest()
+        do{
+            tags = try context.fetch(request)
+        } catch {
+            print("Error loading categories \(error)")
+        }
+    }
+    //save data to database
+    func saveTags() {
+        do {
+            try context.save()
+        } catch {
+            print("Error saving tags \(error)")
+        }
+    }
+    
+    
     //MARK: - initialize elements on the interface
-    func initializeFields(){
+    func initializeFields() throws{
+        //1st section: load values into temp variables
+        guard((indexForEdit) != nil) else {
+            throw CONSTS.VariableNullErrors.indexForEditIsNull
+        }
+        tagTitle = tags[indexForEdit!].title
+        tagPriority = Int(tags[indexForEdit!].priority)
+        tagThemeColorName = tags[indexForEdit!].themeColorName
+        tagIsLightThemed = tags[indexForEdit!].isLightThemed
+        
+        //2nd section: display data onto screen
+        titleTextField.text = tagTitle
+        priorityBar.selectedSegmentIndex = tagPriority!
+        warningLabel.isHidden = true
+        if(!tagIsLightThemed!){
+            switch tagThemeColorName{
+            case CONSTS.Colors.BackgroundBlue:
+                blueButtonSelected(blueButton)
+            case CONSTS.Colors.BackgroundGreen:
+                greenButtonSelected(greenButton)
+            case CONSTS.Colors.BackgroundTurquoise:
+                turquoiseButtonSelected(turquoiseButton)
+            case CONSTS.Colors.BackgroundGrey:
+                greyButtonSelected(greyButton)
+            case CONSTS.Colors.BackgroundDeepBlue:
+                deepBlueButtonSelected(deepBlueButton)
+            case CONSTS.Colors.BackgroundPurple:
+                purpleButtonSelected(purpleButton)
+            case CONSTS.Colors.BackgroundOrange:
+                orangeButtonSelected(orangeButton)
+            case CONSTS.Colors.BackgroundRed:
+                redButtonSelected(redButton)
+            default:
+                throw CONSTS.VariableNullErrors.noColorFound
+            }
+        }else{
+            switch tagThemeColorName{
+            case CONSTS.Colors.BackgroundBlue:
+                blueLTButtonSelected(blueLTButton)
+            case CONSTS.Colors.BackgroundGreen:
+                greenLTButtonSelected(greenLTButton)
+            case CONSTS.Colors.BackgroundTurquoise:
+                turquoiseLTButtonSelected(turquoiseLTButton)
+            case CONSTS.Colors.BackgroundGrey:
+                greyLTButtonSelected(greyLTButton)
+            case CONSTS.Colors.BackgroundDeepBlue:
+                deepBlueLTButtonSelected(deepBlueLTButton)
+            case CONSTS.Colors.BackgroundPurple:
+                purpleLTButtonSelected(purpleLTButton)
+            case CONSTS.Colors.BackgroundOrange:
+                orangeLTButtonSelected(orangeLTButton)
+            case CONSTS.Colors.BackgroundRed:
+                redLTButtonSelected(redLTButton)
+            default:
+                throw CONSTS.VariableNullErrors.noColorFound
+            }
+        }
         
     }
     
     //MARK: - when user clicks on priority bar
     @IBAction func priorityBarChanged(_ sender: UISegmentedControl) {
+        tagPriority = sender.selectedSegmentIndex
     }
     
     //MARK: - Done Button Pressed: saves changes
@@ -75,6 +176,7 @@ class EditTagViewController: UIViewController, UITextFieldDelegate {
     //MARK: - Delete Button Pressed
     //Pops up alert saying either list is not empty can't delete, or an alert confirming action
     @IBAction func deleteButtonPressed(_ sender: UIButton) {
+        
     }
     
     
@@ -126,6 +228,8 @@ extension EditTagViewController{
         titleLabel.textColor = UIColor(named: CONSTS.Colors.PseudoWhite)
         priorityLabel.textColor = UIColor(named: CONSTS.Colors.PseudoWhite)
         themeLabel.textColor = UIColor(named: CONSTS.Colors.PseudoWhite)
+        tagThemeColorName = CONSTS.Colors.BackgroundBlue
+        tagIsLightThemed = false
     }
     @IBAction func greenButtonSelected(_ sender: UIButton) {
         blueButton.isSelected = false
@@ -153,6 +257,8 @@ extension EditTagViewController{
         titleLabel.textColor = UIColor(named: CONSTS.Colors.PseudoWhite)
         priorityLabel.textColor = UIColor(named: CONSTS.Colors.PseudoWhite)
         themeLabel.textColor = UIColor(named: CONSTS.Colors.PseudoWhite)
+        tagThemeColorName = CONSTS.Colors.BackgroundGreen
+        tagIsLightThemed = false
     }
     @IBAction func turquoiseButtonSelected(_ sender: UIButton) {
         blueButton.isSelected = false
@@ -180,6 +286,8 @@ extension EditTagViewController{
         titleLabel.textColor = UIColor(named: CONSTS.Colors.PseudoWhite)
         priorityLabel.textColor = UIColor(named: CONSTS.Colors.PseudoWhite)
         themeLabel.textColor = UIColor(named: CONSTS.Colors.PseudoWhite)
+        tagThemeColorName = CONSTS.Colors.BackgroundTurquoise
+        tagIsLightThemed = false
     }
     @IBAction func greyButtonSelected(_ sender: UIButton) {
         blueButton.isSelected = false
@@ -207,6 +315,8 @@ extension EditTagViewController{
         titleLabel.textColor = UIColor(named: CONSTS.Colors.PseudoWhite)
         priorityLabel.textColor = UIColor(named: CONSTS.Colors.PseudoWhite)
         themeLabel.textColor = UIColor(named: CONSTS.Colors.PseudoWhite)
+        tagThemeColorName = CONSTS.Colors.BackgroundGrey
+        tagIsLightThemed = false
     }
     @IBAction func deepBlueButtonSelected(_ sender: UIButton) {
         blueButton.isSelected = false
@@ -234,6 +344,8 @@ extension EditTagViewController{
         titleLabel.textColor = UIColor(named: CONSTS.Colors.PseudoWhite)
         priorityLabel.textColor = UIColor(named: CONSTS.Colors.PseudoWhite)
         themeLabel.textColor = UIColor(named: CONSTS.Colors.PseudoWhite)
+        tagThemeColorName = CONSTS.Colors.BackgroundDeepBlue
+        tagIsLightThemed = false
     }
     @IBAction func purpleButtonSelected(_ sender: UIButton) {
         blueButton.isSelected = false
@@ -261,6 +373,8 @@ extension EditTagViewController{
         titleLabel.textColor = UIColor(named: CONSTS.Colors.PseudoWhite)
         priorityLabel.textColor = UIColor(named: CONSTS.Colors.PseudoWhite)
         themeLabel.textColor = UIColor(named: CONSTS.Colors.PseudoWhite)
+        tagThemeColorName = CONSTS.Colors.BackgroundPurple
+        tagIsLightThemed = false
     }
     @IBAction func orangeButtonSelected(_ sender: UIButton) {
         blueButton.isSelected = false
@@ -288,6 +402,8 @@ extension EditTagViewController{
         titleLabel.textColor = UIColor(named: CONSTS.Colors.PseudoWhite)
         priorityLabel.textColor = UIColor(named: CONSTS.Colors.PseudoWhite)
         themeLabel.textColor = UIColor(named: CONSTS.Colors.PseudoWhite)
+        tagThemeColorName = CONSTS.Colors.BackgroundOrange
+        tagIsLightThemed = false
     }
     @IBAction func redButtonSelected(_ sender: UIButton) {
         blueButton.isSelected = false
@@ -315,6 +431,8 @@ extension EditTagViewController{
         titleLabel.textColor = UIColor(named: CONSTS.Colors.PseudoWhite)
         priorityLabel.textColor = UIColor(named: CONSTS.Colors.PseudoWhite)
         themeLabel.textColor = UIColor(named: CONSTS.Colors.PseudoWhite)
+        tagThemeColorName = CONSTS.Colors.BackgroundRed
+        tagIsLightThemed = false
     }
     
     @IBAction func blueLTButtonSelected(_ sender: UIButton) {
@@ -343,6 +461,8 @@ extension EditTagViewController{
         titleLabel.textColor = UIColor(named: CONSTS.Colors.BackgroundBlue)
         priorityLabel.textColor = UIColor(named: CONSTS.Colors.BackgroundBlue)
         themeLabel.textColor = UIColor(named: CONSTS.Colors.BackgroundBlue)
+        tagThemeColorName = CONSTS.Colors.BackgroundBlue
+        tagIsLightThemed = true
     }
     @IBAction func greenLTButtonSelected(_ sender: UIButton) {
         blueButton.isSelected = false
@@ -370,6 +490,8 @@ extension EditTagViewController{
         titleLabel.textColor = UIColor(named: CONSTS.Colors.BackgroundGreen)
         priorityLabel.textColor = UIColor(named: CONSTS.Colors.BackgroundGreen)
         themeLabel.textColor = UIColor(named: CONSTS.Colors.BackgroundGreen)
+        tagThemeColorName = CONSTS.Colors.BackgroundGreen
+        tagIsLightThemed = true
     }
     @IBAction func turquoiseLTButtonSelected(_ sender: UIButton) {
         blueButton.isSelected = false
@@ -397,6 +519,8 @@ extension EditTagViewController{
         titleLabel.textColor = UIColor(named: CONSTS.Colors.BackgroundTurquoise)
         priorityLabel.textColor = UIColor(named: CONSTS.Colors.BackgroundTurquoise)
         themeLabel.textColor = UIColor(named: CONSTS.Colors.BackgroundTurquoise)
+        tagThemeColorName = CONSTS.Colors.BackgroundTurquoise
+        tagIsLightThemed = true
     }
     @IBAction func greyLTButtonSelected(_ sender: UIButton) {
         blueButton.isSelected = false
@@ -424,6 +548,8 @@ extension EditTagViewController{
         titleLabel.textColor = UIColor(named: CONSTS.Colors.BackgroundGrey)
         priorityLabel.textColor = UIColor(named: CONSTS.Colors.BackgroundGrey)
         themeLabel.textColor = UIColor(named: CONSTS.Colors.BackgroundGrey)
+        tagThemeColorName = CONSTS.Colors.BackgroundGrey
+        tagIsLightThemed = true
     }
     @IBAction func deepBlueLTButtonSelected(_ sender: UIButton) {
         blueButton.isSelected = false
@@ -451,6 +577,8 @@ extension EditTagViewController{
         titleLabel.textColor = UIColor(named: CONSTS.Colors.BackgroundDeepBlue)
         priorityLabel.textColor = UIColor(named: CONSTS.Colors.BackgroundDeepBlue)
         themeLabel.textColor = UIColor(named: CONSTS.Colors.BackgroundDeepBlue)
+        tagThemeColorName = CONSTS.Colors.BackgroundDeepBlue
+        tagIsLightThemed = true
     }
     @IBAction func purpleLTButtonSelected(_ sender: UIButton) {
         blueButton.isSelected = false
@@ -478,6 +606,8 @@ extension EditTagViewController{
         titleLabel.textColor = UIColor(named: CONSTS.Colors.BackgroundPurple)
         priorityLabel.textColor = UIColor(named: CONSTS.Colors.BackgroundPurple)
         themeLabel.textColor = UIColor(named: CONSTS.Colors.BackgroundPurple)
+        tagThemeColorName = CONSTS.Colors.BackgroundPurple
+        tagIsLightThemed = true
     }
     @IBAction func orangeLTButtonSelected(_ sender: UIButton) {
         blueButton.isSelected = false
@@ -505,6 +635,8 @@ extension EditTagViewController{
         titleLabel.textColor = UIColor(named: CONSTS.Colors.BackgroundOrange)
         priorityLabel.textColor = UIColor(named: CONSTS.Colors.BackgroundOrange)
         themeLabel.textColor = UIColor(named: CONSTS.Colors.BackgroundOrange)
+        tagThemeColorName = CONSTS.Colors.BackgroundOrange
+        tagIsLightThemed = true
     }
     @IBAction func redLTButtonSelected(_ sender: UIButton) {
         blueButton.isSelected = false
@@ -532,5 +664,7 @@ extension EditTagViewController{
         titleLabel.textColor = UIColor(named: CONSTS.Colors.BackgroundRed)
         priorityLabel.textColor = UIColor(named: CONSTS.Colors.BackgroundRed)
         themeLabel.textColor = UIColor(named: CONSTS.Colors.BackgroundRed)
+        tagThemeColorName = CONSTS.Colors.BackgroundRed
+        tagIsLightThemed = true
     }
 }

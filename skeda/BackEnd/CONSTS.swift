@@ -23,6 +23,8 @@ struct CONSTS{
         static let BackgroundPurple = "BackgroundPurple"
         static let BackgroundOrange = "BackgroundOrange"
         static let BackgroundRed = "BackgroundRed"
+        
+        static let White = "White"
     }
     struct CloseButtons{
         static let Blue = "CloseButtonBlue"
@@ -60,5 +62,11 @@ struct CONSTS{
     struct SubtaskTypes{
         static let Point = "Point"
         static let Line = "Line"
+    }
+    
+    
+    enum VariableNullErrors: Error{
+        case indexForEditIsNull
+        case noColorFound
     }
 }

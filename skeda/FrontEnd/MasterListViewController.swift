@@ -11,13 +11,16 @@ import PopMenu
 import CoreData
 import SwipeCellKit
 
-class MasterListViewController: UIViewController, canLoadTags{
+class MasterListViewController: UIViewController, canLoadTags,canEdit{
     
     @IBOutlet weak var tableView: UITableView!
     
     var tags = [Tag]()
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    
+    //row index used for editing, used later
+    var editIndex: Int?
     
     //var newTagView = NewTagViewController()  OLD CODE
 
@@ -50,6 +53,17 @@ class MasterListViewController: UIViewController, canLoadTags{
 
     }
     
+    //same as previous function, called from another VC
+    func loadTagsFromEdit() {
+        let request : NSFetchRequest<Tag> = Tag.fetchRequest()
+        do{
+            tags = try context.fetch(request)
+        } catch {
+            print("Error loading categories \(error)")
+        }
+        tableView.reloadData()
+    }
+    
     //MARK: - New Tag Button Pressed (Interactions with NewTagViewController)
     
     @IBAction func newTagButtonPressed(_ sender: UIButton) {
@@ -62,7 +76,11 @@ class MasterListViewController: UIViewController, canLoadTags{
             destinationVC.delegate = self
         }
         if(segue.identifier == "TagListToEditTag"){
-            //... pass info on the selected item
+            let destinationVC = segue.destination as! EditTagViewController
+            destinationVC.delegate = self
+            if((editIndex) != nil){
+                destinationVC.indexForEdit = editIndex
+            }
         }
     }
     
@@ -112,6 +130,7 @@ class MasterListViewController: UIViewController, canLoadTags{
     
 }
 
+//MARK: - TableView and SwipeView functionality
 extension MasterListViewController: UITableViewDataSource, UITableViewDelegate, SwipeTableViewCellDelegate{
     //DataSource methods:
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -164,6 +183,7 @@ extension MasterListViewController: UITableViewDataSource, UITableViewDelegate, 
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath, for orientation: SwipeActionsOrientation) -> [SwipeAction]? {
         guard orientation == .right else {return nil}
         let editAction = SwipeAction(style: .default, title: nil) { (action, indexPath) in
+            self.editIndex = indexPath.row
             self.performSegue(withIdentifier: "TagListToEditTag", sender: self.self)
         }
         editAction.image = UIImage(named: "EditButton")
