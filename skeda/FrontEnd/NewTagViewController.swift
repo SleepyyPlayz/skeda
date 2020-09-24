@@ -117,7 +117,7 @@ class NewTagViewController: UIViewController {
                     message: "", textAlignment: .center,
                     preferredStyle: .alert,
                     didDismissAlertHandler: nil)
-                let okButton = CFAlertAction(title: "Back", style: .Default, alignment: .justified, backgroundColor: UIColor(named: CONSTS.Colors.BackgroundRed), textColor: UIColor(named: CONSTS.Colors.PseudoWhite), handler: nil)
+                let okButton = CFAlertAction(title: "Back", style: .Default, alignment: .justified, backgroundColor: UIColor(named: CONSTS.Colors.BackgroundBlue), textColor: UIColor(named: CONSTS.Colors.PseudoWhite), handler: nil)
                 alertVC.addAction(okButton)
                 present(alertVC,animated: true,completion: nil)
             }

@@ -206,19 +206,24 @@ class EditTagViewController: UIViewController, UITextFieldDelegate {
                 message: "", textAlignment: .center,
                 preferredStyle: .alert,
                 didDismissAlertHandler: nil)
-            let okButton = CFAlertAction(title: "Back", style: .Default, alignment: .justified, backgroundColor: UIColor(named: CONSTS.Colors.BackgroundRed), textColor: UIColor(named: CONSTS.Colors.PseudoWhite), handler: nil)
+            let okButton = CFAlertAction(title: "Back", style: .Default, alignment: .justified, backgroundColor: UIColor(named: CONSTS.Colors.BackgroundBlue), textColor: UIColor(named: CONSTS.Colors.PseudoWhite), handler: nil)
             alertVC.addAction(okButton)
             present(alertVC,animated: true,completion: nil)
         }else{
             let alertVC = CFAlertViewController(
-                title: "",
-                message: "Are you sure you want to delete this list?", textAlignment: .center,
+                title: "Are you sure you want to delete this list?",
+                message: "", textAlignment: .center,
                 preferredStyle: .alert,
                 didDismissAlertHandler: nil)
-            let okButton = CFAlertAction(title: "Cancel", style: .Default, alignment: .left, backgroundColor: UIColor(named: CONSTS.Colors.BackgroundBlue), textColor: UIColor(named: CONSTS.Colors.PseudoWhite), handler: nil)
-            let deleteButton = CFAlertAction(title: "DELETE", style: .Destructive, alignment: .right, backgroundColor: UIColor(named: CONSTS.Colors.WarningRed), textColor: UIColor(named: CONSTS.Colors.PseudoWhite)) { (action) in
+            let okButton = CFAlertAction(title: "Cancel", style: .Default, alignment: .justified, backgroundColor: UIColor(named: CONSTS.Colors.BackgroundBlue), textColor: UIColor(named: CONSTS.Colors.PseudoWhite), handler: nil)
+            let deleteButton = CFAlertAction(title: "DELETE", style: .Destructive, alignment: .justified, backgroundColor: UIColor(named: CONSTS.Colors.WarningRed), textColor: UIColor(named: CONSTS.Colors.PseudoWhite)) { (action) in
                 
+                let tagToRemove = self.tags[self.indexForEdit!]
+                self.context.delete(tagToRemove)
                 
+                self.saveTags()
+                self.delegate?.loadTagsFromEdit()
+                self.dismiss(animated: true)
             }
             alertVC.addAction(okButton)
             alertVC.addAction(deleteButton)
