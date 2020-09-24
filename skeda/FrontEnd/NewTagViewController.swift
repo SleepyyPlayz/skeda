@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import CFAlertViewController
 
 protocol canLoadTags {
     func loadTags()
@@ -96,21 +97,44 @@ class NewTagViewController: UIViewController {
             warningLabel.isHidden = false
         }else{
             warningLabel.isHidden = true
-            let newTag = Tag(context: context)
-            //newTag.type = CONSTS.TagTypes.UserCreated
-            newTag.title = titleTextField.text
-            newTag.priority = Int32(tagPriority!)
-            newTag.themeColorName = tagThemeColorName
-            newTag.isLightThemed = tagIsLightThemed ?? false
-            newTag.dateKey = Date().timeIntervalSinceReferenceDate
-            
-            
-            tags.append(newTag)
-            saveTags()
-            self.delegate?.loadTags()
-            self.dismiss(animated: true)
+            if (nameIsUnique(titleTextField.text!)){
+                let newTag = Tag(context: context)
+                //newTag.type = CONSTS.TagTypes.UserCreated
+                newTag.title = titleTextField.text
+                newTag.priority = Int32(tagPriority!)
+                newTag.themeColorName = tagThemeColorName
+                newTag.isLightThemed = tagIsLightThemed ?? false
+                newTag.dateKey = Date().timeIntervalSinceReferenceDate
+                
+                
+                tags.append(newTag)
+                saveTags()
+                self.delegate?.loadTags()
+                self.dismiss(animated: true)
+            }else{
+                let alertVC = CFAlertViewController(
+                    title: "Title is already taken. Please choose another unique title.",
+                    message: "", textAlignment: .center,
+                    preferredStyle: .alert,
+                    didDismissAlertHandler: nil)
+                let okButton = CFAlertAction(title: "Back", style: .Default, alignment: .justified, backgroundColor: UIColor(named: CONSTS.Colors.BackgroundRed), textColor: UIColor(named: CONSTS.Colors.PseudoWhite), handler: nil)
+                alertVC.addAction(okButton)
+                present(alertVC,animated: true,completion: nil)
+            }
         }
-        //save data
+    }
+    
+    //check for title uniqueness in list of current tags
+    //VERY IMPORTANT: title HAS to be unique, because it's used as an Unique Key
+    func nameIsUnique(_ name: String) -> Bool{
+        var flag = true
+        for tag in tags{
+            if tag.title == name{
+                flag = false
+                break
+            }
+        }
+        return flag
     }
     
     

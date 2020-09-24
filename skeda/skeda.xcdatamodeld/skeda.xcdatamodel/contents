@@ -19,7 +19,7 @@
         <attribute name="priority" attributeType="Integer 32" defaultValueString="2" usesScalarValueType="YES"/>
         <attribute name="themeColorName" attributeType="String" defaultValueString="1EC0EF"/>
         <attribute name="title" attributeType="String" defaultValueString=""/>
-        <relationship name="tasks" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Task" inverseName="tags" inverseEntity="Task"/>
+        <relationship name="tasks" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Task" inverseName="parentTag" inverseEntity="Task"/>
     </entity>
     <entity name="Task" representedClassName="Task" syncable="YES" codeGenerationType="class">
         <attribute name="dateCreated" attributeType="Date" defaultDateTimeInterval="616857180" usesScalarValueType="NO"/>
@@ -33,14 +33,14 @@
         <attribute name="themeColorName" attributeType="String" defaultValueString="1EC0EF"/>
         <attribute name="title" attributeType="String" defaultValueString=""/>
         <attribute name="type" attributeType="String" defaultValueString=""/>
+        <relationship name="parentTag" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Tag" inverseName="tasks" inverseEntity="Tag"/>
         <relationship name="reminders" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Reminder" inverseName="parentTask" inverseEntity="Reminder"/>
         <relationship name="subtasks" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Subtask" inverseName="parentTask" inverseEntity="Subtask"/>
-        <relationship name="tags" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Tag" inverseName="tasks" inverseEntity="Tag"/>
     </entity>
     <elements>
         <element name="Reminder" positionX="111.265625" positionY="-429.26171875" width="128" height="73"/>
         <element name="Subtask" positionX="122.3671875" positionY="-236.4609375" width="128" height="148"/>
         <element name="Tag" positionX="-253.45703125" positionY="-297.2265625" width="128" height="133"/>
-        <element name="Task" positionX="-78.64453125" positionY="-423.6796875" width="128" height="253"/>
+        <element name="Task" positionX="-81.51171875" positionY="-423.328125" width="128" height="253"/>
     </elements>
 </model>

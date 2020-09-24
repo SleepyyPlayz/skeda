@@ -171,15 +171,84 @@ class EditTagViewController: UIViewController, UITextFieldDelegate {
     
     //MARK: - Done Button Pressed: saves changes
     @IBAction func doneButtonPressed(_ sender: UIButton) {
+        if(titleTextField.text == ""){
+            warningLabel.isHidden = false
+        }else{
+            warningLabel.isHidden = true
+            tagTitle = titleTextField.text //redundency
+            
+            if((indexForEdit) != nil){
+                tags[indexForEdit!].title = tagTitle
+                tags[indexForEdit!].priority = Int32(tagPriority!)
+                tags[indexForEdit!].themeColorName = tagThemeColorName
+                tags[indexForEdit!].isLightThemed = tagIsLightThemed ?? false
+            }
+            
+            saveTags()
+            self.delegate?.loadTagsFromEdit()
+            self.dismiss(animated: true)
+        }
     }
     
     
     //MARK: - Delete Button Pressed
     //Pops up alert saying either list is not empty can't delete, or an alert confirming action
     @IBAction func deleteButtonPressed(_ sender: UIButton) {
-        
+        var flag: Bool = true
+        do{
+            try flag = tagHasChildren()
+        }catch{
+            print("Error when deleting: \(error)")
+        }
+        if(flag){
+            let alertVC = CFAlertViewController(
+                title: "Cannot delete: List is not empty.",
+                message: "", textAlignment: .center,
+                preferredStyle: .alert,
+                didDismissAlertHandler: nil)
+            let okButton = CFAlertAction(title: "Back", style: .Default, alignment: .justified, backgroundColor: UIColor(named: CONSTS.Colors.BackgroundRed), textColor: UIColor(named: CONSTS.Colors.PseudoWhite), handler: nil)
+            alertVC.addAction(okButton)
+            present(alertVC,animated: true,completion: nil)
+        }else{
+            let alertVC = CFAlertViewController(
+                title: "",
+                message: "Are you sure you want to delete this list?", textAlignment: .center,
+                preferredStyle: .alert,
+                didDismissAlertHandler: nil)
+            let okButton = CFAlertAction(title: "Cancel", style: .Default, alignment: .left, backgroundColor: UIColor(named: CONSTS.Colors.BackgroundBlue), textColor: UIColor(named: CONSTS.Colors.PseudoWhite), handler: nil)
+            let deleteButton = CFAlertAction(title: "DELETE", style: .Destructive, alignment: .right, backgroundColor: UIColor(named: CONSTS.Colors.WarningRed), textColor: UIColor(named: CONSTS.Colors.PseudoWhite)) { (action) in
+                
+                
+            }
+            alertVC.addAction(okButton)
+            alertVC.addAction(deleteButton)
+            present(alertVC,animated: true,completion: nil)
+        }
     }
     
+    //check if the tag the user wants to delete has child tasks
+    func tagHasChildren() throws -> Bool{
+        var tasks = [Task]()
+        let request : NSFetchRequest<Task> = Task.fetchRequest()
+        let titlePredicate: NSPredicate?
+        if((indexForEdit) != nil){
+            titlePredicate = NSPredicate(format: "parentTag.title MATCHES %@", tags[indexForEdit!].title!)
+        }else{
+            throw CONSTS.VariableNullErrors.indexForEditIsNull
+        }
+        request.predicate = titlePredicate
+        do {
+            tasks = try context.fetch(request)
+        } catch {
+            print("Error fetching tasks when checking deletion safety: \(error)")
+        }
+        
+        if(tasks.count != 0){
+            return true
+        }else{
+            return false
+        }
+    }
     
     //MARK: - Text Field Functionality
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

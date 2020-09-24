@@ -266,6 +266,7 @@
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="HyE-Qq-vXb">
                                 <rect key="frame" x="20" y="150" width="374" height="50"/>
+                                <color key="backgroundColor" name="PseudoWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="QWU-yr-rpb"/>
                                 </constraints>
@@ -684,6 +685,7 @@
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="4M8-lO-yLX">
                                 <rect key="frame" x="20" y="150" width="374" height="50"/>
+                                <color key="backgroundColor" name="PseudoWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="XwT-wc-j6p"/>
                                 </constraints>

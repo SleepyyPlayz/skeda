@@ -25,6 +25,7 @@ struct CONSTS{
         static let BackgroundRed = "BackgroundRed"
         
         static let White = "White"
+        static let WarningRed = "WarningRed"
     }
     struct CloseButtons{
         static let Blue = "CloseButtonBlue"
