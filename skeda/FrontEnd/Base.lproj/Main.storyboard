@@ -71,7 +71,7 @@
             <objects>
                 <viewController id="Ur5-gu-aSL" customClass="SettingsViewController" customModule="skeda" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2mo-zr-UVq">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="FjN-SU-Opo"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -143,7 +143,7 @@
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="tableView" destination="hrR-al-lco" id="bwf-si-1uh"/>
-                        <segue destination="sqG-s7-mbU" kind="show" identifier="masterToItems" animates="NO" id="aJ1-QX-hpE"/>
+                        <segue destination="sqG-s7-mbU" kind="show" identifier="MasterToItems" animates="NO" id="aJ1-QX-hpE"/>
                         <segue destination="wFR-FM-vla" kind="presentation" identifier="TagListToNewTag" id="pyP-V6-wY0"/>
                         <segue destination="JKW-fF-O7E" kind="presentation" identifier="TagListToEditTag" id="0gK-CU-tq7"/>
                     </connections>
@@ -166,7 +166,7 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9rm-z5-wBq">
-                                <rect key="frame" x="160" y="44" width="100" height="50"/>
+                                <rect key="frame" x="90" y="44" width="100" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="ETf-F6-JAl"/>
                                     <constraint firstAttribute="height" constant="50" id="Et9-hK-Tkw"/>
@@ -184,9 +184,12 @@
                                     <constraint firstAttribute="width" constant="50" id="IMZ-Uv-6b4"/>
                                 </constraints>
                                 <state key="normal" image="AddNewButton"/>
+                                <connections>
+                                    <action selector="newTaskButtonPressed:" destination="sqG-s7-mbU" eventType="touchUpInside" id="wY3-92-bU2"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h9e-NT-23U">
-                                <rect key="frame" x="90" y="44" width="50" height="50"/>
+                                <rect key="frame" x="20" y="44" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="G79-Q4-iQL"/>
                                     <constraint firstAttribute="height" constant="50" id="mVz-6o-UcJ"/>
@@ -194,43 +197,49 @@
                                 <state key="normal" image="SettingsButton"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8m7-6S-djs">
-                                <rect key="frame" x="20" y="44" width="50" height="50"/>
+                                <rect key="frame" x="210" y="44" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="kBr-gv-7nO"/>
                                     <constraint firstAttribute="height" constant="50" id="pfv-Cn-6QG"/>
                                 </constraints>
                                 <state key="normal" image="BackButton"/>
+                                <connections>
+                                    <action selector="backButtonPressed:" destination="sqG-s7-mbU" eventType="touchUpInside" id="LbS-El-dxK"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="IFS-Ha-dTI"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="h9e-NT-23U" firstAttribute="leading" secondItem="8m7-6S-djs" secondAttribute="trailing" constant="20" id="CMN-23-nk6"/>
-                            <constraint firstItem="8m7-6S-djs" firstAttribute="top" secondItem="IFS-Ha-dTI" secondAttribute="top" id="GQp-9K-Rs9"/>
+                            <constraint firstItem="8m7-6S-djs" firstAttribute="leading" secondItem="9rm-z5-wBq" secondAttribute="trailing" constant="20" id="Nb5-Q7-Nbo"/>
+                            <constraint firstItem="9rm-z5-wBq" firstAttribute="leading" secondItem="h9e-NT-23U" secondAttribute="trailing" constant="20" id="QRX-9t-h8B"/>
                             <constraint firstItem="IFS-Ha-dTI" firstAttribute="trailing" secondItem="cvO-Vu-bBG" secondAttribute="trailing" constant="20" id="S1v-8e-bky"/>
+                            <constraint firstItem="8m7-6S-djs" firstAttribute="leading" secondItem="9rm-z5-wBq" secondAttribute="trailing" constant="20" id="UpL-Kk-NTE"/>
                             <constraint firstItem="cvO-Vu-bBG" firstAttribute="top" secondItem="IFS-Ha-dTI" secondAttribute="top" id="WDV-l4-L8R"/>
-                            <constraint firstItem="h9e-NT-23U" firstAttribute="top" secondItem="IFS-Ha-dTI" secondAttribute="top" id="kNM-Ie-PIX"/>
-                            <constraint firstItem="9rm-z5-wBq" firstAttribute="leading" secondItem="h9e-NT-23U" secondAttribute="trailing" constant="20" id="kPu-sb-aF0"/>
+                            <constraint firstItem="h9e-NT-23U" firstAttribute="leading" secondItem="IFS-Ha-dTI" secondAttribute="leading" constant="20" id="Zxz-aL-IaA"/>
+                            <constraint firstItem="8m7-6S-djs" firstAttribute="top" secondItem="IFS-Ha-dTI" secondAttribute="top" id="gls-Ea-0VL"/>
+                            <constraint firstItem="h9e-NT-23U" firstAttribute="top" secondItem="IFS-Ha-dTI" secondAttribute="top" id="sdr-lF-Gfb"/>
                             <constraint firstItem="9rm-z5-wBq" firstAttribute="top" secondItem="IFS-Ha-dTI" secondAttribute="top" id="vtx-dH-AxD"/>
-                            <constraint firstItem="8m7-6S-djs" firstAttribute="leading" secondItem="IFS-Ha-dTI" secondAttribute="leading" constant="20" id="wg5-bF-fOB"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="m04-Tw-k1w"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
-                        <segue destination="h78-Ej-qJv" kind="presentation" id="uNQ-Bj-Ei8"/>
+                        <segue destination="h78-Ej-qJv" kind="presentation" identifier="ItemsToNewTaskType" id="uNQ-Bj-Ei8"/>
+                        <segue destination="ipQ-oJ-e8e" kind="unwind" identifier="ItemsToMaster" animates="NO" unwindAction="unwindToMasterWithUnwindSegue:" id="pfu-Ec-hKa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fI0-cg-ZTe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="ipQ-oJ-e8e" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2786.9565217391305" y="324.77678571428572"/>
+            <point key="canvasLocation" x="2787" y="325"/>
         </scene>
         <!--Edit Tag View Controller-->
         <scene sceneID="RJd-aE-G77">
             <objects>
                 <viewController id="JKW-fF-O7E" customClass="EditTagViewController" customModule="skeda" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TUr-12-wwP">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="WhiteBackground" translatesAutoresizingMaskIntoConstraints="NO" id="0pk-jV-GMM">
@@ -651,7 +660,7 @@
             <objects>
                 <viewController id="wFR-FM-vla" customClass="NewTagViewController" customModule="skeda" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sIW-iM-0gy">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WhiteBackground" translatesAutoresizingMaskIntoConstraints="NO" id="I7A-Km-UDu">
@@ -1047,7 +1056,7 @@
             <objects>
                 <viewController id="9tR-fA-vjW" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Pcu-Pf-eKG" userLabel="Background View">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="1200"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="1146"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WhiteBackground" translatesAutoresizingMaskIntoConstraints="NO" id="mQu-T5-tmM">
@@ -1129,7 +1138,7 @@
             <objects>
                 <viewController id="h78-Ej-qJv" customClass="NewTaskTypeViewController" customModule="skeda" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="reD-9b-p3e">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="irA-Xc-eAY">

@@ -35,9 +35,14 @@ class MasterListViewController: UIViewController, canLoadTags,canEdit{
         
     }
     
-    override func viewDidAppear(_ animated: Bool) {
+    /*override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         loadTags()
+    }*/
+    
+    //unwinding segue
+    @IBAction func unwindToMaster(unwindSegue: UIStoryboardSegue){
+        
     }
     
     //load tags from database into array
@@ -80,6 +85,13 @@ class MasterListViewController: UIViewController, canLoadTags,canEdit{
             destinationVC.delegate = self
             if((editIndex) != nil){
                 destinationVC.indexForEdit = editIndex
+            }
+        }
+        if(segue.identifier == "MasterToItems"){
+            let destinationVC = segue.destination as! ItemViewController
+            //destinationVC.delegate = self
+            if let indexPath = tableView.indexPathForSelectedRow{
+                destinationVC.selectedTag = tags[indexPath.row]
             }
         }
     }
@@ -201,9 +213,8 @@ extension MasterListViewController: UITableViewDataSource, UITableViewDelegate, 
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "MasterToItems", sender: self)
         tableView.deselectRow(at: indexPath, animated: true)
-        
-        //segue to task list (+query by category)
     }
     
     

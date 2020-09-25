@@ -13,12 +13,39 @@ import CoreData
 
 class ItemViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    var tasks = [Task]()
+    var selectedTag: Tag?{
+        didSet{
+            
+        }
     }
     
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+    }
+    
+    
+    @IBAction func backButtonPressed(_ sender: UIButton) {
+        performSegue(withIdentifier: "ItemsToMaster", sender: self)
+    }
+    
+    @IBAction func newTaskButtonPressed(_ sender: UIButton) {
+        performSegue(withIdentifier: "ItemsToNewTaskType", sender: self)
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "ItemsToNewTaskType"){
+            //...
+        }
+    }
+    
+}
+
+//MARK: - Sort Functionality
+
+extension ItemViewController{
     @IBAction func sortButtonPressed(_ sender: UIButton) {
         var sortMethodViewActions : [PopMenuDefaultAction] = []
         
@@ -61,26 +88,4 @@ class ItemViewController: UIViewController {
         present(sortMethodViewController, animated: true, completion: nil)
         
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    /*
-
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
