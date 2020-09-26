@@ -49,10 +49,6 @@ struct CONSTS{
         static let Orange = "OrangeArrow"
         static let Red = "RedArrow"
     }
-    struct TagTypes{
-        static let Default = "Default"
-        static let UserCreated = "UserCreated"
-    }
     
     struct TaskTypes{
         static let Point = "Point"
