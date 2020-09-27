@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		08ED5A8563AD937FB881C06B /* Pods_skeda.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDFAB3EFA5A80E48862A6A7E /* Pods_skeda.framework */; };
+		91003EA9252098BC0045F51F /* NewPointTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91003EA8252098BC0045F51F /* NewPointTaskViewController.swift */; };
 		9126DFE02506479500D47DDA /* EditTagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9126DFDF2506479500D47DDA /* EditTagViewController.swift */; };
 		9135713324F2C46800E0CF0B /* NewTaskTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9135713224F2C46800E0CF0B /* NewTaskTypeViewController.swift */; };
 		91C5982B24C610A0005E6A87 /* NewTagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C5982A24C610A0005E6A87 /* NewTagViewController.swift */; };
@@ -30,6 +31,7 @@
 /* Begin PBXFileReference section */
 		3625DAB69C897A5FF834D373 /* Pods-skeda.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-skeda.debug.xcconfig"; path = "Target Support Files/Pods-skeda/Pods-skeda.debug.xcconfig"; sourceTree = "<group>"; };
 		821DB5F27DD319C87DEBC813 /* Pods-skeda.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-skeda.release.xcconfig"; path = "Target Support Files/Pods-skeda/Pods-skeda.release.xcconfig"; sourceTree = "<group>"; };
+		91003EA8252098BC0045F51F /* NewPointTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPointTaskViewController.swift; sourceTree = "<group>"; };
 		9126DFDF2506479500D47DDA /* EditTagViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTagViewController.swift; sourceTree = "<group>"; };
 		9135713224F2C46800E0CF0B /* NewTaskTypeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTaskTypeViewController.swift; sourceTree = "<group>"; };
 		91C5982A24C610A0005E6A87 /* NewTagViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTagViewController.swift; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 				91C5982C24C612FB005E6A87 /* SettingsViewController.swift */,
 				91EB561824E1385D000AE310 /* ItemViewController.swift */,
 				9126DFDF2506479500D47DDA /* EditTagViewController.swift */,
+				91003EA8252098BC0045F51F /* NewPointTaskViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -298,6 +301,7 @@
 			files = (
 				91EB561924E1385D000AE310 /* ItemViewController.swift in Sources */,
 				91D72BBC24BCB1E100E7487D /* CalendarViewController.swift in Sources */,
+				91003EA9252098BC0045F51F /* NewPointTaskViewController.swift in Sources */,
 				91D72BA324BCADF200E7487D /* MasterListViewController.swift in Sources */,
 				91C5982B24C610A0005E6A87 /* NewTagViewController.swift in Sources */,
 				9126DFE02506479500D47DDA /* EditTagViewController.swift in Sources */,

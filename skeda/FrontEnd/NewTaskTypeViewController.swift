@@ -11,6 +11,12 @@ import CFAlertViewController
 
 class NewTaskTypeViewController: UIViewController {
 
+    @IBAction func closeButtonPressed(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

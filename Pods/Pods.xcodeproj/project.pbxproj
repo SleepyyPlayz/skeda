@@ -7,210 +7,246 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		03B6D237E16948EE9A04DF850F594267 /* CollectionViewWaterfallLayout-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 72935DC65BA2D22A8724384FEE3254AD /* CollectionViewWaterfallLayout-dummy.m */; };
-		090E841F50675153B289C4D8501B8300 /* CFAlertNotificationTransitionGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A618D07A25123F0C96A35A2BA457C1B /* CFAlertNotificationTransitionGestureRecognizer.swift */; };
-		10E4F317355B2F7ED81DAC14C53FF029 /* CFAlertAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32C8CF680AF9C8592DB2D1F019C71DC /* CFAlertAction.swift */; };
-		12232B4992FF44F9E743704426A5C34D /* Haptics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF0C106BD723DCE2F73AB02966F6326 /* Haptics.swift */; };
-		1395C5DA3B7AA6A17E28CF4A8E1B4633 /* CFAlertViewController-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = ED46102A9A1FF8F1A33C1E484645D57F /* CFAlertViewController-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		03B6D237E16948EE9A04DF850F594267 /* CollectionViewWaterfallLayout-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B9D3876B1C849293685D09B3A31056D3 /* CollectionViewWaterfallLayout-dummy.m */; };
+		090E841F50675153B289C4D8501B8300 /* CFAlertNotificationTransitionGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E3927443CEE245DCE62137F2A05DB6 /* CFAlertNotificationTransitionGestureRecognizer.swift */; };
+		10E4F317355B2F7ED81DAC14C53FF029 /* CFAlertAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C63CE0F0B41CFF07DF3082E58AB40F /* CFAlertAction.swift */; };
+		12232B4992FF44F9E743704426A5C34D /* Haptics.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59A2E0AE7CF519A765A032CB1450663 /* Haptics.swift */; };
+		1395C5DA3B7AA6A17E28CF4A8E1B4633 /* CFAlertViewController-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 429284A03606741B6D10BEC1ADC29A72 /* CFAlertViewController-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		166BFDACD221323FA6EBBBE82B88BFD7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */; };
-		2AE1CB979809662C29C04D3F00B62259 /* SwipeExpansionStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E904731B1333F4AFA8838B8E247686 /* SwipeExpansionStyle.swift */; };
-		37B21598D79AAB24127E025FD2915CAB /* SwipeCollectionViewCell+Display.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28028E4F9356C95012805A00105BD8FB /* SwipeCollectionViewCell+Display.swift */; };
-		3E174AEDC606B2A5414781F343E1AD8A /* NewPopMenu-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CEFBEE1F14AB4B44ACF46A1F92A39555 /* NewPopMenu-dummy.m */; };
+		2AE1CB979809662C29C04D3F00B62259 /* SwipeExpansionStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6776AC32B53854B5E481D11DDEE46E /* SwipeExpansionStyle.swift */; };
+		37B21598D79AAB24127E025FD2915CAB /* SwipeCollectionViewCell+Display.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ACEF3BAC1B7150B1C58B5B2520FE63F /* SwipeCollectionViewCell+Display.swift */; };
+		3E174AEDC606B2A5414781F343E1AD8A /* NewPopMenu-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B0DEFEC2069B8C1A872AA5287DA13B58 /* NewPopMenu-dummy.m */; };
 		3FECEAC084882D3EB3AA06008499F41A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */; };
-		4129C5ADD2A59209D49838407095D1F8 /* PopMenuAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A3AA36E508767FA90A4BE44A04654A /* PopMenuAppearance.swift */; };
-		41473BF5990BA28C17CEBC5940668548 /* CFAlertTitleSubtitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D209DB82BE2BCC6D67036FC87FB553F1 /* CFAlertTitleSubtitleTableViewCell.swift */; };
-		43F271869112DCCB01E8A89C493F1530 /* CFAlertViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABE093C741BCF83C6069AFFCE29208B0 /* CFAlertViewController.xib */; };
-		461D4B815655E66E255FBEFFF65FBFE0 /* CFAlertNotificationInteractiveTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 599E637987B302F8E96A4CF045814EC6 /* CFAlertNotificationInteractiveTransition.swift */; };
+		4129C5ADD2A59209D49838407095D1F8 /* PopMenuAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4AA2E8F73C47F509874E76A9AA68A1 /* PopMenuAppearance.swift */; };
+		41473BF5990BA28C17CEBC5940668548 /* CFAlertTitleSubtitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69AAFE960DA887327FA3A7BE368AE536 /* CFAlertTitleSubtitleTableViewCell.swift */; };
+		43F271869112DCCB01E8A89C493F1530 /* CFAlertViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D45058F29360F55FEAE3FAB175667B32 /* CFAlertViewController.xib */; };
+		461D4B815655E66E255FBEFFF65FBFE0 /* CFAlertNotificationInteractiveTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25262DC9E263A20FDA4ADED752ACACA8 /* CFAlertNotificationInteractiveTransition.swift */; };
 		4654EB063C3477E876157222A074356D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */; };
-		4C09DF4559F1ED92F2D5FCF68B9533BB /* SwipeActionTransitioning.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FFC9D9FE704900F5A1FC57CA14B4C0 /* SwipeActionTransitioning.swift */; };
-		4C5DA85066112D5F37C80941FD024315 /* CollectionViewWaterfallLayout-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DF39326C817202BAC6369BED6E1885D /* CollectionViewWaterfallLayout-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4F4BEA1FDCD1F8D56807FEB6A4673FB5 /* PopMenu.h in Headers */ = {isa = PBXBuildFile; fileRef = A09B9F924D90FA578881C63A7B0A5DEC /* PopMenu.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		50A08628631D1513E3DB94DAFA0A4BC0 /* PopMenuPresentAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A278D77C50F237EF5368262B46FA29F /* PopMenuPresentAnimationController.swift */; };
-		59C8290D1696A7961FA600E0DD42D84F /* Pods-skeda-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 04AA6F510ABC908063005B37F87EC396 /* Pods-skeda-dummy.m */; };
-		5BCDEE546CC934C24A7FA1C8EEDD4755 /* PopMenuGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7F2D3BEFA3FB58E36C646BC7239DD4 /* PopMenuGradientView.swift */; };
-		5F29D68FABD1DBFB2CE81CD0EEB8C717 /* Swipeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE8E88DCFA3DFB60FAEEDE40FAD696B /* Swipeable.swift */; };
-		63F676BD162BC71EF4C5AC25CEED5FE7 /* CFAlertBaseInteractiveTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B572A070329AE7A17AAAF83A16B0B5 /* CFAlertBaseInteractiveTransition.swift */; };
-		673675F0D1021CC1AFC87DDDB66F3280 /* SwipeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681826CD7CE731129747FDCB18433224 /* SwipeTableViewCell.swift */; };
-		67551064A06E18FD42E55C9EA4B3157A /* CollectionViewWaterfallLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD7481FAE0EAA87A7BD62BE102C0916 /* CollectionViewWaterfallLayout.swift */; };
-		683808AB342CD6D4B49238896FA41A89 /* SwipeActionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9249E63B00E3B5B7E0E2EC4F5C1049 /* SwipeActionsView.swift */; };
-		6D511F288B33A0B110DD241009EADDF3 /* SwipeFeedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81862108597690192BE5086F161FB6A1 /* SwipeFeedback.swift */; };
-		77B80B1AF5452E5544C84C319F9895C6 /* SwipeCellKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DF7586AB44B76E7C4762A3FD0C8B6281 /* SwipeCellKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7B5FEBC758BE2C3E569600DFA545E083 /* SwipeTableViewCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD113CD30DEF3D64AF631A0D65220328 /* SwipeTableViewCellDelegate.swift */; };
-		7CFF7CEAACD1B839D0949659B0A983CC /* SwipeTransitionLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC427187506D0CB8538FBF113B9D3CA /* SwipeTransitionLayout.swift */; };
-		841D7E6DE79CF955672886E7B3F579A5 /* CFAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C37F19C1FAA9DAA700F9E8D6F8E4AF /* CFAlertViewController.swift */; };
-		84C0698CBC026FCC647D038AB290C334 /* Pods-skeda-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E310EED8CF29758697C98C8ADBF58A7 /* Pods-skeda-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		890FDAEBC2E2916F225E7D0DC57CCF26 /* NewPopMenu-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 189C1AC31DC91226B50B3ADB405BBC37 /* NewPopMenu-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4C09DF4559F1ED92F2D5FCF68B9533BB /* SwipeActionTransitioning.swift in Sources */ = {isa = PBXBuildFile; fileRef = F352327CF32FCB1E74A2F71BDA9AF504 /* SwipeActionTransitioning.swift */; };
+		4C5DA85066112D5F37C80941FD024315 /* CollectionViewWaterfallLayout-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BFE1188F41110C3702F774585DE8F82 /* CollectionViewWaterfallLayout-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4F4BEA1FDCD1F8D56807FEB6A4673FB5 /* PopMenu.h in Headers */ = {isa = PBXBuildFile; fileRef = B91AAAE194011965E3C1DCAAB437FB92 /* PopMenu.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		50A08628631D1513E3DB94DAFA0A4BC0 /* PopMenuPresentAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CAE6C8F0A7318AE78C2044EE984D60 /* PopMenuPresentAnimationController.swift */; };
+		5BCDEE546CC934C24A7FA1C8EEDD4755 /* PopMenuGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C597FA1D2FB9C713E915113DC70A01AA /* PopMenuGradientView.swift */; };
+		5F29D68FABD1DBFB2CE81CD0EEB8C717 /* Swipeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5B4AC374F76C5BC34B865BBD31D93B /* Swipeable.swift */; };
+		6134CEAF6C4FB83813AF9FE5B54874DA /* DatePickerDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6379FB56C69EF866C13656E3BAB0F35A /* DatePickerDialog.swift */; };
+		63F676BD162BC71EF4C5AC25CEED5FE7 /* CFAlertBaseInteractiveTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DA8F18253CCF0D3B2F96F518B52405 /* CFAlertBaseInteractiveTransition.swift */; };
+		673675F0D1021CC1AFC87DDDB66F3280 /* SwipeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EBA1EA7D617A0558740155503DDC9A5 /* SwipeTableViewCell.swift */; };
+		67551064A06E18FD42E55C9EA4B3157A /* CollectionViewWaterfallLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE97D444AACB93E9073565A69DD9A533 /* CollectionViewWaterfallLayout.swift */; };
+		683808AB342CD6D4B49238896FA41A89 /* SwipeActionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435158F40A53675CA28CD34DF6646A59 /* SwipeActionsView.swift */; };
+		6D511F288B33A0B110DD241009EADDF3 /* SwipeFeedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8A374D57356901B6CABD311BDFD176 /* SwipeFeedback.swift */; };
+		77B3BBE9D68C4FDA61682884726A01F6 /* DatePickerDialog-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 63D12FF9DA21729BC713A0EE5892717C /* DatePickerDialog-dummy.m */; };
+		77B80B1AF5452E5544C84C319F9895C6 /* SwipeCellKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 575954D62864551276BBE07DCADBF4D8 /* SwipeCellKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7B5FEBC758BE2C3E569600DFA545E083 /* SwipeTableViewCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1F096A6A81F9B0970D04FD91A0B3F8 /* SwipeTableViewCellDelegate.swift */; };
+		7CFF7CEAACD1B839D0949659B0A983CC /* SwipeTransitionLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE6B7974E2FE3828D71525E63820588 /* SwipeTransitionLayout.swift */; };
+		80CA2C0FEE21DB3E4F86876FDC648100 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */; };
+		841D7E6DE79CF955672886E7B3F579A5 /* CFAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A8FF145AD54A688174D593538DF93F /* CFAlertViewController.swift */; };
+		890FDAEBC2E2916F225E7D0DC57CCF26 /* NewPopMenu-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 74C5450E7AC96A0DBD95457A11677B2D /* NewPopMenu-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8D4797C5635A35CDE2F8E40F17A74E2B /* Pods-skeda-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 04AA6F510ABC908063005B37F87EC396 /* Pods-skeda-dummy.m */; };
+		91C71C1B022D57E00A35D00C2AE3A139 /* DatePickerDialog-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E0B498900F1F6F9585106E9F70A66389 /* DatePickerDialog-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		92C790328F0C52977F80C0B4ECBF6A97 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 312B988EF117AE4DE76A268D970131FE /* UIKit.framework */; };
-		93D8CEFB102C95EA87EEE89D05353D97 /* CFAlertActionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C7C7374ABF783F46ED78B758F0F70FF /* CFAlertActionTableViewCell.xib */; };
-		93DE825E02AB8DD74859BF5124306CE1 /* SwipeAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925D88D230207B07F17DF5F63E6CE19B /* SwipeAnimator.swift */; };
-		98FD4EE4D50D5431B633D2CFE35E6490 /* SwipeActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7062A1A09EDF534F4EFC19A6C5DBAB39 /* SwipeActionButton.swift */; };
-		9C6CEFAE327908F6310B15348E31AEA4 /* PopMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C821DA39A71AF87E23DC5823E490847A /* PopMenuViewController.swift */; };
-		9D94E9855EB48604692E0A6EA874541D /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4809D54488B13953444E72E2A111D22 /* Extensions.swift */; };
-		9E03313FFA2ABA45DD7E57668EF8BDA9 /* CFAlertViewController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E5B21D6937D086349605E67DBEC49A9B /* CFAlertViewController-dummy.m */; };
-		A43F1308D1FF06D3E6B93EC3068E93C6 /* CFAlertActionSheetTransitionGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BE8F35CB7DEA5B4C927CC2DD63F7EA /* CFAlertActionSheetTransitionGestureRecognizer.swift */; };
-		A465A69E28DDC33494F2D7B235CDB4CD /* SwipeExpanding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B45E506EF91427376BE15C8016A1B25 /* SwipeExpanding.swift */; };
-		A827AC7E2BF92ED0BF5C9254FA3CE2CA /* SwipeTableViewCell+Display.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6274D55C665F42679C027B67F5A0F46 /* SwipeTableViewCell+Display.swift */; };
-		A90D490E57A38E6C83DC0A626E316834 /* SwipeCellKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 125C74E0EF6DF333A0B1A51C3244467D /* SwipeCellKit-dummy.m */; };
-		AE26D355E9E86F3079A48C29C7AD3D82 /* SwipeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED6F9ADA22B82AF94AF6E635F3C467F /* SwipeCollectionViewCell.swift */; };
-		AE94166107B8DFBA5F63A6A518728738 /* CFAlertTitleSubtitleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7186213906139B27C61A38635E671D3 /* CFAlertTitleSubtitleTableViewCell.xib */; };
-		C28F1A38EFFD963EA921344DD4FE52D0 /* PopMenuAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AAEA75C00AFF2CD4B1692ECAED9A214 /* PopMenuAction.swift */; };
-		C6F3A2CB1E171122BD1AF9E114318D3E /* CFAlertBaseTransitionGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7F783FCD2B8360A7340003B0D39F65 /* CFAlertBaseTransitionGestureRecognizer.swift */; };
-		C7D79905255E40DF892829E3BA925BFE /* CFPushButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE927A0102B3BED6B4C574F6449E1E9C /* CFPushButton.swift */; };
+		93D8CEFB102C95EA87EEE89D05353D97 /* CFAlertActionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70B13ECBBEC9D5D9867091A11BE800DF /* CFAlertActionTableViewCell.xib */; };
+		93DE825E02AB8DD74859BF5124306CE1 /* SwipeAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850EABAB849137DAF5A81FB2883DF765 /* SwipeAnimator.swift */; };
+		98FD4EE4D50D5431B633D2CFE35E6490 /* SwipeActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035FDC9FF2718279DAE657F2F7B7C327 /* SwipeActionButton.swift */; };
+		9B0843EA6E66879707E9E4BED5D1F171 /* Pods-skeda-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E310EED8CF29758697C98C8ADBF58A7 /* Pods-skeda-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9C6CEFAE327908F6310B15348E31AEA4 /* PopMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97198C68C536E70DA7BA2A8676DB7085 /* PopMenuViewController.swift */; };
+		9D94E9855EB48604692E0A6EA874541D /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89CB3CEDC07DA556B717C5E76971D4DF /* Extensions.swift */; };
+		9E03313FFA2ABA45DD7E57668EF8BDA9 /* CFAlertViewController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 034AF86B2EBEA746006903746EEC4D48 /* CFAlertViewController-dummy.m */; };
+		A43F1308D1FF06D3E6B93EC3068E93C6 /* CFAlertActionSheetTransitionGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97921C09730E6CF13B8928EA314121E /* CFAlertActionSheetTransitionGestureRecognizer.swift */; };
+		A465A69E28DDC33494F2D7B235CDB4CD /* SwipeExpanding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916BD158E73F0B9A7EDCEB6EB1013100 /* SwipeExpanding.swift */; };
+		A827AC7E2BF92ED0BF5C9254FA3CE2CA /* SwipeTableViewCell+Display.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102BBAB82E7663B01A12FC71A09BD914 /* SwipeTableViewCell+Display.swift */; };
+		A90D490E57A38E6C83DC0A626E316834 /* SwipeCellKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 27DD4CBFEC33557DB3D9FEC8449F8807 /* SwipeCellKit-dummy.m */; };
+		AE26D355E9E86F3079A48C29C7AD3D82 /* SwipeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08B604D6449149FC56F23D961A005B8 /* SwipeCollectionViewCell.swift */; };
+		AE94166107B8DFBA5F63A6A518728738 /* CFAlertTitleSubtitleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 668B553CC1407F3545F2489809F2AA43 /* CFAlertTitleSubtitleTableViewCell.xib */; };
+		C28F1A38EFFD963EA921344DD4FE52D0 /* PopMenuAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CE62B75D8239C38F6EB806D6C712175 /* PopMenuAction.swift */; };
+		C6F3A2CB1E171122BD1AF9E114318D3E /* CFAlertBaseTransitionGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802BC032A4FEE4F08169D62D00FA7F42 /* CFAlertBaseTransitionGestureRecognizer.swift */; };
+		C7D79905255E40DF892829E3BA925BFE /* CFPushButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95EB90B5DB5E2BD718B6C034F6DD8D2 /* CFPushButton.swift */; };
 		C8050DEE07EF6CFDA08570211010347F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */; };
-		C8D0704B2906CB54EE63116317370DE4 /* SwipeCollectionViewCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03435DC32730B22B8A29407001F58978 /* SwipeCollectionViewCellDelegate.swift */; };
-		CDC43E21A6B99558C46CCB4A7E06C0A2 /* CFAlertPopupTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F65B00D85AAEF89BD3A3AE5D7E69CC /* CFAlertPopupTransition.swift */; };
-		D0549E548B8DC5D7A4BACB8E96C9D441 /* SwipeAccessibilityCustomAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB51BDFE862DC47C055586EB4DF8935 /* SwipeAccessibilityCustomAction.swift */; };
-		D11C8923B0451C47BA946C43CA7B3CC3 /* SwipeCollectionViewCell+Accessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A0E79E7DAAD40BCA238D6257171A26 /* SwipeCollectionViewCell+Accessibility.swift */; };
-		D147BCBC15708326CA8DF3A9EB465E51 /* SwipeTableViewCell+Accessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171722D0B57460DBEEAB7131D783FB51 /* SwipeTableViewCell+Accessibility.swift */; };
+		C8D0704B2906CB54EE63116317370DE4 /* SwipeCollectionViewCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8565642A463CC3B2D4AC985F32DD1DD9 /* SwipeCollectionViewCellDelegate.swift */; };
+		CDC43E21A6B99558C46CCB4A7E06C0A2 /* CFAlertPopupTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831E5651EEFCBBB3F993222F3E574EED /* CFAlertPopupTransition.swift */; };
+		D0549E548B8DC5D7A4BACB8E96C9D441 /* SwipeAccessibilityCustomAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF930DB278C3BCE8523E790B9437E8E /* SwipeAccessibilityCustomAction.swift */; };
+		D11C8923B0451C47BA946C43CA7B3CC3 /* SwipeCollectionViewCell+Accessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38862B7E683CB890B0AD14EB8C1287E9 /* SwipeCollectionViewCell+Accessibility.swift */; };
+		D147BCBC15708326CA8DF3A9EB465E51 /* SwipeTableViewCell+Accessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76317B9B540719B8210F7848B4284241 /* SwipeTableViewCell+Accessibility.swift */; };
 		D2FA5F7FFA44C4859818073FC97E0083 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 312B988EF117AE4DE76A268D970131FE /* UIKit.framework */; };
-		D6DFB1257A5B7662A05ABB0983A2715D /* SwipeAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4BE7A787CD22D15F05F82BDF50EABD0 /* SwipeAction.swift */; };
-		DB3DAAA9D1BB76ECD1CD6D702D6A2887 /* SwipeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456085867E6474BED8E5045291596D7D /* SwipeController.swift */; };
-		DC4FBA009BD68DB0F36A765203AD6650 /* UIView+Shadows.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA5906CA74A2C2888F7D0C9ED5294AF /* UIView+Shadows.swift */; };
-		E2F45457159D8A54C8981974405714D7 /* PopMenuManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9343AB2CE484D854797F03E39C435B /* PopMenuManager.swift */; };
-		E514C59F3A036397E120B3D7E7E848A1 /* SwipeOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E0085F99C3AC968BFA19809829223B /* SwipeOptions.swift */; };
-		E8204AD95B3BCE70B976F17655BA6351 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */; };
-		E8F4A7D2FAE517E711A2776B6ED8D6E6 /* CFAlertActionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86775382007ECFB28AB8E32D63CC42C1 /* CFAlertActionTableViewCell.swift */; };
-		EA75E23AACB80AACCF1565E8D267883E /* UIColor+Contrast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C5D454487A25F1E111799CF62615660 /* UIColor+Contrast.swift */; };
-		EAAF6E89476D2D619962C3F496B326B3 /* CFAlertActionSheetInteractiveTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6BCA072A378760C330B67E631CA5AB2 /* CFAlertActionSheetInteractiveTransition.swift */; };
+		D6DFB1257A5B7662A05ABB0983A2715D /* SwipeAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD045F21672E9E7CAA7ECC1FBED46D51 /* SwipeAction.swift */; };
+		DB3DAAA9D1BB76ECD1CD6D702D6A2887 /* SwipeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E0D1F75DD4F0337191A648413AD965 /* SwipeController.swift */; };
+		DC4FBA009BD68DB0F36A765203AD6650 /* UIView+Shadows.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EBD35627477C808B5A0B952CA30A38 /* UIView+Shadows.swift */; };
+		E2F45457159D8A54C8981974405714D7 /* PopMenuManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58194823CBCB5940008B52D47F8B6208 /* PopMenuManager.swift */; };
+		E514C59F3A036397E120B3D7E7E848A1 /* SwipeOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D68F2DBCD664BC8A56C0AFF3E0AFEA /* SwipeOptions.swift */; };
+		E8F4A7D2FAE517E711A2776B6ED8D6E6 /* CFAlertActionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0592E7C23936CE9B17260487B12E89C /* CFAlertActionTableViewCell.swift */; };
+		EA75E23AACB80AACCF1565E8D267883E /* UIColor+Contrast.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2A1D839B8EC2AF5A76B6915B0271E7 /* UIColor+Contrast.swift */; };
+		EAAF6E89476D2D619962C3F496B326B3 /* CFAlertActionSheetInteractiveTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BAD33478D3AA62245EFEDF7A32DBEB /* CFAlertActionSheetInteractiveTransition.swift */; };
+		ED106876F9027451F5C8C5CD035825A2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */; };
 		ED27A97EF1B524913E59677746064D57 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 312B988EF117AE4DE76A268D970131FE /* UIKit.framework */; };
-		FE2CE2A5D99C4FEC6BEFB477793111C3 /* PopMenuDismissAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EF4D600066075FBF78764B4F8D266A6 /* PopMenuDismissAnimationController.swift */; };
+		FE2CE2A5D99C4FEC6BEFB477793111C3 /* PopMenuDismissAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F4DC46C89BFBA804513CADFEE4DD877 /* PopMenuDismissAnimationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		91EE0EA7E9A239A9D1EBB0D8BCDB44E6 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 902E26B6547F079F6F96B6EA275C1C93;
-			remoteInfo = CFAlertViewController;
-		};
-		BD1150B5A07301C61DCEDFF6F925894E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 79AB4C2480419605A17F9288AAB7AAF0;
-			remoteInfo = CollectionViewWaterfallLayout;
-		};
-		E718A599F1A0C0874BC547E37A84E9C4 /* PBXContainerItemProxy */ = {
+		04EFAD73DC177FEA910E0B1204516E0B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 1DE44C23B82E6671E9E1541D06DE0E87;
 			remoteInfo = SwipeCellKit;
 		};
-		F8332C794B6B4D67F29E26E13D1BE93F /* PBXContainerItemProxy */ = {
+		2156FAC1F30C96F011ABD562843F9207 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 977B67E6ADDDC9C183DE6B6E33F17FCC;
+			remoteInfo = DatePickerDialog;
+		};
+		3BFD835FC7F6C364B1753C573E5A3941 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 8CC7F28675174E65A4EB204EBB5DC19A;
 			remoteInfo = NewPopMenu;
 		};
+		89D862D795A284C498A6436D24A85A51 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 79AB4C2480419605A17F9288AAB7AAF0;
+			remoteInfo = CollectionViewWaterfallLayout;
+		};
+		DAECC6C1BE6377516111F0D8E5BBA26D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 902E26B6547F079F6F96B6EA275C1C93;
+			remoteInfo = CFAlertViewController;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		03435DC32730B22B8A29407001F58978 /* SwipeCollectionViewCellDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeCollectionViewCellDelegate.swift; path = Source/SwipeCollectionViewCellDelegate.swift; sourceTree = "<group>"; };
+		031CB370B7EBB7B86AB19EDFF3C69DDC /* CollectionViewWaterfallLayout.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = CollectionViewWaterfallLayout.modulemap; sourceTree = "<group>"; };
+		034AF86B2EBEA746006903746EEC4D48 /* CFAlertViewController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CFAlertViewController-dummy.m"; sourceTree = "<group>"; };
+		035FDC9FF2718279DAE657F2F7B7C327 /* SwipeActionButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeActionButton.swift; path = Source/SwipeActionButton.swift; sourceTree = "<group>"; };
 		04AA6F510ABC908063005B37F87EC396 /* Pods-skeda-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-skeda-dummy.m"; sourceTree = "<group>"; };
-		09881EC0A45BB345C5833B1B3B4C3375 /* NewPopMenu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = NewPopMenu.release.xcconfig; sourceTree = "<group>"; };
-		0B9249E63B00E3B5B7E0E2EC4F5C1049 /* SwipeActionsView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeActionsView.swift; path = Source/SwipeActionsView.swift; sourceTree = "<group>"; };
-		125C74E0EF6DF333A0B1A51C3244467D /* SwipeCellKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwipeCellKit-dummy.m"; sourceTree = "<group>"; };
-		1574A2ECA271318205123504DD67D139 /* SwipeCellKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwipeCellKit-prefix.pch"; sourceTree = "<group>"; };
-		171722D0B57460DBEEAB7131D783FB51 /* SwipeTableViewCell+Accessibility.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "SwipeTableViewCell+Accessibility.swift"; path = "Source/SwipeTableViewCell+Accessibility.swift"; sourceTree = "<group>"; };
-		189C1AC31DC91226B50B3ADB405BBC37 /* NewPopMenu-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NewPopMenu-umbrella.h"; sourceTree = "<group>"; };
-		1DD7481FAE0EAA87A7BD62BE102C0916 /* CollectionViewWaterfallLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CollectionViewWaterfallLayout.swift; sourceTree = "<group>"; };
-		1DF39326C817202BAC6369BED6E1885D /* CollectionViewWaterfallLayout-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CollectionViewWaterfallLayout-umbrella.h"; sourceTree = "<group>"; };
-		1ED6F9ADA22B82AF94AF6E635F3C467F /* SwipeCollectionViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeCollectionViewCell.swift; path = Source/SwipeCollectionViewCell.swift; sourceTree = "<group>"; };
-		28028E4F9356C95012805A00105BD8FB /* SwipeCollectionViewCell+Display.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "SwipeCollectionViewCell+Display.swift"; path = "Source/SwipeCollectionViewCell+Display.swift"; sourceTree = "<group>"; };
-		2A618D07A25123F0C96A35A2BA457C1B /* CFAlertNotificationTransitionGestureRecognizer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CFAlertNotificationTransitionGestureRecognizer.swift; path = CFAlertViewController/Transitions/Notification/CFAlertNotificationTransitionGestureRecognizer.swift; sourceTree = "<group>"; };
-		2B80122115E4DCB9EC1B5E6EB73E331D /* CollectionViewWaterfallLayout.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CollectionViewWaterfallLayout.release.xcconfig; sourceTree = "<group>"; };
+		081A97D42583904B66EC5AB1E1525C01 /* NewPopMenu.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = NewPopMenu.modulemap; sourceTree = "<group>"; };
+		08BAD33478D3AA62245EFEDF7A32DBEB /* CFAlertActionSheetInteractiveTransition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CFAlertActionSheetInteractiveTransition.swift; path = "CFAlertViewController/Transitions/Action Sheet/CFAlertActionSheetInteractiveTransition.swift"; sourceTree = "<group>"; };
+		0969EB51C1E293C173141D48DC24C3B8 /* DatePickerDialog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = DatePickerDialog.framework; path = DatePickerDialog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0BBB0CDA65DD43F2B11B333E43B4ACFF /* DatePickerDialog.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = DatePickerDialog.modulemap; sourceTree = "<group>"; };
+		0BFE1188F41110C3702F774585DE8F82 /* CollectionViewWaterfallLayout-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CollectionViewWaterfallLayout-umbrella.h"; sourceTree = "<group>"; };
+		102BBAB82E7663B01A12FC71A09BD914 /* SwipeTableViewCell+Display.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "SwipeTableViewCell+Display.swift"; path = "Source/SwipeTableViewCell+Display.swift"; sourceTree = "<group>"; };
+		12E762A666359E9E8506EDCD81B6E2DF /* SwipeCellKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SwipeCellKit.modulemap; sourceTree = "<group>"; };
+		19EBD35627477C808B5A0B952CA30A38 /* UIView+Shadows.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+Shadows.swift"; path = "PopMenu/Classes/Helpers/UIView+Shadows.swift"; sourceTree = "<group>"; };
+		25262DC9E263A20FDA4ADED752ACACA8 /* CFAlertNotificationInteractiveTransition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CFAlertNotificationInteractiveTransition.swift; path = CFAlertViewController/Transitions/Notification/CFAlertNotificationInteractiveTransition.swift; sourceTree = "<group>"; };
+		27DD4CBFEC33557DB3D9FEC8449F8807 /* SwipeCellKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwipeCellKit-dummy.m"; sourceTree = "<group>"; };
+		2D5B4AC374F76C5BC34B865BBD31D93B /* Swipeable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Swipeable.swift; path = Source/Swipeable.swift; sourceTree = "<group>"; };
 		312B988EF117AE4DE76A268D970131FE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		3C7C7374ABF783F46ED78B758F0F70FF /* CFAlertActionTableViewCell.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = CFAlertActionTableViewCell.xib; path = CFAlertViewController/Cells/CFAlertActionTableViewCell.xib; sourceTree = "<group>"; };
+		337694537BF3B215D0C94353EE680E4F /* CFAlertViewController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CFAlertViewController-prefix.pch"; sourceTree = "<group>"; };
+		38862B7E683CB890B0AD14EB8C1287E9 /* SwipeCollectionViewCell+Accessibility.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "SwipeCollectionViewCell+Accessibility.swift"; path = "Source/SwipeCollectionViewCell+Accessibility.swift"; sourceTree = "<group>"; };
 		3E310EED8CF29758697C98C8ADBF58A7 /* Pods-skeda-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-skeda-umbrella.h"; sourceTree = "<group>"; };
+		3EBA1EA7D617A0558740155503DDC9A5 /* SwipeTableViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeTableViewCell.swift; path = Source/SwipeTableViewCell.swift; sourceTree = "<group>"; };
+		3F6DB2F770E624CBF45FFDA38518D9D1 /* SwipeCellKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SwipeCellKit-Info.plist"; sourceTree = "<group>"; };
+		429284A03606741B6D10BEC1ADC29A72 /* CFAlertViewController-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CFAlertViewController-umbrella.h"; sourceTree = "<group>"; };
+		435158F40A53675CA28CD34DF6646A59 /* SwipeActionsView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeActionsView.swift; path = Source/SwipeActionsView.swift; sourceTree = "<group>"; };
 		436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		456085867E6474BED8E5045291596D7D /* SwipeController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeController.swift; path = Source/SwipeController.swift; sourceTree = "<group>"; };
-		4AB51BDFE862DC47C055586EB4DF8935 /* SwipeAccessibilityCustomAction.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeAccessibilityCustomAction.swift; path = Source/SwipeAccessibilityCustomAction.swift; sourceTree = "<group>"; };
-		4B45E506EF91427376BE15C8016A1B25 /* SwipeExpanding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeExpanding.swift; path = Source/SwipeExpanding.swift; sourceTree = "<group>"; };
+		4E6776AC32B53854B5E481D11DDEE46E /* SwipeExpansionStyle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeExpansionStyle.swift; path = Source/SwipeExpansionStyle.swift; sourceTree = "<group>"; };
+		53C63CE0F0B41CFF07DF3082E58AB40F /* CFAlertAction.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CFAlertAction.swift; path = CFAlertViewController/Models/CFAlertAction.swift; sourceTree = "<group>"; };
 		557BA794473438958F58B141D58C2F68 /* Pods-skeda.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-skeda.release.xcconfig"; sourceTree = "<group>"; };
-		58F65B00D85AAEF89BD3A3AE5D7E69CC /* CFAlertPopupTransition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CFAlertPopupTransition.swift; path = CFAlertViewController/Transitions/Popup/CFAlertPopupTransition.swift; sourceTree = "<group>"; };
-		5986D4021A8AE1E3C88CBE2FB4FB7894 /* CFAlertViewController-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "CFAlertViewController-Info.plist"; sourceTree = "<group>"; };
-		599E637987B302F8E96A4CF045814EC6 /* CFAlertNotificationInteractiveTransition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CFAlertNotificationInteractiveTransition.swift; path = CFAlertViewController/Transitions/Notification/CFAlertNotificationInteractiveTransition.swift; sourceTree = "<group>"; };
-		59C37F19C1FAA9DAA700F9E8D6F8E4AF /* CFAlertViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CFAlertViewController.swift; path = CFAlertViewController/CFAlertViewController.swift; sourceTree = "<group>"; };
-		5FF0C106BD723DCE2F73AB02966F6326 /* Haptics.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Haptics.swift; path = PopMenu/Classes/Helpers/Haptics.swift; sourceTree = "<group>"; };
-		61FE134B7FC8D3C05E3EBAEE872DF395 /* SwipeCellKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwipeCellKit.release.xcconfig; sourceTree = "<group>"; };
+		575954D62864551276BBE07DCADBF4D8 /* SwipeCellKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwipeCellKit-umbrella.h"; sourceTree = "<group>"; };
+		58194823CBCB5940008B52D47F8B6208 /* PopMenuManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PopMenuManager.swift; path = PopMenu/Classes/PopMenuManager.swift; sourceTree = "<group>"; };
+		61CE62158DBA8E8AB6250D661DF1A0E0 /* NewPopMenu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = NewPopMenu.release.xcconfig; sourceTree = "<group>"; };
+		6307D177C3EF64F8EF7CC2E2B72940C5 /* SwipeCellKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwipeCellKit.debug.xcconfig; sourceTree = "<group>"; };
+		6379FB56C69EF866C13656E3BAB0F35A /* DatePickerDialog.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DatePickerDialog.swift; path = Sources/DatePickerDialog.swift; sourceTree = "<group>"; };
+		63A8FF145AD54A688174D593538DF93F /* CFAlertViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CFAlertViewController.swift; path = CFAlertViewController/CFAlertViewController.swift; sourceTree = "<group>"; };
+		63D12FF9DA21729BC713A0EE5892717C /* DatePickerDialog-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DatePickerDialog-dummy.m"; sourceTree = "<group>"; };
 		6621F187367B248DBD6597C2527F3140 /* Pods-skeda.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-skeda.debug.xcconfig"; sourceTree = "<group>"; };
+		668B553CC1407F3545F2489809F2AA43 /* CFAlertTitleSubtitleTableViewCell.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = CFAlertTitleSubtitleTableViewCell.xib; path = CFAlertViewController/Cells/CFAlertTitleSubtitleTableViewCell.xib; sourceTree = "<group>"; };
 		66BF7D0C2D74E85C866133F25A01B04A /* Pods-skeda-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-skeda-acknowledgements.plist"; sourceTree = "<group>"; };
-		681826CD7CE731129747FDCB18433224 /* SwipeTableViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeTableViewCell.swift; path = Source/SwipeTableViewCell.swift; sourceTree = "<group>"; };
-		68E0085F99C3AC968BFA19809829223B /* SwipeOptions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeOptions.swift; path = Source/SwipeOptions.swift; sourceTree = "<group>"; };
-		69D3D3632BF0F2E5054190102FED24D0 /* CollectionViewWaterfallLayout-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CollectionViewWaterfallLayout-prefix.pch"; sourceTree = "<group>"; };
-		6A278D77C50F237EF5368262B46FA29F /* PopMenuPresentAnimationController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PopMenuPresentAnimationController.swift; path = PopMenu/Transitions/PopMenuPresentAnimationController.swift; sourceTree = "<group>"; };
-		6C5D454487A25F1E111799CF62615660 /* UIColor+Contrast.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIColor+Contrast.swift"; path = "PopMenu/Classes/Helpers/UIColor+Contrast.swift"; sourceTree = "<group>"; };
-		6EF4D600066075FBF78764B4F8D266A6 /* PopMenuDismissAnimationController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PopMenuDismissAnimationController.swift; path = PopMenu/Transitions/PopMenuDismissAnimationController.swift; sourceTree = "<group>"; };
-		7062A1A09EDF534F4EFC19A6C5DBAB39 /* SwipeActionButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeActionButton.swift; path = Source/SwipeActionButton.swift; sourceTree = "<group>"; };
-		72935DC65BA2D22A8724384FEE3254AD /* CollectionViewWaterfallLayout-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CollectionViewWaterfallLayout-dummy.m"; sourceTree = "<group>"; };
-		7E9343AB2CE484D854797F03E39C435B /* PopMenuManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PopMenuManager.swift; path = PopMenu/Classes/PopMenuManager.swift; sourceTree = "<group>"; };
+		69AAFE960DA887327FA3A7BE368AE536 /* CFAlertTitleSubtitleTableViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CFAlertTitleSubtitleTableViewCell.swift; path = CFAlertViewController/Cells/CFAlertTitleSubtitleTableViewCell.swift; sourceTree = "<group>"; };
+		6ACEF3BAC1B7150B1C58B5B2520FE63F /* SwipeCollectionViewCell+Display.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "SwipeCollectionViewCell+Display.swift"; path = "Source/SwipeCollectionViewCell+Display.swift"; sourceTree = "<group>"; };
+		6CE62B75D8239C38F6EB806D6C712175 /* PopMenuAction.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PopMenuAction.swift; path = "PopMenu/View Controller & Views/PopMenuAction.swift"; sourceTree = "<group>"; };
+		6E3A0AAD3D7875CE517A449E50FD4142 /* DatePickerDialog-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "DatePickerDialog-Info.plist"; sourceTree = "<group>"; };
+		6F4DC46C89BFBA804513CADFEE4DD877 /* PopMenuDismissAnimationController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PopMenuDismissAnimationController.swift; path = PopMenu/Transitions/PopMenuDismissAnimationController.swift; sourceTree = "<group>"; };
+		70B13ECBBEC9D5D9867091A11BE800DF /* CFAlertActionTableViewCell.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = CFAlertActionTableViewCell.xib; path = CFAlertViewController/Cells/CFAlertActionTableViewCell.xib; sourceTree = "<group>"; };
+		72CAE6C8F0A7318AE78C2044EE984D60 /* PopMenuPresentAnimationController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PopMenuPresentAnimationController.swift; path = PopMenu/Transitions/PopMenuPresentAnimationController.swift; sourceTree = "<group>"; };
+		74C5450E7AC96A0DBD95457A11677B2D /* NewPopMenu-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NewPopMenu-umbrella.h"; sourceTree = "<group>"; };
+		76317B9B540719B8210F7848B4284241 /* SwipeTableViewCell+Accessibility.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "SwipeTableViewCell+Accessibility.swift"; path = "Source/SwipeTableViewCell+Accessibility.swift"; sourceTree = "<group>"; };
+		790AEE00A8FA16F9145F8491B762574E /* CollectionViewWaterfallLayout.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CollectionViewWaterfallLayout.debug.xcconfig; sourceTree = "<group>"; };
 		7EDA92F922F7E44E25875E271EDD2313 /* Pods-skeda-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-skeda-acknowledgements.markdown"; sourceTree = "<group>"; };
-		7F0D0C6265239E81411F435A1E1C8237 /* SwipeCellKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwipeCellKit.debug.xcconfig; sourceTree = "<group>"; };
-		81862108597690192BE5086F161FB6A1 /* SwipeFeedback.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeFeedback.swift; path = Source/SwipeFeedback.swift; sourceTree = "<group>"; };
-		86775382007ECFB28AB8E32D63CC42C1 /* CFAlertActionTableViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CFAlertActionTableViewCell.swift; path = CFAlertViewController/Cells/CFAlertActionTableViewCell.swift; sourceTree = "<group>"; };
-		8AAEA75C00AFF2CD4B1692ECAED9A214 /* PopMenuAction.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PopMenuAction.swift; path = "PopMenu/View Controller & Views/PopMenuAction.swift"; sourceTree = "<group>"; };
-		8C7F783FCD2B8360A7340003B0D39F65 /* CFAlertBaseTransitionGestureRecognizer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CFAlertBaseTransitionGestureRecognizer.swift; path = CFAlertViewController/Transitions/Base/CFAlertBaseTransitionGestureRecognizer.swift; sourceTree = "<group>"; };
+		802BC032A4FEE4F08169D62D00FA7F42 /* CFAlertBaseTransitionGestureRecognizer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CFAlertBaseTransitionGestureRecognizer.swift; path = CFAlertViewController/Transitions/Base/CFAlertBaseTransitionGestureRecognizer.swift; sourceTree = "<group>"; };
+		831E5651EEFCBBB3F993222F3E574EED /* CFAlertPopupTransition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CFAlertPopupTransition.swift; path = CFAlertViewController/Transitions/Popup/CFAlertPopupTransition.swift; sourceTree = "<group>"; };
+		850EABAB849137DAF5A81FB2883DF765 /* SwipeAnimator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeAnimator.swift; path = Source/SwipeAnimator.swift; sourceTree = "<group>"; };
+		8565642A463CC3B2D4AC985F32DD1DD9 /* SwipeCollectionViewCellDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeCollectionViewCellDelegate.swift; path = Source/SwipeCollectionViewCellDelegate.swift; sourceTree = "<group>"; };
+		89CB3CEDC07DA556B717C5E76971D4DF /* Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = Source/Extensions.swift; sourceTree = "<group>"; };
+		89D68F2DBCD664BC8A56C0AFF3E0AFEA /* SwipeOptions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeOptions.swift; path = Source/SwipeOptions.swift; sourceTree = "<group>"; };
+		8B8A374D57356901B6CABD311BDFD176 /* SwipeFeedback.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeFeedback.swift; path = Source/SwipeFeedback.swift; sourceTree = "<group>"; };
 		8F3FA2EBF3C700A0D5D33BC985FBECE2 /* Pods-skeda-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-skeda-frameworks.sh"; sourceTree = "<group>"; };
-		8FBD86255BEFD9E1EDC7CB0E9D1A9E89 /* NewPopMenu-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "NewPopMenu-Info.plist"; sourceTree = "<group>"; };
-		925D88D230207B07F17DF5F63E6CE19B /* SwipeAnimator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeAnimator.swift; path = Source/SwipeAnimator.swift; sourceTree = "<group>"; };
-		9D443E759FE97A6C0CA5A3B5E4142EBA /* SwipeCellKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwipeCellKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9E7F2D3BEFA3FB58E36C646BC7239DD4 /* PopMenuGradientView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PopMenuGradientView.swift; path = PopMenu/Classes/Helpers/PopMenuGradientView.swift; sourceTree = "<group>"; };
-		9F914A7498FBE10312BF3E5DD5F654D8 /* CFAlertViewController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CFAlertViewController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A09B9F924D90FA578881C63A7B0A5DEC /* PopMenu.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PopMenu.h; path = PopMenu/PopMenu.h; sourceTree = "<group>"; };
-		A3A4846A4623A84ACF0DADB79953A3FE /* CFAlertViewController.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CFAlertViewController.debug.xcconfig; sourceTree = "<group>"; };
-		A4A0E79E7DAAD40BCA238D6257171A26 /* SwipeCollectionViewCell+Accessibility.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "SwipeCollectionViewCell+Accessibility.swift"; path = "Source/SwipeCollectionViewCell+Accessibility.swift"; sourceTree = "<group>"; };
-		A5E904731B1333F4AFA8838B8E247686 /* SwipeExpansionStyle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeExpansionStyle.swift; path = Source/SwipeExpansionStyle.swift; sourceTree = "<group>"; };
-		A6BCA072A378760C330B67E631CA5AB2 /* CFAlertActionSheetInteractiveTransition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CFAlertActionSheetInteractiveTransition.swift; path = "CFAlertViewController/Transitions/Action Sheet/CFAlertActionSheetInteractiveTransition.swift"; sourceTree = "<group>"; };
-		ABE093C741BCF83C6069AFFCE29208B0 /* CFAlertViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = CFAlertViewController.xib; path = CFAlertViewController/CFAlertViewController.xib; sourceTree = "<group>"; };
-		B15A8779893D7E387776EEED048C0E21 /* CFAlertViewController.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CFAlertViewController.release.xcconfig; sourceTree = "<group>"; };
+		8F94C396A1BFB2D8C7592A93313540DF /* CFAlertViewController.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CFAlertViewController.release.xcconfig; sourceTree = "<group>"; };
+		916BD158E73F0B9A7EDCEB6EB1013100 /* SwipeExpanding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeExpanding.swift; path = Source/SwipeExpanding.swift; sourceTree = "<group>"; };
+		96181660F2DEA727F59C167FE58CAFDA /* SwipeCellKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwipeCellKit.release.xcconfig; sourceTree = "<group>"; };
+		96338B4B33BEA19573DD7A06449F2AE9 /* CFAlertViewController.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CFAlertViewController.debug.xcconfig; sourceTree = "<group>"; };
+		97198C68C536E70DA7BA2A8676DB7085 /* PopMenuViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PopMenuViewController.swift; path = "PopMenu/View Controller & Views/PopMenuViewController.swift"; sourceTree = "<group>"; };
+		9A06248A19DA459FB0E8BCADE70D600E /* NewPopMenu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = NewPopMenu.debug.xcconfig; sourceTree = "<group>"; };
+		9D443E759FE97A6C0CA5A3B5E4142EBA /* SwipeCellKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwipeCellKit.framework; path = SwipeCellKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9F914A7498FBE10312BF3E5DD5F654D8 /* CFAlertViewController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CFAlertViewController.framework; path = CFAlertViewController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A4DFBD4291377FE8D62C9D9509AE8A00 /* DatePickerDialog-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DatePickerDialog-prefix.pch"; sourceTree = "<group>"; };
+		A7EC17AB97CF32BE9DA98E95FC9C3CEF /* DatePickerDialog.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DatePickerDialog.debug.xcconfig; sourceTree = "<group>"; };
+		A831846CC7D0448AA864812CD5BDA87C /* CollectionViewWaterfallLayout-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "CollectionViewWaterfallLayout-Info.plist"; sourceTree = "<group>"; };
+		AE1F096A6A81F9B0970D04FD91A0B3F8 /* SwipeTableViewCellDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeTableViewCellDelegate.swift; path = Source/SwipeTableViewCellDelegate.swift; sourceTree = "<group>"; };
+		AECDF19B95F53FF11B8B98CACA299FBB /* CollectionViewWaterfallLayout-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CollectionViewWaterfallLayout-prefix.pch"; sourceTree = "<group>"; };
+		B0DEFEC2069B8C1A872AA5287DA13B58 /* NewPopMenu-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NewPopMenu-dummy.m"; sourceTree = "<group>"; };
 		B26C696B1007BDCA111D86B7FADE4E40 /* Pods-skeda-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-skeda-Info.plist"; sourceTree = "<group>"; };
-		B480EF8E8DEDB634C3F4C0870B320B93 /* NewPopMenu.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = NewPopMenu.modulemap; sourceTree = "<group>"; };
-		B7D7317C6C6C5CA6EB712781286F3B61 /* SwipeCellKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SwipeCellKit.modulemap; sourceTree = "<group>"; };
-		BB9F085B83443B75B2DC41CF5AC93CEB /* PopMenu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PopMenu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C293BBE10ACA2C1BE9D7CB57FB5E617F /* Pods_skeda.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_skeda.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C32C8CF680AF9C8592DB2D1F019C71DC /* CFAlertAction.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CFAlertAction.swift; path = CFAlertViewController/Models/CFAlertAction.swift; sourceTree = "<group>"; };
-		C3B572A070329AE7A17AAAF83A16B0B5 /* CFAlertBaseInteractiveTransition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CFAlertBaseInteractiveTransition.swift; path = CFAlertViewController/Transitions/Base/CFAlertBaseInteractiveTransition.swift; sourceTree = "<group>"; };
-		C3FFC9D9FE704900F5A1FC57CA14B4C0 /* SwipeActionTransitioning.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeActionTransitioning.swift; path = Source/SwipeActionTransitioning.swift; sourceTree = "<group>"; };
-		C4809D54488B13953444E72E2A111D22 /* Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = Source/Extensions.swift; sourceTree = "<group>"; };
-		C6274D55C665F42679C027B67F5A0F46 /* SwipeTableViewCell+Display.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "SwipeTableViewCell+Display.swift"; path = "Source/SwipeTableViewCell+Display.swift"; sourceTree = "<group>"; };
-		C7BDE30613E7BD618C1190FDB9648783 /* SwipeCellKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SwipeCellKit-Info.plist"; sourceTree = "<group>"; };
-		C821DA39A71AF87E23DC5823E490847A /* PopMenuViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PopMenuViewController.swift; path = "PopMenu/View Controller & Views/PopMenuViewController.swift"; sourceTree = "<group>"; };
-		C88E9B2C37C93D96A82ADFD8123AD9EA /* CollectionViewWaterfallLayout-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "CollectionViewWaterfallLayout-Info.plist"; sourceTree = "<group>"; };
+		B59A2E0AE7CF519A765A032CB1450663 /* Haptics.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Haptics.swift; path = PopMenu/Classes/Helpers/Haptics.swift; sourceTree = "<group>"; };
+		B91AAAE194011965E3C1DCAAB437FB92 /* PopMenu.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PopMenu.h; path = PopMenu/PopMenu.h; sourceTree = "<group>"; };
+		B97921C09730E6CF13B8928EA314121E /* CFAlertActionSheetTransitionGestureRecognizer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CFAlertActionSheetTransitionGestureRecognizer.swift; path = "CFAlertViewController/Transitions/Action Sheet/CFAlertActionSheetTransitionGestureRecognizer.swift"; sourceTree = "<group>"; };
+		B9D3876B1C849293685D09B3A31056D3 /* CollectionViewWaterfallLayout-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CollectionViewWaterfallLayout-dummy.m"; sourceTree = "<group>"; };
+		BB9F085B83443B75B2DC41CF5AC93CEB /* PopMenu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = PopMenu.framework; path = NewPopMenu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BBF930DB278C3BCE8523E790B9437E8E /* SwipeAccessibilityCustomAction.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeAccessibilityCustomAction.swift; path = Source/SwipeAccessibilityCustomAction.swift; sourceTree = "<group>"; };
+		BD045F21672E9E7CAA7ECC1FBED46D51 /* SwipeAction.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeAction.swift; path = Source/SwipeAction.swift; sourceTree = "<group>"; };
+		C293BBE10ACA2C1BE9D7CB57FB5E617F /* Pods_skeda.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_skeda.framework; path = "Pods-skeda.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C4EC8FF732F993CBAF3868FE2860AC2F /* DatePickerDialog.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DatePickerDialog.release.xcconfig; sourceTree = "<group>"; };
+		C597FA1D2FB9C713E915113DC70A01AA /* PopMenuGradientView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PopMenuGradientView.swift; path = PopMenu/Classes/Helpers/PopMenuGradientView.swift; sourceTree = "<group>"; };
+		C5E0D1F75DD4F0337191A648413AD965 /* SwipeController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeController.swift; path = Source/SwipeController.swift; sourceTree = "<group>"; };
+		C6424CDEBE4C8BB3C4AB0D4D13F4D6A1 /* CFAlertViewController-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "CFAlertViewController-Info.plist"; sourceTree = "<group>"; };
 		C95ED99459E6E083B6B4E53E100FEC8D /* Pods-skeda.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-skeda.modulemap"; sourceTree = "<group>"; };
-		CAE6F2A055232ADADCE7795CC877CA0A /* NewPopMenu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = NewPopMenu.debug.xcconfig; sourceTree = "<group>"; };
-		CBE8E88DCFA3DFB60FAEEDE40FAD696B /* Swipeable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Swipeable.swift; path = Source/Swipeable.swift; sourceTree = "<group>"; };
-		CEC427187506D0CB8538FBF113B9D3CA /* SwipeTransitionLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeTransitionLayout.swift; path = Source/SwipeTransitionLayout.swift; sourceTree = "<group>"; };
-		CEFBEE1F14AB4B44ACF46A1F92A39555 /* NewPopMenu-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NewPopMenu-dummy.m"; sourceTree = "<group>"; };
-		CF34798AE8213715A3AEDDF098F83047 /* CollectionViewWaterfallLayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CollectionViewWaterfallLayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D209DB82BE2BCC6D67036FC87FB553F1 /* CFAlertTitleSubtitleTableViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CFAlertTitleSubtitleTableViewCell.swift; path = CFAlertViewController/Cells/CFAlertTitleSubtitleTableViewCell.swift; sourceTree = "<group>"; };
-		D56B52926C3FF498C34A9C459E554485 /* CollectionViewWaterfallLayout.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = CollectionViewWaterfallLayout.modulemap; sourceTree = "<group>"; };
-		D70CD9DD69A263DD3F985AA7A9B54F21 /* CFAlertViewController.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = CFAlertViewController.modulemap; sourceTree = "<group>"; };
-		DD113CD30DEF3D64AF631A0D65220328 /* SwipeTableViewCellDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeTableViewCellDelegate.swift; path = Source/SwipeTableViewCellDelegate.swift; sourceTree = "<group>"; };
-		DDA5906CA74A2C2888F7D0C9ED5294AF /* UIView+Shadows.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+Shadows.swift"; path = "PopMenu/Classes/Helpers/UIView+Shadows.swift"; sourceTree = "<group>"; };
-		DF7586AB44B76E7C4762A3FD0C8B6281 /* SwipeCellKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwipeCellKit-umbrella.h"; sourceTree = "<group>"; };
-		E4BE7A787CD22D15F05F82BDF50EABD0 /* SwipeAction.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeAction.swift; path = Source/SwipeAction.swift; sourceTree = "<group>"; };
-		E5B21D6937D086349605E67DBEC49A9B /* CFAlertViewController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CFAlertViewController-dummy.m"; sourceTree = "<group>"; };
-		E9B0F9724B62EEA5E94F092B57EC377D /* CFAlertViewController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CFAlertViewController-prefix.pch"; sourceTree = "<group>"; };
-		ED46102A9A1FF8F1A33C1E484645D57F /* CFAlertViewController-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CFAlertViewController-umbrella.h"; sourceTree = "<group>"; };
-		EE927A0102B3BED6B4C574F6449E1E9C /* CFPushButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CFPushButton.swift; path = CFAlertViewController/Subclass/CFPushButton/CFPushButton.swift; sourceTree = "<group>"; };
-		EF541AF49483746F4DD71FDD22D71E40 /* NewPopMenu-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NewPopMenu-prefix.pch"; sourceTree = "<group>"; };
-		F3BE8F35CB7DEA5B4C927CC2DD63F7EA /* CFAlertActionSheetTransitionGestureRecognizer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CFAlertActionSheetTransitionGestureRecognizer.swift; path = "CFAlertViewController/Transitions/Action Sheet/CFAlertActionSheetTransitionGestureRecognizer.swift"; sourceTree = "<group>"; };
-		F6A3AA36E508767FA90A4BE44A04654A /* PopMenuAppearance.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PopMenuAppearance.swift; path = PopMenu/Classes/PopMenuAppearance.swift; sourceTree = "<group>"; };
-		F7186213906139B27C61A38635E671D3 /* CFAlertTitleSubtitleTableViewCell.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = CFAlertTitleSubtitleTableViewCell.xib; path = CFAlertViewController/Cells/CFAlertTitleSubtitleTableViewCell.xib; sourceTree = "<group>"; };
-		FEDE2684CD9C9EE70039E4D596A1C027 /* CollectionViewWaterfallLayout.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CollectionViewWaterfallLayout.debug.xcconfig; sourceTree = "<group>"; };
+		CA4AA2E8F73C47F509874E76A9AA68A1 /* PopMenuAppearance.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PopMenuAppearance.swift; path = PopMenu/Classes/PopMenuAppearance.swift; sourceTree = "<group>"; };
+		CBE6B7974E2FE3828D71525E63820588 /* SwipeTransitionLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeTransitionLayout.swift; path = Source/SwipeTransitionLayout.swift; sourceTree = "<group>"; };
+		CF34798AE8213715A3AEDDF098F83047 /* CollectionViewWaterfallLayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CollectionViewWaterfallLayout.framework; path = CollectionViewWaterfallLayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0592E7C23936CE9B17260487B12E89C /* CFAlertActionTableViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CFAlertActionTableViewCell.swift; path = CFAlertViewController/Cells/CFAlertActionTableViewCell.swift; sourceTree = "<group>"; };
+		D08B604D6449149FC56F23D961A005B8 /* SwipeCollectionViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeCollectionViewCell.swift; path = Source/SwipeCollectionViewCell.swift; sourceTree = "<group>"; };
+		D3E3927443CEE245DCE62137F2A05DB6 /* CFAlertNotificationTransitionGestureRecognizer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CFAlertNotificationTransitionGestureRecognizer.swift; path = CFAlertViewController/Transitions/Notification/CFAlertNotificationTransitionGestureRecognizer.swift; sourceTree = "<group>"; };
+		D45058F29360F55FEAE3FAB175667B32 /* CFAlertViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = CFAlertViewController.xib; path = CFAlertViewController/CFAlertViewController.xib; sourceTree = "<group>"; };
+		D5CB63E177B7D2A3B52AE6180ADC977D /* CollectionViewWaterfallLayout.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CollectionViewWaterfallLayout.release.xcconfig; sourceTree = "<group>"; };
+		D77063CE66743B20C1A581C28B926A06 /* CFAlertViewController.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = CFAlertViewController.modulemap; sourceTree = "<group>"; };
+		D8DA8F18253CCF0D3B2F96F518B52405 /* CFAlertBaseInteractiveTransition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CFAlertBaseInteractiveTransition.swift; path = CFAlertViewController/Transitions/Base/CFAlertBaseInteractiveTransition.swift; sourceTree = "<group>"; };
+		DD2A1D839B8EC2AF5A76B6915B0271E7 /* UIColor+Contrast.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIColor+Contrast.swift"; path = "PopMenu/Classes/Helpers/UIColor+Contrast.swift"; sourceTree = "<group>"; };
+		E0B498900F1F6F9585106E9F70A66389 /* DatePickerDialog-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DatePickerDialog-umbrella.h"; sourceTree = "<group>"; };
+		E1853B2D3865B464DAC045D6B5FE794D /* SwipeCellKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwipeCellKit-prefix.pch"; sourceTree = "<group>"; };
+		E50D089EEA6519CC2E2554CBC557A952 /* NewPopMenu-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NewPopMenu-prefix.pch"; sourceTree = "<group>"; };
+		F352327CF32FCB1E74A2F71BDA9AF504 /* SwipeActionTransitioning.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeActionTransitioning.swift; path = Source/SwipeActionTransitioning.swift; sourceTree = "<group>"; };
+		F95EB90B5DB5E2BD718B6C034F6DD8D2 /* CFPushButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CFPushButton.swift; path = CFAlertViewController/Subclass/CFPushButton/CFPushButton.swift; sourceTree = "<group>"; };
+		FC7AB4132B60283639B4FA860E4BEAEC /* NewPopMenu-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "NewPopMenu-Info.plist"; sourceTree = "<group>"; };
+		FE97D444AACB93E9073565A69DD9A533 /* CollectionViewWaterfallLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CollectionViewWaterfallLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		19D7D563BCDABA2C66D4FE76DEFE9CDE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED106876F9027451F5C8C5CD035825A2 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		255E17FF551B34CC5712CCC68E5000B8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				C8050DEE07EF6CFDA08570211010347F /* Foundation.framework in Frameworks */,
 				ED27A97EF1B524913E59677746064D57 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2C57BB6F9C12A01BD53B32B4F4DB710F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				80CA2C0FEE21DB3E4F86876FDC648100 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -232,14 +268,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AC2C5552A72A876E5EB2856CD15340F9 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E8204AD95B3BCE70B976F17655BA6351 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		EDBEDF442462D623C30146E6B225FD44 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -251,33 +279,49 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0278376C2974CB7D33D8F3E6E9CCF98E /* SwipeCellKit */ = {
+		0BE8E9EB5E11EE648A2469A2F56DF46D /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				C4809D54488B13953444E72E2A111D22 /* Extensions.swift */,
-				CBE8E88DCFA3DFB60FAEEDE40FAD696B /* Swipeable.swift */,
-				4AB51BDFE862DC47C055586EB4DF8935 /* SwipeAccessibilityCustomAction.swift */,
-				E4BE7A787CD22D15F05F82BDF50EABD0 /* SwipeAction.swift */,
-				7062A1A09EDF534F4EFC19A6C5DBAB39 /* SwipeActionButton.swift */,
-				0B9249E63B00E3B5B7E0E2EC4F5C1049 /* SwipeActionsView.swift */,
-				C3FFC9D9FE704900F5A1FC57CA14B4C0 /* SwipeActionTransitioning.swift */,
-				925D88D230207B07F17DF5F63E6CE19B /* SwipeAnimator.swift */,
-				1ED6F9ADA22B82AF94AF6E635F3C467F /* SwipeCollectionViewCell.swift */,
-				A4A0E79E7DAAD40BCA238D6257171A26 /* SwipeCollectionViewCell+Accessibility.swift */,
-				28028E4F9356C95012805A00105BD8FB /* SwipeCollectionViewCell+Display.swift */,
-				03435DC32730B22B8A29407001F58978 /* SwipeCollectionViewCellDelegate.swift */,
-				456085867E6474BED8E5045291596D7D /* SwipeController.swift */,
-				4B45E506EF91427376BE15C8016A1B25 /* SwipeExpanding.swift */,
-				A5E904731B1333F4AFA8838B8E247686 /* SwipeExpansionStyle.swift */,
-				81862108597690192BE5086F161FB6A1 /* SwipeFeedback.swift */,
-				68E0085F99C3AC968BFA19809829223B /* SwipeOptions.swift */,
-				681826CD7CE731129747FDCB18433224 /* SwipeTableViewCell.swift */,
-				171722D0B57460DBEEAB7131D783FB51 /* SwipeTableViewCell+Accessibility.swift */,
-				C6274D55C665F42679C027B67F5A0F46 /* SwipeTableViewCell+Display.swift */,
-				DD113CD30DEF3D64AF631A0D65220328 /* SwipeTableViewCellDelegate.swift */,
-				CEC427187506D0CB8538FBF113B9D3CA /* SwipeTransitionLayout.swift */,
-				B67C66E5877BCCEB21B24EB79B999B6A /* Support Files */,
+				12E762A666359E9E8506EDCD81B6E2DF /* SwipeCellKit.modulemap */,
+				27DD4CBFEC33557DB3D9FEC8449F8807 /* SwipeCellKit-dummy.m */,
+				3F6DB2F770E624CBF45FFDA38518D9D1 /* SwipeCellKit-Info.plist */,
+				E1853B2D3865B464DAC045D6B5FE794D /* SwipeCellKit-prefix.pch */,
+				575954D62864551276BBE07DCADBF4D8 /* SwipeCellKit-umbrella.h */,
+				6307D177C3EF64F8EF7CC2E2B72940C5 /* SwipeCellKit.debug.xcconfig */,
+				96181660F2DEA727F59C167FE58CAFDA /* SwipeCellKit.release.xcconfig */,
 			);
+			name = "Support Files";
+			path = "../Target Support Files/SwipeCellKit";
+			sourceTree = "<group>";
+		};
+		13771DACB0B4C39162F9C52DE9C7C8B7 /* SwipeCellKit */ = {
+			isa = PBXGroup;
+			children = (
+				89CB3CEDC07DA556B717C5E76971D4DF /* Extensions.swift */,
+				2D5B4AC374F76C5BC34B865BBD31D93B /* Swipeable.swift */,
+				BBF930DB278C3BCE8523E790B9437E8E /* SwipeAccessibilityCustomAction.swift */,
+				BD045F21672E9E7CAA7ECC1FBED46D51 /* SwipeAction.swift */,
+				035FDC9FF2718279DAE657F2F7B7C327 /* SwipeActionButton.swift */,
+				435158F40A53675CA28CD34DF6646A59 /* SwipeActionsView.swift */,
+				F352327CF32FCB1E74A2F71BDA9AF504 /* SwipeActionTransitioning.swift */,
+				850EABAB849137DAF5A81FB2883DF765 /* SwipeAnimator.swift */,
+				D08B604D6449149FC56F23D961A005B8 /* SwipeCollectionViewCell.swift */,
+				38862B7E683CB890B0AD14EB8C1287E9 /* SwipeCollectionViewCell+Accessibility.swift */,
+				6ACEF3BAC1B7150B1C58B5B2520FE63F /* SwipeCollectionViewCell+Display.swift */,
+				8565642A463CC3B2D4AC985F32DD1DD9 /* SwipeCollectionViewCellDelegate.swift */,
+				C5E0D1F75DD4F0337191A648413AD965 /* SwipeController.swift */,
+				916BD158E73F0B9A7EDCEB6EB1013100 /* SwipeExpanding.swift */,
+				4E6776AC32B53854B5E481D11DDEE46E /* SwipeExpansionStyle.swift */,
+				8B8A374D57356901B6CABD311BDFD176 /* SwipeFeedback.swift */,
+				89D68F2DBCD664BC8A56C0AFF3E0AFEA /* SwipeOptions.swift */,
+				3EBA1EA7D617A0558740155503DDC9A5 /* SwipeTableViewCell.swift */,
+				76317B9B540719B8210F7848B4284241 /* SwipeTableViewCell+Accessibility.swift */,
+				102BBAB82E7663B01A12FC71A09BD914 /* SwipeTableViewCell+Display.swift */,
+				AE1F096A6A81F9B0970D04FD91A0B3F8 /* SwipeTableViewCellDelegate.swift */,
+				CBE6B7974E2FE3828D71525E63820588 /* SwipeTransitionLayout.swift */,
+				0BE8E9EB5E11EE648A2469A2F56DF46D /* Support Files */,
+			);
+			name = SwipeCellKit;
 			path = SwipeCellKit;
 			sourceTree = "<group>";
 		};
@@ -306,58 +350,65 @@
 			path = "Target Support Files/Pods-skeda";
 			sourceTree = "<group>";
 		};
-		34A0E94D77A92732156FC4B601651318 /* Pods */ = {
+		34E94DCE39F3FFFFA143E7A39822622C /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				3DAA85635CD65D6E4B98F058AB8D0565 /* CFAlertViewController */,
-				F01AB5783D4939DF3AFF46EE0C0B91D9 /* CollectionViewWaterfallLayout */,
-				FC1CA0BE9E769C5CECC6C45EC9C1584B /* NewPopMenu */,
-				0278376C2974CB7D33D8F3E6E9CCF98E /* SwipeCellKit */,
+				D77063CE66743B20C1A581C28B926A06 /* CFAlertViewController.modulemap */,
+				034AF86B2EBEA746006903746EEC4D48 /* CFAlertViewController-dummy.m */,
+				C6424CDEBE4C8BB3C4AB0D4D13F4D6A1 /* CFAlertViewController-Info.plist */,
+				337694537BF3B215D0C94353EE680E4F /* CFAlertViewController-prefix.pch */,
+				429284A03606741B6D10BEC1ADC29A72 /* CFAlertViewController-umbrella.h */,
+				96338B4B33BEA19573DD7A06449F2AE9 /* CFAlertViewController.debug.xcconfig */,
+				8F94C396A1BFB2D8C7592A93313540DF /* CFAlertViewController.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/CFAlertViewController";
+			sourceTree = "<group>";
+		};
+		3B6E49121CA103226E57726543BB0FE9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3E4D1DEF52A81DDB2DDDBE82C929CCC2 /* CFAlertViewController */,
+				E725C21CEBE18E2574F4F8CB78C0D0F2 /* CollectionViewWaterfallLayout */,
+				B4A5494FC5FBE8B51CCA216ED863C548 /* DatePickerDialog */,
+				E0543EA96C64DC46F49CFC60259F169E /* NewPopMenu */,
+				13771DACB0B4C39162F9C52DE9C7C8B7 /* SwipeCellKit */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		3B50FF72B55EFE1184D6D4738BBEA302 /* Resources */ = {
+		3E4D1DEF52A81DDB2DDDBE82C929CCC2 /* CFAlertViewController */ = {
 			isa = PBXGroup;
 			children = (
-				3C7C7374ABF783F46ED78B758F0F70FF /* CFAlertActionTableViewCell.xib */,
-				F7186213906139B27C61A38635E671D3 /* CFAlertTitleSubtitleTableViewCell.xib */,
-				ABE093C741BCF83C6069AFFCE29208B0 /* CFAlertViewController.xib */,
+				53C63CE0F0B41CFF07DF3082E58AB40F /* CFAlertAction.swift */,
+				08BAD33478D3AA62245EFEDF7A32DBEB /* CFAlertActionSheetInteractiveTransition.swift */,
+				B97921C09730E6CF13B8928EA314121E /* CFAlertActionSheetTransitionGestureRecognizer.swift */,
+				D0592E7C23936CE9B17260487B12E89C /* CFAlertActionTableViewCell.swift */,
+				D8DA8F18253CCF0D3B2F96F518B52405 /* CFAlertBaseInteractiveTransition.swift */,
+				802BC032A4FEE4F08169D62D00FA7F42 /* CFAlertBaseTransitionGestureRecognizer.swift */,
+				25262DC9E263A20FDA4ADED752ACACA8 /* CFAlertNotificationInteractiveTransition.swift */,
+				D3E3927443CEE245DCE62137F2A05DB6 /* CFAlertNotificationTransitionGestureRecognizer.swift */,
+				831E5651EEFCBBB3F993222F3E574EED /* CFAlertPopupTransition.swift */,
+				69AAFE960DA887327FA3A7BE368AE536 /* CFAlertTitleSubtitleTableViewCell.swift */,
+				63A8FF145AD54A688174D593538DF93F /* CFAlertViewController.swift */,
+				F95EB90B5DB5E2BD718B6C034F6DD8D2 /* CFPushButton.swift */,
+				8E9660F4ED42BC637C6C613D787AFA6A /* Resources */,
+				34E94DCE39F3FFFFA143E7A39822622C /* Support Files */,
 			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
-		3DAA85635CD65D6E4B98F058AB8D0565 /* CFAlertViewController */ = {
-			isa = PBXGroup;
-			children = (
-				C32C8CF680AF9C8592DB2D1F019C71DC /* CFAlertAction.swift */,
-				A6BCA072A378760C330B67E631CA5AB2 /* CFAlertActionSheetInteractiveTransition.swift */,
-				F3BE8F35CB7DEA5B4C927CC2DD63F7EA /* CFAlertActionSheetTransitionGestureRecognizer.swift */,
-				86775382007ECFB28AB8E32D63CC42C1 /* CFAlertActionTableViewCell.swift */,
-				C3B572A070329AE7A17AAAF83A16B0B5 /* CFAlertBaseInteractiveTransition.swift */,
-				8C7F783FCD2B8360A7340003B0D39F65 /* CFAlertBaseTransitionGestureRecognizer.swift */,
-				599E637987B302F8E96A4CF045814EC6 /* CFAlertNotificationInteractiveTransition.swift */,
-				2A618D07A25123F0C96A35A2BA457C1B /* CFAlertNotificationTransitionGestureRecognizer.swift */,
-				58F65B00D85AAEF89BD3A3AE5D7E69CC /* CFAlertPopupTransition.swift */,
-				D209DB82BE2BCC6D67036FC87FB553F1 /* CFAlertTitleSubtitleTableViewCell.swift */,
-				59C37F19C1FAA9DAA700F9E8D6F8E4AF /* CFAlertViewController.swift */,
-				EE927A0102B3BED6B4C574F6449E1E9C /* CFPushButton.swift */,
-				3B50FF72B55EFE1184D6D4738BBEA302 /* Resources */,
-				8ED0C52ACC69B24B62ED6A67FE8FD249 /* Support Files */,
-			);
+			name = CFAlertViewController;
 			path = CFAlertViewController;
 			sourceTree = "<group>";
 		};
-		462161C9379AA293339F2E519E1EC6AA /* Support Files */ = {
+		48523456429CDD468DCEC0AA3770CC7F /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				D56B52926C3FF498C34A9C459E554485 /* CollectionViewWaterfallLayout.modulemap */,
-				72935DC65BA2D22A8724384FEE3254AD /* CollectionViewWaterfallLayout-dummy.m */,
-				C88E9B2C37C93D96A82ADFD8123AD9EA /* CollectionViewWaterfallLayout-Info.plist */,
-				69D3D3632BF0F2E5054190102FED24D0 /* CollectionViewWaterfallLayout-prefix.pch */,
-				1DF39326C817202BAC6369BED6E1885D /* CollectionViewWaterfallLayout-umbrella.h */,
-				FEDE2684CD9C9EE70039E4D596A1C027 /* CollectionViewWaterfallLayout.debug.xcconfig */,
-				2B80122115E4DCB9EC1B5E6EB73E331D /* CollectionViewWaterfallLayout.release.xcconfig */,
+				031CB370B7EBB7B86AB19EDFF3C69DDC /* CollectionViewWaterfallLayout.modulemap */,
+				B9D3876B1C849293685D09B3A31056D3 /* CollectionViewWaterfallLayout-dummy.m */,
+				A831846CC7D0448AA864812CD5BDA87C /* CollectionViewWaterfallLayout-Info.plist */,
+				AECDF19B95F53FF11B8B98CACA299FBB /* CollectionViewWaterfallLayout-prefix.pch */,
+				0BFE1188F41110C3702F774585DE8F82 /* CollectionViewWaterfallLayout-umbrella.h */,
+				790AEE00A8FA16F9145F8491B762574E /* CollectionViewWaterfallLayout.debug.xcconfig */,
+				D5CB63E177B7D2A3B52AE6180ADC977D /* CollectionViewWaterfallLayout.release.xcconfig */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/CollectionViewWaterfallLayout";
@@ -371,49 +422,54 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		8ED0C52ACC69B24B62ED6A67FE8FD249 /* Support Files */ = {
+		8E71BB65651B3FA4C6B4647726C03CF7 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				D70CD9DD69A263DD3F985AA7A9B54F21 /* CFAlertViewController.modulemap */,
-				E5B21D6937D086349605E67DBEC49A9B /* CFAlertViewController-dummy.m */,
-				5986D4021A8AE1E3C88CBE2FB4FB7894 /* CFAlertViewController-Info.plist */,
-				E9B0F9724B62EEA5E94F092B57EC377D /* CFAlertViewController-prefix.pch */,
-				ED46102A9A1FF8F1A33C1E484645D57F /* CFAlertViewController-umbrella.h */,
-				A3A4846A4623A84ACF0DADB79953A3FE /* CFAlertViewController.debug.xcconfig */,
-				B15A8779893D7E387776EEED048C0E21 /* CFAlertViewController.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/CFAlertViewController";
-			sourceTree = "<group>";
-		};
-		9325A1FEACD35EAD2227843B3822ED72 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				B480EF8E8DEDB634C3F4C0870B320B93 /* NewPopMenu.modulemap */,
-				CEFBEE1F14AB4B44ACF46A1F92A39555 /* NewPopMenu-dummy.m */,
-				8FBD86255BEFD9E1EDC7CB0E9D1A9E89 /* NewPopMenu-Info.plist */,
-				EF541AF49483746F4DD71FDD22D71E40 /* NewPopMenu-prefix.pch */,
-				189C1AC31DC91226B50B3ADB405BBC37 /* NewPopMenu-umbrella.h */,
-				CAE6F2A055232ADADCE7795CC877CA0A /* NewPopMenu.debug.xcconfig */,
-				09881EC0A45BB345C5833B1B3B4C3375 /* NewPopMenu.release.xcconfig */,
+				081A97D42583904B66EC5AB1E1525C01 /* NewPopMenu.modulemap */,
+				B0DEFEC2069B8C1A872AA5287DA13B58 /* NewPopMenu-dummy.m */,
+				FC7AB4132B60283639B4FA860E4BEAEC /* NewPopMenu-Info.plist */,
+				E50D089EEA6519CC2E2554CBC557A952 /* NewPopMenu-prefix.pch */,
+				74C5450E7AC96A0DBD95457A11677B2D /* NewPopMenu-umbrella.h */,
+				9A06248A19DA459FB0E8BCADE70D600E /* NewPopMenu.debug.xcconfig */,
+				61CE62158DBA8E8AB6250D661DF1A0E0 /* NewPopMenu.release.xcconfig */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/NewPopMenu";
 			sourceTree = "<group>";
 		};
-		B67C66E5877BCCEB21B24EB79B999B6A /* Support Files */ = {
+		8E9660F4ED42BC637C6C613D787AFA6A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				B7D7317C6C6C5CA6EB712781286F3B61 /* SwipeCellKit.modulemap */,
-				125C74E0EF6DF333A0B1A51C3244467D /* SwipeCellKit-dummy.m */,
-				C7BDE30613E7BD618C1190FDB9648783 /* SwipeCellKit-Info.plist */,
-				1574A2ECA271318205123504DD67D139 /* SwipeCellKit-prefix.pch */,
-				DF7586AB44B76E7C4762A3FD0C8B6281 /* SwipeCellKit-umbrella.h */,
-				7F0D0C6265239E81411F435A1E1C8237 /* SwipeCellKit.debug.xcconfig */,
-				61FE134B7FC8D3C05E3EBAEE872DF395 /* SwipeCellKit.release.xcconfig */,
+				70B13ECBBEC9D5D9867091A11BE800DF /* CFAlertActionTableViewCell.xib */,
+				668B553CC1407F3545F2489809F2AA43 /* CFAlertTitleSubtitleTableViewCell.xib */,
+				D45058F29360F55FEAE3FAB175667B32 /* CFAlertViewController.xib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		9A0EC1C71033FA6D4F6107029C0B039D /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				0BBB0CDA65DD43F2B11B333E43B4ACFF /* DatePickerDialog.modulemap */,
+				63D12FF9DA21729BC713A0EE5892717C /* DatePickerDialog-dummy.m */,
+				6E3A0AAD3D7875CE517A449E50FD4142 /* DatePickerDialog-Info.plist */,
+				A4DFBD4291377FE8D62C9D9509AE8A00 /* DatePickerDialog-prefix.pch */,
+				E0B498900F1F6F9585106E9F70A66389 /* DatePickerDialog-umbrella.h */,
+				A7EC17AB97CF32BE9DA98E95FC9C3CEF /* DatePickerDialog.debug.xcconfig */,
+				C4EC8FF732F993CBAF3868FE2860AC2F /* DatePickerDialog.release.xcconfig */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/SwipeCellKit";
+			path = "../Target Support Files/DatePickerDialog";
+			sourceTree = "<group>";
+		};
+		B4A5494FC5FBE8B51CCA216ED863C548 /* DatePickerDialog */ = {
+			isa = PBXGroup;
+			children = (
+				6379FB56C69EF866C13656E3BAB0F35A /* DatePickerDialog.swift */,
+				9A0EC1C71033FA6D4F6107029C0B039D /* Support Files */,
+			);
+			name = DatePickerDialog;
+			path = DatePickerDialog;
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
@@ -421,22 +477,30 @@
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */,
-				34A0E94D77A92732156FC4B601651318 /* Pods */,
-				D590B2CBE2850E061B396633EECE27A5 /* Products */,
+				3B6E49121CA103226E57726543BB0FE9 /* Pods */,
+				EBB31B9AB01C990860A3D3EA237212BF /* Products */,
 				8193389CD9012B4465A17D7E5C708FD5 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		D590B2CBE2850E061B396633EECE27A5 /* Products */ = {
+		E0543EA96C64DC46F49CFC60259F169E /* NewPopMenu */ = {
 			isa = PBXGroup;
 			children = (
-				9F914A7498FBE10312BF3E5DD5F654D8 /* CFAlertViewController.framework */,
-				CF34798AE8213715A3AEDDF098F83047 /* CollectionViewWaterfallLayout.framework */,
-				C293BBE10ACA2C1BE9D7CB57FB5E617F /* Pods_skeda.framework */,
-				BB9F085B83443B75B2DC41CF5AC93CEB /* PopMenu.framework */,
-				9D443E759FE97A6C0CA5A3B5E4142EBA /* SwipeCellKit.framework */,
+				B59A2E0AE7CF519A765A032CB1450663 /* Haptics.swift */,
+				B91AAAE194011965E3C1DCAAB437FB92 /* PopMenu.h */,
+				6CE62B75D8239C38F6EB806D6C712175 /* PopMenuAction.swift */,
+				CA4AA2E8F73C47F509874E76A9AA68A1 /* PopMenuAppearance.swift */,
+				6F4DC46C89BFBA804513CADFEE4DD877 /* PopMenuDismissAnimationController.swift */,
+				C597FA1D2FB9C713E915113DC70A01AA /* PopMenuGradientView.swift */,
+				58194823CBCB5940008B52D47F8B6208 /* PopMenuManager.swift */,
+				72CAE6C8F0A7318AE78C2044EE984D60 /* PopMenuPresentAnimationController.swift */,
+				97198C68C536E70DA7BA2A8676DB7085 /* PopMenuViewController.swift */,
+				DD2A1D839B8EC2AF5A76B6915B0271E7 /* UIColor+Contrast.swift */,
+				19EBD35627477C808B5A0B952CA30A38 /* UIView+Shadows.swift */,
+				8E71BB65651B3FA4C6B4647726C03CF7 /* Support Files */,
 			);
-			name = Products;
+			name = NewPopMenu;
+			path = NewPopMenu;
 			sourceTree = "<group>";
 		};
 		E2983683FD097A93297E2F5D4E382B36 /* iOS */ = {
@@ -448,32 +512,27 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		F01AB5783D4939DF3AFF46EE0C0B91D9 /* CollectionViewWaterfallLayout */ = {
+		E725C21CEBE18E2574F4F8CB78C0D0F2 /* CollectionViewWaterfallLayout */ = {
 			isa = PBXGroup;
 			children = (
-				1DD7481FAE0EAA87A7BD62BE102C0916 /* CollectionViewWaterfallLayout.swift */,
-				462161C9379AA293339F2E519E1EC6AA /* Support Files */,
+				FE97D444AACB93E9073565A69DD9A533 /* CollectionViewWaterfallLayout.swift */,
+				48523456429CDD468DCEC0AA3770CC7F /* Support Files */,
 			);
+			name = CollectionViewWaterfallLayout;
 			path = CollectionViewWaterfallLayout;
 			sourceTree = "<group>";
 		};
-		FC1CA0BE9E769C5CECC6C45EC9C1584B /* NewPopMenu */ = {
+		EBB31B9AB01C990860A3D3EA237212BF /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5FF0C106BD723DCE2F73AB02966F6326 /* Haptics.swift */,
-				A09B9F924D90FA578881C63A7B0A5DEC /* PopMenu.h */,
-				8AAEA75C00AFF2CD4B1692ECAED9A214 /* PopMenuAction.swift */,
-				F6A3AA36E508767FA90A4BE44A04654A /* PopMenuAppearance.swift */,
-				6EF4D600066075FBF78764B4F8D266A6 /* PopMenuDismissAnimationController.swift */,
-				9E7F2D3BEFA3FB58E36C646BC7239DD4 /* PopMenuGradientView.swift */,
-				7E9343AB2CE484D854797F03E39C435B /* PopMenuManager.swift */,
-				6A278D77C50F237EF5368262B46FA29F /* PopMenuPresentAnimationController.swift */,
-				C821DA39A71AF87E23DC5823E490847A /* PopMenuViewController.swift */,
-				6C5D454487A25F1E111799CF62615660 /* UIColor+Contrast.swift */,
-				DDA5906CA74A2C2888F7D0C9ED5294AF /* UIView+Shadows.swift */,
-				9325A1FEACD35EAD2227843B3822ED72 /* Support Files */,
+				9F914A7498FBE10312BF3E5DD5F654D8 /* CFAlertViewController.framework */,
+				CF34798AE8213715A3AEDDF098F83047 /* CollectionViewWaterfallLayout.framework */,
+				0969EB51C1E293C173141D48DC24C3B8 /* DatePickerDialog.framework */,
+				C293BBE10ACA2C1BE9D7CB57FB5E617F /* Pods_skeda.framework */,
+				BB9F085B83443B75B2DC41CF5AC93CEB /* PopMenu.framework */,
+				9D443E759FE97A6C0CA5A3B5E4142EBA /* SwipeCellKit.framework */,
 			);
-			path = NewPopMenu;
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -495,12 +554,28 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5F5D48FC07664A6628BF65946D3EC0EB /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9B0843EA6E66879707E9E4BED5D1F171 /* Pods-skeda-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A873E236F3991384AF740271C1E68AD7 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				890FDAEBC2E2916F225E7D0DC57CCF26 /* NewPopMenu-umbrella.h in Headers */,
 				4F4BEA1FDCD1F8D56807FEB6A4673FB5 /* PopMenu.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE89C036DE2BB62B6239E4516A30F3FF /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				91C71C1B022D57E00A35D00C2AE3A139 /* DatePickerDialog-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -512,33 +587,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F9CB70A36A1D985D8A91910708415AFD /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				84C0698CBC026FCC647D038AB290C334 /* Pods-skeda-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		1593063359C0F0BA052CC8817DEB89D2 /* Pods-skeda */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B3DA943D332C40F26B2F8818A94340C1 /* Build configuration list for PBXNativeTarget "Pods-skeda" */;
+			buildConfigurationList = 8A295232B69FE5131C46404F3D4190F0 /* Build configuration list for PBXNativeTarget "Pods-skeda" */;
 			buildPhases = (
-				F9CB70A36A1D985D8A91910708415AFD /* Headers */,
-				30F5E5E4838F1F233B14FB7DB4379CE4 /* Sources */,
-				AC2C5552A72A876E5EB2856CD15340F9 /* Frameworks */,
-				292103CA66A919A504DAF7CA292C8165 /* Resources */,
+				5F5D48FC07664A6628BF65946D3EC0EB /* Headers */,
+				7B839A429D5DA600578AB55C89F2B06D /* Sources */,
+				19D7D563BCDABA2C66D4FE76DEFE9CDE /* Frameworks */,
+				454C4E4364CCFF1983D6E5E4D3B06F80 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				1C10216A0C1866616B82D6866F19D310 /* PBXTargetDependency */,
-				46EC7FEE1C9C56CC319173BB6674B86F /* PBXTargetDependency */,
-				9139C3159C63CA2716F640D91285354B /* PBXTargetDependency */,
-				735B81CD669B06BA7EBB7CF415C879F0 /* PBXTargetDependency */,
+				21B2BF322BF2092522428A3D64774D44 /* PBXTargetDependency */,
+				8FFC32B31BD457BF970CD60C63CD2489 /* PBXTargetDependency */,
+				5026097161DE0A2C5D06B90A5FB53D02 /* PBXTargetDependency */,
+				D47A24890D475A8505C515C0FF9205DB /* PBXTargetDependency */,
+				AEF6069D3209F7E0CB06721A25B7BDB1 /* PBXTargetDependency */,
 			);
 			name = "Pods-skeda";
 			productName = "Pods-skeda";
@@ -617,6 +685,24 @@
 			productReference = 9F914A7498FBE10312BF3E5DD5F654D8 /* CFAlertViewController.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		977B67E6ADDDC9C183DE6B6E33F17FCC /* DatePickerDialog */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A4D558CD916807A4099E254989022729 /* Build configuration list for PBXNativeTarget "DatePickerDialog" */;
+			buildPhases = (
+				CE89C036DE2BB62B6239E4516A30F3FF /* Headers */,
+				26DAD317734D3A3D4DFF695E9AA279E7 /* Sources */,
+				2C57BB6F9C12A01BD53B32B4F4DB710F /* Frameworks */,
+				F949476E2CBAB035E574CB61A55948AC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DatePickerDialog;
+			productName = DatePickerDialog;
+			productReference = 0969EB51C1E293C173141D48DC24C3B8 /* DatePickerDialog.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -625,11 +711,6 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1100;
 				LastUpgradeCheck = 1100;
-				TargetAttributes = {
-					8CC7F28675174E65A4EB204EBB5DC19A = {
-						LastSwiftMigration = 1170;
-					};
-				};
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 10.0";
@@ -640,12 +721,13 @@
 				Base,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = D590B2CBE2850E061B396633EECE27A5 /* Products */;
+			productRefGroup = EBB31B9AB01C990860A3D3EA237212BF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				902E26B6547F079F6F96B6EA275C1C93 /* CFAlertViewController */,
 				79AB4C2480419605A17F9288AAB7AAF0 /* CollectionViewWaterfallLayout */,
+				977B67E6ADDDC9C183DE6B6E33F17FCC /* DatePickerDialog */,
 				8CC7F28675174E65A4EB204EBB5DC19A /* NewPopMenu */,
 				1593063359C0F0BA052CC8817DEB89D2 /* Pods-skeda */,
 				1DE44C23B82E6671E9E1541D06DE0E87 /* SwipeCellKit */,
@@ -654,7 +736,7 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		292103CA66A919A504DAF7CA292C8165 /* Resources */ = {
+		454C4E4364CCFF1983D6E5E4D3B06F80 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -692,14 +774,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F949476E2CBAB035E574CB61A55948AC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		30F5E5E4838F1F233B14FB7DB4379CE4 /* Sources */ = {
+		26DAD317734D3A3D4DFF695E9AA279E7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				59C8290D1696A7961FA600E0DD42D84F /* Pods-skeda-dummy.m in Sources */,
+				77B3BBE9D68C4FDA61682884726A01F6 /* DatePickerDialog-dummy.m in Sources */,
+				6134CEAF6C4FB83813AF9FE5B54874DA /* DatePickerDialog.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -718,6 +808,14 @@
 				9C6CEFAE327908F6310B15348E31AEA4 /* PopMenuViewController.swift in Sources */,
 				EA75E23AACB80AACCF1565E8D267883E /* UIColor+Contrast.swift in Sources */,
 				DC4FBA009BD68DB0F36A765203AD6650 /* UIView+Shadows.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7B839A429D5DA600578AB55C89F2B06D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D4797C5635A35CDE2F8E40F17A74E2B /* Pods-skeda-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -783,36 +881,42 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		1C10216A0C1866616B82D6866F19D310 /* PBXTargetDependency */ = {
+		21B2BF322BF2092522428A3D64774D44 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = CFAlertViewController;
 			target = 902E26B6547F079F6F96B6EA275C1C93 /* CFAlertViewController */;
-			targetProxy = 91EE0EA7E9A239A9D1EBB0D8BCDB44E6 /* PBXContainerItemProxy */;
+			targetProxy = DAECC6C1BE6377516111F0D8E5BBA26D /* PBXContainerItemProxy */;
 		};
-		46EC7FEE1C9C56CC319173BB6674B86F /* PBXTargetDependency */ = {
+		5026097161DE0A2C5D06B90A5FB53D02 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = DatePickerDialog;
+			target = 977B67E6ADDDC9C183DE6B6E33F17FCC /* DatePickerDialog */;
+			targetProxy = 2156FAC1F30C96F011ABD562843F9207 /* PBXContainerItemProxy */;
+		};
+		8FFC32B31BD457BF970CD60C63CD2489 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = CollectionViewWaterfallLayout;
 			target = 79AB4C2480419605A17F9288AAB7AAF0 /* CollectionViewWaterfallLayout */;
-			targetProxy = BD1150B5A07301C61DCEDFF6F925894E /* PBXContainerItemProxy */;
+			targetProxy = 89D862D795A284C498A6436D24A85A51 /* PBXContainerItemProxy */;
 		};
-		735B81CD669B06BA7EBB7CF415C879F0 /* PBXTargetDependency */ = {
+		AEF6069D3209F7E0CB06721A25B7BDB1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SwipeCellKit;
 			target = 1DE44C23B82E6671E9E1541D06DE0E87 /* SwipeCellKit */;
-			targetProxy = E718A599F1A0C0874BC547E37A84E9C4 /* PBXContainerItemProxy */;
+			targetProxy = 04EFAD73DC177FEA910E0B1204516E0B /* PBXContainerItemProxy */;
 		};
-		9139C3159C63CA2716F640D91285354B /* PBXTargetDependency */ = {
+		D47A24890D475A8505C515C0FF9205DB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = NewPopMenu;
 			target = 8CC7F28675174E65A4EB204EBB5DC19A /* NewPopMenu */;
-			targetProxy = F8332C794B6B4D67F29E26E13D1BE93F /* PBXContainerItemProxy */;
+			targetProxy = 3BFD835FC7F6C364B1753C573E5A3941 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		217F77D0CAB800627F8588F37F85E2E2 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 09881EC0A45BB345C5833B1B3B4C3375 /* NewPopMenu.release.xcconfig */;
+			baseConfigurationReference = 61CE62158DBA8E8AB6250D661DF1A0E0 /* NewPopMenu.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -826,7 +930,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/NewPopMenu/NewPopMenu-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/NewPopMenu/NewPopMenu-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -837,22 +941,19 @@
 				PRODUCT_NAME = PopMenu;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SUPPORTS_MACCATALYST = NO;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
-		2EC050A9087CFDE2F5AAC1EFC9168EFF /* Release */ = {
+		2DD8A0771FEDD4BDED07B6D49657E8B8 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 557BA794473438958F58B141D58C2F68 /* Pods-skeda.release.xcconfig */;
+			baseConfigurationReference = C4EC8FF732F993CBAF3868FE2860AC2F /* DatePickerDialog.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -862,25 +963,23 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-skeda/Pods-skeda-Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/DatePickerDialog/DatePickerDialog-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/DatePickerDialog/DatePickerDialog-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-skeda/Pods-skeda.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				MODULEMAP_FILE = "Target Support Files/DatePickerDialog/DatePickerDialog.modulemap";
+				PRODUCT_MODULE_NAME = DatePickerDialog;
+				PRODUCT_NAME = DatePickerDialog;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SUPPORTS_MACCATALYST = NO;
-				TARGETED_DEVICE_FAMILY = 1;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -889,7 +988,7 @@
 		};
 		323D2FE9D54C529D93C8E711E4758613 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CAE6F2A055232ADADCE7795CC877CA0A /* NewPopMenu.debug.xcconfig */;
+			baseConfigurationReference = 9A06248A19DA459FB0E8BCADE70D600E /* NewPopMenu.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -903,7 +1002,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/NewPopMenu/NewPopMenu-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/NewPopMenu/NewPopMenu-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -914,10 +1013,9 @@
 				PRODUCT_NAME = PopMenu;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SUPPORTS_MACCATALYST = NO;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -925,7 +1023,7 @@
 		};
 		3584595DD406CECEAB53C52F9E2E1154 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7F0D0C6265239E81411F435A1E1C8237 /* SwipeCellKit.debug.xcconfig */;
+			baseConfigurationReference = 6307D177C3EF64F8EF7CC2E2B72940C5 /* SwipeCellKit.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -939,7 +1037,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/SwipeCellKit/SwipeCellKit-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/SwipeCellKit/SwipeCellKit-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -950,16 +1048,228 @@
 				PRODUCT_NAME = SwipeCellKit;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SUPPORTS_MACCATALYST = NO;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
-		3683CC39B28025CB3F00C0664D5E6FB4 /* Debug */ = {
+		35C0DADA8835E6BD2776739D09A01636 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A7EC17AB97CF32BE9DA98E95FC9C3CEF /* DatePickerDialog.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/DatePickerDialog/DatePickerDialog-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/DatePickerDialog/DatePickerDialog-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/DatePickerDialog/DatePickerDialog.modulemap";
+				PRODUCT_MODULE_NAME = DatePickerDialog;
+				PRODUCT_NAME = DatePickerDialog;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		568F3B054263A877DAC3981DF05B1976 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 96338B4B33BEA19573DD7A06449F2AE9 /* CFAlertViewController.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/CFAlertViewController/CFAlertViewController-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/CFAlertViewController/CFAlertViewController-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/CFAlertViewController/CFAlertViewController.modulemap";
+				PRODUCT_MODULE_NAME = CFAlertViewController;
+				PRODUCT_NAME = CFAlertViewController;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		5733E228875D24D226AB76ADDEE73BFC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 96181660F2DEA727F59C167FE58CAFDA /* SwipeCellKit.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SwipeCellKit/SwipeCellKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwipeCellKit/SwipeCellKit-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/SwipeCellKit/SwipeCellKit.modulemap";
+				PRODUCT_MODULE_NAME = SwipeCellKit;
+				PRODUCT_NAME = SwipeCellKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		5FA68822953B7BF92E2503F81CACB266 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 790AEE00A8FA16F9145F8491B762574E /* CollectionViewWaterfallLayout.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/CollectionViewWaterfallLayout/CollectionViewWaterfallLayout-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/CollectionViewWaterfallLayout/CollectionViewWaterfallLayout-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/CollectionViewWaterfallLayout/CollectionViewWaterfallLayout.modulemap";
+				PRODUCT_MODULE_NAME = CollectionViewWaterfallLayout;
+				PRODUCT_NAME = CollectionViewWaterfallLayout;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		7FA2D1FFDBB3AF2ACC27111A5D09601F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D5CB63E177B7D2A3B52AE6180ADC977D /* CollectionViewWaterfallLayout.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/CollectionViewWaterfallLayout/CollectionViewWaterfallLayout-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/CollectionViewWaterfallLayout/CollectionViewWaterfallLayout-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/CollectionViewWaterfallLayout/CollectionViewWaterfallLayout.modulemap";
+				PRODUCT_MODULE_NAME = CollectionViewWaterfallLayout;
+				PRODUCT_NAME = CollectionViewWaterfallLayout;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		82489FC7C8F7310958AA3296C1F9867D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8F94C396A1BFB2D8C7592A93313540DF /* CFAlertViewController.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/CFAlertViewController/CFAlertViewController-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/CFAlertViewController/CFAlertViewController-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/CFAlertViewController/CFAlertViewController.modulemap";
+				PRODUCT_MODULE_NAME = CFAlertViewController;
+				PRODUCT_NAME = CFAlertViewController;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		8E8C9963AAEFF17E44D0B356BFA25380 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6621F187367B248DBD6597C2527F3140 /* Pods-skeda.debug.xcconfig */;
 			buildSettings = {
@@ -991,17 +1301,18 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SUPPORTS_MACCATALYST = NO;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
-		568F3B054263A877DAC3981DF05B1976 /* Debug */ = {
+		D51D62ACE4603374A5E073FC371C33E7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A3A4846A4623A84ACF0DADB79953A3FE /* CFAlertViewController.debug.xcconfig */;
+			baseConfigurationReference = 557BA794473438958F58B141D58C2F68 /* Pods-skeda.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1011,8 +1322,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/CFAlertViewController/CFAlertViewController-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/CFAlertViewController/CFAlertViewController-Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-skeda/Pods-skeda-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1020,161 +1330,16 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MODULEMAP_FILE = "Target Support Files/CFAlertViewController/CFAlertViewController.modulemap";
-				PRODUCT_MODULE_NAME = CFAlertViewController;
-				PRODUCT_NAME = CFAlertViewController;
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-skeda/Pods-skeda.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SUPPORTS_MACCATALYST = NO;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		5733E228875D24D226AB76ADDEE73BFC /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 61FE134B7FC8D3C05E3EBAEE872DF395 /* SwipeCellKit.release.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/SwipeCellKit/SwipeCellKit-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SwipeCellKit/SwipeCellKit-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/SwipeCellKit/SwipeCellKit.modulemap";
-				PRODUCT_MODULE_NAME = SwipeCellKit;
-				PRODUCT_NAME = SwipeCellKit;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SUPPORTS_MACCATALYST = NO;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		5FA68822953B7BF92E2503F81CACB266 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = FEDE2684CD9C9EE70039E4D596A1C027 /* CollectionViewWaterfallLayout.debug.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/CollectionViewWaterfallLayout/CollectionViewWaterfallLayout-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/CollectionViewWaterfallLayout/CollectionViewWaterfallLayout-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/CollectionViewWaterfallLayout/CollectionViewWaterfallLayout.modulemap";
-				PRODUCT_MODULE_NAME = CollectionViewWaterfallLayout;
-				PRODUCT_NAME = CollectionViewWaterfallLayout;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SUPPORTS_MACCATALYST = NO;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		7FA2D1FFDBB3AF2ACC27111A5D09601F /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2B80122115E4DCB9EC1B5E6EB73E331D /* CollectionViewWaterfallLayout.release.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/CollectionViewWaterfallLayout/CollectionViewWaterfallLayout-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/CollectionViewWaterfallLayout/CollectionViewWaterfallLayout-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/CollectionViewWaterfallLayout/CollectionViewWaterfallLayout.modulemap";
-				PRODUCT_MODULE_NAME = CollectionViewWaterfallLayout;
-				PRODUCT_NAME = CollectionViewWaterfallLayout;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SUPPORTS_MACCATALYST = NO;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		82489FC7C8F7310958AA3296C1F9867D /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B15A8779893D7E387776EEED048C0E21 /* CFAlertViewController.release.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/CFAlertViewController/CFAlertViewController-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/CFAlertViewController/CFAlertViewController-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/CFAlertViewController/CFAlertViewController.modulemap";
-				PRODUCT_MODULE_NAME = CFAlertViewController;
-				PRODUCT_NAME = CFAlertViewController;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SUPPORTS_MACCATALYST = NO;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -1344,6 +1509,15 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		8A295232B69FE5131C46404F3D4190F0 /* Build configuration list for PBXNativeTarget "Pods-skeda" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8E8C9963AAEFF17E44D0B356BFA25380 /* Debug */,
+				D51D62ACE4603374A5E073FC371C33E7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		9DFD21A6FA12F25203D9FD893CB9D99E /* Build configuration list for PBXNativeTarget "CFAlertViewController" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1353,11 +1527,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B3DA943D332C40F26B2F8818A94340C1 /* Build configuration list for PBXNativeTarget "Pods-skeda" */ = {
+		A4D558CD916807A4099E254989022729 /* Build configuration list for PBXNativeTarget "DatePickerDialog" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3683CC39B28025CB3F00C0664D5E6FB4 /* Debug */,
-				2EC050A9087CFDE2F5AAC1EFC9168EFF /* Release */,
+				35C0DADA8835E6BD2776739D09A01636 /* Debug */,
+				2DD8A0771FEDD4BDED07B6D49657E8B8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

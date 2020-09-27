@@ -9,4 +9,5 @@ target 'skeda' do
   pod 'CollectionViewWaterfallLayout'
   pod 'CFAlertViewController'
   pod 'SwipeCellKit'
+  pod 'DatePickerDialog'
 end
