@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ReminderCell" id="KGk-i7-Jjw" customClass="ReminderTableViewCell" customModule="skeda" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SubBackground" translatesAutoresizingMaskIntoConstraints="NO" id="GiQ-po-mDy">
+                        <rect key="frame" x="5" y="2" width="310" height="40"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reminder Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r4n-7B-N9C">
+                        <rect key="frame" x="15" y="11.5" width="109" height="21"/>
+                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                        <color key="textColor" name="SubGrey"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10/14/2020 10:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SN1-zp-TU0">
+                        <rect key="frame" x="211" y="14.5" width="99" height="15"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" name="SubGrey"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="SN1-zp-TU0" secondAttribute="trailing" constant="10" id="6p1-98-qTz"/>
+                    <constraint firstItem="SN1-zp-TU0" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="r4n-7B-N9C" secondAttribute="trailing" constant="10" id="NXr-wH-nJk"/>
+                    <constraint firstItem="SN1-zp-TU0" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="P0P-d4-Eae"/>
+                    <constraint firstAttribute="trailing" secondItem="GiQ-po-mDy" secondAttribute="trailing" constant="5" id="Rte-IE-8Xi"/>
+                    <constraint firstItem="GiQ-po-mDy" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="b3V-Ko-P8D"/>
+                    <constraint firstItem="GiQ-po-mDy" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="2" id="d0o-FL-ZA3"/>
+                    <constraint firstItem="r4n-7B-N9C" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="lHj-bR-JKA"/>
+                    <constraint firstItem="r4n-7B-N9C" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="mmA-Jq-n5J"/>
+                    <constraint firstAttribute="bottom" secondItem="GiQ-po-mDy" secondAttribute="bottom" constant="2" id="qhh-3c-V4f"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="timeLabel" destination="SN1-zp-TU0" id="arf-sf-hpy"/>
+                <outlet property="titleLabel" destination="r4n-7B-N9C" id="lBX-Ft-QsU"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="91.741071428571431"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="SubBackground" width="310" height="40"/>
+        <namedColor name="SubGrey">
+            <color red="0.41176470588235292" green="0.41176470588235292" blue="0.41176470588235292" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

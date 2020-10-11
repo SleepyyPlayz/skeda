@@ -27,6 +27,16 @@
 		91D72BC124BCBA2800E7487D /* CONSTS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D72BC024BCBA2800E7487D /* CONSTS.swift */; };
 		91EB561924E1385D000AE310 /* ItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91EB561824E1385D000AE310 /* ItemViewController.swift */; };
 		91F4E42F2531FEE300EAEAB1 /* NewLineTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F4E42E2531FEE300EAEAB1 /* NewLineTaskViewController.swift */; };
+		91F4E4352532E68500EAEAB1 /* NewSubtaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F4E4332532E68500EAEAB1 /* NewSubtaskTableViewCell.swift */; };
+		91F4E4362532E68500EAEAB1 /* NewSubtaskTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91F4E4342532E68500EAEAB1 /* NewSubtaskTableViewCell.xib */; };
+		91F4E43B25330B5100EAEAB1 /* PointSubtaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F4E43925330B5100EAEAB1 /* PointSubtaskTableViewCell.swift */; };
+		91F4E43C25330B5100EAEAB1 /* PointSubtaskTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91F4E43A25330B5100EAEAB1 /* PointSubtaskTableViewCell.xib */; };
+		91F4E4412533698600EAEAB1 /* LineSubtaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F4E43F2533698600EAEAB1 /* LineSubtaskTableViewCell.swift */; };
+		91F4E4422533698600EAEAB1 /* LineSubtaskTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91F4E4402533698600EAEAB1 /* LineSubtaskTableViewCell.xib */; };
+		91F4E447253372F200EAEAB1 /* NewReminderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F4E445253372F200EAEAB1 /* NewReminderTableViewCell.swift */; };
+		91F4E448253372F200EAEAB1 /* NewReminderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91F4E446253372F200EAEAB1 /* NewReminderTableViewCell.xib */; };
+		91F4E44E253374E900EAEAB1 /* ReminderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F4E44C253374E900EAEAB1 /* ReminderTableViewCell.swift */; };
+		91F4E44F253374E900EAEAB1 /* ReminderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91F4E44D253374E900EAEAB1 /* ReminderTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +63,16 @@
 		91D72BC024BCBA2800E7487D /* CONSTS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CONSTS.swift; sourceTree = "<group>"; };
 		91EB561824E1385D000AE310 /* ItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewController.swift; sourceTree = "<group>"; };
 		91F4E42E2531FEE300EAEAB1 /* NewLineTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewLineTaskViewController.swift; sourceTree = "<group>"; };
+		91F4E4332532E68500EAEAB1 /* NewSubtaskTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewSubtaskTableViewCell.swift; sourceTree = "<group>"; };
+		91F4E4342532E68500EAEAB1 /* NewSubtaskTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewSubtaskTableViewCell.xib; sourceTree = "<group>"; };
+		91F4E43925330B5100EAEAB1 /* PointSubtaskTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointSubtaskTableViewCell.swift; sourceTree = "<group>"; };
+		91F4E43A25330B5100EAEAB1 /* PointSubtaskTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PointSubtaskTableViewCell.xib; sourceTree = "<group>"; };
+		91F4E43F2533698600EAEAB1 /* LineSubtaskTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineSubtaskTableViewCell.swift; sourceTree = "<group>"; };
+		91F4E4402533698600EAEAB1 /* LineSubtaskTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LineSubtaskTableViewCell.xib; sourceTree = "<group>"; };
+		91F4E445253372F200EAEAB1 /* NewReminderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewReminderTableViewCell.swift; sourceTree = "<group>"; };
+		91F4E446253372F200EAEAB1 /* NewReminderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewReminderTableViewCell.xib; sourceTree = "<group>"; };
+		91F4E44C253374E900EAEAB1 /* ReminderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderTableViewCell.swift; sourceTree = "<group>"; };
+		91F4E44D253374E900EAEAB1 /* ReminderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReminderTableViewCell.xib; sourceTree = "<group>"; };
 		DDFAB3EFA5A80E48862A6A7E /* Pods_skeda.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_skeda.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -157,6 +177,11 @@
 		91D72BB824BCAE3400E7487D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				91F4E44A253374CB00EAEAB1 /* ReminderCell */,
+				91F4E444253372C100EAEAB1 /* NewReminderCell */,
+				91F4E43E2533696600EAEAB1 /* LineSubtaskCell */,
+				91F4E43825330B2C00EAEAB1 /* PointSubtaskCell */,
+				91F4E4312532E63600EAEAB1 /* NewSubtaskCell */,
 				91C5982F24C827AA005E6A87 /* TagCell */,
 				91D72BA424BCADF200E7487D /* Main.storyboard */,
 				91D72BAC24BCADF400E7487D /* LaunchScreen.storyboard */,
@@ -176,6 +201,51 @@
 			children = (
 			);
 			name = Controllers;
+			sourceTree = "<group>";
+		};
+		91F4E4312532E63600EAEAB1 /* NewSubtaskCell */ = {
+			isa = PBXGroup;
+			children = (
+				91F4E4332532E68500EAEAB1 /* NewSubtaskTableViewCell.swift */,
+				91F4E4342532E68500EAEAB1 /* NewSubtaskTableViewCell.xib */,
+			);
+			name = NewSubtaskCell;
+			sourceTree = "<group>";
+		};
+		91F4E43825330B2C00EAEAB1 /* PointSubtaskCell */ = {
+			isa = PBXGroup;
+			children = (
+				91F4E43925330B5100EAEAB1 /* PointSubtaskTableViewCell.swift */,
+				91F4E43A25330B5100EAEAB1 /* PointSubtaskTableViewCell.xib */,
+			);
+			name = PointSubtaskCell;
+			sourceTree = "<group>";
+		};
+		91F4E43E2533696600EAEAB1 /* LineSubtaskCell */ = {
+			isa = PBXGroup;
+			children = (
+				91F4E43F2533698600EAEAB1 /* LineSubtaskTableViewCell.swift */,
+				91F4E4402533698600EAEAB1 /* LineSubtaskTableViewCell.xib */,
+			);
+			name = LineSubtaskCell;
+			sourceTree = "<group>";
+		};
+		91F4E444253372C100EAEAB1 /* NewReminderCell */ = {
+			isa = PBXGroup;
+			children = (
+				91F4E445253372F200EAEAB1 /* NewReminderTableViewCell.swift */,
+				91F4E446253372F200EAEAB1 /* NewReminderTableViewCell.xib */,
+			);
+			name = NewReminderCell;
+			sourceTree = "<group>";
+		};
+		91F4E44A253374CB00EAEAB1 /* ReminderCell */ = {
+			isa = PBXGroup;
+			children = (
+				91F4E44C253374E900EAEAB1 /* ReminderTableViewCell.swift */,
+				91F4E44D253374E900EAEAB1 /* ReminderTableViewCell.xib */,
+			);
+			name = ReminderCell;
 			sourceTree = "<group>";
 		};
 		B2DC3BE421CB38DC0C89F6BA /* Frameworks */ = {
@@ -246,9 +316,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91F4E448253372F200EAEAB1 /* NewReminderTableViewCell.xib in Resources */,
+				91F4E4422533698600EAEAB1 /* LineSubtaskTableViewCell.xib in Resources */,
+				91F4E4362532E68500EAEAB1 /* NewSubtaskTableViewCell.xib in Resources */,
 				91C5983324C82840005E6A87 /* TagTableViewCell.xib in Resources */,
 				91D72BAE24BCADF400E7487D /* LaunchScreen.storyboard in Resources */,
+				91F4E44F253374E900EAEAB1 /* ReminderTableViewCell.xib in Resources */,
 				91D72BAB24BCADF400E7487D /* Assets.xcassets in Resources */,
+				91F4E43C25330B5100EAEAB1 /* PointSubtaskTableViewCell.xib in Resources */,
 				91D72BA624BCADF200E7487D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -304,6 +379,8 @@
 			files = (
 				91EB561924E1385D000AE310 /* ItemViewController.swift in Sources */,
 				91D72BBC24BCB1E100E7487D /* CalendarViewController.swift in Sources */,
+				91F4E4352532E68500EAEAB1 /* NewSubtaskTableViewCell.swift in Sources */,
+				91F4E43B25330B5100EAEAB1 /* PointSubtaskTableViewCell.swift in Sources */,
 				91003EA9252098BC0045F51F /* NewPointTaskViewController.swift in Sources */,
 				91F4E42F2531FEE300EAEAB1 /* NewLineTaskViewController.swift in Sources */,
 				91D72BA324BCADF200E7487D /* MasterListViewController.swift in Sources */,
@@ -315,8 +392,11 @@
 				91C5983224C82840005E6A87 /* TagTableViewCell.swift in Sources */,
 				9135713324F2C46800E0CF0B /* NewTaskTypeViewController.swift in Sources */,
 				91D72B9F24BCADF200E7487D /* SceneDelegate.swift in Sources */,
+				91F4E447253372F200EAEAB1 /* NewReminderTableViewCell.swift in Sources */,
+				91F4E4412533698600EAEAB1 /* LineSubtaskTableViewCell.swift in Sources */,
 				91D72BC124BCBA2800E7487D /* CONSTS.swift in Sources */,
 				91C5982D24C612FB005E6A87 /* SettingsViewController.swift in Sources */,
+				91F4E44E253374E900EAEAB1 /* ReminderTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
