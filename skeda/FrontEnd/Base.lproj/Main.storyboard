@@ -71,7 +71,7 @@
             <objects>
                 <viewController id="Ur5-gu-aSL" customClass="SettingsViewController" customModule="skeda" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2mo-zr-UVq">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="FjN-SU-Opo"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -89,9 +89,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hrR-al-lco">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hrR-al-lco">
                                 <rect key="frame" x="0.0" y="102" width="414" height="711"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" name="Transparent"/>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ruR-vA-yeu">
@@ -134,7 +133,11 @@
                             <constraint firstItem="gaX-6M-0jo" firstAttribute="leading" secondItem="ruR-vA-yeu" secondAttribute="trailing" constant="20" id="8rv-w6-Eit"/>
                             <constraint firstItem="ruR-vA-yeu" firstAttribute="top" secondItem="O1u-W8-tvY" secondAttribute="top" id="FgX-GH-B6d"/>
                             <constraint firstItem="gaX-6M-0jo" firstAttribute="top" secondItem="O1u-W8-tvY" secondAttribute="top" id="Kxf-OP-0aY"/>
+                            <constraint firstItem="hrR-al-lco" firstAttribute="width" secondItem="O1u-W8-tvY" secondAttribute="width" id="LGy-Bk-3q4"/>
+                            <constraint firstItem="hrR-al-lco" firstAttribute="top" secondItem="O1u-W8-tvY" secondAttribute="top" constant="58" id="Pyh-fX-SRq"/>
+                            <constraint firstItem="hrR-al-lco" firstAttribute="bottom" secondItem="O1u-W8-tvY" secondAttribute="bottom" id="St9-at-l0h"/>
                             <constraint firstItem="6wM-66-vsP" firstAttribute="top" secondItem="O1u-W8-tvY" secondAttribute="top" id="dST-Bd-GJp"/>
+                            <constraint firstItem="hrR-al-lco" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="kbP-vC-VEd"/>
                             <constraint firstItem="ruR-vA-yeu" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" constant="20" id="mBX-hz-yja"/>
                             <constraint firstItem="O1u-W8-tvY" firstAttribute="trailing" secondItem="6wM-66-vsP" secondAttribute="trailing" constant="20" id="mLc-YR-RJ1"/>
                         </constraints>
@@ -160,9 +163,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xZZ-Gq-ehR">
-                                <rect key="frame" x="0.0" y="108" width="414" height="711"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xZZ-Gq-ehR">
+                                <rect key="frame" x="0.0" y="102" width="414" height="711"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9rm-z5-wBq">
@@ -211,12 +213,16 @@
                         <viewLayoutGuide key="safeArea" id="IFS-Ha-dTI"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="xZZ-Gq-ehR" firstAttribute="bottom" secondItem="IFS-Ha-dTI" secondAttribute="bottom" id="99H-Fk-QFN"/>
                             <constraint firstItem="8m7-6S-djs" firstAttribute="leading" secondItem="9rm-z5-wBq" secondAttribute="trailing" constant="20" id="Nb5-Q7-Nbo"/>
+                            <constraint firstItem="xZZ-Gq-ehR" firstAttribute="centerX" secondItem="2Uf-KH-1vb" secondAttribute="centerX" id="PRm-nF-NQR"/>
                             <constraint firstItem="9rm-z5-wBq" firstAttribute="leading" secondItem="h9e-NT-23U" secondAttribute="trailing" constant="20" id="QRX-9t-h8B"/>
+                            <constraint firstItem="xZZ-Gq-ehR" firstAttribute="width" secondItem="IFS-Ha-dTI" secondAttribute="width" id="R6k-vv-Iir"/>
                             <constraint firstItem="IFS-Ha-dTI" firstAttribute="trailing" secondItem="cvO-Vu-bBG" secondAttribute="trailing" constant="20" id="S1v-8e-bky"/>
                             <constraint firstItem="8m7-6S-djs" firstAttribute="leading" secondItem="9rm-z5-wBq" secondAttribute="trailing" constant="20" id="UpL-Kk-NTE"/>
                             <constraint firstItem="cvO-Vu-bBG" firstAttribute="top" secondItem="IFS-Ha-dTI" secondAttribute="top" id="WDV-l4-L8R"/>
                             <constraint firstItem="h9e-NT-23U" firstAttribute="leading" secondItem="IFS-Ha-dTI" secondAttribute="leading" constant="20" id="Zxz-aL-IaA"/>
+                            <constraint firstItem="xZZ-Gq-ehR" firstAttribute="top" secondItem="IFS-Ha-dTI" secondAttribute="top" constant="58" id="aVa-N7-9CB"/>
                             <constraint firstItem="8m7-6S-djs" firstAttribute="top" secondItem="IFS-Ha-dTI" secondAttribute="top" id="gls-Ea-0VL"/>
                             <constraint firstItem="h9e-NT-23U" firstAttribute="top" secondItem="IFS-Ha-dTI" secondAttribute="top" id="sdr-lF-Gfb"/>
                             <constraint firstItem="9rm-z5-wBq" firstAttribute="top" secondItem="IFS-Ha-dTI" secondAttribute="top" id="vtx-dH-AxD"/>
@@ -239,12 +245,11 @@
             <objects>
                 <viewController id="JKW-fF-O7E" customClass="EditTagViewController" customModule="skeda" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TUr-12-wwP">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="WhiteBackground" translatesAutoresizingMaskIntoConstraints="NO" id="0pk-jV-GMM">
+                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WhiteBackground" translatesAutoresizingMaskIntoConstraints="NO" id="0pk-jV-GMM">
                                 <rect key="frame" x="10" y="10" width="394" height="822"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Edit List" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="20g-oQ-EJ8">
                                 <rect key="frame" x="35" y="35" width="178.5" height="60"/>
@@ -594,6 +599,7 @@
                             <constraint firstItem="PTI-Y1-y1z" firstAttribute="leading" secondItem="2g4-tl-ygb" secondAttribute="leading" constant="20" id="EPL-J6-ffD"/>
                             <constraint firstItem="tIc-BH-piX" firstAttribute="centerX" secondItem="TUr-12-wwP" secondAttribute="centerX" id="EeL-p5-ftx"/>
                             <constraint firstAttribute="bottom" secondItem="ECm-x8-xO7" secondAttribute="bottom" constant="30" id="Hdz-aE-mmE"/>
+                            <constraint firstItem="2g4-tl-ygb" firstAttribute="trailing" secondItem="0pk-jV-GMM" secondAttribute="trailing" constant="10" id="J6f-Hp-SwQ"/>
                             <constraint firstItem="PTI-Y1-y1z" firstAttribute="top" secondItem="20g-oQ-EJ8" secondAttribute="bottom" constant="25" id="Jdy-b1-Knu"/>
                             <constraint firstItem="HyE-Qq-vXb" firstAttribute="top" secondItem="xTN-Zq-HuP" secondAttribute="bottom" constant="6" id="Lmz-eL-dsc"/>
                             <constraint firstItem="20g-oQ-EJ8" firstAttribute="leading" secondItem="2g4-tl-ygb" secondAttribute="leading" constant="35" id="Mo7-YG-7sf"/>
@@ -605,14 +611,17 @@
                             <constraint firstItem="2g4-tl-ygb" firstAttribute="trailing" secondItem="GIY-bf-ica" secondAttribute="trailing" constant="15.5" id="U4f-Gm-aBj"/>
                             <constraint firstItem="2g4-tl-ygb" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="3ev-XN-tIt" secondAttribute="trailing" symbolic="YES" id="Upw-2X-qOI"/>
                             <constraint firstItem="GIY-bf-ica" firstAttribute="top" secondItem="QsD-8f-ON1" secondAttribute="bottom" constant="3" id="VdZ-ke-ajN"/>
+                            <constraint firstAttribute="bottom" secondItem="0pk-jV-GMM" secondAttribute="bottom" constant="10" id="VvJ-jl-ozi"/>
                             <constraint firstItem="HyE-Qq-vXb" firstAttribute="leading" secondItem="2g4-tl-ygb" secondAttribute="leading" constant="20" id="XHb-Tw-GSc"/>
                             <constraint firstItem="xTN-Zq-HuP" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="PTI-Y1-y1z" secondAttribute="trailing" constant="8" symbolic="YES" id="Zgi-wo-rkA"/>
+                            <constraint firstItem="0pk-jV-GMM" firstAttribute="leading" secondItem="2g4-tl-ygb" secondAttribute="leading" constant="10" id="aW2-7O-FpQ"/>
                             <constraint firstItem="E7V-Fj-niX" firstAttribute="centerX" secondItem="TUr-12-wwP" secondAttribute="centerX" id="bmJ-gg-qqe"/>
                             <constraint firstItem="E7V-Fj-niX" firstAttribute="leading" secondItem="2g4-tl-ygb" secondAttribute="leading" constant="20" id="bqd-NM-NaO"/>
                             <constraint firstItem="GIY-bf-ica" firstAttribute="centerX" secondItem="TUr-12-wwP" secondAttribute="centerX" id="fRO-9p-qzo"/>
                             <constraint firstItem="2g4-tl-ygb" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="QsD-8f-ON1" secondAttribute="trailing" symbolic="YES" id="gA8-83-5Yi"/>
                             <constraint firstItem="2g4-tl-ygb" firstAttribute="trailing" secondItem="xTN-Zq-HuP" secondAttribute="trailing" constant="20" id="gHQ-nC-aY3"/>
                             <constraint firstItem="3ev-XN-tIt" firstAttribute="leading" secondItem="2g4-tl-ygb" secondAttribute="leading" constant="20" id="gaL-Im-nHr"/>
+                            <constraint firstItem="0pk-jV-GMM" firstAttribute="top" secondItem="2g4-tl-ygb" secondAttribute="top" constant="10" id="iIE-RP-VRP"/>
                             <constraint firstItem="GIY-bf-ica" firstAttribute="leading" secondItem="2g4-tl-ygb" secondAttribute="leading" constant="15.5" id="jiM-Zb-ayI"/>
                             <constraint firstItem="k9e-An-MX4" firstAttribute="top" secondItem="2g4-tl-ygb" secondAttribute="top" constant="40" id="jwi-lL-vWC"/>
                             <constraint firstItem="k9e-An-MX4" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="20g-oQ-EJ8" secondAttribute="trailing" constant="8" symbolic="YES" id="lnR-Pb-VDb"/>
@@ -660,7 +669,7 @@
             <objects>
                 <viewController id="wFR-FM-vla" customClass="NewTagViewController" customModule="skeda" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sIW-iM-0gy">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WhiteBackground" translatesAutoresizingMaskIntoConstraints="NO" id="I7A-Km-UDu">
@@ -1056,7 +1065,7 @@
             <objects>
                 <viewController id="9tR-fA-vjW" customClass="NewPointTaskViewController" customModule="skeda" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Pcu-Pf-eKG" userLabel="Background View">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="1280"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="1226"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WhiteBackground" translatesAutoresizingMaskIntoConstraints="NO" id="mQu-T5-tmM">
@@ -1531,7 +1540,7 @@
             <objects>
                 <viewController id="h78-Ej-qJv" customClass="NewTaskTypeViewController" customModule="skeda" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="reD-9b-p3e">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="irA-Xc-eAY">
@@ -1720,7 +1729,7 @@
             <objects>
                 <viewController id="JnQ-uV-2HM" customClass="NewLineTaskViewController" customModule="skeda" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="enf-Xy-TnM" userLabel="Background View">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="1364"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="1310"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WhiteBackground" translatesAutoresizingMaskIntoConstraints="NO" id="5h8-qq-ZLc">
@@ -2217,7 +2226,7 @@
             <objects>
                 <viewController id="DWZ-hr-vvS" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MBH-Ti-Qqg" userLabel="Background View">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="1280"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="1226"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WhiteBackground" translatesAutoresizingMaskIntoConstraints="NO" id="GBg-aF-d61">
@@ -2689,7 +2698,7 @@
             <objects>
                 <viewController id="ulZ-cq-L0U" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7xy-Ma-S52" userLabel="Background View">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="1280"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="1226"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WhiteBackground" translatesAutoresizingMaskIntoConstraints="NO" id="vtC-fA-cuk">
