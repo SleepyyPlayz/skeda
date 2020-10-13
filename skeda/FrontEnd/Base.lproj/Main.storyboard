@@ -1144,6 +1144,7 @@
                                                         <connections>
                                                             <action selector="priorityBarChanged:" destination="wFR-FM-vla" eventType="valueChanged" id="b0p-7g-IgN"/>
                                                             <action selector="priorityBarChanged:" destination="JKW-fF-O7E" eventType="valueChanged" id="hkk-4x-0xb"/>
+                                                            <action selector="priorityBarChanged:" destination="9tR-fA-vjW" eventType="valueChanged" id="jrf-aW-hb9"/>
                                                         </connections>
                                                     </segmentedControl>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PriorityBarRight" translatesAutoresizingMaskIntoConstraints="NO" id="fVM-Qa-lQY">
@@ -1198,6 +1199,7 @@
                                                         <state key="selected" image="ThemeButtonBlueSLTD"/>
                                                         <connections>
                                                             <action selector="blueButtonSelected:" destination="wFR-FM-vla" eventType="touchUpInside" id="MhP-Fu-oJJ"/>
+                                                            <action selector="blueButtonSelected:" destination="9tR-fA-vjW" eventType="touchUpInside" id="fLd-6c-Eud"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uvu-j9-gTq">
@@ -1208,6 +1210,7 @@
                                                         <state key="normal" image="ThemeButtonGreen"/>
                                                         <state key="selected" image="ThemeButtonGreenSLTD"/>
                                                         <connections>
+                                                            <action selector="greenButtonSelected:" destination="9tR-fA-vjW" eventType="touchUpInside" id="Y9P-V6-cPt"/>
                                                             <action selector="greenButtonSelected:" destination="wFR-FM-vla" eventType="touchUpInside" id="b4A-NC-3kG"/>
                                                         </connections>
                                                     </button>
@@ -1219,6 +1222,7 @@
                                                         <state key="normal" image="ThemeButtonTurquoise"/>
                                                         <state key="selected" image="ThemeButtonTurquoiseSLTD"/>
                                                         <connections>
+                                                            <action selector="turquoiseButtonSelected:" destination="9tR-fA-vjW" eventType="touchUpInside" id="1LD-XJ-Nn8"/>
                                                             <action selector="turquoiseButtonSelected:" destination="wFR-FM-vla" eventType="touchUpInside" id="HRZ-t0-MSJ"/>
                                                         </connections>
                                                     </button>
@@ -1230,6 +1234,7 @@
                                                         <state key="normal" image="ThemeButtonGrey"/>
                                                         <state key="selected" image="ThemeButtonGreySLTD"/>
                                                         <connections>
+                                                            <action selector="greyButtonSelected:" destination="9tR-fA-vjW" eventType="touchUpInside" id="2W0-5z-zQN"/>
                                                             <action selector="greyButtonSelected:" destination="wFR-FM-vla" eventType="touchUpInside" id="H32-qb-ftg"/>
                                                         </connections>
                                                     </button>
@@ -1241,6 +1246,7 @@
                                                         <state key="normal" image="ThemeButtonDeepBlue"/>
                                                         <state key="selected" image="ThemeButtonDeepBlueSLTD"/>
                                                         <connections>
+                                                            <action selector="deepBlueButtonSelected:" destination="9tR-fA-vjW" eventType="touchUpInside" id="5iQ-J8-ble"/>
                                                             <action selector="deepBlueButtonSelected:" destination="wFR-FM-vla" eventType="touchUpInside" id="jAz-Mg-tFP"/>
                                                         </connections>
                                                     </button>
@@ -1252,6 +1258,7 @@
                                                         <state key="normal" image="ThemeButtonPurple"/>
                                                         <state key="selected" image="ThemeButtonPurpleSLTD"/>
                                                         <connections>
+                                                            <action selector="purpleButtonSelected:" destination="9tR-fA-vjW" eventType="touchUpInside" id="0PE-bd-s6p"/>
                                                             <action selector="purpleButtonSelected:" destination="wFR-FM-vla" eventType="touchUpInside" id="B0r-ju-YqT"/>
                                                         </connections>
                                                     </button>
@@ -1263,6 +1270,7 @@
                                                         <state key="normal" image="ThemeButtonOrange"/>
                                                         <state key="selected" image="ThemeButtonOrangeSLTD"/>
                                                         <connections>
+                                                            <action selector="orangeButtonSelected:" destination="9tR-fA-vjW" eventType="touchUpInside" id="Ykd-b2-MwP"/>
                                                             <action selector="orangeButtonSelected:" destination="wFR-FM-vla" eventType="touchUpInside" id="br1-5k-vvC"/>
                                                         </connections>
                                                     </button>
@@ -1274,6 +1282,7 @@
                                                         <state key="normal" image="ThemeButtonRed"/>
                                                         <state key="selected" image="ThemeButtonRedSLTD"/>
                                                         <connections>
+                                                            <action selector="redButtonSelected:" destination="9tR-fA-vjW" eventType="touchUpInside" id="lQc-6i-sBk"/>
                                                             <action selector="redButtonSelected:" destination="wFR-FM-vla" eventType="touchUpInside" id="tMG-Ez-et8"/>
                                                         </connections>
                                                     </button>
@@ -1302,6 +1311,7 @@
                                                         <state key="selected" image="ThemeButtonBlueLT_SLTD"/>
                                                         <connections>
                                                             <action selector="blueLTButtonSelected:" destination="wFR-FM-vla" eventType="touchUpInside" id="WxV-xt-TCX"/>
+                                                            <action selector="blueLTButtonSelected:" destination="9tR-fA-vjW" eventType="touchUpInside" id="gjR-Zu-wtc"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n8l-zy-lle">
@@ -1313,6 +1323,7 @@
                                                         <state key="selected" image="ThemeButtonGreenLT_SLTD"/>
                                                         <connections>
                                                             <action selector="greenLTButtonSelected:" destination="wFR-FM-vla" eventType="touchUpInside" id="Siy-d4-X0C"/>
+                                                            <action selector="greenLTButtonSelected:" destination="9tR-fA-vjW" eventType="touchUpInside" id="kgR-jX-A2a"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iLI-w6-tFY">
@@ -1324,6 +1335,7 @@
                                                         <state key="selected" image="ThemeButtonTurquoiseLT_SLTD"/>
                                                         <connections>
                                                             <action selector="turquoiseLTButtonSelected:" destination="wFR-FM-vla" eventType="touchUpInside" id="TsF-cO-QeX"/>
+                                                            <action selector="turquoiseLTButtonSelected:" destination="9tR-fA-vjW" eventType="touchUpInside" id="pTS-0j-amz"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rxQ-ye-jEr">
@@ -1335,6 +1347,7 @@
                                                         <state key="selected" image="ThemeButtonGreyLT_SLTD"/>
                                                         <connections>
                                                             <action selector="greyLTButtonSelected:" destination="wFR-FM-vla" eventType="touchUpInside" id="HpS-Tx-969"/>
+                                                            <action selector="greyLTButtonSelected:" destination="9tR-fA-vjW" eventType="touchUpInside" id="dpv-pP-aYT"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FW1-1b-2ah">
@@ -1346,6 +1359,7 @@
                                                         <state key="selected" image="ThemeButtonDeepBlueLT_SLTD"/>
                                                         <connections>
                                                             <action selector="deepBlueLTButtonSelected:" destination="wFR-FM-vla" eventType="touchUpInside" id="GEm-uX-DuV"/>
+                                                            <action selector="deepBlueLTButtonSelected:" destination="9tR-fA-vjW" eventType="touchUpInside" id="yUc-Xk-xC7"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dnq-Mm-6tb">
@@ -1357,6 +1371,7 @@
                                                         <state key="selected" image="ThemeButtonPurpleLT_SLTD"/>
                                                         <connections>
                                                             <action selector="PurpleLTButtonSelected:" destination="wFR-FM-vla" eventType="touchUpInside" id="oe8-hM-wQm"/>
+                                                            <action selector="purpleLTButtonSelected:" destination="9tR-fA-vjW" eventType="touchUpInside" id="gTQ-RU-VK1"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cpd-rg-B59">
@@ -1367,6 +1382,7 @@
                                                         <state key="normal" image="ThemeButtonOrangeLT"/>
                                                         <state key="selected" image="ThemeButtonOrangeLT_SLTD"/>
                                                         <connections>
+                                                            <action selector="orangeLTButtonSelected:" destination="9tR-fA-vjW" eventType="touchUpInside" id="91D-qD-uT5"/>
                                                             <action selector="orangeLTButtonSelected:" destination="wFR-FM-vla" eventType="touchUpInside" id="DWp-y5-9mf"/>
                                                         </connections>
                                                     </button>
@@ -1378,6 +1394,7 @@
                                                         <state key="normal" image="ThemeButtonRedLT"/>
                                                         <state key="selected" image="ThemeButtonRedLT_SLTD"/>
                                                         <connections>
+                                                            <action selector="redLTButtonSelected:" destination="9tR-fA-vjW" eventType="touchUpInside" id="24q-Ze-7vK"/>
                                                             <action selector="redLTButtonSelected:" destination="wFR-FM-vla" eventType="touchUpInside" id="cCZ-ZD-rZ8"/>
                                                         </connections>
                                                     </button>
@@ -1421,14 +1438,14 @@
                                                 <color key="textColor" name="PseudoWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4ly-JI-Mr7">
+                                            <tableView clipsSubviews="YES" tag="1" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4ly-JI-Mr7">
                                                 <rect key="frame" x="10" y="442" width="374" height="154"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="154" id="Sqw-Zq-Yr0"/>
                                                 </constraints>
                                             </tableView>
-                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vIn-CZ-c1d">
+                                            <tableView clipsSubviews="YES" tag="2" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vIn-CZ-c1d">
                                                 <rect key="frame" x="10" y="638" width="374" height="132"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
@@ -1443,9 +1460,16 @@
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
                                                 <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES" shipmentTrackingNumber="YES" flightNumber="YES"/>
                                             </textView>
+                                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter a title." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KZ7-fd-pgY">
+                                                <rect key="frame" x="288.5" y="29" width="95.5" height="12"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="10"/>
+                                                <color key="textColor" name="WarningRed"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" name="Transparent"/>
                                         <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="KZ7-fd-pgY" secondAttribute="trailing" constant="10" id="1Cp-CJ-VvI"/>
                                             <constraint firstItem="Aul-ao-Exf" firstAttribute="top" secondItem="VcY-W9-VR3" secondAttribute="bottom" constant="8" id="1oC-Oe-Neg"/>
                                             <constraint firstItem="i0q-mN-aUA" firstAttribute="top" secondItem="ktp-od-zA7" secondAttribute="bottom" constant="2" id="1zQ-2c-lYN"/>
                                             <constraint firstItem="b5C-8h-uBI" firstAttribute="top" secondItem="i0q-mN-aUA" secondAttribute="bottom" constant="10" id="3Nx-9k-bW3"/>
@@ -1484,6 +1508,7 @@
                                             <constraint firstItem="Aul-ao-Exf" firstAttribute="leading" secondItem="7If-ez-L25" secondAttribute="leading" constant="10" id="kyP-pC-NrH"/>
                                             <constraint firstItem="i0q-mN-aUA" firstAttribute="width" secondItem="ktp-od-zA7" secondAttribute="width" id="oUp-02-uv0"/>
                                             <constraint firstItem="doa-13-zNO" firstAttribute="leading" secondItem="7If-ez-L25" secondAttribute="leading" constant="10" id="qGc-ov-eA7"/>
+                                            <constraint firstItem="Xf3-xJ-J9y" firstAttribute="top" secondItem="KZ7-fd-pgY" secondAttribute="bottom" constant="6" id="tjO-b8-9a6"/>
                                             <constraint firstAttribute="trailing" secondItem="ktp-od-zA7" secondAttribute="trailing" constant="5.5" id="u06-Va-g4z"/>
                                             <constraint firstItem="b5C-8h-uBI" firstAttribute="leading" secondItem="7If-ez-L25" secondAttribute="leading" constant="10" id="w9n-gY-EA0"/>
                                             <constraint firstItem="Xf3-xJ-J9y" firstAttribute="leading" secondItem="7If-ez-L25" secondAttribute="leading" constant="10" id="yVS-9e-Xx3"/>
@@ -1530,6 +1555,42 @@
                         </constraints>
                     </view>
                     <size key="freeformSize" width="414" height="1280"/>
+                    <connections>
+                        <outlet property="backgroundView" destination="Pcu-Pf-eKG" id="0Km-SP-9wz"/>
+                        <outlet property="blueButton" destination="zcJ-d8-FLK" id="xtr-EU-CBp"/>
+                        <outlet property="blueLTButton" destination="TQ7-bi-hQ2" id="L8m-Ux-FnP"/>
+                        <outlet property="closeButton" destination="Ksg-Lh-bZg" id="gUb-O1-w8D"/>
+                        <outlet property="deepBlueButton" destination="7Yv-hY-lYa" id="ydz-HC-AV0"/>
+                        <outlet property="deepBlueLTButton" destination="FW1-1b-2ah" id="g0P-nV-CO4"/>
+                        <outlet property="dueDateData" destination="eJs-OX-9Su" id="rTN-cf-rJL"/>
+                        <outlet property="dueDateLabel" destination="gdL-eY-GYy" id="qDC-35-Q2A"/>
+                        <outlet property="greenButton" destination="uvu-j9-gTq" id="ckG-8p-72F"/>
+                        <outlet property="greenLTButton" destination="n8l-zy-lle" id="WWf-SJ-FW1"/>
+                        <outlet property="greyButton" destination="VJM-VK-yln" id="VGG-ML-7gc"/>
+                        <outlet property="greyLTButton" destination="rxQ-ye-jEr" id="tq8-uX-0jk"/>
+                        <outlet property="notesLabel" destination="bkE-tY-rkX" id="EXU-YK-mbN"/>
+                        <outlet property="notesTextView" destination="TCS-Ig-fAh" id="2yd-Wc-wel"/>
+                        <outlet property="orangeButton" destination="V2l-JP-l4G" id="BO6-HP-ywV"/>
+                        <outlet property="orangeLTButton" destination="cpd-rg-B59" id="wFo-0P-Z6O"/>
+                        <outlet property="priorityBar" destination="MQm-Ef-5Rp" id="HWJ-Ao-NM4"/>
+                        <outlet property="priorityLabel" destination="VcY-W9-VR3" id="rJE-r9-fWa"/>
+                        <outlet property="purpleButton" destination="ndV-sI-h6M" id="vwB-K1-XTR"/>
+                        <outlet property="purpleLTButton" destination="dnq-Mm-6tb" id="dSM-2Y-a30"/>
+                        <outlet property="redButton" destination="yIG-gh-28T" id="zpU-bn-yYC"/>
+                        <outlet property="redLTButton" destination="bG7-HC-22F" id="HiG-4W-otD"/>
+                        <outlet property="remindersLabel" destination="doa-13-zNO" id="RzH-Rn-aVA"/>
+                        <outlet property="remindersTableView" destination="vIn-CZ-c1d" id="kq4-wV-lmO"/>
+                        <outlet property="subtasksLabel" destination="b5C-8h-uBI" id="BHJ-QW-LT3"/>
+                        <outlet property="subtasksTableView" destination="4ly-JI-Mr7" id="mHV-KG-ZqJ"/>
+                        <outlet property="themeLabel" destination="Zmp-rT-Ucx" id="nGR-1P-YcX"/>
+                        <outlet property="titleLabel" destination="SBP-AB-N7A" id="0OX-cd-xAR"/>
+                        <outlet property="titleTextField" destination="Xf3-xJ-J9y" id="qWq-Io-ReA"/>
+                        <outlet property="topText" destination="bxy-fu-BGB" id="HAN-hH-KY3"/>
+                        <outlet property="turquoiseButton" destination="NoP-RQ-EaZ" id="zF3-46-Be0"/>
+                        <outlet property="turquoiseLTButton" destination="iLI-w6-tFY" id="jSI-XW-5EL"/>
+                        <outlet property="warningLabel" destination="KZ7-fd-pgY" id="V0B-h8-Crb"/>
+                        <outlet property="whiteBackground" destination="mQu-T5-tmM" id="Yzd-8E-lKz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WAp-mm-Qq4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
