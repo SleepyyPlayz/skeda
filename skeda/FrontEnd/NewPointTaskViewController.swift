@@ -9,6 +9,7 @@
 import UIKit
 import CoreData
 import CFAlertViewController
+import DatePickerDialog
 
 class NewPointTaskViewController: UIViewController{
     //BUTTONS
@@ -70,6 +71,7 @@ class NewPointTaskViewController: UIViewController{
     var taskPriority: Int? = 2
     var taskThemeColorName: String?
     var taskIsLightThemed: Bool? = false
+    var taskDueDate: Date? = Date()
     //let tempDateKey = Date().timeIntervalSinceReferenceDate
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
@@ -117,9 +119,27 @@ class NewPointTaskViewController: UIViewController{
         titleTextField.text = ""
         warningLabel.isHidden = true
         priorityBar.selectedSegmentIndex = 2
+        
+        //set temp due date date
+        let formatter = DateFormatter()
+        formatter.dateFormat = "MMMM dd, yyyy"
+        dueDateData.text = formatter.string(from: taskDueDate ?? Date())
+        
     }
     @IBAction func priorityBarChanged(_ sender: UISegmentedControl) {
         taskPriority = sender.selectedSegmentIndex
+    }
+    
+    @IBAction func dueDateButtonPressed(_ sender: UIButton) {
+        DatePickerDialog().show("Select Due Date", doneButtonTitle: "Done", cancelButtonTitle: "Cancel", datePickerMode: .date){
+            (date) -> Void in
+            if let dt = date{
+                let formatter = DateFormatter()
+                formatter.dateFormat = "MMMM dd, yyyy"
+                self.dueDateData.text = formatter.string(from: dt)
+                self.taskDueDate = dt
+            }
+        }
     }
     
     func loadData(){

@@ -1,7 +1,7 @@
 PODS:
   - CFAlertViewController (3.1)
   - CollectionViewWaterfallLayout (0.5.0)
-  - DatePickerDialog (3.0)
+  - DatePickerDialog (4.0)
   - NewPopMenu (2.1.2)
   - SwipeCellKit (2.7.1)
 
@@ -23,7 +23,7 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   CFAlertViewController: a27cf0512d0fa9ef6a3b966862039c295fb0ef69
   CollectionViewWaterfallLayout: 4399ba01be265fff4da1ed1d607130fe009780e4
-  DatePickerDialog: 03dbb8350bfa80302ab2a8c83cee1fec70184444
+  DatePickerDialog: ccff2f91ff7a018057a4d72fa5ad6de49c8cb0cd
   NewPopMenu: c6129e08e8192f6257ceb5f9a4357e1b59c6e2e7
   SwipeCellKit: 3972254a826da74609926daf59b08d6c72e619ea
 
