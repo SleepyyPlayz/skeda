@@ -266,7 +266,7 @@ class EditTagViewController: UIViewController, UITextFieldDelegate {
     }
     //fuction that co-ops with the gesture recognizer in ViewDidLoad
     @objc func dismissKeyboard(){
-        view.endEditing(true)
+        view.resignFirstResponder()
     }
 
     //TODO: CoreData functionality???

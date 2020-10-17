@@ -51,7 +51,17 @@ class NewPointTaskViewController: UIViewController{
     @IBOutlet weak var remindersTableView: UITableView!
     @IBOutlet weak var notesTextView: UITextView!
     
+    @IBOutlet weak var subtasksHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var remindersHeightConstraint: NSLayoutConstraint!
+    var subtasksTableViewCurrentRowNumber: Int?
+    var remindersTableViewCurrentRowNumber: Int?
+    
     var tasks = [Task]()
+    var subtasks = [Subtask]()
+    var reminders = [Reminder]()
+    
+    var subtaskTemp = [Subtask]()
+    var reminderTemp = [Reminder]()
     
     @IBAction func closeButtonPressed(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
@@ -60,7 +70,7 @@ class NewPointTaskViewController: UIViewController{
     var taskPriority: Int? = 2
     var taskThemeColorName: String?
     var taskIsLightThemed: Bool?
-    
+    //let tempDateKey = Date().timeIntervalSinceReferenceDate
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
@@ -81,13 +91,24 @@ class NewPointTaskViewController: UIViewController{
         remindersTableView.register(UINib(nibName: "NewReminderTableViewCell", bundle: nil), forCellReuseIdentifier: "NewReminderCell")
         remindersTableView.register(UINib(nibName: "ReminderTableViewCell", bundle: nil), forCellReuseIdentifier: "ReminderCell")
         
+        notesTextView.delegate = self
+        
+        subtasksTableView.layer.cornerRadius = 5
+        remindersTableView.layer.cornerRadius = 5
+        notesTextView.layer.cornerRadius = 5
+        
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard))
         tap.cancelsTouchesInView = false
         view.addGestureRecognizer(tap)
         
         initializeFields()
-        loadTasks()
+        loadData()
         
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+       // adjustTableViewSizes()
     }
     
     func initializeFields(){
@@ -101,12 +122,16 @@ class NewPointTaskViewController: UIViewController{
         taskPriority = sender.selectedSegmentIndex
     }
     
-    func loadTasks(){
-        let request: NSFetchRequest<Task> = Task.fetchRequest()
+    func loadData(){
+        let taskRequest: NSFetchRequest<Task> = Task.fetchRequest()
+        let subtaskRequest: NSFetchRequest<Subtask> = Subtask.fetchRequest()
+        let reminderRequest: NSFetchRequest<Reminder> = Reminder.fetchRequest()
         do{
-            tasks = try context.fetch(request)
+            tasks = try context.fetch(taskRequest)
+            subtasks = try context.fetch(subtaskRequest)
+            reminders = try context.fetch(reminderRequest)
         }catch{
-            print("Error loading tasks \(error)")
+            print("Error loading data \(error)")
         }
     }
     
@@ -132,17 +157,17 @@ extension NewPointTaskViewController: UITextFieldDelegate{
         return true
     }
     @objc func dismissKeyboard(){
-        view.endEditing(true)
+        view.resignFirstResponder()
     }
 }
 
 //MARK: - TextViewDelegate
 extension NewPointTaskViewController: UITextViewDelegate{
     func textViewShouldBeginEditing(_ textView: UITextView) -> Bool {
-        <#code#>
+        return true
     }
     func textViewShouldEndEditing(_ textView: UITextView) -> Bool {
-        <#code#>
+        return true
     }
     
 }
@@ -151,25 +176,98 @@ extension NewPointTaskViewController: UITextViewDelegate{
 extension NewPointTaskViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if (tableView.tag == 1){
+            /*
+            var subtaskTempArray = [Subtask]()
+            let queryPredicate = NSPredicate(format: "parentTask.dateKey MATCHES %@", tempDateKey)
+            let queryRequest: NSFetchRequest<Subtask> = Subtask.fetchRequest()
+            queryRequest.predicate = queryPredicate
+            do{
+                subtaskTempArray = try context.fetch(queryRequest)
+            }catch{
+                print("Error when checking number of Subtasks \(error)")
+            }*/
+            subtasksTableViewCurrentRowNumber = subtaskTemp.count + 1
             
+            subtasksHeightConstraint.constant = CGFloat(subtasksTableViewCurrentRowNumber! * 44)
+            self.view.layoutIfNeeded()
+            
+            return subtasksTableViewCurrentRowNumber!
         }else if(tableView.tag == 2){
+            /*
+            var reminderTempArray = [Reminder]()
+            let queryPredicate = NSPredicate(format: "parentTask.dateKey MATCHES %@", tempDateKey)
+            let queryRequest: NSFetchRequest<Reminder> = Reminder.fetchRequest()
+            queryRequest.predicate = queryPredicate
+            do{
+                reminderTempArray = try context.fetch(queryRequest)
+            }catch{
+                print("Error when checking number of Reminders \(error)")
+            }*/
+            remindersTableViewCurrentRowNumber = reminderTemp.count + 1
             
+            remindersHeightConstraint.constant = CGFloat(remindersTableViewCurrentRowNumber! * 44)
+            self.view.layoutIfNeeded()
+            
+            return remindersTableViewCurrentRowNumber!
         }else{
             print("ERROR Finding Table Views through tags")
             return 0
         }
     }
     
+    
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MM/dd/yyyy"
+        
+        let timeFormatter = DateFormatter()
+        timeFormatter.dateFormat = "MM/dd/yyyy HH:mm"
+        
         if (tableView.tag == 1){
-            
-        }else if(tableView.tag == 2){
-            
-        }else{
-            print("ERROR Loading Tags")
-            //return nil?
+            if(indexPath.row == 0){
+                let cell = tableView.dequeueReusableCell(withIdentifier: "NewSubtaskCell",for: indexPath) as! NewSubtaskTableViewCell
+                return cell
+            }else{
+                if(subtaskTemp[indexPath.row - 1].type == CONSTS.SubtaskTypes.Point){
+                    let cell = tableView.dequeueReusableCell(withIdentifier: "PointSubtaskCell",for: indexPath) as! PointSubtaskTableViewCell
+                    cell.titleLabel.text = subtaskTemp[indexPath.row - 1].title
+                    cell.dueDateLabel.text = "Due " + dateFormatter.string(from: subtaskTemp[indexPath.row - 1].dateDeadline!)
+                    return cell
+                }else{ //Type is CONSTS.SubtaskTypes.Line
+                    let cell = tableView.dequeueReusableCell(withIdentifier: "LineSubtaskCell",for: indexPath) as! LineSubtaskTableViewCell
+                    cell.titleLabel.text = subtaskTemp[indexPath.row - 1].title
+                    cell.startingDateLabel.text = "From " + dateFormatter.string(from: subtaskTemp[indexPath.row - 1].dateStarting!)
+                    cell.dueDateLabel.text = "To " + dateFormatter.string(from: subtaskTemp[indexPath.row - 1].dateDeadline!)
+                    return cell
+                }
+            }
+        }else{ //tableView.tag == 2
+            if(indexPath.row == 0){
+                let cell = tableView.dequeueReusableCell(withIdentifier: "NewReminderCell",for: indexPath) as! NewReminderTableViewCell
+                return cell
+            }else{
+                let cell = tableView.dequeueReusableCell(withIdentifier: "ReminderCell",for: indexPath) as! ReminderTableViewCell
+                
+                cell.timeLabel.text = timeFormatter.string(from: reminderTemp[indexPath.row - 1].dateHappens!)
+                return cell
+            }
         }
     }
+    
+    func adjustTableViewSizes(){
+        
+        subtasksHeightConstraint.constant = CGFloat(subtasksTableViewCurrentRowNumber! * 44)
+        remindersHeightConstraint.constant = CGFloat(remindersTableViewCurrentRowNumber! * 44)
+        self.view.layoutIfNeeded()
+    }
+    
+    
+    
+    
+    
+    
 }
 
 

@@ -11,9 +11,7 @@ import SwipeCellKit
 
 class ReminderTableViewCell: SwipeTableViewCell {
     
-    @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
-    
     
     
     override func awakeFromNib() {
