@@ -69,7 +69,7 @@ class NewPointTaskViewController: UIViewController{
     
     var taskPriority: Int? = 2
     var taskThemeColorName: String?
-    var taskIsLightThemed: Bool?
+    var taskIsLightThemed: Bool? = false
     //let tempDateKey = Date().timeIntervalSinceReferenceDate
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
@@ -77,6 +77,8 @@ class NewPointTaskViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         self.isModalInPresentation = true
+        
+        initializeFields()
         
         titleTextField.delegate = self
         
@@ -101,7 +103,6 @@ class NewPointTaskViewController: UIViewController{
         tap.cancelsTouchesInView = false
         view.addGestureRecognizer(tap)
         
-        initializeFields()
         loadData()
         
     }
@@ -116,7 +117,6 @@ class NewPointTaskViewController: UIViewController{
         titleTextField.text = ""
         warningLabel.isHidden = true
         priorityBar.selectedSegmentIndex = 2
-        
     }
     @IBAction func priorityBarChanged(_ sender: UISegmentedControl) {
         taskPriority = sender.selectedSegmentIndex
@@ -228,29 +228,79 @@ extension NewPointTaskViewController: UITableViewDelegate, UITableViewDataSource
         if (tableView.tag == 1){
             if(indexPath.row == 0){
                 let cell = tableView.dequeueReusableCell(withIdentifier: "NewSubtaskCell",for: indexPath) as! NewSubtaskTableViewCell
+                
+                //color & theme
+                if !taskIsLightThemed!{
+                    cell.backgroundImage.image = UIImage(named: CONSTS.SubImages.SubBackgroundLT)
+                    cell.plusSignImage.image = UIImage(named: CONSTS.SubImages.PlusSignLT)
+                }else{
+                    cell.backgroundImage.image = UIImage(named: CONSTS.SubImages.SubBackground)
+                    cell.plusSignImage.image = UIImage(named: CONSTS.SubImages.PlusSign)
+                }
                 return cell
             }else{
                 if(subtaskTemp[indexPath.row - 1].type == CONSTS.SubtaskTypes.Point){
                     let cell = tableView.dequeueReusableCell(withIdentifier: "PointSubtaskCell",for: indexPath) as! PointSubtaskTableViewCell
                     cell.titleLabel.text = subtaskTemp[indexPath.row - 1].title
                     cell.dueDateLabel.text = "Due " + dateFormatter.string(from: subtaskTemp[indexPath.row - 1].dateDeadline!)
+                    
+                    //color & theme
+                    if !taskIsLightThemed!{
+                        cell.backgroundImage.image = UIImage(named: CONSTS.SubImages.SubBackgroundLT)
+                        cell.titleLabel.textColor = UIColor(named: CONSTS.Colors.PseudoWhite)
+                        cell.dueDateLabel.textColor = UIColor(named: CONSTS.Colors.PseudoWhite)
+                    }else{
+                        cell.backgroundImage.image = UIImage(named: CONSTS.SubImages.SubBackground)
+                        cell.titleLabel.textColor = UIColor(named: CONSTS.Colors.SubGrey)
+                        cell.dueDateLabel.textColor = UIColor(named: CONSTS.Colors.SubGrey)
+                    }
+                    
                     return cell
                 }else{ //Type is CONSTS.SubtaskTypes.Line
                     let cell = tableView.dequeueReusableCell(withIdentifier: "LineSubtaskCell",for: indexPath) as! LineSubtaskTableViewCell
                     cell.titleLabel.text = subtaskTemp[indexPath.row - 1].title
                     cell.startingDateLabel.text = "From " + dateFormatter.string(from: subtaskTemp[indexPath.row - 1].dateStarting!)
                     cell.dueDateLabel.text = "To " + dateFormatter.string(from: subtaskTemp[indexPath.row - 1].dateDeadline!)
+                    
+                    //color & theme
+                    if !taskIsLightThemed!{
+                        cell.backgroundImage.image = UIImage(named: CONSTS.SubImages.SubBackgroundLT)
+                        cell.titleLabel.textColor = UIColor(named: CONSTS.Colors.PseudoWhite)
+                        cell.dueDateLabel.textColor = UIColor(named: CONSTS.Colors.PseudoWhite)
+                        cell.startingDateLabel.textColor = UIColor(named: CONSTS.Colors.PseudoWhite)
+                    }else{
+                        cell.backgroundImage.image = UIImage(named: CONSTS.SubImages.SubBackground)
+                        cell.titleLabel.textColor = UIColor(named: CONSTS.Colors.SubGrey)
+                        cell.dueDateLabel.textColor = UIColor(named: CONSTS.Colors.SubGrey)
+                        cell.startingDateLabel.textColor = UIColor(named: CONSTS.Colors.SubGrey)
+                    }
                     return cell
                 }
             }
         }else{ //tableView.tag == 2
             if(indexPath.row == 0){
                 let cell = tableView.dequeueReusableCell(withIdentifier: "NewReminderCell",for: indexPath) as! NewReminderTableViewCell
+                
+                //color & theme
+                if !taskIsLightThemed!{
+                    cell.backgroundImage.image = UIImage(named: CONSTS.SubImages.SubBackgroundLT)
+                    cell.plusSignImage.image = UIImage(named: CONSTS.SubImages.PlusSignLT)
+                }else{
+                    cell.backgroundImage.image = UIImage(named: CONSTS.SubImages.SubBackground)
+                    cell.plusSignImage.image = UIImage(named: CONSTS.SubImages.PlusSign)
+                }
                 return cell
             }else{
                 let cell = tableView.dequeueReusableCell(withIdentifier: "ReminderCell",for: indexPath) as! ReminderTableViewCell
                 
                 cell.timeLabel.text = timeFormatter.string(from: reminderTemp[indexPath.row - 1].dateHappens!)
+                if !taskIsLightThemed!{
+                    cell.backgroundImage.image = UIImage(named: CONSTS.SubImages.SubBackgroundLT)
+                    cell.timeLabel.textColor = UIColor(named: CONSTS.Colors.PseudoWhite)
+                }else{
+                    cell.backgroundImage.image = UIImage(named: CONSTS.SubImages.SubBackground)
+                    cell.timeLabel.textColor = UIColor(named: CONSTS.Colors.SubGrey)
+                }
                 return cell
             }
         }
@@ -307,6 +357,9 @@ extension NewPointTaskViewController{
         notesLabel.textColor = UIColor(named: CONSTS.Colors.PseudoWhite)
         taskThemeColorName = CONSTS.Colors.BackgroundBlue
         taskIsLightThemed = false
+        dueDateData.textColor = UIColor(named: CONSTS.Colors.PseudoWhite)
+        subtasksTableView.reloadData()
+        remindersTableView.reloadData()
     }
     @IBAction func greenButtonSelected(_ sender: UIButton) {
         blueButton.isSelected = false
@@ -340,6 +393,9 @@ extension NewPointTaskViewController{
         notesLabel.textColor = UIColor(named: CONSTS.Colors.PseudoWhite)
         taskThemeColorName = CONSTS.Colors.BackgroundGreen
         taskIsLightThemed = false
+        dueDateData.textColor = UIColor(named: CONSTS.Colors.PseudoWhite)
+        subtasksTableView.reloadData()
+        remindersTableView.reloadData()
     }
     @IBAction func turquoiseButtonSelected(_ sender: UIButton) {
         blueButton.isSelected = false
@@ -373,6 +429,9 @@ extension NewPointTaskViewController{
         notesLabel.textColor = UIColor(named: CONSTS.Colors.PseudoWhite)
         taskThemeColorName = CONSTS.Colors.BackgroundTurquoise
         taskIsLightThemed = false
+        dueDateData.textColor = UIColor(named: CONSTS.Colors.PseudoWhite)
+        subtasksTableView.reloadData()
+        remindersTableView.reloadData()
     }
     @IBAction func greyButtonSelected(_ sender: UIButton) {
         blueButton.isSelected = false
@@ -406,6 +465,9 @@ extension NewPointTaskViewController{
         notesLabel.textColor = UIColor(named: CONSTS.Colors.PseudoWhite)
         taskThemeColorName = CONSTS.Colors.BackgroundGrey
         taskIsLightThemed = false
+        dueDateData.textColor = UIColor(named: CONSTS.Colors.PseudoWhite)
+        subtasksTableView.reloadData()
+        remindersTableView.reloadData()
     }
     @IBAction func deepBlueButtonSelected(_ sender: UIButton) {
         blueButton.isSelected = false
@@ -439,6 +501,9 @@ extension NewPointTaskViewController{
         notesLabel.textColor = UIColor(named: CONSTS.Colors.PseudoWhite)
         taskThemeColorName = CONSTS.Colors.BackgroundDeepBlue
         taskIsLightThemed = false
+        dueDateData.textColor = UIColor(named: CONSTS.Colors.PseudoWhite)
+        subtasksTableView.reloadData()
+        remindersTableView.reloadData()
     }
     @IBAction func purpleButtonSelected(_ sender: UIButton) {
         blueButton.isSelected = false
@@ -472,6 +537,9 @@ extension NewPointTaskViewController{
         notesLabel.textColor = UIColor(named: CONSTS.Colors.PseudoWhite)
         taskThemeColorName = CONSTS.Colors.BackgroundPurple
         taskIsLightThemed = false
+        dueDateData.textColor = UIColor(named: CONSTS.Colors.PseudoWhite)
+        subtasksTableView.reloadData()
+        remindersTableView.reloadData()
     }
     @IBAction func orangeButtonSelected(_ sender: UIButton) {
         blueButton.isSelected = false
@@ -505,6 +573,9 @@ extension NewPointTaskViewController{
         notesLabel.textColor = UIColor(named: CONSTS.Colors.PseudoWhite)
         taskThemeColorName = CONSTS.Colors.BackgroundOrange
         taskIsLightThemed = false
+        dueDateData.textColor = UIColor(named: CONSTS.Colors.PseudoWhite)
+        subtasksTableView.reloadData()
+        remindersTableView.reloadData()
     }
     @IBAction func redButtonSelected(_ sender: UIButton) {
         blueButton.isSelected = false
@@ -538,6 +609,9 @@ extension NewPointTaskViewController{
         notesLabel.textColor = UIColor(named: CONSTS.Colors.PseudoWhite)
         taskThemeColorName = CONSTS.Colors.BackgroundRed
         taskIsLightThemed = false
+        dueDateData.textColor = UIColor(named: CONSTS.Colors.PseudoWhite)
+        subtasksTableView.reloadData()
+        remindersTableView.reloadData()
     }
     @IBAction func blueLTButtonSelected(_ sender: UIButton) {
         blueButton.isSelected = false
@@ -571,6 +645,9 @@ extension NewPointTaskViewController{
         notesLabel.textColor = UIColor(named: CONSTS.Colors.BackgroundBlue)
         taskThemeColorName = CONSTS.Colors.BackgroundBlue
         taskIsLightThemed = true
+        dueDateData.textColor = UIColor(named: CONSTS.Colors.SubGrey)
+        subtasksTableView.reloadData()
+        remindersTableView.reloadData()
     }
     @IBAction func greenLTButtonSelected(_ sender: UIButton) {
         blueButton.isSelected = false
@@ -604,6 +681,9 @@ extension NewPointTaskViewController{
         notesLabel.textColor = UIColor(named: CONSTS.Colors.BackgroundGreen)
         taskThemeColorName = CONSTS.Colors.BackgroundGreen
         taskIsLightThemed = true
+        dueDateData.textColor = UIColor(named: CONSTS.Colors.SubGrey)
+        subtasksTableView.reloadData()
+        remindersTableView.reloadData()
     }
     @IBAction func turquoiseLTButtonSelected(_ sender: UIButton) {
         blueButton.isSelected = false
@@ -637,6 +717,9 @@ extension NewPointTaskViewController{
         notesLabel.textColor = UIColor(named: CONSTS.Colors.BackgroundTurquoise)
         taskThemeColorName = CONSTS.Colors.BackgroundTurquoise
         taskIsLightThemed = true
+        dueDateData.textColor = UIColor(named: CONSTS.Colors.SubGrey)
+        subtasksTableView.reloadData()
+        remindersTableView.reloadData()
     }
     @IBAction func greyLTButtonSelected(_ sender: UIButton) {
         blueButton.isSelected = false
@@ -670,6 +753,9 @@ extension NewPointTaskViewController{
         notesLabel.textColor = UIColor(named: CONSTS.Colors.BackgroundGrey)
         taskThemeColorName = CONSTS.Colors.BackgroundGrey
         taskIsLightThemed = true
+        dueDateData.textColor = UIColor(named: CONSTS.Colors.SubGrey)
+        subtasksTableView.reloadData()
+        remindersTableView.reloadData()
     }
     @IBAction func deepBlueLTButtonSelected(_ sender: UIButton) {
         blueButton.isSelected = false
@@ -703,6 +789,9 @@ extension NewPointTaskViewController{
         notesLabel.textColor = UIColor(named: CONSTS.Colors.BackgroundDeepBlue)
         taskThemeColorName = CONSTS.Colors.BackgroundDeepBlue
         taskIsLightThemed = true
+        dueDateData.textColor = UIColor(named: CONSTS.Colors.SubGrey)
+        subtasksTableView.reloadData()
+        remindersTableView.reloadData()
     }
     @IBAction func purpleLTButtonSelected(_ sender: UIButton) {
         blueButton.isSelected = false
@@ -736,6 +825,9 @@ extension NewPointTaskViewController{
         notesLabel.textColor = UIColor(named: CONSTS.Colors.BackgroundPurple)
         taskThemeColorName = CONSTS.Colors.BackgroundPurple
         taskIsLightThemed = true
+        dueDateData.textColor = UIColor(named: CONSTS.Colors.SubGrey)
+        subtasksTableView.reloadData()
+        remindersTableView.reloadData()
     }
     @IBAction func orangeLTButtonSelected(_ sender: UIButton) {
         blueButton.isSelected = false
@@ -769,6 +861,9 @@ extension NewPointTaskViewController{
         notesLabel.textColor = UIColor(named: CONSTS.Colors.BackgroundOrange)
         taskThemeColorName = CONSTS.Colors.BackgroundOrange
         taskIsLightThemed = true
+        dueDateData.textColor = UIColor(named: CONSTS.Colors.SubGrey)
+        subtasksTableView.reloadData()
+        remindersTableView.reloadData()
     }
     @IBAction func redLTButtonSelected(_ sender: UIButton) {
         blueButton.isSelected = false
@@ -802,6 +897,9 @@ extension NewPointTaskViewController{
         notesLabel.textColor = UIColor(named: CONSTS.Colors.BackgroundRed)
         taskThemeColorName = CONSTS.Colors.BackgroundRed
         taskIsLightThemed = true
+        dueDateData.textColor = UIColor(named: CONSTS.Colors.SubGrey)
+        subtasksTableView.reloadData()
+        remindersTableView.reloadData()
     }
 }
 

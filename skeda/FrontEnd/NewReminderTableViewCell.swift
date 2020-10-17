@@ -10,6 +10,10 @@ import UIKit
 
 class NewReminderTableViewCell: UITableViewCell {
 
+    
+    @IBOutlet weak var backgroundImage: UIImageView!
+    @IBOutlet weak var plusSignImage: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

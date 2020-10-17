@@ -38,7 +38,9 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" name="Transparent"/>
             <connections>
+                <outlet property="backgroundImage" destination="GiQ-po-mDy" id="Gns-65-V4a"/>
                 <outlet property="timeLabel" destination="r4n-7B-N9C" id="lBX-Ft-QsU"/>
             </connections>
             <point key="canvasLocation" x="137.68115942028987" y="91.741071428571431"/>
@@ -48,6 +50,9 @@
         <image name="SubBackground" width="310" height="40"/>
         <namedColor name="SubGrey">
             <color red="0.41176470588235292" green="0.41176470588235292" blue="0.41176470588235292" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Transparent">
+            <color red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

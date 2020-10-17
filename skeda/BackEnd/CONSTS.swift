@@ -27,6 +27,8 @@ struct CONSTS{
         static let BlackText = "BlackText"
         static let White = "White"
         static let WarningRed = "WarningRed"
+        
+        static let SubGrey = "SubGrey"
     }
     struct CloseButtons{
         static let Blue = "CloseButtonBlue"
@@ -62,6 +64,12 @@ struct CONSTS{
         static let Line = "Line"
     }
     
+    struct SubImages{
+        static let SubBackground =   "SubBackground"
+        static let SubBackgroundLT = "SubBackgroundLT"
+        static let PlusSign = "PlusSign"
+        static let PlusSignLT = "PlusSignLT"
+    }
     
     enum VariableNullErrors: Error{
         case indexForEditIsNull

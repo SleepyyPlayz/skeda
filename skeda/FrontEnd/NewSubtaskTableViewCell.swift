@@ -10,6 +10,10 @@ import UIKit
 //import SwipeCellKit
 
 class NewSubtaskTableViewCell: UITableViewCell {
+    
+    @IBOutlet weak var backgroundImage: UIImageView!
+    @IBOutlet weak var plusSignImage: UIImageView!
+    
 
     override func awakeFromNib() {
         super.awakeFromNib()

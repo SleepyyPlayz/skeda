@@ -55,7 +55,9 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" name="Transparent"/>
             <connections>
+                <outlet property="backgroundImage" destination="OCf-Cf-L00" id="xWb-jD-cTN"/>
                 <outlet property="dueDateLabel" destination="W6A-2W-2RR" id="Xwf-wv-vjr"/>
                 <outlet property="startingDateLabel" destination="Aaa-AW-DeU" id="fwT-4H-tjp"/>
                 <outlet property="titleLabel" destination="CPv-d8-RcD" id="ohN-PD-8DL"/>
@@ -67,6 +69,9 @@
         <image name="SubBackground" width="310" height="40"/>
         <namedColor name="SubGrey">
             <color red="0.41176470588235292" green="0.41176470588235292" blue="0.41176470588235292" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Transparent">
+            <color red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

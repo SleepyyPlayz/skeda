@@ -12,6 +12,7 @@ import SwipeCellKit
 class PointSubtaskTableViewCell: SwipeTableViewCell {
 
     
+    @IBOutlet weak var backgroundImage: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var dueDateLabel: UILabel!
     
