@@ -9,7 +9,7 @@
 import UIKit
 import SwipeCellKit
 
-class ReminderTableViewCell: SwipeTableViewCell {
+class ReminderTableViewCell: UITableViewCell {
     
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var backgroundImage: UIImageView!

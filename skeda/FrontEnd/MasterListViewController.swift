@@ -55,8 +55,9 @@ class MasterListViewController: UIViewController, canLoadTags,canEdit{
         } catch {
             print("Error loading categories \(error)")
         }
-        tableView.reloadData()
-
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
     }
     
     //same as previous function, called from another VC
@@ -67,7 +68,9 @@ class MasterListViewController: UIViewController, canLoadTags,canEdit{
         } catch {
             print("Error loading categories \(error)")
         }
-        tableView.reloadData()
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
     }
     
     //MARK: - New Tag Button Pressed (Interactions with NewTagViewController)
@@ -212,6 +215,7 @@ extension MasterListViewController: UITableViewDataSource, UITableViewDelegate, 
         //options.backgroundColor = UIColor(named: CONSTS.Colors.PseudoWhite)
         return options
     }
+    
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: "MasterToItems", sender: self)

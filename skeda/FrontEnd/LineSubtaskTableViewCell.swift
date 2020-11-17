@@ -9,7 +9,7 @@
 import UIKit
 import SwipeCellKit
 
-class LineSubtaskTableViewCell: SwipeTableViewCell {
+class LineSubtaskTableViewCell: UITableViewCell {
     
     
     @IBOutlet weak var backgroundImage: UIImageView!

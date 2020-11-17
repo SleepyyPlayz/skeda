@@ -226,8 +226,8 @@ class EditTagViewController: UIViewController, UITextFieldDelegate {
                 self.delegate?.loadTagsFromEdit()
                 self.dismiss(animated: true)
             }
-            alertVC.addAction(okButton)
             alertVC.addAction(deleteButton)
+            alertVC.addAction(okButton)
             present(alertVC,animated: true,completion: nil)
         }
     }

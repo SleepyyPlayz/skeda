@@ -10,6 +10,7 @@ import UIKit
 import CoreData
 import CFAlertViewController
 import DatePickerDialog
+//import SwipeCellKit
 
 class NewPointTaskViewController: UIViewController{
     //BUTTONS
@@ -42,7 +43,7 @@ class NewPointTaskViewController: UIViewController{
     @IBOutlet weak var themeLabel: UILabel!
     @IBOutlet weak var subtasksLabel: UILabel!
     @IBOutlet weak var remindersLabel: UILabel!
-    @IBOutlet weak var notesLabel: UILabel!
+    //@IBOutlet weak var notesLabel: UILabel!
     @IBOutlet weak var warningLabel: UILabel!
     
     @IBOutlet weak var titleTextField: UITextField!
@@ -50,7 +51,7 @@ class NewPointTaskViewController: UIViewController{
     @IBOutlet weak var dueDateData: UILabel!
     @IBOutlet weak var subtasksTableView: UITableView!
     @IBOutlet weak var remindersTableView: UITableView!
-    @IBOutlet weak var notesTextView: UITextView!
+    //@IBOutlet weak var notesTextView: UITextView!
     
     @IBOutlet weak var subtasksHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var remindersHeightConstraint: NSLayoutConstraint!
@@ -74,13 +75,17 @@ class NewPointTaskViewController: UIViewController{
     var taskDueDate: Date? = Date()
     //let tempDateKey = Date().timeIntervalSinceReferenceDate
     
+    var newSubtaskEditMode = false
+    
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.isModalInPresentation = true
+        loadData()
         
-        initializeFields()
+        initializeFieldsForNew()
+        
         
         titleTextField.delegate = self
         
@@ -95,26 +100,19 @@ class NewPointTaskViewController: UIViewController{
         remindersTableView.register(UINib(nibName: "NewReminderTableViewCell", bundle: nil), forCellReuseIdentifier: "NewReminderCell")
         remindersTableView.register(UINib(nibName: "ReminderTableViewCell", bundle: nil), forCellReuseIdentifier: "ReminderCell")
         
-        notesTextView.delegate = self
+        //notesTextView.delegate = self
         
-        subtasksTableView.layer.cornerRadius = 5
-        remindersTableView.layer.cornerRadius = 5
-        notesTextView.layer.cornerRadius = 5
+        //subtasksTableView.layer.cornerRadius = 5
+        //remindersTableView.layer.cornerRadius = 5
+        //notesTextView.layer.cornerRadius = 5
         
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard))
         tap.cancelsTouchesInView = false
         view.addGestureRecognizer(tap)
         
-        loadData()
-        
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-       // adjustTableViewSizes()
-    }
-    
-    func initializeFields(){
+    func initializeFieldsForNew(){
         blueButtonSelected(blueButton)
         titleTextField.text = ""
         warningLabel.isHidden = true
@@ -182,6 +180,7 @@ extension NewPointTaskViewController: UITextFieldDelegate{
 }
 
 //MARK: - TextViewDelegate
+/*
 extension NewPointTaskViewController: UITextViewDelegate{
     func textViewShouldBeginEditing(_ textView: UITextView) -> Bool {
         return true
@@ -191,9 +190,11 @@ extension NewPointTaskViewController: UITextViewDelegate{
     }
     
 }
+*/
 //MARK: - TableViewDelegate and DataSource
 
 extension NewPointTaskViewController: UITableViewDelegate, UITableViewDataSource{
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if (tableView.tag == 1){
             /*
@@ -207,7 +208,7 @@ extension NewPointTaskViewController: UITableViewDelegate, UITableViewDataSource
                 print("Error when checking number of Subtasks \(error)")
             }*/
             subtasksTableViewCurrentRowNumber = subtaskTemp.count + 1
-            
+             
             subtasksHeightConstraint.constant = CGFloat(subtasksTableViewCurrentRowNumber! * 44)
             self.view.layoutIfNeeded()
             
@@ -326,6 +327,62 @@ extension NewPointTaskViewController: UITableViewDelegate, UITableViewDataSource
         }
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if tableView.tag == 1{
+            // the following three segues need a special variable to distinguish if the NewSubtaskCell is called in edit mode or not.
+            if tableView.cellForRow(at: indexPath)?.reuseIdentifier == "NewSubtaskCell"{
+                newSubtaskEditMode = false
+                performSegue(withIdentifier: "NewPointTaskToNewSubtask", sender: self)
+                
+            }
+            if tableView.cellForRow(at: indexPath)?.reuseIdentifier == "PointSubtaskCell"{
+                newSubtaskEditMode = true
+                performSegue(withIdentifier: "NewPointTaskToNewSubtask", sender: self)
+            }
+            if tableView.cellForRow(at: indexPath)?.reuseIdentifier == "LineSubtaskCell"{
+                newSubtaskEditMode = true
+                performSegue(withIdentifier: "NewPointTaskToNewSubtask", sender: self)
+            }
+        }else{
+            if tableView.cellForRow(at: indexPath)?.reuseIdentifier == "NewReminderCell"{
+                DatePickerDialog().show("New Reminder", doneButtonTitle: "Done", cancelButtonTitle: "Cancel", datePickerMode: .dateAndTime){
+                    (date) -> Void in
+                    if let dt = date{
+                        let newReminder = Reminder(context: self.context)
+                        newReminder.dateHappens = dt
+                        self.reminderTemp.append(newReminder)
+                        DispatchQueue.main.async {
+                            self.remindersTableView.reloadData()
+                        }
+                    }
+                }
+            }
+            if tableView.cellForRow(at: indexPath)?.reuseIdentifier == "ReminderCell"{
+                let deleteReminderAlertController = CFAlertViewController(title: "Remove Reminder?", message: "", textAlignment: .justified, preferredStyle: .alert, didDismissAlertHandler: nil)
+                let deleteReminderAction = CFAlertAction(title: "Remove", style: .Destructive, alignment: .justified, backgroundColor: UIColor(named: CONSTS.Colors.WarningRed), textColor: UIColor(named: CONSTS.Colors.PseudoWhite)) { (action) in
+                    // delete selected reminder from ReminderTemp & reload data
+                    self.reminderTemp.remove(at: indexPath.row - 1)
+                    DispatchQueue.main.async {
+                        self.remindersTableView.reloadData()
+                    }
+                }
+                let deleteReminderCancelAction = CFAlertAction(title: "Cancel", style: .Default, alignment: .justified, backgroundColor: UIColor(named: CONSTS.Colors.BackgroundBlue), textColor: UIColor(named: CONSTS.Colors.PseudoWhite), handler: nil)
+                deleteReminderAlertController.addAction(deleteReminderAction)
+                deleteReminderAlertController.addAction(deleteReminderCancelAction)
+                present(deleteReminderAlertController, animated: true, completion: nil)
+                
+            }
+        }
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destinationVC = segue.destination as! SubtaskCreationAndEditViewController
+        destinationVC.editMode = newSubtaskEditMode
+        
+    }
+    
+    
     func adjustTableViewSizes(){
         
         subtasksHeightConstraint.constant = CGFloat(subtasksTableViewCurrentRowNumber! * 44)
@@ -374,7 +431,7 @@ extension NewPointTaskViewController{
         themeLabel.textColor = UIColor(named: CONSTS.Colors.PseudoWhite)
         subtasksLabel.textColor = UIColor(named: CONSTS.Colors.PseudoWhite)
         remindersLabel.textColor = UIColor(named: CONSTS.Colors.PseudoWhite)
-        notesLabel.textColor = UIColor(named: CONSTS.Colors.PseudoWhite)
+        //notesLabel.textColor = UIColor(named: CONSTS.Colors.PseudoWhite)
         taskThemeColorName = CONSTS.Colors.BackgroundBlue
         taskIsLightThemed = false
         dueDateData.textColor = UIColor(named: CONSTS.Colors.PseudoWhite)
@@ -410,7 +467,7 @@ extension NewPointTaskViewController{
         themeLabel.textColor = UIColor(named: CONSTS.Colors.PseudoWhite)
         subtasksLabel.textColor = UIColor(named: CONSTS.Colors.PseudoWhite)
         remindersLabel.textColor = UIColor(named: CONSTS.Colors.PseudoWhite)
-        notesLabel.textColor = UIColor(named: CONSTS.Colors.PseudoWhite)
+        //notesLabel.textColor = UIColor(named: CONSTS.Colors.PseudoWhite)
         taskThemeColorName = CONSTS.Colors.BackgroundGreen
         taskIsLightThemed = false
         dueDateData.textColor = UIColor(named: CONSTS.Colors.PseudoWhite)
@@ -446,7 +503,7 @@ extension NewPointTaskViewController{
         themeLabel.textColor = UIColor(named: CONSTS.Colors.PseudoWhite)
         subtasksLabel.textColor = UIColor(named: CONSTS.Colors.PseudoWhite)
         remindersLabel.textColor = UIColor(named: CONSTS.Colors.PseudoWhite)
-        notesLabel.textColor = UIColor(named: CONSTS.Colors.PseudoWhite)
+        //notesLabel.textColor = UIColor(named: CONSTS.Colors.PseudoWhite)
         taskThemeColorName = CONSTS.Colors.BackgroundTurquoise
         taskIsLightThemed = false
         dueDateData.textColor = UIColor(named: CONSTS.Colors.PseudoWhite)
@@ -482,7 +539,7 @@ extension NewPointTaskViewController{
         themeLabel.textColor = UIColor(named: CONSTS.Colors.PseudoWhite)
         subtasksLabel.textColor = UIColor(named: CONSTS.Colors.PseudoWhite)
         remindersLabel.textColor = UIColor(named: CONSTS.Colors.PseudoWhite)
-        notesLabel.textColor = UIColor(named: CONSTS.Colors.PseudoWhite)
+        //notesLabel.textColor = UIColor(named: CONSTS.Colors.PseudoWhite)
         taskThemeColorName = CONSTS.Colors.BackgroundGrey
         taskIsLightThemed = false
         dueDateData.textColor = UIColor(named: CONSTS.Colors.PseudoWhite)
@@ -518,7 +575,7 @@ extension NewPointTaskViewController{
         themeLabel.textColor = UIColor(named: CONSTS.Colors.PseudoWhite)
         subtasksLabel.textColor = UIColor(named: CONSTS.Colors.PseudoWhite)
         remindersLabel.textColor = UIColor(named: CONSTS.Colors.PseudoWhite)
-        notesLabel.textColor = UIColor(named: CONSTS.Colors.PseudoWhite)
+        //notesLabel.textColor = UIColor(named: CONSTS.Colors.PseudoWhite)
         taskThemeColorName = CONSTS.Colors.BackgroundDeepBlue
         taskIsLightThemed = false
         dueDateData.textColor = UIColor(named: CONSTS.Colors.PseudoWhite)
@@ -554,7 +611,7 @@ extension NewPointTaskViewController{
         themeLabel.textColor = UIColor(named: CONSTS.Colors.PseudoWhite)
         subtasksLabel.textColor = UIColor(named: CONSTS.Colors.PseudoWhite)
         remindersLabel.textColor = UIColor(named: CONSTS.Colors.PseudoWhite)
-        notesLabel.textColor = UIColor(named: CONSTS.Colors.PseudoWhite)
+        //notesLabel.textColor = UIColor(named: CONSTS.Colors.PseudoWhite)
         taskThemeColorName = CONSTS.Colors.BackgroundPurple
         taskIsLightThemed = false
         dueDateData.textColor = UIColor(named: CONSTS.Colors.PseudoWhite)
@@ -590,7 +647,7 @@ extension NewPointTaskViewController{
         themeLabel.textColor = UIColor(named: CONSTS.Colors.PseudoWhite)
         subtasksLabel.textColor = UIColor(named: CONSTS.Colors.PseudoWhite)
         remindersLabel.textColor = UIColor(named: CONSTS.Colors.PseudoWhite)
-        notesLabel.textColor = UIColor(named: CONSTS.Colors.PseudoWhite)
+        //notesLabel.textColor = UIColor(named: CONSTS.Colors.PseudoWhite)
         taskThemeColorName = CONSTS.Colors.BackgroundOrange
         taskIsLightThemed = false
         dueDateData.textColor = UIColor(named: CONSTS.Colors.PseudoWhite)
@@ -626,7 +683,7 @@ extension NewPointTaskViewController{
         themeLabel.textColor = UIColor(named: CONSTS.Colors.PseudoWhite)
         subtasksLabel.textColor = UIColor(named: CONSTS.Colors.PseudoWhite)
         remindersLabel.textColor = UIColor(named: CONSTS.Colors.PseudoWhite)
-        notesLabel.textColor = UIColor(named: CONSTS.Colors.PseudoWhite)
+        //notesLabel.textColor = UIColor(named: CONSTS.Colors.PseudoWhite)
         taskThemeColorName = CONSTS.Colors.BackgroundRed
         taskIsLightThemed = false
         dueDateData.textColor = UIColor(named: CONSTS.Colors.PseudoWhite)
@@ -662,7 +719,7 @@ extension NewPointTaskViewController{
         themeLabel.textColor = UIColor(named: CONSTS.Colors.BackgroundBlue)
         subtasksLabel.textColor = UIColor(named: CONSTS.Colors.BackgroundBlue)
         remindersLabel.textColor = UIColor(named: CONSTS.Colors.BackgroundBlue)
-        notesLabel.textColor = UIColor(named: CONSTS.Colors.BackgroundBlue)
+        //notesLabel.textColor = UIColor(named: CONSTS.Colors.BackgroundBlue)
         taskThemeColorName = CONSTS.Colors.BackgroundBlue
         taskIsLightThemed = true
         dueDateData.textColor = UIColor(named: CONSTS.Colors.SubGrey)
@@ -698,7 +755,7 @@ extension NewPointTaskViewController{
         themeLabel.textColor = UIColor(named: CONSTS.Colors.BackgroundGreen)
         subtasksLabel.textColor = UIColor(named: CONSTS.Colors.BackgroundGreen)
         remindersLabel.textColor = UIColor(named: CONSTS.Colors.BackgroundGreen)
-        notesLabel.textColor = UIColor(named: CONSTS.Colors.BackgroundGreen)
+        //notesLabel.textColor = UIColor(named: CONSTS.Colors.BackgroundGreen)
         taskThemeColorName = CONSTS.Colors.BackgroundGreen
         taskIsLightThemed = true
         dueDateData.textColor = UIColor(named: CONSTS.Colors.SubGrey)
@@ -734,7 +791,7 @@ extension NewPointTaskViewController{
         themeLabel.textColor = UIColor(named: CONSTS.Colors.BackgroundTurquoise)
         subtasksLabel.textColor = UIColor(named: CONSTS.Colors.BackgroundTurquoise)
         remindersLabel.textColor = UIColor(named: CONSTS.Colors.BackgroundTurquoise)
-        notesLabel.textColor = UIColor(named: CONSTS.Colors.BackgroundTurquoise)
+        //notesLabel.textColor = UIColor(named: CONSTS.Colors.BackgroundTurquoise)
         taskThemeColorName = CONSTS.Colors.BackgroundTurquoise
         taskIsLightThemed = true
         dueDateData.textColor = UIColor(named: CONSTS.Colors.SubGrey)
@@ -770,7 +827,7 @@ extension NewPointTaskViewController{
         themeLabel.textColor = UIColor(named: CONSTS.Colors.BackgroundGrey)
         subtasksLabel.textColor = UIColor(named: CONSTS.Colors.BackgroundGrey)
         remindersLabel.textColor = UIColor(named: CONSTS.Colors.BackgroundGrey)
-        notesLabel.textColor = UIColor(named: CONSTS.Colors.BackgroundGrey)
+        //notesLabel.textColor = UIColor(named: CONSTS.Colors.BackgroundGrey)
         taskThemeColorName = CONSTS.Colors.BackgroundGrey
         taskIsLightThemed = true
         dueDateData.textColor = UIColor(named: CONSTS.Colors.SubGrey)
@@ -806,7 +863,7 @@ extension NewPointTaskViewController{
         themeLabel.textColor = UIColor(named: CONSTS.Colors.BackgroundDeepBlue)
         subtasksLabel.textColor = UIColor(named: CONSTS.Colors.BackgroundDeepBlue)
         remindersLabel.textColor = UIColor(named: CONSTS.Colors.BackgroundDeepBlue)
-        notesLabel.textColor = UIColor(named: CONSTS.Colors.BackgroundDeepBlue)
+        //notesLabel.textColor = UIColor(named: CONSTS.Colors.BackgroundDeepBlue)
         taskThemeColorName = CONSTS.Colors.BackgroundDeepBlue
         taskIsLightThemed = true
         dueDateData.textColor = UIColor(named: CONSTS.Colors.SubGrey)
@@ -842,7 +899,7 @@ extension NewPointTaskViewController{
         themeLabel.textColor = UIColor(named: CONSTS.Colors.BackgroundPurple)
         subtasksLabel.textColor = UIColor(named: CONSTS.Colors.BackgroundPurple)
         remindersLabel.textColor = UIColor(named: CONSTS.Colors.BackgroundPurple)
-        notesLabel.textColor = UIColor(named: CONSTS.Colors.BackgroundPurple)
+        //notesLabel.textColor = UIColor(named: CONSTS.Colors.BackgroundPurple)
         taskThemeColorName = CONSTS.Colors.BackgroundPurple
         taskIsLightThemed = true
         dueDateData.textColor = UIColor(named: CONSTS.Colors.SubGrey)
@@ -878,7 +935,7 @@ extension NewPointTaskViewController{
         themeLabel.textColor = UIColor(named: CONSTS.Colors.BackgroundOrange)
         subtasksLabel.textColor = UIColor(named: CONSTS.Colors.BackgroundOrange)
         remindersLabel.textColor = UIColor(named: CONSTS.Colors.BackgroundOrange)
-        notesLabel.textColor = UIColor(named: CONSTS.Colors.BackgroundOrange)
+        //notesLabel.textColor = UIColor(named: CONSTS.Colors.BackgroundOrange)
         taskThemeColorName = CONSTS.Colors.BackgroundOrange
         taskIsLightThemed = true
         dueDateData.textColor = UIColor(named: CONSTS.Colors.SubGrey)
@@ -914,7 +971,7 @@ extension NewPointTaskViewController{
         themeLabel.textColor = UIColor(named: CONSTS.Colors.BackgroundRed)
         subtasksLabel.textColor = UIColor(named: CONSTS.Colors.BackgroundRed)
         remindersLabel.textColor = UIColor(named: CONSTS.Colors.BackgroundRed)
-        notesLabel.textColor = UIColor(named: CONSTS.Colors.BackgroundRed)
+        //notesLabel.textColor = UIColor(named: CONSTS.Colors.BackgroundRed)
         taskThemeColorName = CONSTS.Colors.BackgroundRed
         taskIsLightThemed = true
         dueDateData.textColor = UIColor(named: CONSTS.Colors.SubGrey)

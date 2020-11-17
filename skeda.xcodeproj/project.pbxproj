@@ -10,6 +10,7 @@
 		08ED5A8563AD937FB881C06B /* Pods_skeda.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDFAB3EFA5A80E48862A6A7E /* Pods_skeda.framework */; };
 		91003EA9252098BC0045F51F /* NewPointTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91003EA8252098BC0045F51F /* NewPointTaskViewController.swift */; };
 		9126DFE02506479500D47DDA /* EditTagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9126DFDF2506479500D47DDA /* EditTagViewController.swift */; };
+		912B216C253DE0A2004493E0 /* SubtaskCreationAndEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912B216B253DE0A2004493E0 /* SubtaskCreationAndEditViewController.swift */; };
 		9135713324F2C46800E0CF0B /* NewTaskTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9135713224F2C46800E0CF0B /* NewTaskTypeViewController.swift */; };
 		91C5982B24C610A0005E6A87 /* NewTagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C5982A24C610A0005E6A87 /* NewTagViewController.swift */; };
 		91C5982D24C612FB005E6A87 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C5982C24C612FB005E6A87 /* SettingsViewController.swift */; };
@@ -44,6 +45,7 @@
 		821DB5F27DD319C87DEBC813 /* Pods-skeda.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-skeda.release.xcconfig"; path = "Target Support Files/Pods-skeda/Pods-skeda.release.xcconfig"; sourceTree = "<group>"; };
 		91003EA8252098BC0045F51F /* NewPointTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPointTaskViewController.swift; sourceTree = "<group>"; };
 		9126DFDF2506479500D47DDA /* EditTagViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTagViewController.swift; sourceTree = "<group>"; };
+		912B216B253DE0A2004493E0 /* SubtaskCreationAndEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubtaskCreationAndEditViewController.swift; sourceTree = "<group>"; };
 		9135713224F2C46800E0CF0B /* NewTaskTypeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTaskTypeViewController.swift; sourceTree = "<group>"; };
 		91C5982A24C610A0005E6A87 /* NewTagViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTagViewController.swift; sourceTree = "<group>"; };
 		91C5982C24C612FB005E6A87 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
@@ -170,6 +172,7 @@
 				9126DFDF2506479500D47DDA /* EditTagViewController.swift */,
 				91003EA8252098BC0045F51F /* NewPointTaskViewController.swift */,
 				91F4E42E2531FEE300EAEAB1 /* NewLineTaskViewController.swift */,
+				912B216B253DE0A2004493E0 /* SubtaskCreationAndEditViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -382,6 +385,7 @@
 				91F4E4352532E68500EAEAB1 /* NewSubtaskTableViewCell.swift in Sources */,
 				91F4E43B25330B5100EAEAB1 /* PointSubtaskTableViewCell.swift in Sources */,
 				91003EA9252098BC0045F51F /* NewPointTaskViewController.swift in Sources */,
+				912B216C253DE0A2004493E0 /* SubtaskCreationAndEditViewController.swift in Sources */,
 				91F4E42F2531FEE300EAEAB1 /* NewLineTaskViewController.swift in Sources */,
 				91D72BA324BCADF200E7487D /* MasterListViewController.swift in Sources */,
 				91C5982B24C610A0005E6A87 /* NewTagViewController.swift in Sources */,

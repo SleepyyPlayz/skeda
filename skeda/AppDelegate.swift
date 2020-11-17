@@ -8,7 +8,6 @@
 
 import UIKit
 import CoreData
-import DatePickerDialog
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

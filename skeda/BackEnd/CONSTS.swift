@@ -29,6 +29,7 @@ struct CONSTS{
         static let WarningRed = "WarningRed"
         
         static let SubGrey = "SubGrey"
+        static let Transparent = "Transparent"
     }
     struct CloseButtons{
         static let Blue = "CloseButtonBlue"
