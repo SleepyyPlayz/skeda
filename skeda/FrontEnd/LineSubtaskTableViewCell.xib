@@ -18,9 +18,8 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SubBackground" translatesAutoresizingMaskIntoConstraints="NO" id="OCf-Cf-L00">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SubBackground" translatesAutoresizingMaskIntoConstraints="NO" id="OCf-Cf-L00">
                         <rect key="frame" x="5" y="2" width="310" height="40"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subtask Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CPv-d8-RcD">
                         <rect key="frame" x="15" y="12" width="99.5" height="20.5"/>
@@ -47,10 +46,14 @@
                     </stackView>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="OCf-Cf-L00" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="2" id="Asl-Wc-xk7"/>
                     <constraint firstItem="CPv-d8-RcD" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="KPT-hF-bo6"/>
+                    <constraint firstItem="OCf-Cf-L00" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="SpI-PX-9ag"/>
                     <constraint firstAttribute="trailing" secondItem="GRs-d3-bkd" secondAttribute="trailing" constant="10" id="ViR-qK-PQx"/>
+                    <constraint firstAttribute="trailing" secondItem="OCf-Cf-L00" secondAttribute="trailing" constant="5" id="iUP-8P-bHx"/>
                     <constraint firstItem="CPv-d8-RcD" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="mCt-F4-OCp"/>
                     <constraint firstItem="GRs-d3-bkd" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="nDD-Z5-gld"/>
+                    <constraint firstAttribute="bottom" secondItem="OCf-Cf-L00" secondAttribute="bottom" constant="2" id="t9C-sO-5hl"/>
                     <constraint firstItem="GRs-d3-bkd" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="CPv-d8-RcD" secondAttribute="trailing" constant="10" id="yFu-dR-ZvN"/>
                 </constraints>
             </tableViewCellContentView>

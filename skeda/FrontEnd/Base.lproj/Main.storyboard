@@ -71,7 +71,7 @@
             <objects>
                 <viewController id="Ur5-gu-aSL" customClass="SettingsViewController" customModule="skeda" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2mo-zr-UVq">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="FjN-SU-Opo"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -245,7 +245,7 @@
             <objects>
                 <viewController id="JKW-fF-O7E" customClass="EditTagViewController" customModule="skeda" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TUr-12-wwP">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WhiteBackground" translatesAutoresizingMaskIntoConstraints="NO" id="0pk-jV-GMM">
@@ -669,7 +669,7 @@
             <objects>
                 <viewController id="wFR-FM-vla" customClass="NewTagViewController" customModule="skeda" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sIW-iM-0gy">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WhiteBackground" translatesAutoresizingMaskIntoConstraints="NO" id="I7A-Km-UDu">
@@ -1065,7 +1065,7 @@
             <objects>
                 <viewController id="9tR-fA-vjW" customClass="NewPointTaskViewController" customModule="skeda" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Pcu-Pf-eKG" userLabel="Background View">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="963"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="1017"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WhiteBackground" translatesAutoresizingMaskIntoConstraints="NO" id="mQu-T5-tmM">
@@ -1594,7 +1594,7 @@
             <objects>
                 <viewController id="h78-Ej-qJv" customClass="NewTaskTypeViewController" customModule="skeda" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="reD-9b-p3e">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="irA-Xc-eAY">
@@ -1807,7 +1807,7 @@
             <objects>
                 <viewController id="JnQ-uV-2HM" customClass="NewLineTaskViewController" customModule="skeda" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="enf-Xy-TnM" userLabel="Background View">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="1310"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="1364"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WhiteBackground" translatesAutoresizingMaskIntoConstraints="NO" id="5h8-qq-ZLc">
@@ -2321,7 +2321,7 @@
             <objects>
                 <viewController id="DWZ-hr-vvS" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MBH-Ti-Qqg" userLabel="Background View">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="1226"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="1280"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WhiteBackground" translatesAutoresizingMaskIntoConstraints="NO" id="GBg-aF-d61">
@@ -2793,7 +2793,7 @@
             <objects>
                 <viewController id="ulZ-cq-L0U" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7xy-Ma-S52" userLabel="Background View">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="1226"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="1280"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WhiteBackground" translatesAutoresizingMaskIntoConstraints="NO" id="vtC-fA-cuk">
@@ -3265,7 +3265,7 @@
             <objects>
                 <viewController id="jlh-wP-XTx" customClass="SubtaskCreationAndEditViewController" customModule="skeda" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="F9S-Nk-XpT">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="None" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hLD-vK-gEY">
@@ -3327,9 +3327,12 @@
                                     <constraint firstAttribute="width" constant="50" id="shI-Zc-EcH"/>
                                 </constraints>
                                 <state key="normal" image="CloseButtonBlue"/>
+                                <connections>
+                                    <action selector="closeButtonPressed:" destination="jlh-wP-XTx" eventType="touchUpInside" id="1J1-RW-HQQ"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ws4-LU-QhL">
-                                <rect key="frame" x="20" y="120" width="40" height="24"/>
+                                <rect key="frame" x="20" y="120" width="41" height="24"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                 <color key="textColor" name="PseudoWhite"/>
                                 <nil key="highlightedColor"/>
@@ -3431,7 +3434,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RTF-Rw-aIh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1374" y="2702"/>
+            <point key="canvasLocation" x="1373.913043478261" y="2701.3392857142858"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

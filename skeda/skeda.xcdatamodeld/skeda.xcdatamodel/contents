@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17192" systemVersion="19E287" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="YES" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17511" systemVersion="20B29" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="YES" userDefinedModelVersionIdentifier="">
     <entity name="Reminder" representedClassName="Reminder" syncable="YES" codeGenerationType="class">
         <attribute name="dateHappens" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <relationship name="parentTask" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Task" inverseName="reminders" inverseEntity="Task"/>
     </entity>
     <entity name="Subtask" representedClassName="Subtask" syncable="YES" codeGenerationType="class">
         <attribute name="dateDeadline" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
-        <attribute name="dateKey" attributeType="Date" defaultDateTimeInterval="616867800" usesScalarValueType="NO"/>
+        <attribute name="dateKey" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="dateStarting" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="isCompleted" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
         <attribute name="title" attributeType="String" defaultValueString=""/>
@@ -23,7 +23,7 @@
     </entity>
     <entity name="Task" representedClassName="Task" syncable="YES" codeGenerationType="class">
         <attribute name="dateDeadline" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
-        <attribute name="dateKey" attributeType="Date" defaultDateTimeInterval="616857180" usesScalarValueType="NO"/>
+        <attribute name="dateKey" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="dateStarting" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="importance" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="isCompleted" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>

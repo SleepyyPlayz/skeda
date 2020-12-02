@@ -12,7 +12,7 @@ import CFAlertViewController
 import DatePickerDialog
 //import SwipeCellKit
 
-class NewPointTaskViewController: UIViewController{
+class NewPointTaskViewController: UIViewController, UpdateSubtask{
     //BUTTONS
     
     @IBOutlet weak var blueButton: UIButton!
@@ -76,6 +76,7 @@ class NewPointTaskViewController: UIViewController{
     //let tempDateKey = Date().timeIntervalSinceReferenceDate
     
     var newSubtaskEditMode = false
+    var subtaskForEditKey: Int?
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
@@ -129,7 +130,7 @@ class NewPointTaskViewController: UIViewController{
     }
     
     @IBAction func dueDateButtonPressed(_ sender: UIButton) {
-        DatePickerDialog().show("Select Due Date", doneButtonTitle: "Done", cancelButtonTitle: "Cancel", datePickerMode: .date){
+        DatePickerDialog().show("Select Due Date", doneButtonTitle: "Done", cancelButtonTitle: "Cancel", defaultDate: taskDueDate!, datePickerMode: .date){
             (date) -> Void in
             if let dt = date{
                 let formatter = DateFormatter()
@@ -162,6 +163,51 @@ class NewPointTaskViewController: UIViewController{
     }
     
     
+    //MARK: - (inside main class) custom delegate functions
+    
+    func passSubtaskFromCreation(title: String, dueDate: Date, startDate: Date?){
+        let newSubtask = Subtask(context: context)
+        newSubtask.title = title
+        newSubtask.dateKey = Date().timeIntervalSinceReferenceDate
+        newSubtask.dateDeadline = dueDate
+        if((startDate) != nil){
+            newSubtask.type = CONSTS.SubtaskTypes.Line
+            newSubtask.dateStarting = startDate
+        }else{
+            newSubtask.type = CONSTS.SubtaskTypes.Point
+            newSubtask.dateStarting = nil
+        }
+        newSubtask.isCompleted = false
+        subtaskTemp.append(newSubtask)
+        //print(subtaskTemp.count)
+        DispatchQueue.main.async{
+            self.subtasksTableView.reloadData()
+        }
+        //adjustTableViewSizes()
+    }
+    
+    func passSubtaskFromEdit(title: String, dueDate: Date, startDate: Date?){
+        //TODO: Add code here after implementing code from the edit feature
+        subtaskTemp[subtaskForEditKey!].title = title
+        subtaskTemp[subtaskForEditKey!].dateDeadline = dueDate
+        if((startDate) != nil){
+            subtaskTemp[subtaskForEditKey!].type = CONSTS.SubtaskTypes.Line
+            subtaskTemp[subtaskForEditKey!].dateStarting = startDate
+        }else{
+            subtaskTemp[subtaskForEditKey!].type = CONSTS.SubtaskTypes.Point
+            subtaskTemp[subtaskForEditKey!].dateStarting = nil
+        }
+        DispatchQueue.main.async{
+            self.subtasksTableView.reloadData()
+        }
+    }
+    
+    func deleteSubtaskFromEdit() {
+        subtaskTemp.remove(at: subtaskForEditKey!)
+        DispatchQueue.main.async {
+            self.subtasksTableView.reloadData()
+        }
+    }
 }
 
 //MARK: - TextFieldDelegate
@@ -329,7 +375,6 @@ extension NewPointTaskViewController: UITableViewDelegate, UITableViewDataSource
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if tableView.tag == 1{
-            // the following three segues need a special variable to distinguish if the NewSubtaskCell is called in edit mode or not.
             if tableView.cellForRow(at: indexPath)?.reuseIdentifier == "NewSubtaskCell"{
                 newSubtaskEditMode = false
                 performSegue(withIdentifier: "NewPointTaskToNewSubtask", sender: self)
@@ -337,10 +382,12 @@ extension NewPointTaskViewController: UITableViewDelegate, UITableViewDataSource
             }
             if tableView.cellForRow(at: indexPath)?.reuseIdentifier == "PointSubtaskCell"{
                 newSubtaskEditMode = true
+                subtaskForEditKey = indexPath.row - 1
                 performSegue(withIdentifier: "NewPointTaskToNewSubtask", sender: self)
             }
             if tableView.cellForRow(at: indexPath)?.reuseIdentifier == "LineSubtaskCell"{
                 newSubtaskEditMode = true
+                subtaskForEditKey = indexPath.row - 1
                 performSegue(withIdentifier: "NewPointTaskToNewSubtask", sender: self)
             }
         }else{
@@ -379,7 +426,17 @@ extension NewPointTaskViewController: UITableViewDelegate, UITableViewDataSource
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let destinationVC = segue.destination as! SubtaskCreationAndEditViewController
         destinationVC.editMode = newSubtaskEditMode
-        
+        destinationVC.delegate = self
+        if(newSubtaskEditMode){
+            destinationVC.titleForEdit = subtaskTemp[subtaskForEditKey!].title
+            destinationVC.typeTemp = subtaskTemp[subtaskForEditKey!].type
+            if(destinationVC.typeTemp == CONSTS.SubtaskTypes.Line){
+                destinationVC.startingDateTemp = subtaskTemp[subtaskForEditKey!].dateStarting
+            }
+            destinationVC.dueDateTemp = subtaskTemp[subtaskForEditKey!].dateDeadline!
+            
+            destinationVC.parentTaskDueDate = taskDueDate
+        }
     }
     
     
