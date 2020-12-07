@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TaskCell" rowHeight="141" id="KGk-i7-Jjw" customClass="TaskTableViewCell" customModule="skeda" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="385" height="150"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="385" height="150"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M51-H0-Xwh">
+                        <rect key="frame" x="10" y="5" width="365" height="140"/>
+                        <subviews>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ogT-Lj-ynU">
+                                <rect key="frame" x="41" y="5" width="319" height="130"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="exclamationmark.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="0Ld-JY-fDb">
+                                <rect key="frame" x="10" y="41.5" width="26" height="25"/>
+                                <color key="tintColor" name="PseudoWhite"/>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="22" weight="light"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="list.dash" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="aJO-hz-h87">
+                                <rect key="frame" x="10" y="75.5" width="26" height="18"/>
+                                <color key="tintColor" name="PseudoWhite"/>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="22" weight="light"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="alarm" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="zR0-5o-nPu">
+                                <rect key="frame" x="10" y="103.5" width="24.5" height="25"/>
+                                <color key="tintColor" name="PseudoWhite"/>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="22" weight="light"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="up8-ac-ABz">
+                                <rect key="frame" x="10" y="9" width="58.5" height="29"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
+                                <color key="textColor" name="PseudoWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="October 7, 2020" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GDQ-v5-atb">
+                                <rect key="frame" x="44" y="44" width="122" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                <color key="textColor" name="PseudoWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2 Subtasks" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TU0-rG-jVm">
+                                <rect key="frame" x="44" y="74" width="83" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                <color key="textColor" name="PseudoWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="3 Reminders" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QzN-hn-R9Q">
+                                <rect key="frame" x="44" y="107" width="95" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                <color key="textColor" name="PseudoWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Priority0" translatesAutoresizingMaskIntoConstraints="NO" id="WFX-Rj-jNd">
+                                <rect key="frame" x="327" y="12" width="26" height="19"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" name="BackgroundBlue"/>
+                        <constraints>
+                            <constraint firstItem="aJO-hz-h87" firstAttribute="leading" secondItem="M51-H0-Xwh" secondAttribute="leading" constant="10" id="7gi-WK-veT"/>
+                            <constraint firstAttribute="bottom" secondItem="ogT-Lj-ynU" secondAttribute="bottom" constant="5" id="Ngm-7g-smC"/>
+                            <constraint firstItem="0Ld-JY-fDb" firstAttribute="leading" secondItem="M51-H0-Xwh" secondAttribute="leading" constant="10" id="PiY-o6-SkR"/>
+                            <constraint firstItem="ogT-Lj-ynU" firstAttribute="top" secondItem="M51-H0-Xwh" secondAttribute="top" constant="5" id="R6H-Xt-958"/>
+                            <constraint firstItem="zR0-5o-nPu" firstAttribute="top" secondItem="aJO-hz-h87" secondAttribute="bottom" constant="6" id="TO1-jl-sUF"/>
+                            <constraint firstItem="zR0-5o-nPu" firstAttribute="leading" secondItem="M51-H0-Xwh" secondAttribute="leading" constant="10" id="Y3M-NV-Y48"/>
+                            <constraint firstItem="up8-ac-ABz" firstAttribute="leading" secondItem="M51-H0-Xwh" secondAttribute="leading" constant="10" id="bbO-Dg-csC"/>
+                            <constraint firstAttribute="bottom" secondItem="zR0-5o-nPu" secondAttribute="bottom" constant="10" id="bwX-Nr-39U"/>
+                            <constraint firstAttribute="trailing" secondItem="ogT-Lj-ynU" secondAttribute="trailing" constant="5" id="eYN-df-2bR"/>
+                            <constraint firstItem="WFX-Rj-jNd" firstAttribute="top" secondItem="M51-H0-Xwh" secondAttribute="top" constant="12" id="jOL-zH-vNp"/>
+                            <constraint firstItem="ogT-Lj-ynU" firstAttribute="leading" secondItem="0Ld-JY-fDb" secondAttribute="trailing" constant="5" id="jVy-76-wXg"/>
+                            <constraint firstAttribute="trailing" secondItem="WFX-Rj-jNd" secondAttribute="trailing" constant="12" id="lxh-mI-nsq"/>
+                            <constraint firstItem="aJO-hz-h87" firstAttribute="top" secondItem="0Ld-JY-fDb" secondAttribute="bottom" constant="4" id="ruc-Lx-c4Z"/>
+                            <constraint firstItem="up8-ac-ABz" firstAttribute="top" secondItem="M51-H0-Xwh" secondAttribute="top" constant="9" id="zUb-Pc-0NG"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="M51-H0-Xwh" secondAttribute="bottom" constant="5" id="Mv8-wt-NUO"/>
+                    <constraint firstItem="M51-H0-Xwh" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="Plh-JZ-AW5"/>
+                    <constraint firstItem="M51-H0-Xwh" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="k2y-Ov-TKK"/>
+                    <constraint firstAttribute="trailing" secondItem="M51-H0-Xwh" secondAttribute="trailing" constant="10" id="rmm-0X-LHw"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="backgroundBar" destination="M51-H0-Xwh" id="tdh-dE-25l"/>
+                <outlet property="deadlineIcon" destination="0Ld-JY-fDb" id="LOU-ff-ulv"/>
+                <outlet property="deadlineLabel" destination="GDQ-v5-atb" id="sLL-KK-CFv"/>
+                <outlet property="priorityIcon" destination="WFX-Rj-jNd" id="4ZJ-cS-T5p"/>
+                <outlet property="reminderIcon" destination="zR0-5o-nPu" id="XgY-kW-g7e"/>
+                <outlet property="reminderLabel" destination="QzN-hn-R9Q" id="L8u-Ra-igJ"/>
+                <outlet property="subtaskIcon" destination="aJO-hz-h87" id="ktF-Wc-XSM"/>
+                <outlet property="subtaskLabel" destination="TU0-rG-jVm" id="g3w-l1-Wz0"/>
+                <outlet property="titleLabel" destination="up8-ac-ABz" id="mvc-sc-DIO"/>
+                <outlet property="whiteBackground" destination="ogT-Lj-ynU" id="Jd0-h9-73l"/>
+            </connections>
+            <point key="canvasLocation" x="194.92753623188406" y="123.88392857142857"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Priority0" width="26" height="19"/>
+        <image name="alarm" catalog="system" width="124" height="128"/>
+        <image name="exclamationmark.circle" catalog="system" width="128" height="121"/>
+        <image name="list.dash" catalog="system" width="128" height="85"/>
+        <namedColor name="BackgroundBlue">
+            <color red="0.11764705882352941" green="0.75294117647058822" blue="0.93725490196078431" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="PseudoWhite">
+            <color red="0.98039215686274506" green="0.98431372549019602" blue="0.9882352941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

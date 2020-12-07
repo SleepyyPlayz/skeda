@@ -12,6 +12,8 @@
 		9126DFE02506479500D47DDA /* EditTagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9126DFDF2506479500D47DDA /* EditTagViewController.swift */; };
 		912B216C253DE0A2004493E0 /* SubtaskCreationAndEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912B216B253DE0A2004493E0 /* SubtaskCreationAndEditViewController.swift */; };
 		9135713324F2C46800E0CF0B /* NewTaskTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9135713224F2C46800E0CF0B /* NewTaskTypeViewController.swift */; };
+		91B6E9D1257CBA6A004DFB08 /* TaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B6E9CF257CBA6A004DFB08 /* TaskTableViewCell.swift */; };
+		91B6E9D2257CBA6A004DFB08 /* TaskTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91B6E9D0257CBA6A004DFB08 /* TaskTableViewCell.xib */; };
 		91C5982B24C610A0005E6A87 /* NewTagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C5982A24C610A0005E6A87 /* NewTagViewController.swift */; };
 		91C5982D24C612FB005E6A87 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C5982C24C612FB005E6A87 /* SettingsViewController.swift */; };
 		91C5983224C82840005E6A87 /* TagTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C5983024C82840005E6A87 /* TagTableViewCell.swift */; };
@@ -47,6 +49,8 @@
 		9126DFDF2506479500D47DDA /* EditTagViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTagViewController.swift; sourceTree = "<group>"; };
 		912B216B253DE0A2004493E0 /* SubtaskCreationAndEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubtaskCreationAndEditViewController.swift; sourceTree = "<group>"; };
 		9135713224F2C46800E0CF0B /* NewTaskTypeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTaskTypeViewController.swift; sourceTree = "<group>"; };
+		91B6E9CF257CBA6A004DFB08 /* TaskTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTableViewCell.swift; sourceTree = "<group>"; };
+		91B6E9D0257CBA6A004DFB08 /* TaskTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TaskTableViewCell.xib; sourceTree = "<group>"; };
 		91C5982A24C610A0005E6A87 /* NewTagViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTagViewController.swift; sourceTree = "<group>"; };
 		91C5982C24C612FB005E6A87 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		91C5983024C82840005E6A87 /* TagTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagTableViewCell.swift; sourceTree = "<group>"; };
@@ -97,6 +101,15 @@
 				821DB5F27DD319C87DEBC813 /* Pods-skeda.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		91B6E9CE257CB9C8004DFB08 /* TaskCell */ = {
+			isa = PBXGroup;
+			children = (
+				91B6E9CF257CBA6A004DFB08 /* TaskTableViewCell.swift */,
+				91B6E9D0257CBA6A004DFB08 /* TaskTableViewCell.xib */,
+			);
+			name = TaskCell;
 			sourceTree = "<group>";
 		};
 		91C5982F24C827AA005E6A87 /* TagCell */ = {
@@ -180,6 +193,7 @@
 		91D72BB824BCAE3400E7487D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				91B6E9CE257CB9C8004DFB08 /* TaskCell */,
 				91F4E44A253374CB00EAEAB1 /* ReminderCell */,
 				91F4E444253372C100EAEAB1 /* NewReminderCell */,
 				91F4E43E2533696600EAEAB1 /* LineSubtaskCell */,
@@ -323,6 +337,7 @@
 				91F4E4422533698600EAEAB1 /* LineSubtaskTableViewCell.xib in Resources */,
 				91F4E4362532E68500EAEAB1 /* NewSubtaskTableViewCell.xib in Resources */,
 				91C5983324C82840005E6A87 /* TagTableViewCell.xib in Resources */,
+				91B6E9D2257CBA6A004DFB08 /* TaskTableViewCell.xib in Resources */,
 				91D72BAE24BCADF400E7487D /* LaunchScreen.storyboard in Resources */,
 				91F4E44F253374E900EAEAB1 /* ReminderTableViewCell.xib in Resources */,
 				91D72BAB24BCADF400E7487D /* Assets.xcassets in Resources */,
@@ -382,6 +397,7 @@
 			files = (
 				91EB561924E1385D000AE310 /* ItemViewController.swift in Sources */,
 				91D72BBC24BCB1E100E7487D /* CalendarViewController.swift in Sources */,
+				91B6E9D1257CBA6A004DFB08 /* TaskTableViewCell.swift in Sources */,
 				91F4E4352532E68500EAEAB1 /* NewSubtaskTableViewCell.swift in Sources */,
 				91F4E43B25330B5100EAEAB1 /* PointSubtaskTableViewCell.swift in Sources */,
 				91003EA9252098BC0045F51F /* NewPointTaskViewController.swift in Sources */,

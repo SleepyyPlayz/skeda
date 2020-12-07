@@ -163,7 +163,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xZZ-Gq-ehR">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xZZ-Gq-ehR">
                                 <rect key="frame" x="0.0" y="102" width="414" height="711"/>
                                 <color key="backgroundColor" name="Transparent"/>
                             </tableView>
@@ -231,6 +231,7 @@
                     <navigationItem key="navigationItem" id="m04-Tw-k1w"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
+                        <outlet property="tableView" destination="xZZ-Gq-ehR" id="EiR-aW-5em"/>
                         <segue destination="h78-Ej-qJv" kind="presentation" identifier="ItemsToNewTaskType" id="uNQ-Bj-Ei8"/>
                         <segue destination="ipQ-oJ-e8e" kind="unwind" identifier="ItemsToMaster" animates="NO" unwindAction="unwindToMasterWithUnwindSegue:" id="pfu-Ec-hKa"/>
                     </connections>
