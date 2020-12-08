@@ -27,6 +27,13 @@ class MasterListViewController: UIViewController, canLoadTags,canEdit{
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        //debug
+        print("Documents Directory: ", FileManager.default.urls(for: .libraryDirectory, in: .userDomainMask).last ?? "Not Found!")
+        
+        
+        
         tableView.dataSource = self
         tableView.delegate = self
         tableView.register(UINib(nibName: "TagTableViewCell", bundle: nil), forCellReuseIdentifier: "TagCell")
@@ -49,7 +56,6 @@ class MasterListViewController: UIViewController, canLoadTags,canEdit{
     //load tags from database into array
     func loadTags() {
         let request : NSFetchRequest<Tag> = Tag.fetchRequest()
-
         do{
             tags = try context.fetch(request)
         } catch {

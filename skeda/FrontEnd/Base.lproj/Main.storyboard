@@ -71,7 +71,7 @@
             <objects>
                 <viewController id="Ur5-gu-aSL" customClass="SettingsViewController" customModule="skeda" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2mo-zr-UVq">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="FjN-SU-Opo"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -115,7 +115,7 @@
                                     <action selector="sortButtonPressedInMaster:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="bnV-yX-L3z"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6wM-66-vsP">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6wM-66-vsP">
                                 <rect key="frame" x="344" y="44" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="OZX-jo-hLo"/>
@@ -163,7 +163,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xZZ-Gq-ehR">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xZZ-Gq-ehR">
                                 <rect key="frame" x="0.0" y="102" width="414" height="711"/>
                                 <color key="backgroundColor" name="Transparent"/>
                             </tableView>
@@ -246,7 +246,7 @@
             <objects>
                 <viewController id="JKW-fF-O7E" customClass="EditTagViewController" customModule="skeda" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TUr-12-wwP">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WhiteBackground" translatesAutoresizingMaskIntoConstraints="NO" id="0pk-jV-GMM">
@@ -670,7 +670,7 @@
             <objects>
                 <viewController id="wFR-FM-vla" customClass="NewTagViewController" customModule="skeda" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sIW-iM-0gy">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WhiteBackground" translatesAutoresizingMaskIntoConstraints="NO" id="I7A-Km-UDu">
@@ -1066,7 +1066,7 @@
             <objects>
                 <viewController id="9tR-fA-vjW" customClass="NewPointTaskViewController" customModule="skeda" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Pcu-Pf-eKG" userLabel="Background View">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="1017"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="963"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WhiteBackground" translatesAutoresizingMaskIntoConstraints="NO" id="mQu-T5-tmM">
@@ -1079,7 +1079,7 @@
                                 </constraints>
                                 <state key="normal" image="BigCheckButton"/>
                                 <connections>
-                                    <action selector="doneButtonPressed:" destination="wFR-FM-vla" eventType="touchUpInside" id="F6H-zc-7SH"/>
+                                    <action selector="doneButtonPressed:" destination="9tR-fA-vjW" eventType="touchUpInside" id="8Ze-Q7-0WT"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Task" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bxy-fu-BGB">
@@ -1584,9 +1584,11 @@
                         <outlet property="warningLabel" destination="KZ7-fd-pgY" id="V0B-h8-Crb"/>
                         <outlet property="whiteBackground" destination="mQu-T5-tmM" id="Yzd-8E-lKz"/>
                         <segue destination="jlh-wP-XTx" kind="presentation" identifier="NewPointTaskToNewSubtask" id="JUn-X8-Frj"/>
+                        <segue destination="bNi-cI-Cd5" kind="unwind" identifier="UnwindToItemVC" unwindAction="unwindToItemVCWithSegue:" id="WJu-dJ-R2e"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WAp-mm-Qq4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="bNi-cI-Cd5" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1372" y="1854"/>
         </scene>
@@ -1595,7 +1597,7 @@
             <objects>
                 <viewController id="h78-Ej-qJv" customClass="NewTaskTypeViewController" customModule="skeda" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="reD-9b-p3e">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="irA-Xc-eAY">
@@ -1634,7 +1636,7 @@
                                                 </constraints>
                                                 <state key="normal" image="Point"/>
                                                 <connections>
-                                                    <segue destination="9tR-fA-vjW" kind="presentation" id="itJ-HS-HQX"/>
+                                                    <action selector="pointButtonPressed:" destination="h78-Ej-qJv" eventType="touchUpInside" id="8FH-kI-cF6"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zes-fd-URF">
@@ -1656,9 +1658,6 @@
                                                     <constraint firstAttribute="width" constant="140" id="gtw-8B-ZiG"/>
                                                 </constraints>
                                                 <state key="normal" image="Line"/>
-                                                <connections>
-                                                    <segue destination="JnQ-uV-2HM" kind="presentation" id="VwZ-Ld-C7i"/>
-                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dGz-p8-jRI">
                                                 <rect key="frame" x="148" y="0.0" width="20" height="22"/>
@@ -1684,9 +1683,6 @@
                                                     <constraint firstAttribute="height" constant="140" id="yne-o6-BqL"/>
                                                 </constraints>
                                                 <state key="normal" image="Routine"/>
-                                                <connections>
-                                                    <segue destination="DWZ-hr-vvS" kind="presentation" id="27O-tS-yt6"/>
-                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OY7-2x-HlH">
                                                 <rect key="frame" x="148" y="0.0" width="20" height="22"/>
@@ -1710,9 +1706,6 @@
                                                             <constraint firstAttribute="width" constant="140" id="fcW-UI-wyv"/>
                                                         </constraints>
                                                         <state key="normal" image="RoutineLine"/>
-                                                        <connections>
-                                                            <segue destination="ulZ-cq-L0U" kind="presentation" id="5oG-by-Bod"/>
-                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Ow-Tc-1qN">
                                                         <rect key="frame" x="148" y="0.0" width="20" height="22"/>
@@ -1743,6 +1736,9 @@
                             <constraint firstItem="i8n-qc-f6b" firstAttribute="trailing" secondItem="irA-Xc-eAY" secondAttribute="trailing" constant="20" id="yiX-EZ-ryB"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <segue destination="9tR-fA-vjW" kind="presentation" identifier="CreateNewPoint" id="E2i-kB-Bna"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NVN-Wf-jvf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1812,10 +1808,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WhiteBackground" translatesAutoresizingMaskIntoConstraints="NO" id="5h8-qq-ZLc">
-                                <rect key="frame" x="10" y="10" width="394" height="1290"/>
+                                <rect key="frame" x="10" y="54" width="394" height="1300"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VGw-I2-Csg">
-                                <rect key="frame" x="107" y="1236" width="200" height="50"/>
+                                <rect key="frame" x="107" y="1290" width="200" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="DmQ-gK-tBI"/>
                                 </constraints>
@@ -1825,13 +1821,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Task" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I1K-Fi-Ezy">
-                                <rect key="frame" x="35" y="35" width="214.5" height="60"/>
+                                <rect key="frame" x="35" y="79" width="214.5" height="60"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="50"/>
                                 <color key="textColor" name="PseudoWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XgC-cr-3qO">
-                                <rect key="frame" x="344" y="40" width="50" height="50"/>
+                                <rect key="frame" x="344" y="84" width="50" height="50"/>
                                 <state key="normal" image="CloseButtonBlue"/>
                                 <connections>
                                     <action selector="closeButtonPressed:" destination="JnQ-uV-2HM" eventType="touchUpInside" id="UBa-Ke-ncG"/>
@@ -1839,7 +1835,7 @@
                                 </connections>
                             </button>
                             <scrollView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" keyboardDismissMode="onDrag" translatesAutoresizingMaskIntoConstraints="NO" id="mny-SG-WpP">
-                                <rect key="frame" x="10" y="103" width="394" height="1125"/>
+                                <rect key="frame" x="10" y="147" width="394" height="1135"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DvU-Ks-u8F" userLabel="Content View">
                                         <rect key="frame" x="0.0" y="0.0" width="394" height="1125"/>
@@ -2326,23 +2322,23 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WhiteBackground" translatesAutoresizingMaskIntoConstraints="NO" id="GBg-aF-d61">
-                                <rect key="frame" x="10" y="10" width="394" height="1206"/>
+                                <rect key="frame" x="10" y="54" width="394" height="1216"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ldu-fu-zjP">
-                                <rect key="frame" x="107" y="1152" width="200" height="50"/>
+                                <rect key="frame" x="107" y="1196" width="200" height="60"/>
                                 <state key="normal" image="BigCheckButton"/>
                                 <connections>
                                     <action selector="doneButtonPressed:" destination="wFR-FM-vla" eventType="touchUpInside" id="XAd-h2-VYj"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Task" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6nf-ZT-OUM">
-                                <rect key="frame" x="35" y="35" width="214.5" height="60"/>
+                                <rect key="frame" x="35" y="79" width="214.5" height="60"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="50"/>
                                 <color key="textColor" name="PseudoWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="63I-uN-9eC">
-                                <rect key="frame" x="344" y="40" width="50" height="50"/>
+                                <rect key="frame" x="344" y="84" width="50" height="50"/>
                                 <state key="normal" image="CloseButtonBlue"/>
                                 <connections>
                                     <action selector="closeButtonPressed:" destination="wFR-FM-vla" eventType="touchUpInside" id="HVO-zt-eJB"/>
@@ -2350,7 +2346,7 @@
                                 </connections>
                             </button>
                             <scrollView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" keyboardDismissMode="onDrag" translatesAutoresizingMaskIntoConstraints="NO" id="3yD-zT-Bu8">
-                                <rect key="frame" x="10" y="103" width="394" height="1041"/>
+                                <rect key="frame" x="10" y="147" width="394" height="1041"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cqk-WG-GZ5" userLabel="Content View">
                                         <rect key="frame" x="0.0" y="0.0" width="394" height="1041"/>
@@ -2798,23 +2794,23 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WhiteBackground" translatesAutoresizingMaskIntoConstraints="NO" id="vtC-fA-cuk">
-                                <rect key="frame" x="10" y="10" width="394" height="1206"/>
+                                <rect key="frame" x="10" y="54" width="394" height="1216"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m3w-py-trC">
-                                <rect key="frame" x="107" y="1152" width="200" height="50"/>
+                                <rect key="frame" x="107" y="1196" width="200" height="60"/>
                                 <state key="normal" image="BigCheckButton"/>
                                 <connections>
                                     <action selector="doneButtonPressed:" destination="wFR-FM-vla" eventType="touchUpInside" id="RKC-bn-cZh"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Task" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JhV-8m-ivs">
-                                <rect key="frame" x="35" y="35" width="214.5" height="60"/>
+                                <rect key="frame" x="35" y="79" width="214.5" height="60"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="50"/>
                                 <color key="textColor" name="PseudoWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="73A-2d-DUr">
-                                <rect key="frame" x="344" y="40" width="50" height="50"/>
+                                <rect key="frame" x="344" y="84" width="50" height="50"/>
                                 <state key="normal" image="CloseButtonBlue"/>
                                 <connections>
                                     <action selector="closeButtonPressed:" destination="ulZ-cq-L0U" eventType="touchUpInside" id="Seh-fR-7SW"/>
@@ -2822,7 +2818,7 @@
                                 </connections>
                             </button>
                             <scrollView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" keyboardDismissMode="onDrag" translatesAutoresizingMaskIntoConstraints="NO" id="lft-BB-Q2P">
-                                <rect key="frame" x="10" y="103" width="394" height="1041"/>
+                                <rect key="frame" x="10" y="147" width="394" height="1041"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sLP-uc-BnI" userLabel="Content View">
                                         <rect key="frame" x="0.0" y="0.0" width="394" height="1041"/>
@@ -3266,7 +3262,7 @@
             <objects>
                 <viewController id="jlh-wP-XTx" customClass="SubtaskCreationAndEditViewController" customModule="skeda" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="F9S-Nk-XpT">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="None" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hLD-vK-gEY">

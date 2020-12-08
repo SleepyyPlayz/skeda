@@ -16,13 +16,37 @@ class NewTaskTypeViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
-    
+    var selectedTag: Tag?
+    var delegateVC: ItemViewController?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "CreateNewPoint"){
+            let destinationVC = segue.destination as! NewPointTaskViewController
+            destinationVC.taskParentTag = selectedTag
+            destinationVC.delegate = delegateVC
+        }
+    }
+    
+    
+    @IBAction func pointButtonPressed(_ sender: UIButton) {
+        performSegue(withIdentifier: "CreateNewPoint", sender: self)
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    //MARK: - Info Buttons
     
     @IBAction func pointInfoButtonPressed(_ sender: UIButton) {
         let alertVC = CFAlertViewController(title: "Single Deadline",

@@ -12,6 +12,10 @@ import CFAlertViewController
 import DatePickerDialog
 //import SwipeCellKit
 
+protocol canLoadTasks{
+    func loadTasks()
+}
+
 class NewPointTaskViewController: UIViewController, UpdateSubtask{
     //BUTTONS
     
@@ -74,11 +78,14 @@ class NewPointTaskViewController: UIViewController, UpdateSubtask{
     var taskIsLightThemed: Bool? = false
     var taskDueDate: Date? = Date()
     //let tempDateKey = Date().timeIntervalSinceReferenceDate
+    var taskParentTag: Tag?
     
     var newSubtaskEditMode = false
     var subtaskForEditKey: Int?
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    
+    var delegate: canLoadTasks?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -138,6 +145,59 @@ class NewPointTaskViewController: UIViewController, UpdateSubtask{
                 self.dueDateData.text = formatter.string(from: dt)
                 self.taskDueDate = dt
             }
+        }
+    }
+    
+    
+    @IBAction func doneButtonPressed(_ sender: UIButton) {
+        if(titleTextField.text == ""){
+            warningLabel.isHidden = false
+        }else{
+            warningLabel.isHidden = true
+            let newTask = Task(context: context)
+            
+            newTask.type = CONSTS.TaskTypes.Point
+            newTask.title = titleTextField.text
+            newTask.importance = Int32(taskPriority!)
+            newTask.dateDeadline = taskDueDate
+            newTask.themeColorName = taskThemeColorName
+            newTask.isLightThemed = taskIsLightThemed ?? false
+            newTask.dateKey = Date().timeIntervalSinceReferenceDate
+            newTask.isCompleted = false
+            newTask.parentTag = taskParentTag
+            
+            //funtionality to be added
+            newTask.notes = ""
+            
+            tasks.append(newTask)
+            saveTasks()
+            loadData()
+            
+            //add in subtasks and reminders
+            
+            if subtaskTemp.count > 0{
+                for i in 0...(subtaskTemp.count - 1){
+                    var newSubtask = Subtask(context: context)
+                    newSubtask = subtaskTemp[i]  //might be erroneous if pass by reference
+                    newSubtask.parentTask = tasks[tasks.count - 1]
+                    subtasks.append(newSubtask)
+                }
+            }
+            
+            if reminderTemp.count > 0{
+                for i in 0...(reminderTemp.count - 1){
+                    var newReminder = Reminder(context: context)
+                    newReminder = reminderTemp[i]  //might be erroneous if pass by reference
+                    newReminder.parentTask = tasks[tasks.count - 1]
+                    reminders.append(newReminder)
+                }
+            }
+            
+            saveTasks()
+            
+            self.delegate?.loadTasks()
+            
+            performSegue(withIdentifier: "UnwindToItemVC", sender: nil)
         }
     }
     
@@ -424,18 +484,20 @@ extension NewPointTaskViewController: UITableViewDelegate, UITableViewDataSource
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let destinationVC = segue.destination as! SubtaskCreationAndEditViewController
-        destinationVC.editMode = newSubtaskEditMode
-        destinationVC.delegate = self
-        if(newSubtaskEditMode){
-            destinationVC.titleForEdit = subtaskTemp[subtaskForEditKey!].title
-            destinationVC.typeTemp = subtaskTemp[subtaskForEditKey!].type
-            if(destinationVC.typeTemp == CONSTS.SubtaskTypes.Line){
-                destinationVC.startingDateTemp = subtaskTemp[subtaskForEditKey!].dateStarting
+        if segue.identifier == "NewPointTaskToNewSubtask"{
+            let destinationVC = segue.destination as! SubtaskCreationAndEditViewController
+            destinationVC.editMode = newSubtaskEditMode
+            destinationVC.delegate = self
+            if(newSubtaskEditMode){
+                destinationVC.titleForEdit = subtaskTemp[subtaskForEditKey!].title
+                destinationVC.typeTemp = subtaskTemp[subtaskForEditKey!].type
+                if(destinationVC.typeTemp == CONSTS.SubtaskTypes.Line){
+                    destinationVC.startingDateTemp = subtaskTemp[subtaskForEditKey!].dateStarting
+                }
+                destinationVC.dueDateTemp = subtaskTemp[subtaskForEditKey!].dateDeadline!
+                
+                destinationVC.parentTaskDueDate = taskDueDate
             }
-            destinationVC.dueDateTemp = subtaskTemp[subtaskForEditKey!].dateDeadline!
-            
-            destinationVC.parentTaskDueDate = taskDueDate
         }
     }
     

@@ -14,7 +14,7 @@ import SwipeCellKit
 
 
 
-class ItemViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, SwipeTableViewCellDelegate {
+class ItemViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, SwipeTableViewCellDelegate, canLoadTasks{
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -45,15 +45,21 @@ class ItemViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if(segue.identifier == "ItemsToNewTaskType"){
-            //...
+            let destinationVC = segue.destination as! NewTaskTypeViewController
+            destinationVC.selectedTag = selectedTag
+            destinationVC.delegateVC = self
         }
+    }
+    
+    @IBAction func unwindToItemVC(segue: UIStoryboardSegue){
+        
     }
     
     //MARK: - Query and load tasks
     
     func loadTasks(){
         let request: NSFetchRequest<Task> = Task.fetchRequest()
-        let predicate = NSPredicate(format: "parentTag.dateKey MATCHES %@", selectedTag!.dateKey)
+        let predicate = NSPredicate(format: "parentTag.title == %@", selectedTag!.title!)
         request.predicate = predicate
         
         do {
@@ -61,7 +67,9 @@ class ItemViewController: UIViewController, UITableViewDelegate, UITableViewData
         } catch {
             print("Error loading tasks from QUERY \(error)")
         }
-        tableView.reloadData()
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
     }
     
     //MARK: - TableView Functions
@@ -83,7 +91,7 @@ class ItemViewController: UIViewController, UITableViewDelegate, UITableViewData
         //subtask number label determiner
         var sSubtasks = [Subtask]()
         let sRequest: NSFetchRequest<Subtask> = Subtask.fetchRequest()
-        let sPredicate = NSPredicate(format: "parentTask.dateKey", tasks[index].dateKey)
+        let sPredicate = NSPredicate(format: "abs(parentTask.dateKey - %lf) < 0.001", tasks[index].dateKey)
         sRequest.predicate = sPredicate
         do {
             sSubtasks = try context.fetch(sRequest)
@@ -93,13 +101,13 @@ class ItemViewController: UIViewController, UITableViewDelegate, UITableViewData
         if sSubtasks.count == 1{
             cell.subtaskLabel?.text = "1 Subtask"
         }else{
-            cell.subtaskLabel?.text = (String(sSubtasks.count) + "Subtasks")
+            cell.subtaskLabel?.text = (String(sSubtasks.count) + " Subtasks")
         }
         
         //reminder number label determiner
         var rReminders = [Reminder]()
         let rRequest: NSFetchRequest<Reminder> = Reminder.fetchRequest()
-        let rPredicate = NSPredicate(format: "parentTask.dateKey", tasks[index].dateKey)
+        let rPredicate = NSPredicate(format: "abs(parentTask.dateKey - %lf) < 0.001", tasks[index].dateKey)
         rRequest.predicate = rPredicate
         do {
             rReminders = try context.fetch(rRequest)
@@ -109,7 +117,7 @@ class ItemViewController: UIViewController, UITableViewDelegate, UITableViewData
         if rReminders.count == 1{
             cell.reminderLabel?.text = "1 Reminder"
         }else{
-            cell.reminderLabel?.text = (String(rReminders.count) + "Reminders")
+            cell.reminderLabel?.text = (String(rReminders.count) + " Reminders")
         }
         
         //Style determiner
