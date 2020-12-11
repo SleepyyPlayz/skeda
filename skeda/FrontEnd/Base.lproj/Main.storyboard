@@ -48,23 +48,43 @@
                                     <action selector="sortButtonPressed:" destination="9pv-A4-QxB" eventType="touchUpInside" id="AKc-Ta-oJ8"/>
                                 </connections>
                             </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="MfV-bm-izY">
+                                <rect key="frame" x="0.0" y="102" width="414" height="711"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="No tasks remaining." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="f2L-jO-WGb">
+                                <rect key="frame" x="99" y="420" width="219" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" name="Transparent"/>
+                                <color key="textColor" name="SubGrey"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="23"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="1RZ-F0-En4" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="20" id="88L-go-v80"/>
                             <constraint firstItem="i5S-BS-NiH" firstAttribute="leading" secondItem="1RZ-F0-En4" secondAttribute="trailing" constant="20" id="Mc8-gy-oRn"/>
+                            <constraint firstItem="MfV-bm-izY" firstAttribute="top" secondItem="PQr-Ze-W5v" secondAttribute="top" constant="58" id="Q1A-lZ-Aai"/>
                             <constraint firstItem="1RZ-F0-En4" firstAttribute="top" secondItem="PQr-Ze-W5v" secondAttribute="top" id="SX0-Kz-QDA"/>
                             <constraint firstItem="yOL-Ct-AVb" firstAttribute="top" secondItem="PQr-Ze-W5v" secondAttribute="top" id="anO-Fh-tXs"/>
                             <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="yOL-Ct-AVb" secondAttribute="trailing" constant="20" id="bKy-qe-9SR"/>
+                            <constraint firstItem="MfV-bm-izY" firstAttribute="bottom" secondItem="PQr-Ze-W5v" secondAttribute="bottom" id="hQJ-tv-WIC"/>
+                            <constraint firstItem="MfV-bm-izY" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" id="o2N-ST-PXx"/>
                             <constraint firstItem="i5S-BS-NiH" firstAttribute="top" secondItem="PQr-Ze-W5v" secondAttribute="top" id="wXk-bb-gma"/>
+                            <constraint firstItem="MfV-bm-izY" firstAttribute="trailing" secondItem="PQr-Ze-W5v" secondAttribute="trailing" id="ztq-AG-dAe"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="HomeLogo" selectedImage="HomeLogoSelected" id="acW-dT-cKf"/>
+                    <connections>
+                        <outlet property="tableView" destination="MfV-bm-izY" id="uH5-k4-6dt"/>
+                        <segue destination="9tR-fA-vjW" kind="presentation" identifier="DashToEditPointTask" id="YJa-0M-mlE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="870" y="-489"/>
+            <point key="canvasLocation" x="869.56521739130437" y="-489.50892857142856"/>
         </scene>
         <!--Settings View Controller-->
         <scene sceneID="8rJ-j3-wou">
@@ -73,13 +93,23 @@
                     <view key="view" contentMode="scaleToFill" id="2mo-zr-UVq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="No settings needed, for now. Follow our trello board to track our progress at https://trello.com/b/ZXkccAgG/skeda" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="afT-be-CXA">
+                                <rect key="frame" x="87" y="343" width="240" height="157"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" name="BackgroundBlue"/>
+                                <color key="textColor" name="PseudoWhite"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="FjN-SU-Opo"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="BackgroundBlue"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6aM-ab-QTY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="870" y="-1181"/>
+            <point key="canvasLocation" x="869.56521739130437" y="-1181.25"/>
         </scene>
         <!--Master List View Controller-->
         <scene sceneID="wg7-f3-ORb">
@@ -1529,6 +1559,9 @@
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PiY-f3-2PZ">
                                 <rect key="frame" x="24" y="889" width="50" height="50"/>
                                 <state key="normal" image="DeleteButton"/>
+                                <connections>
+                                    <action selector="deleteButtonPressed:" destination="9tR-fA-vjW" eventType="touchUpInside" id="jmK-lk-d8s"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="thd-jq-zeq"/>
@@ -1759,8 +1792,19 @@
                     <view key="view" contentMode="scaleToFill" id="wFb-vd-8qc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="zrg-ek-XE4">
+                                <rect key="frame" x="32" y="350" width="351" height="197"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" name="Transparent"/>
+                                <string key="text">Calendar overview functionality coming soon! Follow our trello board to track our progress at https://trello.com/b/ZXkccAgG/skeda. Please feel free to comment &amp; report bugs to us. Thanks you for your support.</string>
+                                <color key="textColor" name="PseudoWhite"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="0TC-kh-BPt"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="BackgroundBlue"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="CalendaButton" selectedImage="CalendarButtonSelected" id="x7A-oV-QxU"/>
                 </viewController>
@@ -3443,7 +3487,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="f49-cZ-ZFJ"/>
+        <segue reference="YJa-0M-mlE"/>
         <segue reference="sem-lG-n0s"/>
     </inferredMetricsTieBreakers>
     <resources>
@@ -3513,6 +3557,9 @@
         </namedColor>
         <namedColor name="PseudoWhite">
             <color red="0.98039215686274506" green="0.98431372549019602" blue="0.9882352941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="SubGrey">
+            <color red="0.41176470588235292" green="0.41176470588235292" blue="0.41176470588235292" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Transparent">
             <color red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>

@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		08ED5A8563AD937FB881C06B /* Pods_skeda.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDFAB3EFA5A80E48862A6A7E /* Pods_skeda.framework */; };
 		91003EA9252098BC0045F51F /* NewPointTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91003EA8252098BC0045F51F /* NewPointTaskViewController.swift */; };
+		911A47AE2583BEB500DEA741 /* TaskDashCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911A47AC2583BEB400DEA741 /* TaskDashCollectionViewCell.swift */; };
+		911A47AF2583BEB500DEA741 /* TaskDashCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 911A47AD2583BEB400DEA741 /* TaskDashCollectionViewCell.xib */; };
 		9126DFE02506479500D47DDA /* EditTagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9126DFDF2506479500D47DDA /* EditTagViewController.swift */; };
 		912B216C253DE0A2004493E0 /* SubtaskCreationAndEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912B216B253DE0A2004493E0 /* SubtaskCreationAndEditViewController.swift */; };
 		9135713324F2C46800E0CF0B /* NewTaskTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9135713224F2C46800E0CF0B /* NewTaskTypeViewController.swift */; };
@@ -46,6 +48,8 @@
 		3625DAB69C897A5FF834D373 /* Pods-skeda.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-skeda.debug.xcconfig"; path = "Target Support Files/Pods-skeda/Pods-skeda.debug.xcconfig"; sourceTree = "<group>"; };
 		821DB5F27DD319C87DEBC813 /* Pods-skeda.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-skeda.release.xcconfig"; path = "Target Support Files/Pods-skeda/Pods-skeda.release.xcconfig"; sourceTree = "<group>"; };
 		91003EA8252098BC0045F51F /* NewPointTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPointTaskViewController.swift; sourceTree = "<group>"; };
+		911A47AC2583BEB400DEA741 /* TaskDashCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDashCollectionViewCell.swift; sourceTree = "<group>"; };
+		911A47AD2583BEB400DEA741 /* TaskDashCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TaskDashCollectionViewCell.xib; sourceTree = "<group>"; };
 		9126DFDF2506479500D47DDA /* EditTagViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTagViewController.swift; sourceTree = "<group>"; };
 		912B216B253DE0A2004493E0 /* SubtaskCreationAndEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubtaskCreationAndEditViewController.swift; sourceTree = "<group>"; };
 		9135713224F2C46800E0CF0B /* NewTaskTypeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTaskTypeViewController.swift; sourceTree = "<group>"; };
@@ -101,6 +105,15 @@
 				821DB5F27DD319C87DEBC813 /* Pods-skeda.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		911A47AB2583BDB200DEA741 /* TaskDashCell-temp */ = {
+			isa = PBXGroup;
+			children = (
+				911A47AC2583BEB400DEA741 /* TaskDashCollectionViewCell.swift */,
+				911A47AD2583BEB400DEA741 /* TaskDashCollectionViewCell.xib */,
+			);
+			name = "TaskDashCell-temp";
 			sourceTree = "<group>";
 		};
 		91B6E9CE257CB9C8004DFB08 /* TaskCell */ = {
@@ -193,6 +206,7 @@
 		91D72BB824BCAE3400E7487D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				911A47AB2583BDB200DEA741 /* TaskDashCell-temp */,
 				91B6E9CE257CB9C8004DFB08 /* TaskCell */,
 				91F4E44A253374CB00EAEAB1 /* ReminderCell */,
 				91F4E444253372C100EAEAB1 /* NewReminderCell */,
@@ -336,6 +350,7 @@
 				91F4E448253372F200EAEAB1 /* NewReminderTableViewCell.xib in Resources */,
 				91F4E4422533698600EAEAB1 /* LineSubtaskTableViewCell.xib in Resources */,
 				91F4E4362532E68500EAEAB1 /* NewSubtaskTableViewCell.xib in Resources */,
+				911A47AF2583BEB500DEA741 /* TaskDashCollectionViewCell.xib in Resources */,
 				91C5983324C82840005E6A87 /* TagTableViewCell.xib in Resources */,
 				91B6E9D2257CBA6A004DFB08 /* TaskTableViewCell.xib in Resources */,
 				91D72BAE24BCADF400E7487D /* LaunchScreen.storyboard in Resources */,
@@ -398,6 +413,7 @@
 				91EB561924E1385D000AE310 /* ItemViewController.swift in Sources */,
 				91D72BBC24BCB1E100E7487D /* CalendarViewController.swift in Sources */,
 				91B6E9D1257CBA6A004DFB08 /* TaskTableViewCell.swift in Sources */,
+				911A47AE2583BEB500DEA741 /* TaskDashCollectionViewCell.swift in Sources */,
 				91F4E4352532E68500EAEAB1 /* NewSubtaskTableViewCell.swift in Sources */,
 				91F4E43B25330B5100EAEAB1 /* PointSubtaskTableViewCell.swift in Sources */,
 				91003EA9252098BC0045F51F /* NewPointTaskViewController.swift in Sources */,

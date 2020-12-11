@@ -181,6 +181,11 @@ class ItemViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //Segue to task inspection
+        //performSegue ...
+        dateKeyForEdit = tasks[indexPath.row].dateKey
+        performSegue(withIdentifier: "ItemsToEditPointTask", sender: self.self)
+        
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     
 }

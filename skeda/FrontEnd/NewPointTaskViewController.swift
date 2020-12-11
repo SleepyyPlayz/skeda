@@ -85,7 +85,7 @@ class NewPointTaskViewController: UIViewController, UpdateSubtask{
     var taskEditMode: Bool?
     var dateKeyForEdit: Double?
     var taskIndexForEdit: Int?
-    
+    var fromDashboard: Bool?
     
     var newSubtaskEditMode = false
     var subtaskForEditKey: Int?
@@ -333,8 +333,36 @@ class NewPointTaskViewController: UIViewController, UpdateSubtask{
             
             saveTasks()
             self.delegate?.loadTasks()
-            performSegue(withIdentifier: "UnwindToItemVC", sender: nil)
+            if fromDashboard != nil && fromDashboard == true{
+                self.dismiss(animated: true, completion: nil)
+            }else{
+                performSegue(withIdentifier: "UnwindToItemVC", sender: nil)
+            }
         }
+    }
+    
+    @IBAction func deleteButtonPressed(_ sender: UIButton) {
+        let alertVC = CFAlertViewController(
+            title: "Are you sure you want to delete this list?",
+            message: "", textAlignment: .center,
+            preferredStyle: .alert,
+            didDismissAlertHandler: nil)
+        let okButton = CFAlertAction(title: "Cancel", style: .Default, alignment: .justified, backgroundColor: UIColor(named: CONSTS.Colors.BackgroundBlue), textColor: UIColor(named: CONSTS.Colors.PseudoWhite), handler: nil)
+        let deleteButton = CFAlertAction(title: "DELETE", style: .Destructive, alignment: .justified, backgroundColor: UIColor(named: CONSTS.Colors.WarningRed), textColor: UIColor(named: CONSTS.Colors.PseudoWhite)) { (action) in
+            
+            self.context.delete(self.tasks[self.taskIndexForEdit!])
+            
+            self.saveTasks()
+            self.delegate?.loadTasks()
+            if self.fromDashboard != nil && self.fromDashboard == true{
+                self.dismiss(animated: true, completion: nil)
+            }else{
+                self.performSegue(withIdentifier: "UnwindToItemVC", sender: nil)
+            }
+        }
+        alertVC.addAction(deleteButton)
+        alertVC.addAction(okButton)
+        present(alertVC,animated: true,completion: nil)
     }
     
     func loadData(){
@@ -644,12 +672,7 @@ extension NewPointTaskViewController: UITableViewDelegate, UITableViewDataSource
         remindersHeightConstraint.constant = CGFloat(remindersTableViewCurrentRowNumber! * 44)
         self.view.layoutIfNeeded()
     }
-    
-    
-    
-    
-    
-    
+
 }
 
 
