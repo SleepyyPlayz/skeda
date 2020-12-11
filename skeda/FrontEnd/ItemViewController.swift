@@ -27,6 +27,9 @@ class ItemViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
+    //var editMarker: Bool = false
+    var dateKeyForEdit: Double?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -41,6 +44,7 @@ class ItemViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     @IBAction func newTaskButtonPressed(_ sender: UIButton) {
+        //editMarker = false
         performSegue(withIdentifier: "ItemsToNewTaskType", sender: self)
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -48,6 +52,14 @@ class ItemViewController: UIViewController, UITableViewDelegate, UITableViewData
             let destinationVC = segue.destination as! NewTaskTypeViewController
             destinationVC.selectedTag = selectedTag
             destinationVC.delegateVC = self
+            destinationVC.taskEditMode = false
+        }
+        if(segue.identifier == "ItemsToEditPointTask"){
+            let destinationVC = segue.destination as! NewPointTaskViewController
+            destinationVC.taskParentTag = selectedTag
+            destinationVC.delegate = self
+            destinationVC.taskEditMode = true
+            destinationVC.dateKeyForEdit = dateKeyForEdit!
         }
     }
     
@@ -144,9 +156,11 @@ class ItemViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath, for orientation: SwipeActionsOrientation) -> [SwipeAction]? {
         guard orientation == .right else {return nil}
         let editAction = SwipeAction(style: .default, title: nil) { (action, indexPath) in
-            //... to edit interface
+            //to edit interface
+            //self.editMarker = true
             
-            
+            self.dateKeyForEdit = self.tasks[indexPath.row].dateKey
+            self.performSegue(withIdentifier: "ItemsToEditPointTask", sender: self.self)
             
             //self.editIndex = indexPath.row
             //self.performSegue(withIdentifier: "TagListToEditTag", sender: self.self)

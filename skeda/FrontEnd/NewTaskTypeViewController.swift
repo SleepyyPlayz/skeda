@@ -18,6 +18,7 @@ class NewTaskTypeViewController: UIViewController {
     
     var selectedTag: Tag?
     var delegateVC: ItemViewController?
+    var taskEditMode: Bool?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +31,7 @@ class NewTaskTypeViewController: UIViewController {
             let destinationVC = segue.destination as! NewPointTaskViewController
             destinationVC.taskParentTag = selectedTag
             destinationVC.delegate = delegateVC
+            destinationVC.taskEditMode = taskEditMode
         }
     }
     

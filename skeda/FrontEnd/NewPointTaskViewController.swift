@@ -80,6 +80,13 @@ class NewPointTaskViewController: UIViewController, UpdateSubtask{
     //let tempDateKey = Date().timeIntervalSinceReferenceDate
     var taskParentTag: Tag?
     
+    //edit mode variables
+    @IBOutlet weak var deleteButton: UIButton!
+    var taskEditMode: Bool?
+    var dateKeyForEdit: Double?
+    var taskIndexForEdit: Int?
+    
+    
     var newSubtaskEditMode = false
     var subtaskForEditKey: Int?
     
@@ -92,7 +99,12 @@ class NewPointTaskViewController: UIViewController, UpdateSubtask{
         self.isModalInPresentation = true
         loadData()
         
-        initializeFieldsForNew()
+        if !(taskEditMode!){
+            initializeFieldsForNew()
+        }else{
+            convertdateKeyToIndex()
+            initializeFieldsForEdit()
+        }
         
         
         titleTextField.delegate = self
@@ -120,7 +132,19 @@ class NewPointTaskViewController: UIViewController, UpdateSubtask{
         
     }
     
+    func convertdateKeyToIndex(){
+        for i in 0...(tasks.count - 1){
+            if abs(tasks[i].dateKey - dateKeyForEdit!) < 0.001{
+                taskIndexForEdit = i
+                break
+            }
+        }
+    }
+    
     func initializeFieldsForNew(){
+        topText.text = "New Task"
+        deleteButton.isHidden = true
+        
         blueButtonSelected(blueButton)
         titleTextField.text = ""
         warningLabel.isHidden = true
@@ -132,6 +156,86 @@ class NewPointTaskViewController: UIViewController, UpdateSubtask{
         dueDateData.text = formatter.string(from: taskDueDate ?? Date())
         
     }
+    
+    func initializeFieldsForEdit(){
+        topText.text = "Edit Task"
+        deleteButton.isHidden = false
+        warningLabel.isHidden = true
+        
+        titleTextField.text = tasks[taskIndexForEdit!].title
+        
+        priorityBar.selectedSegmentIndex = Int(tasks[taskIndexForEdit!].importance)
+        taskPriority = Int(tasks[taskIndexForEdit!].importance)
+        
+        let formatter = DateFormatter()
+        formatter.dateFormat = "MMMM dd, yyyy"
+        dueDateData.text = formatter.string(from: tasks[taskIndexForEdit!].dateDeadline ?? Date())
+        taskDueDate = tasks[taskIndexForEdit!].dateDeadline
+        
+        if !(tasks[taskIndexForEdit!].isLightThemed){
+            switch tasks[taskIndexForEdit!].themeColorName {
+            case CONSTS.Colors.BackgroundBlue:
+                blueButtonSelected(blueButton)
+            case CONSTS.Colors.BackgroundGreen:
+                greenButtonSelected(greenButton)
+            case CONSTS.Colors.BackgroundTurquoise:
+                turquoiseButtonSelected(turquoiseButton)
+            case CONSTS.Colors.BackgroundGrey:
+                greyButtonSelected(greyButton)
+            case CONSTS.Colors.BackgroundDeepBlue:
+                deepBlueButtonSelected(deepBlueButton)
+            case CONSTS.Colors.BackgroundPurple:
+                purpleButtonSelected(purpleButton)
+            case CONSTS.Colors.BackgroundOrange:
+                orangeButtonSelected(orangeButton)
+            case CONSTS.Colors.BackgroundRed:
+                redButtonSelected(redButton)
+            default:
+                blueButtonSelected(blueButton)
+            }
+        }else{
+            switch tasks[taskIndexForEdit!].themeColorName {
+            case CONSTS.Colors.BackgroundBlue:
+                blueLTButtonSelected(blueLTButton)
+            case CONSTS.Colors.BackgroundGreen:
+                greenLTButtonSelected(greenLTButton)
+            case CONSTS.Colors.BackgroundTurquoise:
+                turquoiseLTButtonSelected(turquoiseLTButton)
+            case CONSTS.Colors.BackgroundGrey:
+                greyLTButtonSelected(greyLTButton)
+            case CONSTS.Colors.BackgroundDeepBlue:
+                deepBlueLTButtonSelected(deepBlueLTButton)
+            case CONSTS.Colors.BackgroundPurple:
+                purpleLTButtonSelected(purpleLTButton)
+            case CONSTS.Colors.BackgroundOrange:
+                orangeLTButtonSelected(orangeLTButton)
+            case CONSTS.Colors.BackgroundRed:
+                redLTButtonSelected(redLTButton)
+            default:
+                blueLTButtonSelected(blueLTButton)
+            }
+        }
+        
+        let sRequest: NSFetchRequest <Subtask> = Subtask.fetchRequest()
+        let sPredicate = NSPredicate(format: "abs(parentTask.dateKey - %lf) < 0.001", tasks[taskIndexForEdit!].dateKey)
+        sRequest.predicate = sPredicate
+        do {
+            subtaskTemp = try context.fetch(sRequest)
+        } catch {
+            print("Error loading subtasks for edit \(error)")
+        }
+        
+        let rRequest: NSFetchRequest<Reminder> = Reminder.fetchRequest()
+        let rPredicate = NSPredicate(format: "abs(parentTask.dateKey - %lf) < 0.001", tasks[taskIndexForEdit!].dateKey)
+        rRequest.predicate = rPredicate
+        do {
+            reminderTemp = try context.fetch(rRequest)
+        } catch {
+            print("Error loading reminders for edit \(error)")
+        }
+        
+    }
+    
     @IBAction func priorityBarChanged(_ sender: UISegmentedControl) {
         taskPriority = sender.selectedSegmentIndex
     }
@@ -154,49 +258,81 @@ class NewPointTaskViewController: UIViewController, UpdateSubtask{
             warningLabel.isHidden = false
         }else{
             warningLabel.isHidden = true
-            let newTask = Task(context: context)
             
-            newTask.type = CONSTS.TaskTypes.Point
-            newTask.title = titleTextField.text
-            newTask.importance = Int32(taskPriority!)
-            newTask.dateDeadline = taskDueDate
-            newTask.themeColorName = taskThemeColorName
-            newTask.isLightThemed = taskIsLightThemed ?? false
-            newTask.dateKey = Date().timeIntervalSinceReferenceDate
-            newTask.isCompleted = false
-            newTask.parentTag = taskParentTag
-            
-            //funtionality to be added
-            newTask.notes = ""
-            
-            tasks.append(newTask)
-            saveTasks()
-            loadData()
-            
-            //add in subtasks and reminders
-            
-            if subtaskTemp.count > 0{
-                for i in 0...(subtaskTemp.count - 1){
-                    var newSubtask = Subtask(context: context)
-                    newSubtask = subtaskTemp[i]  //might be erroneous if pass by reference
-                    newSubtask.parentTask = tasks[tasks.count - 1]
-                    subtasks.append(newSubtask)
+            if !(taskEditMode!){
+                let newTask = Task(context: context)
+                
+                newTask.type = CONSTS.TaskTypes.Point
+                newTask.title = titleTextField.text
+                newTask.importance = Int32(taskPriority!)
+                newTask.dateDeadline = taskDueDate
+                newTask.themeColorName = taskThemeColorName
+                newTask.isLightThemed = taskIsLightThemed ?? false
+                newTask.dateKey = Date().timeIntervalSinceReferenceDate
+                newTask.isCompleted = false
+                newTask.parentTag = taskParentTag
+                
+                //funtionality to be added
+                newTask.notes = ""
+                
+                tasks.append(newTask)
+                saveTasks()
+                loadData()
+                
+                //add in subtasks and reminders
+                
+                if subtaskTemp.count > 0{
+                    for i in 0...(subtaskTemp.count - 1){
+                        var newSubtask = Subtask(context: context)
+                        newSubtask = subtaskTemp[i]  //might be erroneous if pass by reference
+                        newSubtask.parentTask = tasks[tasks.count - 1]
+                        subtasks.append(newSubtask)
+                    }
                 }
+                if reminderTemp.count > 0{
+                    for i in 0...(reminderTemp.count - 1){
+                        var newReminder = Reminder(context: context)
+                        newReminder = reminderTemp[i]  //might be erroneous if pass by reference
+                        newReminder.parentTask = tasks[tasks.count - 1]
+                        reminders.append(newReminder)
+                    }
+                }
+            }else{
+                tasks[taskIndexForEdit!].title = titleTextField.text
+                tasks[taskIndexForEdit!].importance = Int32(taskPriority!)
+                tasks[taskIndexForEdit!].dateDeadline = taskDueDate
+                tasks[taskIndexForEdit!].themeColorName = taskThemeColorName
+                tasks[taskIndexForEdit!].isLightThemed = taskIsLightThemed ?? false
+                
+                subtasks = subtasks.filter({ (subtaskForInspection) -> Bool in
+                    return subtaskForInspection.parentTask != tasks[taskIndexForEdit!]
+                })
+                
+                reminders = reminders.filter({ (reminderForInspection) -> Bool in
+                    return reminderForInspection.parentTask != tasks[taskIndexForEdit!]
+                })
+                if subtaskTemp.count > 0{
+                    for i in 0...(subtaskTemp.count - 1){
+                        var newSubtask = Subtask(context: context)
+                        newSubtask = subtaskTemp[i]  //might be erroneous if pass by reference
+                        newSubtask.parentTask = tasks[tasks.count - 1]
+                        subtasks.append(newSubtask)
+                    }
+                }
+                if reminderTemp.count > 0{
+                    for i in 0...(reminderTemp.count - 1){
+                        var newReminder = Reminder(context: context)
+                        newReminder = reminderTemp[i]  //might be erroneous if pass by reference
+                        newReminder.parentTask = tasks[tasks.count - 1]
+                        reminders.append(newReminder)
+                    }
+                }
+                
             }
             
-            if reminderTemp.count > 0{
-                for i in 0...(reminderTemp.count - 1){
-                    var newReminder = Reminder(context: context)
-                    newReminder = reminderTemp[i]  //might be erroneous if pass by reference
-                    newReminder.parentTask = tasks[tasks.count - 1]
-                    reminders.append(newReminder)
-                }
-            }
             
             saveTasks()
-            
             self.delegate?.loadTasks()
-            
             performSegue(withIdentifier: "UnwindToItemVC", sender: nil)
         }
     }

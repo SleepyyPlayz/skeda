@@ -29,7 +29,7 @@
                                     <segue destination="Ur5-gu-aSL" kind="presentation" identifier="DashboardToSettings" id="sem-lG-n0s"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yOL-Ct-AVb">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yOL-Ct-AVb">
                                 <rect key="frame" x="344" y="44" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="Yst-XP-kUe"/>
@@ -115,7 +115,7 @@
                                     <action selector="sortButtonPressedInMaster:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="bnV-yX-L3z"/>
                                 </connections>
                             </button>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6wM-66-vsP">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6wM-66-vsP">
                                 <rect key="frame" x="344" y="44" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="OZX-jo-hLo"/>
@@ -234,6 +234,7 @@
                         <outlet property="tableView" destination="xZZ-Gq-ehR" id="EiR-aW-5em"/>
                         <segue destination="h78-Ej-qJv" kind="presentation" identifier="ItemsToNewTaskType" id="uNQ-Bj-Ei8"/>
                         <segue destination="ipQ-oJ-e8e" kind="unwind" identifier="ItemsToMaster" animates="NO" unwindAction="unwindToMasterWithUnwindSegue:" id="pfu-Ec-hKa"/>
+                        <segue destination="9tR-fA-vjW" kind="presentation" identifier="ItemsToEditPointTask" id="f49-cZ-ZFJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fI0-cg-ZTe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1525,6 +1526,10 @@
                                 <viewLayoutGuide key="contentLayoutGuide" id="qmA-KH-7H9"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="EiJ-UT-zp4"/>
                             </scrollView>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PiY-f3-2PZ">
+                                <rect key="frame" x="24" y="889" width="50" height="50"/>
+                                <state key="normal" image="DeleteButton"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="thd-jq-zeq"/>
                         <color key="backgroundColor" name="BackgroundBlue"/>
@@ -1532,6 +1537,7 @@
                             <constraint firstAttribute="bottom" secondItem="4v0-qw-vDg" secondAttribute="bottom" constant="24" id="3V8-iL-IY7"/>
                             <constraint firstItem="mQu-T5-tmM" firstAttribute="top" secondItem="thd-jq-zeq" secondAttribute="top" constant="10" id="3eY-Xo-SjL"/>
                             <constraint firstItem="Ksg-Lh-bZg" firstAttribute="top" secondItem="thd-jq-zeq" secondAttribute="top" constant="40" id="8KO-Id-wYH"/>
+                            <constraint firstAttribute="bottom" secondItem="PiY-f3-2PZ" secondAttribute="bottom" constant="24" id="GLs-aA-E8D"/>
                             <constraint firstItem="bxy-fu-BGB" firstAttribute="top" secondItem="thd-jq-zeq" secondAttribute="top" constant="35" id="Og1-2f-FKB"/>
                             <constraint firstItem="f59-L5-aDe" firstAttribute="centerX" secondItem="Pcu-Pf-eKG" secondAttribute="centerX" id="VIa-8k-qG2"/>
                             <constraint firstItem="mQu-T5-tmM" firstAttribute="leading" secondItem="thd-jq-zeq" secondAttribute="leading" constant="10" id="Wc4-Sf-Vy8"/>
@@ -1539,6 +1545,7 @@
                             <constraint firstItem="bxy-fu-BGB" firstAttribute="leading" secondItem="thd-jq-zeq" secondAttribute="leading" constant="35" id="cIL-Th-7uH"/>
                             <constraint firstItem="f59-L5-aDe" firstAttribute="leading" secondItem="thd-jq-zeq" secondAttribute="leading" constant="10" id="eQd-fx-KQa"/>
                             <constraint firstItem="thd-jq-zeq" firstAttribute="trailing" secondItem="mQu-T5-tmM" secondAttribute="trailing" constant="10" id="fsb-eg-jkk"/>
+                            <constraint firstItem="PiY-f3-2PZ" firstAttribute="leading" secondItem="thd-jq-zeq" secondAttribute="leading" constant="24" id="iS3-NJ-zeR"/>
                             <constraint firstItem="Ksg-Lh-bZg" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="bxy-fu-BGB" secondAttribute="trailing" priority="250" constant="90" id="kc8-wP-VO0"/>
                             <constraint firstAttribute="bottom" secondItem="mQu-T5-tmM" secondAttribute="bottom" constant="10" id="oAM-dr-sHB"/>
                             <constraint firstItem="4v0-qw-vDg" firstAttribute="top" secondItem="f59-L5-aDe" secondAttribute="bottom" constant="8" id="oKa-ma-PbB"/>
@@ -1555,6 +1562,7 @@
                         <outlet property="closeButton" destination="Ksg-Lh-bZg" id="gUb-O1-w8D"/>
                         <outlet property="deepBlueButton" destination="7Yv-hY-lYa" id="ydz-HC-AV0"/>
                         <outlet property="deepBlueLTButton" destination="FW1-1b-2ah" id="g0P-nV-CO4"/>
+                        <outlet property="deleteButton" destination="PiY-f3-2PZ" id="vCA-lB-Cs9"/>
                         <outlet property="dueDateData" destination="eJs-OX-9Su" id="rTN-cf-rJL"/>
                         <outlet property="dueDateLabel" destination="gdL-eY-GYy" id="qDC-35-Q2A"/>
                         <outlet property="greenButton" destination="uvu-j9-gTq" id="ckG-8p-72F"/>
@@ -3435,7 +3443,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="QFF-WB-TTL"/>
+        <segue reference="f49-cZ-ZFJ"/>
+        <segue reference="sem-lG-n0s"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="AddNewButton" width="50" height="50"/>
