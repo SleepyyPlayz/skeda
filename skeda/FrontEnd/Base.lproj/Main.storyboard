@@ -52,10 +52,13 @@
                                 <rect key="frame" x="0.0" y="102" width="414" height="711"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="No tasks remaining." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="f2L-jO-WGb">
-                                <rect key="frame" x="99" y="420" width="219" height="46"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="No tasks. Navigate to &quot;Lists&quot; to create your first list/project." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="f2L-jO-WGb">
+                                <rect key="frame" x="86" y="359" width="242" height="95"/>
                                 <color key="backgroundColor" name="Transparent"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="95" id="KuA-Tj-SdA"/>
+                                    <constraint firstAttribute="width" constant="242" id="bEM-3r-sBs"/>
+                                </constraints>
                                 <color key="textColor" name="SubGrey"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="23"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -64,7 +67,9 @@
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="f2L-jO-WGb" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="2kY-AU-a6J"/>
                             <constraint firstItem="1RZ-F0-En4" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="20" id="88L-go-v80"/>
+                            <constraint firstItem="f2L-jO-WGb" firstAttribute="centerY" secondItem="tsR-hK-woN" secondAttribute="centerY" id="GEg-s3-wJA"/>
                             <constraint firstItem="i5S-BS-NiH" firstAttribute="leading" secondItem="1RZ-F0-En4" secondAttribute="trailing" constant="20" id="Mc8-gy-oRn"/>
                             <constraint firstItem="MfV-bm-izY" firstAttribute="top" secondItem="PQr-Ze-W5v" secondAttribute="top" constant="58" id="Q1A-lZ-Aai"/>
                             <constraint firstItem="1RZ-F0-En4" firstAttribute="top" secondItem="PQr-Ze-W5v" secondAttribute="top" id="SX0-Kz-QDA"/>
@@ -76,8 +81,9 @@
                             <constraint firstItem="MfV-bm-izY" firstAttribute="trailing" secondItem="PQr-Ze-W5v" secondAttribute="trailing" id="ztq-AG-dAe"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="HomeLogo" selectedImage="HomeLogoSelected" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" tag="10" title="" image="HomeLogo" selectedImage="HomeLogoSelected" id="acW-dT-cKf"/>
                     <connections>
+                        <outlet property="instructionTextView" destination="f2L-jO-WGb" id="TvC-7W-uhc"/>
                         <outlet property="tableView" destination="MfV-bm-izY" id="uH5-k4-6dt"/>
                         <segue destination="9tR-fA-vjW" kind="presentation" identifier="DashToEditPointTask" id="YJa-0M-mlE"/>
                     </connections>
@@ -91,13 +97,16 @@
             <objects>
                 <viewController id="Ur5-gu-aSL" customClass="SettingsViewController" customModule="skeda" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2mo-zr-UVq">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="No settings needed, for now. Follow our trello board to track our progress at https://trello.com/b/ZXkccAgG/skeda" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="afT-be-CXA">
-                                <rect key="frame" x="87" y="343" width="240" height="157"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="No settings needed, for now. Follow our trello board to track our progress at https://trello.com/b/ZXkccAgG/skeda" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="afT-be-CXA">
+                                <rect key="frame" x="87" y="342.5" width="240" height="157"/>
                                 <color key="backgroundColor" name="BackgroundBlue"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="S93-KM-jBK"/>
+                                    <constraint firstAttribute="height" constant="157" id="as2-bY-9cg"/>
+                                </constraints>
                                 <color key="textColor" name="PseudoWhite"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -105,6 +114,10 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="FjN-SU-Opo"/>
                         <color key="backgroundColor" name="BackgroundBlue"/>
+                        <constraints>
+                            <constraint firstItem="afT-be-CXA" firstAttribute="centerX" secondItem="2mo-zr-UVq" secondAttribute="centerX" id="aAk-iL-U90"/>
+                            <constraint firstItem="afT-be-CXA" firstAttribute="centerY" secondItem="2mo-zr-UVq" secondAttribute="centerY" id="y27-9W-ACq"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6aM-ab-QTY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -277,7 +290,7 @@
             <objects>
                 <viewController id="JKW-fF-O7E" customClass="EditTagViewController" customModule="skeda" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TUr-12-wwP">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WhiteBackground" translatesAutoresizingMaskIntoConstraints="NO" id="0pk-jV-GMM">
@@ -701,7 +714,7 @@
             <objects>
                 <viewController id="wFR-FM-vla" customClass="NewTagViewController" customModule="skeda" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sIW-iM-0gy">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WhiteBackground" translatesAutoresizingMaskIntoConstraints="NO" id="I7A-Km-UDu">
@@ -1097,7 +1110,7 @@
             <objects>
                 <viewController id="9tR-fA-vjW" customClass="NewPointTaskViewController" customModule="skeda" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Pcu-Pf-eKG" userLabel="Background View">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="963"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="1017"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WhiteBackground" translatesAutoresizingMaskIntoConstraints="NO" id="mQu-T5-tmM">
@@ -1638,7 +1651,7 @@
             <objects>
                 <viewController id="h78-Ej-qJv" customClass="NewTaskTypeViewController" customModule="skeda" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="reD-9b-p3e">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="irA-Xc-eAY">
@@ -1699,6 +1712,9 @@
                                                     <constraint firstAttribute="width" constant="140" id="gtw-8B-ZiG"/>
                                                 </constraints>
                                                 <state key="normal" image="Line"/>
+                                                <connections>
+                                                    <action selector="lineButtonPressed:" destination="h78-Ej-qJv" eventType="touchUpInside" id="2nw-fb-RD6"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dGz-p8-jRI">
                                                 <rect key="frame" x="148" y="0.0" width="20" height="22"/>
@@ -1724,6 +1740,9 @@
                                                     <constraint firstAttribute="height" constant="140" id="yne-o6-BqL"/>
                                                 </constraints>
                                                 <state key="normal" image="Routine"/>
+                                                <connections>
+                                                    <action selector="routineButtonPressed:" destination="h78-Ej-qJv" eventType="touchUpInside" id="PXX-6J-DyW"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OY7-2x-HlH">
                                                 <rect key="frame" x="148" y="0.0" width="20" height="22"/>
@@ -1747,6 +1766,9 @@
                                                             <constraint firstAttribute="width" constant="140" id="fcW-UI-wyv"/>
                                                         </constraints>
                                                         <state key="normal" image="RoutineLine"/>
+                                                        <connections>
+                                                            <action selector="routineLineButtonPressed:" destination="h78-Ej-qJv" eventType="touchUpInside" id="cUp-C5-bFe"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Ow-Tc-1qN">
                                                         <rect key="frame" x="148" y="0.0" width="20" height="22"/>
@@ -1793,10 +1815,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="zrg-ek-XE4">
-                                <rect key="frame" x="32" y="350" width="351" height="197"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="zrg-ek-XE4">
+                                <rect key="frame" x="31.5" y="308.5" width="351" height="196"/>
                                 <color key="backgroundColor" name="Transparent"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="196" id="fEy-7N-2yg"/>
+                                    <constraint firstAttribute="width" constant="351" id="gIk-VN-3F2"/>
+                                </constraints>
                                 <string key="text">Calendar overview functionality coming soon! Follow our trello board to track our progress at https://trello.com/b/ZXkccAgG/skeda. Please feel free to comment &amp; report bugs to us. Thanks you for your support.</string>
                                 <color key="textColor" name="PseudoWhite"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
@@ -1805,8 +1830,12 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="0TC-kh-BPt"/>
                         <color key="backgroundColor" name="BackgroundBlue"/>
+                        <constraints>
+                            <constraint firstItem="zrg-ek-XE4" firstAttribute="centerY" secondItem="wFb-vd-8qc" secondAttribute="centerY" id="SbB-2X-eP1"/>
+                            <constraint firstItem="zrg-ek-XE4" firstAttribute="centerX" secondItem="wFb-vd-8qc" secondAttribute="centerX" id="ozJ-5O-VpN"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="CalendaButton" selectedImage="CalendarButtonSelected" id="x7A-oV-QxU"/>
+                    <tabBarItem key="tabBarItem" tag="30" title="" image="CalendaButton" selectedImage="CalendarButtonSelected" id="x7A-oV-QxU"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Bk-Sg-eHg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1816,7 +1845,7 @@
         <scene sceneID="yl2-sM-qoP">
             <objects>
                 <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
+                    <tabBar key="tabBar" contentMode="scaleToFill" translucent="NO" id="W28-zg-YXA">
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1836,7 +1865,7 @@
         <scene sceneID="KND-ME-qVl">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="HQ8-rA-D2M" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="ListButton" selectedImage="ListButtonSelected" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" tag="20" title="" image="ListButton" selectedImage="ListButtonSelected" id="cPa-gy-q4n"/>
                     <toolbarItems/>
                     <nil key="simulatedTopBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="gqm-Fk-3Zn">
@@ -3314,7 +3343,7 @@
             <objects>
                 <viewController id="jlh-wP-XTx" customClass="SubtaskCreationAndEditViewController" customModule="skeda" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="F9S-Nk-XpT">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="None" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hLD-vK-gEY">

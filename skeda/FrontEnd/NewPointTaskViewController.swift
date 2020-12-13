@@ -343,7 +343,7 @@ class NewPointTaskViewController: UIViewController, UpdateSubtask{
     
     @IBAction func deleteButtonPressed(_ sender: UIButton) {
         let alertVC = CFAlertViewController(
-            title: "Are you sure you want to delete this list?",
+            title: "Are you sure you want to delete this task?",
             message: "", textAlignment: .center,
             preferredStyle: .alert,
             didDismissAlertHandler: nil)

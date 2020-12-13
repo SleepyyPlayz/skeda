@@ -40,13 +40,41 @@ class NewTaskTypeViewController: UIViewController {
         performSegue(withIdentifier: "CreateNewPoint", sender: self)
     }
     
+    @IBAction func lineButtonPressed(_ sender: Any) {
+        let alertVC = CFAlertViewController(title: "Task Type Coming Soon",
+                                            message: "",
+                                            textAlignment: .center,
+                                            preferredStyle: .alert,
+                                            didDismissAlertHandler: nil)
+        let doneButton = CFAlertAction(title: "OK", style: .Default, alignment: .justified, backgroundColor: UIColor(named: CONSTS.Colors.BackgroundBlue), textColor: UIColor(named: CONSTS.Colors.PseudoWhite), handler: nil)
+        
+        alertVC.addAction(doneButton)
+        present(alertVC,animated: true,completion: nil)
+    }
     
+    @IBAction func routineButtonPressed(_ sender: Any) {
+        let alertVC = CFAlertViewController(title: "Task Type Coming Soon",
+                                            message: "",
+                                            textAlignment: .center,
+                                            preferredStyle: .alert,
+                                            didDismissAlertHandler: nil)
+        let doneButton = CFAlertAction(title: "OK", style: .Default, alignment: .justified, backgroundColor: UIColor(named: CONSTS.Colors.BackgroundBlue), textColor: UIColor(named: CONSTS.Colors.PseudoWhite), handler: nil)
+        
+        alertVC.addAction(doneButton)
+        present(alertVC,animated: true,completion: nil)
+    }
     
-    
-    
-    
-    
-    
+    @IBAction func routineLineButtonPressed(_ sender: Any) {
+        let alertVC = CFAlertViewController(title: "Task Type Coming Soon",
+                                            message: "",
+                                            textAlignment: .center,
+                                            preferredStyle: .alert,
+                                            didDismissAlertHandler: nil)
+        let doneButton = CFAlertAction(title: "OK", style: .Default, alignment: .justified, backgroundColor: UIColor(named: CONSTS.Colors.BackgroundBlue), textColor: UIColor(named: CONSTS.Colors.PseudoWhite), handler: nil)
+        
+        alertVC.addAction(doneButton)
+        present(alertVC,animated: true,completion: nil)
+    }
     
     //MARK: - Info Buttons
     

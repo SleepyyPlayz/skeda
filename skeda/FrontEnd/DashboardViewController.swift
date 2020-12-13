@@ -12,9 +12,10 @@ import DatePickerDialog
 import CoreData
 import SwipeCellKit
 
-class DashboardViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, SwipeTableViewCellDelegate, canLoadTasks {
+class DashboardViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, SwipeTableViewCellDelegate, canLoadTasks, UITabBarDelegate {
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var instructionTextView: UITextView!
     
     var tasks = [Task]()
     
@@ -33,6 +34,10 @@ class DashboardViewController: UIViewController, UITableViewDelegate, UITableVie
         
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        loadTasks()
+    }
+    
     @IBAction func unwindToItemVC(segue: UIStoryboardSegue){
         
     }
@@ -49,6 +54,19 @@ class DashboardViewController: UIViewController, UITableViewDelegate, UITableVie
         DispatchQueue.main.async {
             self.tableView.reloadData()
         }
+        if tasks.count == 0{
+            instructionTextView.isHidden = false
+        }else{
+            instructionTextView.isHidden = true
+        }
+    }
+    
+    func saveTasks(){
+        do{
+            try context.save()
+        }catch{
+            print("Error saving tasks \(error)")
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -61,6 +79,11 @@ class DashboardViewController: UIViewController, UITableViewDelegate, UITableVie
             destinationVC.fromDashboard = true
         }
     }
+    
+    func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
+        loadTasks()
+    }
+    
     //MARK: - Table View Functions
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -73,41 +96,11 @@ class DashboardViewController: UIViewController, UITableViewDelegate, UITableVie
         cell.delegate = self
         cell.backgroundBar?.backgroundColor = UIColor(named: tasks[index].themeColorName ?? CONSTS.Colors.BackgroundBlue)
         cell.whiteBackground?.isHidden = !(tasks[index].isLightThemed)
-        cell.titleLabel?.text = tasks[index].title
+        
+        cell.titleLabel?.text = (tasks[index].parentTag?.title)! + " - " + tasks[index].title!
+        //cell.titleLabel?.font = UIFont(name: "SanFranciscoText-Light",size: 24)
+        
         cell.priorityIcon?.image = UIImage(named: ("Priority" + String(tasks[index].importance)))
-        cell.deadlineLabel?.text = cell.deadlineDateFormatter.string(from: tasks[index].dateDeadline!)
-        
-        //subtask number label determiner
-        var sSubtasks = [Subtask]()
-        let sRequest: NSFetchRequest<Subtask> = Subtask.fetchRequest()
-        let sPredicate = NSPredicate(format: "abs(parentTask.dateKey - %lf) < 0.001", tasks[index].dateKey)
-        sRequest.predicate = sPredicate
-        do {
-            sSubtasks = try context.fetch(sRequest)
-        } catch {
-            print("Error loading subtasks for counting \(error)")
-        }
-        if sSubtasks.count == 1{
-            cell.subtaskLabel?.text = "1 Subtask"
-        }else{
-            cell.subtaskLabel?.text = (String(sSubtasks.count) + " Subtasks")
-        }
-        
-        //reminder number label determiner
-        var rReminders = [Reminder]()
-        let rRequest: NSFetchRequest<Reminder> = Reminder.fetchRequest()
-        let rPredicate = NSPredicate(format: "abs(parentTask.dateKey - %lf) < 0.001", tasks[index].dateKey)
-        rRequest.predicate = rPredicate
-        do {
-            rReminders = try context.fetch(rRequest)
-        } catch {
-            print("Error loading reminders for counting \(error)")
-        }
-        if rReminders.count == 1{
-            cell.reminderLabel?.text = "1 Reminder"
-        }else{
-            cell.reminderLabel?.text = (String(rReminders.count) + " Reminders")
-        }
         
         //Style determiner
         if(tasks[index].isLightThemed){
@@ -127,6 +120,66 @@ class DashboardViewController: UIViewController, UITableViewDelegate, UITableVie
             cell.reminderLabel?.textColor = UIColor(named: CONSTS.Colors.PseudoWhite)
             cell.reminderIcon?.tintColor = UIColor(named: CONSTS.Colors.PseudoWhite)
         }
+        
+        //deadline date formatting
+        let daysLeft = Calendar.current.dateComponents([.day], from: Date(), to: tasks[index].dateDeadline!).day
+        if daysLeft! == 0{
+            cell.deadlineLabel?.text = "DUE TODAY!"
+            cell.deadlineLabel?.textColor = UIColor(named: CONSTS.Colors.WarningRed)
+        }else if daysLeft! > 0{
+            if daysLeft == 1{
+                cell.deadlineLabel?.text = "Due in " + String(daysLeft!) + " Day"
+                //cell.deadlineLabel?.textColor = UIColor(named: CONSTS.Colors.WarningRed)
+            }else{
+                cell.deadlineLabel?.text = "Due in " + String(daysLeft!) + " Days"
+                //cell.deadlineLabel?.textColor = UIColor(named: CONSTS.Colors.WarningRed)
+            }
+        }else{
+            if daysLeft == -1{
+                cell.deadlineLabel?.text = String(abs(daysLeft!)) + " DAY OVERDUE!"
+                cell.deadlineLabel?.textColor = UIColor(named: CONSTS.Colors.WarningRed)
+            }else{
+                cell.deadlineLabel?.text = String(abs(daysLeft!)) + " DAYS OVERDUE!"
+                cell.deadlineLabel?.textColor = UIColor(named: CONSTS.Colors.WarningRed)
+            }
+        }
+        
+        //subtask number label determiner
+        var sSubtasks = [Subtask]()
+        let sRequest: NSFetchRequest<Subtask> = Subtask.fetchRequest()
+        let sPredicate = NSPredicate(format: "abs(parentTask.dateKey - %lf) < 0.001", tasks[index].dateKey)
+        sRequest.predicate = sPredicate
+        do {
+            sSubtasks = try context.fetch(sRequest)
+        } catch {
+            print("Error loading subtasks for counting \(error)")
+        }
+        if sSubtasks.count == 0{
+            cell.subtaskLabel?.text = "No Subtasks"
+        }else{
+            let sSubtasksSorted = sSubtasks.sorted { (SubtaskFirst, SubtaskSecond) -> Bool in
+                let delta = SubtaskFirst.dateDeadline?.timeIntervalSince(SubtaskSecond.dateDeadline!)
+                return (delta! < 0)
+            }
+            cell.subtaskLabel?.text = sSubtasksSorted[0].title
+        }
+        
+        //reminder number label determiner
+        var rReminders = [Reminder]()
+        let rRequest: NSFetchRequest<Reminder> = Reminder.fetchRequest()
+        let rPredicate = NSPredicate(format: "abs(parentTask.dateKey - %lf) < 0.001", tasks[index].dateKey)
+        rRequest.predicate = rPredicate
+        do {
+            rReminders = try context.fetch(rRequest)
+        } catch {
+            print("Error loading reminders for counting \(error)")
+        }
+        if rReminders.count == 1{
+            cell.reminderLabel?.text = "1 Reminder"
+        }else{
+            cell.reminderLabel?.text = (String(rReminders.count) + " Reminders")
+        }
+        
         return cell
     }
     
@@ -173,27 +226,54 @@ class DashboardViewController: UIViewController, UITableViewDelegate, UITableVie
         //PopMenuDefaultAction(title: String?, image: UIImage?, color: Color?, didSelect: PopMenuActionHandler func (can also be closure) )
         sortMethodViewActions.append(PopMenuDefaultAction(title: "Smart Sort", color: UIColor(named: CONSTS.Colors.PseudoWhite), didSelect: { (action) in
             
-            //PLACEHOLDER
-            print("\(action.title ?? "error") was selected")
+            self.tasks.sort { (TaskFirst, TaskSecond) -> Bool in
+                let delta = TaskFirst.dateDeadline?.timeIntervalSince(TaskSecond.dateDeadline!)
+                
+                if delta! == 0{
+                    return TaskFirst.importance > TaskSecond.importance
+                }else{
+                    return (delta! < 0)
+                }
+            }
+            
+            self.saveTasks()
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
             
         }))
         sortMethodViewActions.append(PopMenuDefaultAction(title: "Sort by Due Date", color: UIColor(named: CONSTS.Colors.PseudoWhite), didSelect: { (action) in
             
-            //PLACERHOLDER
-            print("\(action.title ?? "error") was selected")
+            self.tasks.sort { (TaskFirst, TaskSecond) -> Bool in
+                let delta = TaskFirst.dateDeadline?.timeIntervalSince(TaskSecond.dateDeadline!)
+                return (delta! < 0)
+            }
             
+            self.saveTasks()
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
         }))
-        sortMethodViewActions.append(PopMenuDefaultAction(title: "Sort by Tag", color: UIColor(named: CONSTS.Colors.PseudoWhite), didSelect: { (action) in
+        sortMethodViewActions.append(PopMenuDefaultAction(title: "Sort by Importance", color: UIColor(named: CONSTS.Colors.PseudoWhite), didSelect: { (action) in
             
-            //PLACEHOLDER
-            print("\(action.title ?? "error") was selected")
+            self.tasks.sort { (TaskFirst, TaskSecond) -> Bool in
+                return TaskFirst.importance > TaskSecond.importance
+            }
+            self.saveTasks()
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
             
         }))
         sortMethodViewActions.append(PopMenuDefaultAction(title: "Sort by Date Created", color: UIColor(named: CONSTS.Colors.PseudoWhite), didSelect: { (action) in
             
-            //PLACEHOLDER
-            print("\(action.title ?? "error") was selected")
-            
+            self.tasks.sort { (TaskFirst, TaskSecond) -> Bool in
+                return TaskFirst.dateKey > TaskSecond.dateKey
+            }
+            self.saveTasks()
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
         }))
         
         
@@ -205,11 +285,6 @@ class DashboardViewController: UIViewController, UITableViewDelegate, UITableVie
         sortMethodViewController.appearance.popMenuFont = .systemFont(ofSize: 20, weight: .semibold)
         sortMethodViewController.appearance.popMenuItemSeparator = .fill(UIColor(named: CONSTS.Colors.PseudoWhite)!, height: 1)
         sortMethodViewController.appearance.popMenuCornerRadius = 20
-        
-        
-        
-        
-        
         
         present(sortMethodViewController, animated: true, completion: nil)
     }

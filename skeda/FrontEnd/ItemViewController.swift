@@ -67,7 +67,15 @@ class ItemViewController: UIViewController, UITableViewDelegate, UITableViewData
         
     }
     
-    //MARK: - Query and load tasks
+    //MARK: - Load & Save Tasks
+    
+    func saveTasks(){
+        do{
+            try context.save()
+        }catch{
+            print("Error saving tasks \(error)")
+        }
+    }
     
     func loadTasks(){
         let request: NSFetchRequest<Task> = Task.fetchRequest()
@@ -198,28 +206,43 @@ extension ItemViewController{
         
         //PopMenuDefaultAction(title: String?, image: UIImage?, color: Color?, didSelect: PopMenuActionHandler func (can also be closure) )
         sortMethodViewActions.append(PopMenuDefaultAction(title: "Sort by Name", color: UIColor(named: CONSTS.Colors.PseudoWhite), didSelect: { (action) in
-            
-            //PLACEHOLDER
-            print("\(action.title ?? "error") was selected")
-            
-        }))
-        sortMethodViewActions.append(PopMenuDefaultAction(title: "Sort by Importance", color: UIColor(named: CONSTS.Colors.PseudoWhite), didSelect: { (action) in
-            
-            //PLACERHOLDER
-            print("\(action.title ?? "error") was selected")
-            
+            self.tasks.sort { (TaskFirst, TaskSecond) -> Bool in
+                return TaskFirst.title! < TaskSecond.title!
+            }
+            self.saveTasks()
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
         }))
         sortMethodViewActions.append(PopMenuDefaultAction(title: "Sort by Due Date", color: UIColor(named: CONSTS.Colors.PseudoWhite), didSelect: { (action) in
+            self.tasks.sort { (TaskFirst, TaskSecond) -> Bool in
+                let delta = TaskFirst.dateDeadline?.timeIntervalSince(TaskSecond.dateDeadline!)
+                return (delta! < 0)
+            }
             
-            //PLACEHOLDER
-            print("\(action.title ?? "error") was selected")
+            self.saveTasks()
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }))
+        sortMethodViewActions.append(PopMenuDefaultAction(title: "Sort by Importance", color: UIColor(named: CONSTS.Colors.PseudoWhite), didSelect: { (action) in
+            self.tasks.sort { (TaskFirst, TaskSecond) -> Bool in
+                return TaskFirst.importance > TaskSecond.importance
+            }
+            self.saveTasks()
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
             
         }))
         sortMethodViewActions.append(PopMenuDefaultAction(title: "Sort by Date Created", color: UIColor(named: CONSTS.Colors.PseudoWhite), didSelect: { (action) in
-            
-            //PLACEHOLDER
-            print("\(action.title ?? "error") was selected")
-            
+            self.tasks.sort { (TaskFirst, TaskSecond) -> Bool in
+                return TaskFirst.dateKey > TaskSecond.dateKey
+            }
+            self.saveTasks()
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
         }))
         
         
