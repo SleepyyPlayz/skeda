@@ -3,12 +3,15 @@ The smart, open-sourced, constantly-evolving to-do list time management assistan
 
 ### Support
 
-Our official support email: 
-[skedabyicosa@gmail.com]
+Our official support email: skedabyicosa@gmail.com
+
+[**Contact Us by Email**](skedabyicosa@gmail.com)
+
 Feel free to submit bugs, questions and feature suggestions! :D
 
-App development progress can also be tracked with our trello site:
-[https://trello.com/b/ZXkccAgG/skeda]
+App development progress can also be tracked with our trello site: [**Trello Site**](https://trello.com/b/ZXkccAgG/skeda)
+
+(link: https://trello.com/b/ZXkccAgG/skeda)
 
 where you can also suggest new features and comment on our proposed features.
 
