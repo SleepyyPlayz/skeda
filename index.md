@@ -1,4 +1,4 @@
-[App Icon](180.png)
+![App Icon](180.png)
 
 # skeda
 The smart, open-sourced, constantly-evolving to-do list time management assistant.
