@@ -1,11 +1,11 @@
+[App Icon](180.png)
+
 # skeda
 The smart, open-sourced, constantly-evolving to-do list time management assistant.
 
 ### Support
 
-Our official support email: skedabyicosa@gmail.com
-
-[**Contact Us by Email**](skedabyicosa@gmail.com)
+Our official support email: [**skedabyicosa@gmail.com**](skedabyicosa@gmail.com)
 
 Feel free to submit bugs, questions and feature suggestions! :D
 
